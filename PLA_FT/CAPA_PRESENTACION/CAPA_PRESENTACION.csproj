@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CAPA_PRESENTACION</RootNamespace>
     <AssemblyName>CAPA_PRESENTACION</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -59,29 +60,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CP_UTILIDADES.cs" />
+    <Compile Include="FORMULARIOS\FRM_DEPARTAMENTO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_DEPARTAMENTO.Designer.cs">
+      <DependentUpon>FRM_DEPARTAMENTO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_DEPARTAMENTOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_DEPARTAMENTOS.Designer.cs">
+      <DependentUpon>FRM_MANT_DEPARTAMENTOS.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMULARIOS\FRM_MANT_OFICINAS.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMULARIOS\FRM_MANT_OFICINAS.Designer.cs">
       <DependentUpon>FRM_MANT_OFICINAS.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\FRM_MANT_USUARIOS.cs">
+    <Compile Include="FORMULARIOS\FRM_MANT_PUESTOS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\FRM_MANT_USUARIOS.Designer.cs">
-      <DependentUpon>FRM_MANT_USUARIOS.cs</DependentUpon>
+    <Compile Include="FORMULARIOS\FRM_MANT_PUESTOS.Designer.cs">
+      <DependentUpon>FRM_MANT_PUESTOS.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\FRM_MENU.cs">
+    <Compile Include="FORMULARIOS\FRM_OFICINAS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\FRM_MENU.Designer.cs">
-      <DependentUpon>FRM_MENU.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FORMULARIOS\FRM_OFICINA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FORMULARIOS\FRM_OFICINA.Designer.cs">
-      <DependentUpon>FRM_OFICINA.cs</DependentUpon>
+    <Compile Include="FORMULARIOS\FRM_OFICINAS.Designer.cs">
+      <DependentUpon>FRM_OFICINAS.cs</DependentUpon>
     </Compile>
     <Compile Include="FORMULARIOS\FRM_PLANTILLA.cs">
       <SubType>Form</SubType>
@@ -89,42 +96,44 @@
     <Compile Include="FORMULARIOS\FRM_PLANTILLA.Designer.cs">
       <DependentUpon>FRM_PLANTILLA.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMULARIOS\FRM_PUESTO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_PUESTO.Designer.cs">
+      <DependentUpon>FRM_PUESTO.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FORMULARIOS\FRM_DEPARTAMENTO.resx">
+      <DependentUpon>FRM_DEPARTAMENTO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_MANT_DEPARTAMENTOS.resx">
+      <DependentUpon>FRM_MANT_DEPARTAMENTOS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_MANT_OFICINAS.resx">
       <DependentUpon>FRM_MANT_OFICINAS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\FRM_MANT_USUARIOS.resx">
-      <DependentUpon>FRM_MANT_USUARIOS.cs</DependentUpon>
+    <EmbeddedResource Include="FORMULARIOS\FRM_MANT_PUESTOS.resx">
+      <DependentUpon>FRM_MANT_PUESTOS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\FRM_MENU.resx">
-      <DependentUpon>FRM_MENU.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\FRM_OFICINA.resx">
-      <DependentUpon>FRM_OFICINA.cs</DependentUpon>
+    <EmbeddedResource Include="FORMULARIOS\FRM_OFICINAS.resx">
+      <DependentUpon>FRM_OFICINAS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_PLANTILLA.resx">
       <DependentUpon>FRM_PLANTILLA.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_PUESTO.resx">
+      <DependentUpon>FRM_PUESTO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -144,9 +153,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="IMAGENES\Edit_24x24.png" />
-    <Content Include="IMAGENES\New_24x24.png" />
-    <Content Include="IMAGENES\Save_24x24.png" />
+    <Folder Include="IMAGENES\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

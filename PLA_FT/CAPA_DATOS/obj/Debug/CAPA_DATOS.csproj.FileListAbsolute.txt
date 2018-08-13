@@ -5,3 +5,10 @@ C:\PLA_FT\CAPA_DATOS\bin\Debug\CAPA_ENTIDAD.pdb
 C:\PLA_FT\CAPA_DATOS\obj\Debug\CAPA_DATOS.csprojResolveAssemblyReference.cache
 C:\PLA_FT\CAPA_DATOS\obj\Debug\CAPA_DATOS.dll
 C:\PLA_FT\CAPA_DATOS\obj\Debug\CAPA_DATOS.pdb
+D:\PLA_FT\PLA_FT\CAPA_DATOS\bin\Debug\CAPA_DATOS.dll
+D:\PLA_FT\PLA_FT\CAPA_DATOS\bin\Debug\CAPA_DATOS.pdb
+D:\PLA_FT\PLA_FT\CAPA_DATOS\bin\Debug\CAPA_ENTIDAD.dll
+D:\PLA_FT\PLA_FT\CAPA_DATOS\bin\Debug\CAPA_ENTIDAD.pdb
+D:\PLA_FT\PLA_FT\CAPA_DATOS\obj\Debug\CAPA_DATOS.csprojResolveAssemblyReference.cache
+D:\PLA_FT\PLA_FT\CAPA_DATOS\obj\Debug\CAPA_DATOS.dll
+D:\PLA_FT\PLA_FT\CAPA_DATOS\obj\Debug\CAPA_DATOS.pdb
