@@ -50,9 +50,6 @@
             this.DG.AllowUserToDeleteRows = false;
             this.DG.AllowUserToResizeColumns = false;
             this.DG.AllowUserToResizeRows = false;
-            this.DG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.DG.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
@@ -70,7 +67,7 @@
             this.DEPARTAMENTO,
             this.ESTADO});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
@@ -85,7 +82,7 @@
             this.DG.ReadOnly = true;
             this.DG.RowHeadersVisible = false;
             this.DG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG.Size = new System.Drawing.Size(712, 276);
+            this.DG.Size = new System.Drawing.Size(708, 282);
             this.DG.TabIndex = 11;
             this.DG.DoubleClick += new System.EventHandler(this.DG_DoubleClick);
             // 
@@ -130,7 +127,6 @@
             // 
             // btn_editar
             // 
-            this.btn_editar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_editar.BackColor = System.Drawing.Color.SteelBlue;
             this.btn_editar.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
             this.btn_editar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
@@ -140,7 +136,7 @@
             this.btn_editar.ForeColor = System.Drawing.Color.White;
             this.btn_editar.Image = ((System.Drawing.Image)(resources.GetObject("btn_editar.Image")));
             this.btn_editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_editar.Location = new System.Drawing.Point(115, 373);
+            this.btn_editar.Location = new System.Drawing.Point(115, 380);
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Size = new System.Drawing.Size(101, 43);
             this.btn_editar.TabIndex = 10;
@@ -151,9 +147,8 @@
             // 
             // lbl_total
             // 
-            this.lbl_total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_total.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lbl_total.Location = new System.Drawing.Point(342, 390);
+            this.lbl_total.Location = new System.Drawing.Point(341, 393);
             this.lbl_total.Name = "lbl_total";
             this.lbl_total.Size = new System.Drawing.Size(377, 25);
             this.lbl_total.TabIndex = 8;
@@ -161,7 +156,6 @@
             // 
             // btn_agregar
             // 
-            this.btn_agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_agregar.BackColor = System.Drawing.Color.SteelBlue;
             this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
             this.btn_agregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
@@ -171,7 +165,7 @@
             this.btn_agregar.ForeColor = System.Drawing.Color.White;
             this.btn_agregar.Image = ((System.Drawing.Image)(resources.GetObject("btn_agregar.Image")));
             this.btn_agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_agregar.Location = new System.Drawing.Point(11, 373);
+            this.btn_agregar.Location = new System.Drawing.Point(11, 380);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(101, 43);
             this.btn_agregar.TabIndex = 9;
@@ -217,7 +211,7 @@
             // FRM_MANT_DEPARTAMENTOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(732, 429);
+            this.ClientSize = new System.Drawing.Size(732, 439);
             this.Controls.Add(this.DG);
             this.Controls.Add(this.btn_editar);
             this.Controls.Add(this.lbl_total);

@@ -42,9 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CN_ACTIVIDAD_ECONOMICA.cs" />
     <Compile Include="CN_DEPARTAMENTO.cs" />
     <Compile Include="CN_OFICINA.cs" />
+    <Compile Include="CN_PRODUCTO.cs" />
     <Compile Include="CN_PUESTO.cs" />
+    <Compile Include="CN_USUARIO.cs" />
     <Compile Include="CN_UTILIDADES.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

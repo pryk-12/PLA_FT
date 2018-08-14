@@ -34,6 +34,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
       <Private>True</Private>
@@ -47,7 +52,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,11 +67,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CP_UTILIDADES.cs" />
+    <Compile Include="FORMULARIOS\FRM_CAMBIAR_CLAVE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_CAMBIAR_CLAVE.Designer.cs">
+      <DependentUpon>FRM_CAMBIAR_CLAVE.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMULARIOS\FRM_DEPARTAMENTO.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMULARIOS\FRM_DEPARTAMENTO.Designer.cs">
       <DependentUpon>FRM_DEPARTAMENTO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_LOGIN.Designer.cs">
+      <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_ACTIVIDADES_ECONOMICAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_ACTIVIDADES_ECONOMICAS.Designer.cs">
+      <DependentUpon>FRM_MANT_ACTIVIDADES_ECONOMICAS.cs</DependentUpon>
     </Compile>
     <Compile Include="FORMULARIOS\FRM_MANT_DEPARTAMENTOS.cs">
       <SubType>Form</SubType>
@@ -77,6 +102,12 @@
     </Compile>
     <Compile Include="FORMULARIOS\FRM_MANT_OFICINAS.Designer.cs">
       <DependentUpon>FRM_MANT_OFICINAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_PRODUCTOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_PRODUCTOS.Designer.cs">
+      <DependentUpon>FRM_MANT_PRODUCTOS.cs</DependentUpon>
     </Compile>
     <Compile Include="FORMULARIOS\FRM_MANT_PUESTOS.cs">
       <SubType>Form</SubType>
@@ -102,6 +133,18 @@
     <Compile Include="FORMULARIOS\FRM_PLANTILLA.Designer.cs">
       <DependentUpon>FRM_PLANTILLA.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMULARIOS\FRM_PRINCIPAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_PRINCIPAL.Designer.cs">
+      <DependentUpon>FRM_PRINCIPAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_PRODUCTO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_PRODUCTO.Designer.cs">
+      <DependentUpon>FRM_PRODUCTO.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMULARIOS\FRM_PUESTO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,20 +157,41 @@
     <Compile Include="FORMULARIOS\FRM_USUARIO.Designer.cs">
       <DependentUpon>FRM_USUARIO.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMULARIOS\FRM_ACTIVIDAD_ECONOMICA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_ACTIVIDAD_ECONOMICA.Designer.cs">
+      <DependentUpon>FRM_ACTIVIDAD_ECONOMICA.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FORMULARIOS\FRM_ACTIVIDAD_ECONOMICA.resx">
+      <DependentUpon>FRM_ACTIVIDAD_ECONOMICA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_CAMBIAR_CLAVE.resx">
+      <DependentUpon>FRM_CAMBIAR_CLAVE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_DEPARTAMENTO.resx">
       <DependentUpon>FRM_DEPARTAMENTO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_LOGIN.resx">
+      <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_MANT_ACTIVIDADES_ECONOMICAS.resx">
+      <DependentUpon>FRM_MANT_ACTIVIDADES_ECONOMICAS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_MANT_DEPARTAMENTOS.resx">
       <DependentUpon>FRM_MANT_DEPARTAMENTOS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_MANT_OFICINAS.resx">
       <DependentUpon>FRM_MANT_OFICINAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_MANT_PRODUCTOS.resx">
+      <DependentUpon>FRM_MANT_PRODUCTOS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_MANT_PUESTOS.resx">
       <DependentUpon>FRM_MANT_PUESTOS.cs</DependentUpon>
@@ -140,6 +204,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_PLANTILLA.resx">
       <DependentUpon>FRM_PLANTILLA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_PRINCIPAL.resx">
+      <DependentUpon>FRM_PRINCIPAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_PRODUCTO.resx">
+      <DependentUpon>FRM_PRODUCTO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_PUESTO.resx">
       <DependentUpon>FRM_PUESTO.cs</DependentUpon>

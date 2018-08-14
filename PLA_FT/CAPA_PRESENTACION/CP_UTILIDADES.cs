@@ -12,6 +12,12 @@ namespace CAPA_PRESENTACION
 {
     public class CP_UTILIDADES
     {
+        public static class DATOS_USUARIO
+        {
+            public static string USUARIO;
+            public static string NOMBRE;
+        }
+
         public static void MENSAJE_INFORMACION(string mensaje, Form obj)
         {
             MetroFramework.MetroMessageBox.Show(obj,mensaje, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -67,7 +73,7 @@ namespace CAPA_PRESENTACION
             return Desencriptar;
         }
 
-        public static void PERMITIR_NUMERO_Y_PUNTO(object sender, KeyPressEventArgs e, TextBox text)
+        public static void PERMITIR_NUMERO_Y_PUNTO(object sender, KeyPressEventArgs e, MetroFramework.Controls.MetroTextBox text)
         {
             if (((e.KeyChar) < 48) && ((e.KeyChar) != 8) || ((e.KeyChar) > 57))
             {

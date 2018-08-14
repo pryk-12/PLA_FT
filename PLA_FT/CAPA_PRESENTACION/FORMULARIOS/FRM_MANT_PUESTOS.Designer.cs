@@ -52,9 +52,6 @@
             this.DG.AllowUserToDeleteRows = false;
             this.DG.AllowUserToResizeColumns = false;
             this.DG.AllowUserToResizeRows = false;
-            this.DG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.DG.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
@@ -74,7 +71,7 @@
             this.PUESTO,
             this.ESTADO});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
@@ -151,7 +148,6 @@
             // 
             // btn_editar
             // 
-            this.btn_editar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_editar.BackColor = System.Drawing.Color.SteelBlue;
             this.btn_editar.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
             this.btn_editar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
@@ -172,7 +168,6 @@
             // 
             // lbl_total
             // 
-            this.lbl_total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_total.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lbl_total.Location = new System.Drawing.Point(435, 386);
             this.lbl_total.Name = "lbl_total";
@@ -182,7 +177,6 @@
             // 
             // btn_agregar
             // 
-            this.btn_agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_agregar.BackColor = System.Drawing.Color.SteelBlue;
             this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
             this.btn_agregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;

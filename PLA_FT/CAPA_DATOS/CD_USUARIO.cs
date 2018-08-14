@@ -6,8 +6,6 @@ namespace CAPA_DATOS
 {
     public class CD_USUARIO
     {
-        public class CD_PUESTO
-        {
             SqlConnection cn = new SqlConnection(CD_CONEXION.cadena_conexion);
             SqlDataAdapter da = new SqlDataAdapter();
 
@@ -39,7 +37,7 @@ namespace CAPA_DATOS
                 da.InsertCommand.Parameters.AddWithValue("@USUARIO", obj.USUARIO);
                 da.InsertCommand.Parameters.AddWithValue("@CLAVE", obj.CLAVE);
                 da.InsertCommand.Parameters.AddWithValue("@ESTADO", obj.ESTADO == "ACTIVO" ? "A" : "I");
-                da.InsertCommand.Parameters.AddWithValue("@SEXO", obj.ESTADO == "MASCULINO" ? "M" : "F");
+                da.InsertCommand.Parameters.AddWithValue("@SEXO", obj.SEXO == "MASCULINO" ? "M" : "F");
                 cn.Open();
                 da.InsertCommand.ExecuteNonQuery();
                 cn.Close();
@@ -59,11 +57,22 @@ namespace CAPA_DATOS
                 da.UpdateCommand.Parameters.AddWithValue("@USUARIO", obj.USUARIO);
                 da.UpdateCommand.Parameters.AddWithValue("@CLAVE", obj.CLAVE);
                 da.UpdateCommand.Parameters.AddWithValue("@ESTADO", obj.ESTADO == "ACTIVO" ? "A" : "I");
-                da.UpdateCommand.Parameters.AddWithValue("@SEXO", obj.ESTADO == "MASCULINO" ? "M" : "F");
+                da.UpdateCommand.Parameters.AddWithValue("@SEXO", obj.SEXO == "MASCULINO" ? "M" : "F");
+                cn.Open();
+                da.UpdateCommand.ExecuteNonQuery();
+                cn.Close();
+            }
+            public void CAMBIAR_CLAVE(CE_USUARIO obj)
+            {
+                cn.Close();
+                da.UpdateCommand = new SqlCommand("SP_USUARIOS", cn);
+                da.UpdateCommand.CommandType = CommandType.StoredProcedure;
+                da.UpdateCommand.Parameters.AddWithValue("@OPCION", "CAMBIAR CLAVE");
+                da.UpdateCommand.Parameters.AddWithValue("@USUARIO", obj.USUARIO);
+                da.UpdateCommand.Parameters.AddWithValue("@CLAVE", obj.CLAVE);
                 cn.Open();
                 da.UpdateCommand.ExecuteNonQuery();
                 cn.Close();
             }
         }
     }
-}
