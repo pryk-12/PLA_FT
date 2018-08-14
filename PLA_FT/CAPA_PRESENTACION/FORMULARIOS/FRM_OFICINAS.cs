@@ -9,7 +9,6 @@ namespace CAPA_PRESENTACION.FORMULARIOS
     {
         CE_OFICINA CE = new CE_OFICINA();
         CN_OFICINA CN = new CN_OFICINA();
-        CP_UTILIDADES CP = new CP_UTILIDADES();
 
         public FRM_OFICINAS()
         {
@@ -46,7 +45,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                     MENSAJE = "Datos Actualizados Correctamente";
                 }
 
-                CP.MENSAJE_INFORMACION(MENSAJE, this);
+                CP_UTILIDADES.MENSAJE_INFORMACION(MENSAJE, this);
 
                 FRM_MANT_OFICINAS FRM = new FRM_MANT_OFICINAS();
                 foreach (Form frm in Application.OpenForms)
@@ -64,7 +63,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             }
             catch (Exception ex)
             {
-                CP.MENSAJE_ERROR(ex.Message,this);
+                CP_UTILIDADES.MENSAJE_ERROR(ex.Message,this);
             }
            
         }
@@ -87,13 +86,13 @@ namespace CAPA_PRESENTACION.FORMULARIOS
         {
             if(txt_descripcion.Text.Equals(""))
             {
-                CP.MENSAJE_INFORMACION("La Descripción es Obligatoria",this);
+                CP_UTILIDADES.MENSAJE_INFORMACION("La Descripción es Obligatoria",this);
                 txt_descripcion.Focus();
                 return;
             }
             if (txt_direccion.Text.Equals(""))
             {
-                CP.MENSAJE_INFORMACION("La Dirección es Obligatoria", this);
+                CP_UTILIDADES.MENSAJE_INFORMACION("La Dirección es Obligatoria", this);
                 txt_direccion.Focus();
                 return;
             }
@@ -101,14 +100,14 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             {
                 if (txt_telefono.Text.Length < 12)
                 {
-                    CP.MENSAJE_INFORMACION("El Teléfono Tiene el Formato Incorrecto", this);
+                    CP_UTILIDADES.MENSAJE_INFORMACION("El Teléfono Tiene el Formato Incorrecto", this);
                     txt_telefono.Focus();
                     return;
                 }
             }
             if (cb_estado.Text.Equals(""))
             {
-                CP.MENSAJE_INFORMACION("El Estado es Obligatorio", this);
+                CP_UTILIDADES.MENSAJE_INFORMACION("El Estado es Obligatorio", this);
                 cb_estado.Focus();
                 return;
             }

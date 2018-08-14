@@ -84,6 +84,12 @@
     <Compile Include="FORMULARIOS\FRM_MANT_PUESTOS.Designer.cs">
       <DependentUpon>FRM_MANT_PUESTOS.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_USUARIOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_USUARIOS.Designer.cs">
+      <DependentUpon>FRM_MANT_USUARIOS.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMULARIOS\FRM_OFICINAS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,12 @@
     </Compile>
     <Compile Include="FORMULARIOS\FRM_PUESTO.Designer.cs">
       <DependentUpon>FRM_PUESTO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_USUARIO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_USUARIO.Designer.cs">
+      <DependentUpon>FRM_USUARIO.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -120,6 +132,9 @@
     <EmbeddedResource Include="FORMULARIOS\FRM_MANT_PUESTOS.resx">
       <DependentUpon>FRM_MANT_PUESTOS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_MANT_USUARIOS.resx">
+      <DependentUpon>FRM_MANT_USUARIOS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_OFICINAS.resx">
       <DependentUpon>FRM_OFICINAS.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_PUESTO.resx">
       <DependentUpon>FRM_PUESTO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_USUARIO.resx">
+      <DependentUpon>FRM_USUARIO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -152,8 +170,15 @@
       <Name>CAPA_NEGOCIOS</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="IMAGENES\" />
+    <Content Include="IMAGENES\Check_24x24.png" />
+    <Content Include="IMAGENES\Edit_24x24.png" />
+    <Content Include="IMAGENES\Globe-WF.png" />
+    <Content Include="IMAGENES\Globe-WF1.png" />
+    <Content Include="IMAGENES\New_24x24.png" />
+    <Content Include="IMAGENES\Save_24x24.png" />
+    <Content Include="IMAGENES\Search_16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

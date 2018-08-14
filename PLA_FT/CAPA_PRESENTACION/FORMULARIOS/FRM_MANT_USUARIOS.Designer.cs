@@ -1,16 +1,16 @@
 ﻿namespace CAPA_PRESENTACION.FORMULARIOS
 {
-    partial class FRM_MANT_DEPARTAMENTOS
+    partial class FRM_MANT_USUARIOS
     {
         /// <summary>
-        /// Variable del diseñador requerida.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpiar los recursos que se estén utilizando.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,27 +20,32 @@
             base.Dispose(disposing);
         }
 
-        #region Código generado por el Diseñador de Windows Forms
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Método necesario para admitir el Diseñador. No se puede modificar
-        /// el contenido del método con el editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_MANT_DEPARTAMENTOS));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_MANT_USUARIOS));
             this.DG = new System.Windows.Forms.DataGridView();
-            this.ID_OFICINA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OFICINA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_DEPARTAMENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DEPARTAMENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_editar = new System.Windows.Forms.Button();
             this.lbl_total = new MetroFramework.Controls.MetroLabel();
             this.btn_agregar = new System.Windows.Forms.Button();
             this.txt_buscar = new MetroFramework.Controls.MetroTextBox();
+            this.ID_OFICINA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OFICINA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_DEPARTAMENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DEPARTAMENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_PUESTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PUESTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.USUARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SEXO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +73,11 @@
             this.OFICINA,
             this.ID_DEPARTAMENTO,
             this.DEPARTAMENTO,
+            this.ID_PUESTO,
+            this.PUESTO,
+            this.USUARIO,
+            this.NOMBRE,
+            this.SEXO,
             this.ESTADO});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCyan;
@@ -79,54 +89,14 @@
             this.DG.DefaultCellStyle = dataGridViewCellStyle2;
             this.DG.EnableHeadersVisualStyles = false;
             this.DG.GridColor = System.Drawing.Color.Gray;
-            this.DG.Location = new System.Drawing.Point(11, 92);
+            this.DG.Location = new System.Drawing.Point(13, 94);
             this.DG.MultiSelect = false;
             this.DG.Name = "DG";
             this.DG.ReadOnly = true;
             this.DG.RowHeadersVisible = false;
             this.DG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG.Size = new System.Drawing.Size(712, 276);
-            this.DG.TabIndex = 11;
-            this.DG.DoubleClick += new System.EventHandler(this.DG_DoubleClick);
-            // 
-            // ID_OFICINA
-            // 
-            this.ID_OFICINA.DataPropertyName = "ID_OFICINA";
-            this.ID_OFICINA.HeaderText = "ID";
-            this.ID_OFICINA.Name = "ID_OFICINA";
-            this.ID_OFICINA.ReadOnly = true;
-            this.ID_OFICINA.Visible = false;
-            // 
-            // OFICINA
-            // 
-            this.OFICINA.DataPropertyName = "OFICINA";
-            this.OFICINA.HeaderText = "OFICINA";
-            this.OFICINA.Name = "OFICINA";
-            this.OFICINA.ReadOnly = true;
-            this.OFICINA.Width = 250;
-            // 
-            // ID_DEPARTAMENTO
-            // 
-            this.ID_DEPARTAMENTO.DataPropertyName = "ID_DEPARTAMENTO";
-            this.ID_DEPARTAMENTO.HeaderText = "ID";
-            this.ID_DEPARTAMENTO.Name = "ID_DEPARTAMENTO";
-            this.ID_DEPARTAMENTO.ReadOnly = true;
-            this.ID_DEPARTAMENTO.Width = 50;
-            // 
-            // DEPARTAMENTO
-            // 
-            this.DEPARTAMENTO.DataPropertyName = "DEPARTAMENTO";
-            this.DEPARTAMENTO.HeaderText = "DESCRIPCION";
-            this.DEPARTAMENTO.Name = "DEPARTAMENTO";
-            this.DEPARTAMENTO.ReadOnly = true;
-            this.DEPARTAMENTO.Width = 300;
-            // 
-            // ESTADO
-            // 
-            this.ESTADO.DataPropertyName = "ESTADO";
-            this.ESTADO.HeaderText = "ESTADO";
-            this.ESTADO.Name = "ESTADO";
-            this.ESTADO.ReadOnly = true;
+            this.DG.Size = new System.Drawing.Size(658, 303);
+            this.DG.TabIndex = 21;
             // 
             // btn_editar
             // 
@@ -140,23 +110,22 @@
             this.btn_editar.ForeColor = System.Drawing.Color.White;
             this.btn_editar.Image = ((System.Drawing.Image)(resources.GetObject("btn_editar.Image")));
             this.btn_editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_editar.Location = new System.Drawing.Point(115, 373);
+            this.btn_editar.Location = new System.Drawing.Point(116, 404);
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Size = new System.Drawing.Size(101, 43);
-            this.btn_editar.TabIndex = 10;
+            this.btn_editar.TabIndex = 20;
             this.btn_editar.Text = "  Editar";
             this.btn_editar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_editar.UseVisualStyleBackColor = false;
-            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
             // lbl_total
             // 
             this.lbl_total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_total.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lbl_total.Location = new System.Drawing.Point(342, 390);
+            this.lbl_total.Location = new System.Drawing.Point(292, 422);
             this.lbl_total.Name = "lbl_total";
             this.lbl_total.Size = new System.Drawing.Size(377, 25);
-            this.lbl_total.TabIndex = 8;
+            this.lbl_total.TabIndex = 18;
             this.lbl_total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btn_agregar
@@ -171,14 +140,13 @@
             this.btn_agregar.ForeColor = System.Drawing.Color.White;
             this.btn_agregar.Image = ((System.Drawing.Image)(resources.GetObject("btn_agregar.Image")));
             this.btn_agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_agregar.Location = new System.Drawing.Point(11, 373);
+            this.btn_agregar.Location = new System.Drawing.Point(12, 404);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(101, 43);
-            this.btn_agregar.TabIndex = 9;
+            this.btn_agregar.TabIndex = 19;
             this.btn_agregar.Text = "  Agregar";
             this.btn_agregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_agregar.UseVisualStyleBackColor = false;
-            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // txt_buscar
             // 
@@ -197,7 +165,7 @@
             this.txt_buscar.DisplayIcon = true;
             this.txt_buscar.Icon = ((System.Drawing.Image)(resources.GetObject("txt_buscar.Icon")));
             this.txt_buscar.Lines = new string[0];
-            this.txt_buscar.Location = new System.Drawing.Point(11, 63);
+            this.txt_buscar.Location = new System.Drawing.Point(14, 65);
             this.txt_buscar.MaxLength = 32767;
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.PasswordChar = '\0';
@@ -207,25 +175,103 @@
             this.txt_buscar.SelectionStart = 0;
             this.txt_buscar.ShortcutsEnabled = true;
             this.txt_buscar.Size = new System.Drawing.Size(330, 23);
-            this.txt_buscar.TabIndex = 7;
+            this.txt_buscar.TabIndex = 17;
             this.txt_buscar.UseSelectable = true;
             this.txt_buscar.WaterMark = "Ingrese la Descripción o ID a Buscar";
             this.txt_buscar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_buscar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txt_buscar.TextChanged += new System.EventHandler(this.txt_buscar_TextChanged);
             // 
-            // FRM_MANT_DEPARTAMENTOS
+            // ID_OFICINA
+            // 
+            this.ID_OFICINA.DataPropertyName = "ID_OFICINA";
+            this.ID_OFICINA.HeaderText = "ID";
+            this.ID_OFICINA.Name = "ID_OFICINA";
+            this.ID_OFICINA.ReadOnly = true;
+            this.ID_OFICINA.Visible = false;
+            // 
+            // OFICINA
+            // 
+            this.OFICINA.DataPropertyName = "OFICINA";
+            this.OFICINA.HeaderText = "OFICINA";
+            this.OFICINA.Name = "OFICINA";
+            this.OFICINA.ReadOnly = true;
+            this.OFICINA.Width = 200;
+            // 
+            // ID_DEPARTAMENTO
+            // 
+            this.ID_DEPARTAMENTO.DataPropertyName = "ID_DEPARTAMENTO";
+            this.ID_DEPARTAMENTO.HeaderText = "ID";
+            this.ID_DEPARTAMENTO.Name = "ID_DEPARTAMENTO";
+            this.ID_DEPARTAMENTO.ReadOnly = true;
+            this.ID_DEPARTAMENTO.Visible = false;
+            this.ID_DEPARTAMENTO.Width = 50;
+            // 
+            // DEPARTAMENTO
+            // 
+            this.DEPARTAMENTO.DataPropertyName = "DEPARTAMENTO";
+            this.DEPARTAMENTO.HeaderText = "DEPARTAMENTO";
+            this.DEPARTAMENTO.Name = "DEPARTAMENTO";
+            this.DEPARTAMENTO.ReadOnly = true;
+            this.DEPARTAMENTO.Visible = false;
+            this.DEPARTAMENTO.Width = 200;
+            // 
+            // ID_PUESTO
+            // 
+            this.ID_PUESTO.DataPropertyName = "ID_PUESTO";
+            this.ID_PUESTO.HeaderText = "ID";
+            this.ID_PUESTO.Name = "ID_PUESTO";
+            this.ID_PUESTO.ReadOnly = true;
+            this.ID_PUESTO.Visible = false;
+            this.ID_PUESTO.Width = 50;
+            // 
+            // PUESTO
+            // 
+            this.PUESTO.DataPropertyName = "PUESTO";
+            this.PUESTO.HeaderText = "PUESTO";
+            this.PUESTO.Name = "PUESTO";
+            this.PUESTO.ReadOnly = true;
+            this.PUESTO.Visible = false;
+            this.PUESTO.Width = 240;
+            // 
+            // USUARIO
+            // 
+            this.USUARIO.HeaderText = "USUARIO";
+            this.USUARIO.Name = "USUARIO";
+            this.USUARIO.ReadOnly = true;
+            // 
+            // NOMBRE
+            // 
+            this.NOMBRE.DataPropertyName = "NOMBRE";
+            this.NOMBRE.HeaderText = "NOMBRE";
+            this.NOMBRE.Name = "NOMBRE";
+            this.NOMBRE.ReadOnly = true;
+            this.NOMBRE.Width = 250;
+            // 
+            // SEXO
+            // 
+            this.SEXO.HeaderText = "SEXO";
+            this.SEXO.Name = "SEXO";
+            this.SEXO.ReadOnly = true;
+            this.SEXO.Visible = false;
+            // 
+            // ESTADO
+            // 
+            this.ESTADO.DataPropertyName = "ESTADO";
+            this.ESTADO.HeaderText = "ESTADO";
+            this.ESTADO.Name = "ESTADO";
+            this.ESTADO.ReadOnly = true;
+            // 
+            // FRM_MANT_USUARIOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(732, 429);
+            this.ClientSize = new System.Drawing.Size(687, 461);
             this.Controls.Add(this.DG);
             this.Controls.Add(this.btn_editar);
             this.Controls.Add(this.lbl_total);
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.txt_buscar);
-            this.Name = "FRM_MANT_DEPARTAMENTOS";
-            this.Text = "Departamentos";
-            this.Load += new System.EventHandler(this.FRM_MANT_DEPARTAMENTOS_Load);
+            this.Name = "FRM_MANT_USUARIOS";
+            this.Text = "Usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.DG)).EndInit();
             this.ResumeLayout(false);
 
@@ -242,6 +288,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn OFICINA;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_DEPARTAMENTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn DEPARTAMENTO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_PUESTO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PUESTO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn USUARIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SEXO;
         private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO;
     }
 }

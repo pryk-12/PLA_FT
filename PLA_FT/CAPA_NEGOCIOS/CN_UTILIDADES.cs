@@ -10,5 +10,11 @@ namespace CAPA_NEGOCIOS
            CD_UTILIDADES CD = new CD_UTILIDADES();
            CD.LLENAR_COMBOBOX(COMBO, SP, TABLA, VALOR, CODIGO, CONDICION);
        }
+
+        public void CREAR_BACKUP()
+        {
+            CD_UTILIDADES CD = new CD_UTILIDADES();
+            CD.CREAR_BACKUP();
+        }
     }
 }

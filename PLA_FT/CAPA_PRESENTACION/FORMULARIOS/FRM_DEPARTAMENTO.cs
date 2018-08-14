@@ -9,7 +9,6 @@ namespace CAPA_PRESENTACION.FORMULARIOS
     {
         CE_DEPARTAMENTO CE = new CE_DEPARTAMENTO();
         CN_DEPARTAMENTO CN = new CN_DEPARTAMENTO();
-        CP_UTILIDADES CP = new CP_UTILIDADES();
         CN_UTILIDADES CNU = new CN_UTILIDADES();
 
         public FRM_DEPARTAMENTO()
@@ -46,7 +45,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                     MENSAJE = "Datos Actualizados Correctamente";
                 }
 
-                CP.MENSAJE_INFORMACION(MENSAJE, this);
+                CP_UTILIDADES.MENSAJE_INFORMACION(MENSAJE, this);
 
                 FRM_MANT_DEPARTAMENTOS FRM = new FRM_MANT_DEPARTAMENTOS();
                 foreach (Form frm in Application.OpenForms)
@@ -64,7 +63,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             }
             catch (Exception ex)
             {
-                CP.MENSAJE_ERROR(ex.Message, this);
+                CP_UTILIDADES.MENSAJE_ERROR(ex.Message, this);
             }
         }
 
@@ -86,21 +85,21 @@ namespace CAPA_PRESENTACION.FORMULARIOS
         {
             if (cb_oficina.Text.Equals(""))
             {
-                CP.MENSAJE_INFORMACION("La Oficina es Obligatoria", this);
+                CP_UTILIDADES.MENSAJE_INFORMACION("La Oficina es Obligatoria", this);
                 cb_oficina.Focus();
                 return;
             }
 
             if (txt_descripcion.Text.Equals(""))
             {
-                CP.MENSAJE_INFORMACION("La Descripción es Obligatoria", this);
+                CP_UTILIDADES.MENSAJE_INFORMACION("La Descripción es Obligatoria", this);
                 txt_descripcion.Focus();
                 return;
             }
 
             if (cb_estado.Text.Equals(""))
             {
-                CP.MENSAJE_INFORMACION("El Estado es Obligatorio", this);
+                CP_UTILIDADES.MENSAJE_INFORMACION("El Estado es Obligatorio", this);
                 cb_estado.Focus();
                 return;
             }

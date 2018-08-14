@@ -47,6 +47,7 @@
     <Compile Include="CD_DEPARTAMENTO.cs" />
     <Compile Include="CD_OFICINA.cs" />
     <Compile Include="CD_PUESTO.cs" />
+    <Compile Include="CD_USUARIO.cs" />
     <Compile Include="CD_UTILIDADES.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

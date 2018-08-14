@@ -65,7 +65,6 @@
             this.txt_buscar.MaxLength = 32767;
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.PasswordChar = '\0';
-            this.txt_buscar.PromptText = "Ingrese la Descripción o ID a Buscar";
             this.txt_buscar.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_buscar.SelectedText = "";
             this.txt_buscar.SelectionLength = 0;
@@ -157,13 +156,14 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCyan;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DG.DefaultCellStyle = dataGridViewCellStyle2;
             this.DG.EnableHeadersVisualStyles = false;
             this.DG.GridColor = System.Drawing.Color.Gray;
             this.DG.Location = new System.Drawing.Point(13, 93);
+            this.DG.MultiSelect = false;
             this.DG.Name = "DG";
             this.DG.ReadOnly = true;
             this.DG.RowHeadersVisible = false;

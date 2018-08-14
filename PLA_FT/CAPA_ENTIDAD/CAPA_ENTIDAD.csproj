@@ -44,6 +44,7 @@
     <Compile Include="CE_DEPARTAMENTO.cs" />
     <Compile Include="CE_OFICINA.cs" />
     <Compile Include="CE_PUESTO.cs" />
+    <Compile Include="CE_USUARIO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

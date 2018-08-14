@@ -32,10 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_MANT_PUESTOS));
             this.DG = new System.Windows.Forms.DataGridView();
-            this.btn_editar = new System.Windows.Forms.Button();
-            this.lbl_total = new MetroFramework.Controls.MetroLabel();
-            this.btn_agregar = new System.Windows.Forms.Button();
-            this.txt_buscar = new MetroFramework.Controls.MetroTextBox();
             this.ID_OFICINA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OFICINA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_DEPARTAMENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +39,10 @@
             this.ID_PUESTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PUESTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_editar = new System.Windows.Forms.Button();
+            this.lbl_total = new MetroFramework.Controls.MetroLabel();
+            this.btn_agregar = new System.Windows.Forms.Button();
+            this.txt_buscar = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,13 +77,14 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCyan;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DG.DefaultCellStyle = dataGridViewCellStyle2;
             this.DG.EnableHeadersVisualStyles = false;
             this.DG.GridColor = System.Drawing.Color.Gray;
             this.DG.Location = new System.Drawing.Point(13, 93);
+            this.DG.MultiSelect = false;
             this.DG.Name = "DG";
             this.DG.ReadOnly = true;
             this.DG.RowHeadersVisible = false;
@@ -91,6 +92,62 @@
             this.DG.Size = new System.Drawing.Size(800, 271);
             this.DG.TabIndex = 16;
             this.DG.DoubleClick += new System.EventHandler(this.DG_DoubleClick);
+            // 
+            // ID_OFICINA
+            // 
+            this.ID_OFICINA.DataPropertyName = "ID_OFICINA";
+            this.ID_OFICINA.HeaderText = "ID";
+            this.ID_OFICINA.Name = "ID_OFICINA";
+            this.ID_OFICINA.ReadOnly = true;
+            this.ID_OFICINA.Visible = false;
+            // 
+            // OFICINA
+            // 
+            this.OFICINA.DataPropertyName = "OFICINA";
+            this.OFICINA.HeaderText = "OFICINA";
+            this.OFICINA.Name = "OFICINA";
+            this.OFICINA.ReadOnly = true;
+            this.OFICINA.Width = 200;
+            // 
+            // ID_DEPARTAMENTO
+            // 
+            this.ID_DEPARTAMENTO.DataPropertyName = "ID_DEPARTAMENTO";
+            this.ID_DEPARTAMENTO.HeaderText = "ID";
+            this.ID_DEPARTAMENTO.Name = "ID_DEPARTAMENTO";
+            this.ID_DEPARTAMENTO.ReadOnly = true;
+            this.ID_DEPARTAMENTO.Visible = false;
+            this.ID_DEPARTAMENTO.Width = 50;
+            // 
+            // DEPARTAMENTO
+            // 
+            this.DEPARTAMENTO.DataPropertyName = "DEPARTAMENTO";
+            this.DEPARTAMENTO.HeaderText = "DEPARTAMENTO";
+            this.DEPARTAMENTO.Name = "DEPARTAMENTO";
+            this.DEPARTAMENTO.ReadOnly = true;
+            this.DEPARTAMENTO.Width = 200;
+            // 
+            // ID_PUESTO
+            // 
+            this.ID_PUESTO.DataPropertyName = "ID_PUESTO";
+            this.ID_PUESTO.HeaderText = "ID";
+            this.ID_PUESTO.Name = "ID_PUESTO";
+            this.ID_PUESTO.ReadOnly = true;
+            this.ID_PUESTO.Width = 50;
+            // 
+            // PUESTO
+            // 
+            this.PUESTO.DataPropertyName = "PUESTO";
+            this.PUESTO.HeaderText = "PUESTO";
+            this.PUESTO.Name = "PUESTO";
+            this.PUESTO.ReadOnly = true;
+            this.PUESTO.Width = 240;
+            // 
+            // ESTADO
+            // 
+            this.ESTADO.DataPropertyName = "ESTADO";
+            this.ESTADO.HeaderText = "ESTADO";
+            this.ESTADO.Name = "ESTADO";
+            this.ESTADO.ReadOnly = true;
             // 
             // btn_editar
             // 
@@ -165,7 +222,6 @@
             this.txt_buscar.MaxLength = 32767;
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.PasswordChar = '\0';
-            this.txt_buscar.PromptText = "Ingrese la Descripción o ID a Buscar";
             this.txt_buscar.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_buscar.SelectedText = "";
             this.txt_buscar.SelectionLength = 0;
@@ -178,62 +234,6 @@
             this.txt_buscar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_buscar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txt_buscar.TextChanged += new System.EventHandler(this.txt_buscar_TextChanged);
-            // 
-            // ID_OFICINA
-            // 
-            this.ID_OFICINA.DataPropertyName = "ID_OFICINA";
-            this.ID_OFICINA.HeaderText = "ID";
-            this.ID_OFICINA.Name = "ID_OFICINA";
-            this.ID_OFICINA.ReadOnly = true;
-            this.ID_OFICINA.Visible = false;
-            // 
-            // OFICINA
-            // 
-            this.OFICINA.DataPropertyName = "OFICINA";
-            this.OFICINA.HeaderText = "OFICINA";
-            this.OFICINA.Name = "OFICINA";
-            this.OFICINA.ReadOnly = true;
-            this.OFICINA.Width = 200;
-            // 
-            // ID_DEPARTAMENTO
-            // 
-            this.ID_DEPARTAMENTO.DataPropertyName = "ID_DEPARTAMENTO";
-            this.ID_DEPARTAMENTO.HeaderText = "ID";
-            this.ID_DEPARTAMENTO.Name = "ID_DEPARTAMENTO";
-            this.ID_DEPARTAMENTO.ReadOnly = true;
-            this.ID_DEPARTAMENTO.Visible = false;
-            this.ID_DEPARTAMENTO.Width = 50;
-            // 
-            // DEPARTAMENTO
-            // 
-            this.DEPARTAMENTO.DataPropertyName = "DEPARTAMENTO";
-            this.DEPARTAMENTO.HeaderText = "DEPARTAMENTO";
-            this.DEPARTAMENTO.Name = "DEPARTAMENTO";
-            this.DEPARTAMENTO.ReadOnly = true;
-            this.DEPARTAMENTO.Width = 200;
-            // 
-            // ID_PUESTO
-            // 
-            this.ID_PUESTO.DataPropertyName = "ID_PUESTO";
-            this.ID_PUESTO.HeaderText = "ID";
-            this.ID_PUESTO.Name = "ID_PUESTO";
-            this.ID_PUESTO.ReadOnly = true;
-            this.ID_PUESTO.Width = 50;
-            // 
-            // PUESTO
-            // 
-            this.PUESTO.DataPropertyName = "PUESTO";
-            this.PUESTO.HeaderText = "PUESTO";
-            this.PUESTO.Name = "PUESTO";
-            this.PUESTO.ReadOnly = true;
-            this.PUESTO.Width = 240;
-            // 
-            // ESTADO
-            // 
-            this.ESTADO.DataPropertyName = "ESTADO";
-            this.ESTADO.HeaderText = "ESTADO";
-            this.ESTADO.Name = "ESTADO";
-            this.ESTADO.ReadOnly = true;
             // 
             // FRM_MANT_PUESTOS
             // 
