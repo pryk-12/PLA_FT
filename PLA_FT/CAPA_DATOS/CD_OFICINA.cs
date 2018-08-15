@@ -34,6 +34,9 @@ namespace CAPA_DATOS
             da.InsertCommand.Parameters.AddWithValue("@DIRECCION", obj.DIRECCION);
             da.InsertCommand.Parameters.AddWithValue("@TELEFONO", obj.TELEFONO);
             da.InsertCommand.Parameters.AddWithValue("@ESTADO", obj.ESTADO == "ACTIVO" ? "A" : "I");
+            da.InsertCommand.Parameters.AddWithValue("@VALORACION", obj.VALORACION);
+            da.InsertCommand.Parameters.AddWithValue("@NIVEL_RIESGO", obj.NIVEL_RIESGO);
+
             cn.Open();
             da.InsertCommand.ExecuteNonQuery();
             cn.Close();
@@ -50,6 +53,8 @@ namespace CAPA_DATOS
             da.UpdateCommand.Parameters.AddWithValue("@DIRECCION", obj.DIRECCION);
             da.UpdateCommand.Parameters.AddWithValue("@TELEFONO", obj.TELEFONO);
             da.UpdateCommand.Parameters.AddWithValue("@ESTADO", obj.ESTADO == "ACTIVO" ? "A" : "I");
+            da.UpdateCommand.Parameters.AddWithValue("@VALORACION", obj.VALORACION);
+            da.UpdateCommand.Parameters.AddWithValue("@NIVEL_RIESGO", obj.NIVEL_RIESGO);
             cn.Open();
             da.UpdateCommand.ExecuteNonQuery();
             cn.Close();

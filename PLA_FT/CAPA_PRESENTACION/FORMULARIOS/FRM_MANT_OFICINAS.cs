@@ -33,6 +33,8 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             CE.DIRECCION = DG.Rows[DG.CurrentRow.Index].Cells["DIRECCION"].Value.ToString();
             CE.TELEFONO = DG.Rows[DG.CurrentRow.Index].Cells["TELEFONO"].Value.ToString();
             CE.ESTADO = DG.Rows[DG.CurrentRow.Index].Cells["ESTADO"].Value.ToString();
+            CE.NIVEL_RIESGO = DG.Rows[DG.CurrentRow.Index].Cells["NIVEL_RIESGO"].Value.ToString();
+            CE.VALORACION = Convert.ToDouble(DG.Rows[DG.CurrentRow.Index].Cells["VALORACION"].Value.ToString());
             FRM.RECIBIR_DATOS(CE);
             FRM.ShowDialog();
         }

@@ -55,6 +55,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -73,11 +74,41 @@
     <Compile Include="FORMULARIOS\FRM_CAMBIAR_CLAVE.Designer.cs">
       <DependentUpon>FRM_CAMBIAR_CLAVE.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMULARIOS\FRM_CANAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_CANAL.Designer.cs">
+      <DependentUpon>FRM_CANAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_CANTIDAD_EFECTIVO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_CANTIDAD_EFECTIVO.Designer.cs">
+      <DependentUpon>FRM_CANTIDAD_EFECTIVO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_CLIENTE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_CLIENTE.Designer.cs">
+      <DependentUpon>FRM_CLIENTE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_CONSULTAR_CLIENTES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_CONSULTAR_CLIENTES.Designer.cs">
+      <DependentUpon>FRM_CONSULTAR_CLIENTES.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMULARIOS\FRM_DEPARTAMENTO.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMULARIOS\FRM_DEPARTAMENTO.Designer.cs">
       <DependentUpon>FRM_DEPARTAMENTO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_EVALUACION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_EVALUACION.Designer.cs">
+      <DependentUpon>FRM_EVALUACION.cs</DependentUpon>
     </Compile>
     <Compile Include="FORMULARIOS\FRM_LOGIN.cs">
       <SubType>Form</SubType>
@@ -91,11 +122,35 @@
     <Compile Include="FORMULARIOS\FRM_MANT_ACTIVIDADES_ECONOMICAS.Designer.cs">
       <DependentUpon>FRM_MANT_ACTIVIDADES_ECONOMICAS.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_CANALES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_CANALES.Designer.cs">
+      <DependentUpon>FRM_MANT_CANALES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_CANTIDADES_EFECTIVO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_CANTIDADES_EFECTIVO.Designer.cs">
+      <DependentUpon>FRM_MANT_CANTIDADES_EFECTIVO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_CLIENTES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_CLIENTES.Designer.cs">
+      <DependentUpon>FRM_MANT_CLIENTES.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMULARIOS\FRM_MANT_DEPARTAMENTOS.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMULARIOS\FRM_MANT_DEPARTAMENTOS.Designer.cs">
       <DependentUpon>FRM_MANT_DEPARTAMENTOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_EVALUACIONES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_EVALUACIONES.Designer.cs">
+      <DependentUpon>FRM_MANT_EVALUACIONES.cs</DependentUpon>
     </Compile>
     <Compile Include="FORMULARIOS\FRM_MANT_OFICINAS.cs">
       <SubType>Form</SubType>
@@ -103,11 +158,23 @@
     <Compile Include="FORMULARIOS\FRM_MANT_OFICINAS.Designer.cs">
       <DependentUpon>FRM_MANT_OFICINAS.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_PAISES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_PAISES.Designer.cs">
+      <DependentUpon>FRM_MANT_PAISES.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMULARIOS\FRM_MANT_PRODUCTOS.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMULARIOS\FRM_MANT_PRODUCTOS.Designer.cs">
       <DependentUpon>FRM_MANT_PRODUCTOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_PROVINCIAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_PROVINCIAS.Designer.cs">
+      <DependentUpon>FRM_MANT_PROVINCIAS.cs</DependentUpon>
     </Compile>
     <Compile Include="FORMULARIOS\FRM_MANT_PUESTOS.cs">
       <SubType>Form</SubType>
@@ -127,6 +194,12 @@
     <Compile Include="FORMULARIOS\FRM_OFICINAS.Designer.cs">
       <DependentUpon>FRM_OFICINAS.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMULARIOS\FRM_PAIS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_PAIS.Designer.cs">
+      <DependentUpon>FRM_PAIS.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMULARIOS\FRM_PLANTILLA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +217,12 @@
     </Compile>
     <Compile Include="FORMULARIOS\FRM_PRODUCTO.Designer.cs">
       <DependentUpon>FRM_PRODUCTO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_PROVINCIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_PROVINCIA.Designer.cs">
+      <DependentUpon>FRM_PROVINCIA.cs</DependentUpon>
     </Compile>
     <Compile Include="FORMULARIOS\FRM_PUESTO.cs">
       <SubType>Form</SubType>
@@ -175,8 +254,23 @@
     <EmbeddedResource Include="FORMULARIOS\FRM_CAMBIAR_CLAVE.resx">
       <DependentUpon>FRM_CAMBIAR_CLAVE.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_CANAL.resx">
+      <DependentUpon>FRM_CANAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_CANTIDAD_EFECTIVO.resx">
+      <DependentUpon>FRM_CANTIDAD_EFECTIVO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_CLIENTE.resx">
+      <DependentUpon>FRM_CLIENTE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_CONSULTAR_CLIENTES.resx">
+      <DependentUpon>FRM_CONSULTAR_CLIENTES.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_DEPARTAMENTO.resx">
       <DependentUpon>FRM_DEPARTAMENTO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_EVALUACION.resx">
+      <DependentUpon>FRM_EVALUACION.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_LOGIN.resx">
       <DependentUpon>FRM_LOGIN.cs</DependentUpon>
@@ -184,14 +278,32 @@
     <EmbeddedResource Include="FORMULARIOS\FRM_MANT_ACTIVIDADES_ECONOMICAS.resx">
       <DependentUpon>FRM_MANT_ACTIVIDADES_ECONOMICAS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_MANT_CANALES.resx">
+      <DependentUpon>FRM_MANT_CANALES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_MANT_CANTIDADES_EFECTIVO.resx">
+      <DependentUpon>FRM_MANT_CANTIDADES_EFECTIVO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_MANT_CLIENTES.resx">
+      <DependentUpon>FRM_MANT_CLIENTES.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_MANT_DEPARTAMENTOS.resx">
       <DependentUpon>FRM_MANT_DEPARTAMENTOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_MANT_EVALUACIONES.resx">
+      <DependentUpon>FRM_MANT_EVALUACIONES.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_MANT_OFICINAS.resx">
       <DependentUpon>FRM_MANT_OFICINAS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_MANT_PAISES.resx">
+      <DependentUpon>FRM_MANT_PAISES.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_MANT_PRODUCTOS.resx">
       <DependentUpon>FRM_MANT_PRODUCTOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_MANT_PROVINCIAS.resx">
+      <DependentUpon>FRM_MANT_PROVINCIAS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_MANT_PUESTOS.resx">
       <DependentUpon>FRM_MANT_PUESTOS.cs</DependentUpon>
@@ -202,6 +314,9 @@
     <EmbeddedResource Include="FORMULARIOS\FRM_OFICINAS.resx">
       <DependentUpon>FRM_OFICINAS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_PAIS.resx">
+      <DependentUpon>FRM_PAIS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_PLANTILLA.resx">
       <DependentUpon>FRM_PLANTILLA.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_PRODUCTO.resx">
       <DependentUpon>FRM_PRODUCTO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_PROVINCIA.resx">
+      <DependentUpon>FRM_PROVINCIA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_PUESTO.resx">
       <DependentUpon>FRM_PUESTO.cs</DependentUpon>

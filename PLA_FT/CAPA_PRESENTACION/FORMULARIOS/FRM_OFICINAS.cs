@@ -22,6 +22,8 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             txt_id.Text = CE.ID_OFICINA.ToString();
             txt_telefono.Text = CE.TELEFONO;
             cb_estado.Text = CE.ESTADO;
+            txt_valoracion.Text = CE.VALORACION.ToString();
+            cb_nivel_riesgo.Text = CE.NIVEL_RIESGO;
         }
 
         public void INSERTAR_ACTUALIZAR()
@@ -31,6 +33,8 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             CE.DIRECCION = txt_direccion.Text.Trim();
             CE.ESTADO = cb_estado.Text;
             CE.TELEFONO = txt_telefono.Text;
+            CE.VALORACION = txt_valoracion.Text.Length == 0 ? 0 : Convert.ToDouble(txt_valoracion.Text);
+            CE.NIVEL_RIESGO = cb_nivel_riesgo.Text;
             try
             {
                 if (txt_id.Text.Equals(""))
@@ -104,6 +108,12 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                     txt_telefono.Focus();
                     return;
                 }
+            }
+            if (cb_nivel_riesgo.Text.Equals(""))
+            {
+                CP_UTILIDADES.MENSAJE_INFORMACION("El Nivel de Riesgo es Obligatorio", this);
+                cb_nivel_riesgo.Focus();
+                return;
             }
             if (cb_estado.Text.Equals(""))
             {

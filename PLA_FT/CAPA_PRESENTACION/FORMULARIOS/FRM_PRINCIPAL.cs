@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CAPA_PRESENTACION.FORMULARIOS
@@ -30,21 +24,12 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 }
             }
 
-            lbl_usuario.Text = CP_UTILIDADES.DATOS_USUARIO.USUARIO;
-
-            OCULTAR_BARRAS(false);
-        }
-
-        public void OCULTAR_BARRAS(bool opcion)
-        {
-            pn_mantenimientos.Visible = opcion;
-            pn_configuraciones.Visible = opcion;
+            btn_usuario.Text ="  "+ CP_UTILIDADES.DATOS_USUARIO.USUARIO;
         }
 
         private void btn_mantenimiento_Click(object sender, EventArgs e)
         {
-            OCULTAR_BARRAS(false);
-            pn_mantenimientos.Visible = true;
+            this.mn_mantenimientos.Show(btn_mantenimiento, 5, btn_mantenimiento.Height);
         }
 
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
@@ -65,7 +50,12 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             FRM.ShowDialog();
         }
 
-        private void btn_mant_oficina_Click(object sender, EventArgs e)
+        private void btn_configuraciones_Click(object sender, EventArgs e)
+        {
+            this.mn_configuraciones.Show(btn_configuraciones, 5, btn_configuraciones.Height);
+        }
+
+        private void mn_mant_oficina_Click(object sender, EventArgs e)
         {
             Form FRM_MANT_OFICINAS = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "FRM_MANT_OFICINAS").SingleOrDefault();
             if (FRM_MANT_OFICINAS == null)
@@ -73,10 +63,21 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 FRM_MANT_OFICINAS frm = new FRM_MANT_OFICINAS();
                 frm.MdiParent = this;
                 frm.Show();
-            }    
+            }   
         }
 
-        private void btn_mant_departamento_Click(object sender, EventArgs e)
+        private void mn_conf_oficina_Click(object sender, EventArgs e)
+        {
+            Form FRM_MANT_OFICINAS = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "FRM_MANT_OFICINAS").SingleOrDefault();
+            if (FRM_MANT_OFICINAS == null)
+            {
+                FRM_MANT_OFICINAS frm = new FRM_MANT_OFICINAS();
+                frm.MdiParent = this;
+                frm.Show();
+            }   
+        }
+
+        private void mn_mant_departamento_Click(object sender, EventArgs e)
         {
             Form FRM_MANT_DEPARTAMENTOS = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "FRM_MANT_DEPARTAMENTOS").SingleOrDefault();
             if (FRM_MANT_DEPARTAMENTOS == null)
@@ -87,17 +88,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             }   
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.metroContextMenu1.Show(pictureBox1, 0, pictureBox1.Height);
-        }
-
-        private void btn_procesos_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btn_mant_puesto_Click(object sender, EventArgs e)
+        private void mn_mant_puesto_Click(object sender, EventArgs e)
         {
             Form FRM_MANT_PUESTOS = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "FRM_MANT_PUESTOS").SingleOrDefault();
             if (FRM_MANT_PUESTOS == null)
@@ -108,7 +99,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             }   
         }
 
-        private void btn_mant_usuario_Click(object sender, EventArgs e)
+        private void mn_mant_usuario_Click(object sender, EventArgs e)
         {
             Form FRM_MANT_USUARIOS = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "FRM_MANT_USUARIOS").SingleOrDefault();
             if (FRM_MANT_USUARIOS == null)
@@ -119,8 +110,9 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             }   
         }
 
-        private void btn_conf_actividades_economicas_Click(object sender, EventArgs e)
+        private void mn_conf_actividad_economica_Click(object sender, EventArgs e)
         {
+
             Form FRM_MANT_ACTIVIDADES_ECONOMICAS = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "FRM_MANT_ACTIVIDADES_ECONOMICAS").SingleOrDefault();
             if (FRM_MANT_ACTIVIDADES_ECONOMICAS == null)
             {
@@ -130,13 +122,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             }   
         }
 
-        private void btn_configuraciones_Click(object sender, EventArgs e)
-        {
-            OCULTAR_BARRAS(false);
-            pn_configuraciones.Visible = true;
-        }
-
-        private void btn_conf_productos_Click(object sender, EventArgs e)
+        private void mn_conf_producto_Click(object sender, EventArgs e)
         {
             Form FRM_MANT_PRODUCTOS = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "FRM_MANT_PRODUCTOS").SingleOrDefault();
             if (FRM_MANT_PRODUCTOS == null)
@@ -147,6 +133,82 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             }   
         }
 
+        private void mn_conf_canal_Click(object sender, EventArgs e)
+        {
+            Form FRM_MANT_CANALES = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "FRM_MANT_CANALES").SingleOrDefault();
+            if (FRM_MANT_CANALES == null)
+            {
+                FRM_MANT_CANALES frm = new FRM_MANT_CANALES();
+                frm.MdiParent = this;
+                frm.Show();
+            }   
+        }
 
+        private void mn_conf_pais_Click(object sender, EventArgs e)
+        {
+            Form FRM_MANT_PAISES = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "FRM_MANT_PAISES").SingleOrDefault();
+            if (FRM_MANT_PAISES == null)
+            {
+                FRM_MANT_PAISES frm = new FRM_MANT_PAISES();
+                frm.MdiParent = this;
+                frm.Show();
+            }   
+        }
+
+        private void mn_conf_provincia_Click(object sender, EventArgs e)
+        {
+            Form FRM_MANT_PROVINCIAS = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "FRM_MANT_PROVINCIAS").SingleOrDefault();
+            if (FRM_MANT_PROVINCIAS == null)
+            {
+                FRM_MANT_PROVINCIAS frm = new FRM_MANT_PROVINCIAS();
+                frm.MdiParent = this;
+                frm.Show();
+            }   
+        }
+
+        private void btn_usuario_Click(object sender, EventArgs e)
+        {
+            this.metroContextMenu1.Show(btn_usuario, 5, btn_usuario.Height);
+        }
+
+        private void mn_conf_cantidad_efectivo_Click(object sender, EventArgs e)
+        {
+            Form FRM_MANT_CANTIDADES_EFECTIVO = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "FRM_MANT_CANTIDADES_EFECTIVO").SingleOrDefault();
+            if (FRM_MANT_CANTIDADES_EFECTIVO == null)
+            {
+                FRM_MANT_CANTIDADES_EFECTIVO frm = new FRM_MANT_CANTIDADES_EFECTIVO();
+                frm.MdiParent = this;
+                frm.Show();
+            }   
+        }
+
+        private void mn_mant_clientes_Click(object sender, EventArgs e)
+        {
+            Form FRM_MANT_CLIENTES = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "FRM_MANT_CLIENTES").SingleOrDefault();
+            if (FRM_MANT_CLIENTES == null)
+            {
+                FRM_MANT_CLIENTES frm = new FRM_MANT_CLIENTES();
+                frm.MdiParent = this;
+                frm.Show();
+            }   
+        }
+
+        private void btn_procesos_Click(object sender, EventArgs e)
+        {
+            this.mn_procesos.Show(btn_procesos, 5, btn_procesos.Height);
+        }
+
+        private void mn_proc_evaluaciones_Click(object sender, EventArgs e)
+        {
+            Form FRM_MANT_EVALUACIONES = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "FRM_MANT_EVALUACIONES").SingleOrDefault();
+            if (FRM_MANT_EVALUACIONES == null)
+            {
+                FRM_MANT_EVALUACIONES frm = new FRM_MANT_EVALUACIONES();
+                frm.MdiParent = this;
+                frm.Show();
+            }   
+        }
+
+       
     }
 }

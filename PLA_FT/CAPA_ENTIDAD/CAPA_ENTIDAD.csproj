@@ -41,10 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CE_CANAL.cs" />
     <Compile Include="CE_ACTIVIDAD_ECONOMICA.cs" />
+    <Compile Include="CE_CANTIDAD_EFECTIVO.cs" />
+    <Compile Include="CE_CLIENTE.cs" />
     <Compile Include="CE_DEPARTAMENTO.cs" />
     <Compile Include="CE_OFICINA.cs" />
+    <Compile Include="CE_PAIS.cs" />
     <Compile Include="CE_PRODUCTO.cs" />
+    <Compile Include="CE_PROVINCIA.cs" />
     <Compile Include="CE_PUESTO.cs" />
     <Compile Include="CE_USUARIO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

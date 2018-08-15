@@ -32,15 +32,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_MANT_OFICINAS));
             this.DG = new System.Windows.Forms.DataGridView();
+            this.btn_editar = new System.Windows.Forms.Button();
+            this.lbl_total = new MetroFramework.Controls.MetroLabel();
+            this.btn_agregar = new System.Windows.Forms.Button();
+            this.txt_buscar = new MetroFramework.Controls.MetroTextBox();
             this.ID_OFICINA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TELEFONO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_editar = new System.Windows.Forms.Button();
-            this.lbl_total = new MetroFramework.Controls.MetroLabel();
-            this.btn_agregar = new System.Windows.Forms.Button();
-            this.txt_buscar = new MetroFramework.Controls.MetroTextBox();
+            this.VALORACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NIVEL_RIESGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +67,9 @@
             this.DESCRIPCION,
             this.DIRECCION,
             this.TELEFONO,
-            this.ESTADO});
+            this.ESTADO,
+            this.VALORACION,
+            this.NIVEL_RIESGO});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -85,44 +89,6 @@
             this.DG.Size = new System.Drawing.Size(659, 276);
             this.DG.TabIndex = 6;
             this.DG.DoubleClick += new System.EventHandler(this.DG_DoubleClick);
-            // 
-            // ID_OFICINA
-            // 
-            this.ID_OFICINA.DataPropertyName = "ID_OFICINA";
-            this.ID_OFICINA.HeaderText = "ID";
-            this.ID_OFICINA.Name = "ID_OFICINA";
-            this.ID_OFICINA.ReadOnly = true;
-            this.ID_OFICINA.Width = 50;
-            // 
-            // DESCRIPCION
-            // 
-            this.DESCRIPCION.DataPropertyName = "DESCRIPCION";
-            this.DESCRIPCION.HeaderText = "DESCRIPCION";
-            this.DESCRIPCION.Name = "DESCRIPCION";
-            this.DESCRIPCION.ReadOnly = true;
-            this.DESCRIPCION.Width = 400;
-            // 
-            // DIRECCION
-            // 
-            this.DIRECCION.DataPropertyName = "DIRECCION";
-            this.DIRECCION.HeaderText = "DIRECCION";
-            this.DIRECCION.Name = "DIRECCION";
-            this.DIRECCION.ReadOnly = true;
-            this.DIRECCION.Visible = false;
-            // 
-            // TELEFONO
-            // 
-            this.TELEFONO.DataPropertyName = "TELEFONO";
-            this.TELEFONO.HeaderText = "TELEFONO";
-            this.TELEFONO.Name = "TELEFONO";
-            this.TELEFONO.ReadOnly = true;
-            // 
-            // ESTADO
-            // 
-            this.ESTADO.DataPropertyName = "ESTADO";
-            this.ESTADO.HeaderText = "ESTADO";
-            this.ESTADO.Name = "ESTADO";
-            this.ESTADO.ReadOnly = true;
             // 
             // btn_editar
             // 
@@ -194,6 +160,7 @@
             this.txt_buscar.MaxLength = 32767;
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.PasswordChar = '\0';
+            this.txt_buscar.PromptText = "Ingrese la Descripción o ID a Buscar";
             this.txt_buscar.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_buscar.SelectedText = "";
             this.txt_buscar.SelectionLength = 0;
@@ -206,6 +173,60 @@
             this.txt_buscar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_buscar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txt_buscar.TextChanged += new System.EventHandler(this.txt_buscar_TextChanged);
+            // 
+            // ID_OFICINA
+            // 
+            this.ID_OFICINA.DataPropertyName = "ID_OFICINA";
+            this.ID_OFICINA.HeaderText = "ID";
+            this.ID_OFICINA.Name = "ID_OFICINA";
+            this.ID_OFICINA.ReadOnly = true;
+            this.ID_OFICINA.Width = 50;
+            // 
+            // DESCRIPCION
+            // 
+            this.DESCRIPCION.DataPropertyName = "DESCRIPCION";
+            this.DESCRIPCION.HeaderText = "DESCRIPCION";
+            this.DESCRIPCION.Name = "DESCRIPCION";
+            this.DESCRIPCION.ReadOnly = true;
+            this.DESCRIPCION.Width = 400;
+            // 
+            // DIRECCION
+            // 
+            this.DIRECCION.DataPropertyName = "DIRECCION";
+            this.DIRECCION.HeaderText = "DIRECCION";
+            this.DIRECCION.Name = "DIRECCION";
+            this.DIRECCION.ReadOnly = true;
+            this.DIRECCION.Visible = false;
+            // 
+            // TELEFONO
+            // 
+            this.TELEFONO.DataPropertyName = "TELEFONO";
+            this.TELEFONO.HeaderText = "TELEFONO";
+            this.TELEFONO.Name = "TELEFONO";
+            this.TELEFONO.ReadOnly = true;
+            // 
+            // ESTADO
+            // 
+            this.ESTADO.DataPropertyName = "ESTADO";
+            this.ESTADO.HeaderText = "ESTADO";
+            this.ESTADO.Name = "ESTADO";
+            this.ESTADO.ReadOnly = true;
+            // 
+            // VALORACION
+            // 
+            this.VALORACION.DataPropertyName = "VALORACION";
+            this.VALORACION.HeaderText = "VALORACION";
+            this.VALORACION.Name = "VALORACION";
+            this.VALORACION.ReadOnly = true;
+            this.VALORACION.Visible = false;
+            // 
+            // NIVEL_RIESGO
+            // 
+            this.NIVEL_RIESGO.DataPropertyName = "NIVEL_RIESGO";
+            this.NIVEL_RIESGO.HeaderText = "NIVE_RIESGO";
+            this.NIVEL_RIESGO.Name = "NIVEL_RIESGO";
+            this.NIVEL_RIESGO.ReadOnly = true;
+            this.NIVEL_RIESGO.Visible = false;
             // 
             // FRM_MANT_OFICINAS
             // 
@@ -238,5 +259,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;
         private System.Windows.Forms.DataGridViewTextBoxColumn TELEFONO;
         private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VALORACION;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NIVEL_RIESGO;
     }
 }

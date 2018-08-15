@@ -1,12 +1,6 @@
 ﻿using CAPA_ENTIDAD;
 using CAPA_NEGOCIOS;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
 
 namespace CAPA_PRESENTACION.FORMULARIOS
 {
