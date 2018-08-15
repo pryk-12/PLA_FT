@@ -63,7 +63,7 @@
             this.btn_agregar.ForeColor = System.Drawing.Color.White;
             this.btn_agregar.Image = ((System.Drawing.Image)(resources.GetObject("btn_agregar.Image")));
             this.btn_agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_agregar.Location = new System.Drawing.Point(12, 261);
+            this.btn_agregar.Location = new System.Drawing.Point(19, 332);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(101, 43);
             this.btn_agregar.TabIndex = 12;
@@ -97,9 +97,9 @@
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(12, 69);
+            this.metroPanel1.Location = new System.Drawing.Point(19, 57);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(468, 186);
+            this.metroPanel1.Size = new System.Drawing.Size(372, 272);
             this.metroPanel1.TabIndex = 11;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -110,7 +110,7 @@
             this.metroLabel8.AutoSize = true;
             this.metroLabel8.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel8.Location = new System.Drawing.Point(65, 149);
+            this.metroLabel8.Location = new System.Drawing.Point(15, 218);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(35, 15);
             this.metroLabel8.TabIndex = 21;
@@ -125,9 +125,9 @@
             "",
             "MASCULINO",
             "FEMENINO"});
-            this.cb_sexo.Location = new System.Drawing.Point(102, 146);
+            this.cb_sexo.Location = new System.Drawing.Point(15, 234);
             this.cb_sexo.Name = "cb_sexo";
-            this.cb_sexo.Size = new System.Drawing.Size(121, 23);
+            this.cb_sexo.Size = new System.Drawing.Size(155, 23);
             this.cb_sexo.TabIndex = 6;
             // 
             // metroLabel7
@@ -135,7 +135,7 @@
             this.metroLabel7.AutoSize = true;
             this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel7.Location = new System.Drawing.Point(251, 125);
+            this.metroLabel7.Location = new System.Drawing.Point(189, 176);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(37, 15);
             this.metroLabel7.TabIndex = 19;
@@ -148,7 +148,7 @@
             // 
             // 
             this.txt_clave.CustomButton.Image = null;
-            this.txt_clave.CustomButton.Location = new System.Drawing.Point(130, 1);
+            this.txt_clave.CustomButton.Location = new System.Drawing.Point(143, 1);
             this.txt_clave.CustomButton.Name = "";
             this.txt_clave.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_clave.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -157,7 +157,7 @@
             this.txt_clave.CustomButton.UseSelectable = true;
             this.txt_clave.CustomButton.Visible = false;
             this.txt_clave.Lines = new string[0];
-            this.txt_clave.Location = new System.Drawing.Point(290, 120);
+            this.txt_clave.Location = new System.Drawing.Point(189, 192);
             this.txt_clave.MaxLength = 100;
             this.txt_clave.Name = "txt_clave";
             this.txt_clave.PasswordChar = '●';
@@ -166,7 +166,7 @@
             this.txt_clave.SelectionLength = 0;
             this.txt_clave.SelectionStart = 0;
             this.txt_clave.ShortcutsEnabled = true;
-            this.txt_clave.Size = new System.Drawing.Size(152, 23);
+            this.txt_clave.Size = new System.Drawing.Size(165, 23);
             this.txt_clave.TabIndex = 5;
             this.txt_clave.UseSelectable = true;
             this.txt_clave.UseSystemPasswordChar = true;
@@ -178,7 +178,7 @@
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel6.Location = new System.Drawing.Point(51, 125);
+            this.metroLabel6.Location = new System.Drawing.Point(15, 176);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(49, 15);
             this.metroLabel6.TabIndex = 17;
@@ -191,7 +191,7 @@
             // 
             // 
             this.txt_usuario.CustomButton.Image = null;
-            this.txt_usuario.CustomButton.Location = new System.Drawing.Point(99, 1);
+            this.txt_usuario.CustomButton.Location = new System.Drawing.Point(133, 1);
             this.txt_usuario.CustomButton.Name = "";
             this.txt_usuario.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_usuario.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -200,7 +200,7 @@
             this.txt_usuario.CustomButton.UseSelectable = true;
             this.txt_usuario.CustomButton.Visible = false;
             this.txt_usuario.Lines = new string[0];
-            this.txt_usuario.Location = new System.Drawing.Point(102, 120);
+            this.txt_usuario.Location = new System.Drawing.Point(15, 192);
             this.txt_usuario.MaxLength = 100;
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.PasswordChar = '\0';
@@ -209,7 +209,7 @@
             this.txt_usuario.SelectionLength = 0;
             this.txt_usuario.SelectionStart = 0;
             this.txt_usuario.ShortcutsEnabled = true;
-            this.txt_usuario.Size = new System.Drawing.Size(121, 23);
+            this.txt_usuario.Size = new System.Drawing.Size(155, 23);
             this.txt_usuario.TabIndex = 4;
             this.txt_usuario.UseSelectable = true;
             this.txt_usuario.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -220,7 +220,7 @@
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel5.Location = new System.Drawing.Point(48, 99);
+            this.metroLabel5.Location = new System.Drawing.Point(15, 134);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(53, 15);
             this.metroLabel5.TabIndex = 15;
@@ -231,7 +231,7 @@
             this.cb_puesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_puesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_puesto.FormattingEnabled = true;
-            this.cb_puesto.Location = new System.Drawing.Point(102, 68);
+            this.cb_puesto.Location = new System.Drawing.Point(15, 108);
             this.cb_puesto.Name = "cb_puesto";
             this.cb_puesto.Size = new System.Drawing.Size(339, 23);
             this.cb_puesto.TabIndex = 2;
@@ -241,7 +241,7 @@
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel3.Location = new System.Drawing.Point(12, 45);
+            this.metroLabel3.Location = new System.Drawing.Point(15, 50);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(89, 15);
             this.metroLabel3.TabIndex = 13;
@@ -252,7 +252,7 @@
             this.cb_departamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_departamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_departamento.FormattingEnabled = true;
-            this.cb_departamento.Location = new System.Drawing.Point(102, 42);
+            this.cb_departamento.Location = new System.Drawing.Point(15, 66);
             this.cb_departamento.Name = "cb_departamento";
             this.cb_departamento.Size = new System.Drawing.Size(339, 23);
             this.cb_departamento.TabIndex = 1;
@@ -263,7 +263,7 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.Location = new System.Drawing.Point(55, 19);
+            this.metroLabel2.Location = new System.Drawing.Point(15, 8);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(46, 15);
             this.metroLabel2.TabIndex = 11;
@@ -274,7 +274,7 @@
             this.cb_oficina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_oficina.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_oficina.FormattingEnabled = true;
-            this.cb_oficina.Location = new System.Drawing.Point(102, 16);
+            this.cb_oficina.Location = new System.Drawing.Point(15, 24);
             this.cb_oficina.Name = "cb_oficina";
             this.cb_oficina.Size = new System.Drawing.Size(339, 23);
             this.cb_oficina.TabIndex = 0;
@@ -285,7 +285,7 @@
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel4.Location = new System.Drawing.Point(245, 149);
+            this.metroLabel4.Location = new System.Drawing.Point(189, 218);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(43, 15);
             this.metroLabel4.TabIndex = 9;
@@ -300,9 +300,9 @@
             "",
             "ACTIVO",
             "INACTIVO"});
-            this.cb_estado.Location = new System.Drawing.Point(290, 146);
+            this.cb_estado.Location = new System.Drawing.Point(189, 234);
             this.cb_estado.Name = "cb_estado";
-            this.cb_estado.Size = new System.Drawing.Size(151, 23);
+            this.cb_estado.Size = new System.Drawing.Size(165, 23);
             this.cb_estado.TabIndex = 7;
             // 
             // metroLabel1
@@ -310,7 +310,7 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(56, 71);
+            this.metroLabel1.Location = new System.Drawing.Point(15, 92);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(45, 15);
             this.metroLabel1.TabIndex = 3;
@@ -323,7 +323,7 @@
             // 
             // 
             this.txt_nombre.CustomButton.Image = null;
-            this.txt_nombre.CustomButton.Location = new System.Drawing.Point(318, 1);
+            this.txt_nombre.CustomButton.Location = new System.Drawing.Point(317, 1);
             this.txt_nombre.CustomButton.Name = "";
             this.txt_nombre.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_nombre.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -332,7 +332,7 @@
             this.txt_nombre.CustomButton.UseSelectable = true;
             this.txt_nombre.CustomButton.Visible = false;
             this.txt_nombre.Lines = new string[0];
-            this.txt_nombre.Location = new System.Drawing.Point(102, 94);
+            this.txt_nombre.Location = new System.Drawing.Point(15, 150);
             this.txt_nombre.MaxLength = 100;
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.PasswordChar = '\0';
@@ -341,7 +341,7 @@
             this.txt_nombre.SelectionLength = 0;
             this.txt_nombre.SelectionStart = 0;
             this.txt_nombre.ShortcutsEnabled = true;
-            this.txt_nombre.Size = new System.Drawing.Size(340, 23);
+            this.txt_nombre.Size = new System.Drawing.Size(339, 23);
             this.txt_nombre.TabIndex = 3;
             this.txt_nombre.UseSelectable = true;
             this.txt_nombre.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -364,7 +364,7 @@
             this.txt_id.CustomButton.UseSelectable = true;
             this.txt_id.CustomButton.Visible = false;
             this.txt_id.Lines = new string[0];
-            this.txt_id.Location = new System.Drawing.Point(416, 42);
+            this.txt_id.Location = new System.Drawing.Point(335, 33);
             this.txt_id.MaxLength = 100;
             this.txt_id.Name = "txt_id";
             this.txt_id.PasswordChar = '\0';
@@ -383,7 +383,7 @@
             // FRM_USUARIO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(494, 316);
+            this.ClientSize = new System.Drawing.Size(413, 396);
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.txt_id);
