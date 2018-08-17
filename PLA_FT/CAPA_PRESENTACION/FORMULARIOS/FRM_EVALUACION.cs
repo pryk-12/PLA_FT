@@ -1,4 +1,5 @@
 ﻿using CAPA_NEGOCIOS;
+using CAPA_ENTIDAD;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -265,9 +266,124 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             }
         }
 
+        public void INSERTAR_ACTUALIZAR()
+        {
+            //CE_EVALUACION CE = new CE_EVALUACION();
+            //CE.FECHA = DateTime.Now;
+            //CE.ID_ACTIVIDAD = Convert.ToInt32(cb_actividad_economica.SelectedValue);
+            //CE.ID_CANTIDAD = Convert.ToInt32(cb_cantidades_efectivo.SelectedValue);
+            //CE.ID_CLIENTE = Convert.ToInt32(txt_id_cliente.Text);
+            //CE.ID_NACIONALIDAD = Convert.ToInt32(cb_nacionalidades.SelectedValue);
+            //CE.ID_PAIS = Convert.ToInt32(cb_paises.SelectedValue);
+            //CE.ID_PROVINCIA = Convert.ToInt32(cb_provincias.SelectedValue);
+            //CE.VALOR_ACTIVIDAD = txt_actividad_economica.Text.Length == 0 ? 0 : Convert.ToDecimal(txt_actividad_economica.Text);
+            //CE.VALOR_CANAL = txt_canales.Text.Length == 0 ? 0 : Convert.ToDecimal(txt_canales.Text);
+            //CE.VALOR_CANTIDAD = txt_cantidad_efectivo.Text.Length == 0 ? 0 : Convert.ToDecimal(txt_cantidad_efectivo.Text);
+            //CE.VALOR_NACIONALIDAD = txt_nacionalidad.Text.Length == 0 ? 0 : Convert.ToDecimal(txt_nacionalidad.Text);
+            //CE.VALOR_PAIS = txt_pais.Text.Length == 0 ? 0 : Convert.ToDecimal(txt_pais.Text);
+            //CE.VALOR_PRODUCTO = txt_producto.Text.Length == 0 ? 0 : Convert.ToDecimal(txt_producto.Text);
+            //CE.VALOR_PROVINCIA = txt_provincia.Text.Length == 0 ? 0 : Convert.ToDecimal(txt_provincia.Text);
+            //CE.VALOR_TOTAL = txt_total.Text.Length == 0 ? 0 : Convert.ToDecimal(txt_total.Text);
+
+            //if (CE.VALOR_TOTAL <= 10)
+            //{
+            //    CE.ID_RECOMENDACION = Convert.ToInt32(CN_RECOMENDACION.CONSULTAR("CONDICION ='<=10'").Rows[0]["ID_RECOMENDACION"].ToString());
+            //}
+            //else if (CE.VALOR_TOTAL > 10 && CE.VALOR_TOTAL <= 20)
+            //{
+            //    CE.ID_RECOMENDACION = Convert.ToInt32(CN_RECOMENDACION.CONSULTAR("CONDICION ='>10 Y <=20'").Rows[0]["ID_RECOMENDACION"].ToString());
+            //}
+            //else if (CE.VALOR_TOTAL > 20 && CE.VALOR_TOTAL <= 30)
+            //{
+            //    CE.ID_RECOMENDACION = Convert.ToInt32(CN_RECOMENDACION.CONSULTAR("CONDICION ='> 20 Y <=30'").Rows[0]["ID_RECOMENDACION"].ToString());
+            //}
+            //else if (CE.VALOR_TOTAL > 30 && CE.VALOR_TOTAL <= 40)
+            //{
+            //    CE.ID_RECOMENDACION = Convert.ToInt32(CN_RECOMENDACION.CONSULTAR("CONDICION ='>30 Y <=40'").Rows[0]["ID_RECOMENDACION"].ToString());
+            //}
+            //else if (CE.VALOR_TOTAL > 40 && CE.VALOR_TOTAL <= 50)
+            //{
+            //    CE.ID_RECOMENDACION = Convert.ToInt32(CN_RECOMENDACION.CONSULTAR("CONDICION ='>40 Y <=50'").Rows[0]["ID_RECOMENDACION"].ToString());
+            //}
+            //else if (CE.VALOR_TOTAL > 50 && CE.VALOR_TOTAL <= 60)
+            //{
+            //    CE.ID_RECOMENDACION = Convert.ToInt32(CN_RECOMENDACION.CONSULTAR("CONDICION ='>50 Y <=60'").Rows[0]["ID_RECOMENDACION"].ToString());
+            //}
+            //else if (CE.VALOR_TOTAL > 60 && CE.VALOR_TOTAL <= 70)
+            //{
+            //    CE.ID_RECOMENDACION = Convert.ToInt32(CN_RECOMENDACION.CONSULTAR("CONDICION ='>60 Y <=70'").Rows[0]["ID_RECOMENDACION"].ToString());
+            //}
+            //else if (CE.VALOR_TOTAL > 70 && CE.VALOR_TOTAL <= 80)
+            //{
+            //    CE.ID_RECOMENDACION = Convert.ToInt32(CN_RECOMENDACION.CONSULTAR("CONDICION ='>70 Y <=80'").Rows[0]["ID_RECOMENDACION"].ToString());
+            //}
+            //else if (CE.VALOR_TOTAL > 80 && CE.VALOR_TOTAL <= 90)
+            //{
+            //    CE.ID_RECOMENDACION = Convert.ToInt32(CN_RECOMENDACION.CONSULTAR("CONDICION ='>80 Y <=90'").Rows[0]["ID_RECOMENDACION"].ToString());
+            //}
+            //else
+            //{
+            //    CE.ID_RECOMENDACION = Convert.ToInt32(CN_RECOMENDACION.CONSULTAR("CONDICION ='>90").Rows[0]["ID_RECOMENDACION"].ToString());
+            //}
+            //CN_EVALUACION.INSERTAR(CE);
+
+            //int ID_EVALUACION = Convert.ToInt32(CN_EVALUACION.CONSULTAR_MAX().Rows[0][0].ToString());
+
+            if (DG_PRODUCTOS.Rows.Count > 0)
+            {
+                    foreach (DataGridViewRow FILA in DG_PRODUCTOS.Rows)
+                    {
+                        DataGridViewCheckBoxCell ck = FILA.Cells["SEL"] as DataGridViewCheckBoxCell;
+                        if (Convert.ToBoolean(ck.Value))
+                        {
+                            CE_PRODUCTO_EVALUACION CE_P = new CE_PRODUCTO_EVALUACION();
+                            // CE_P.ID_EVALUACION = ID_EVALUACION;
+                            CE_P.ID_PRODUCTO = Convert.ToInt32(FILA.Cells[1].Value.ToString());
+                            CE_P.SEL = Convert.ToBoolean(FILA.Cells[0].Value.ToString());
+
+                            // CN_PRODUCTOS_EVALUACION.INSERTAR(CE_P);
+                        }
+
+                    }
+            }
+
+            //if (DG_CANALES.Rows.Count > 0)
+            //{
+            //    foreach (DataGridViewRow FILA in DG_CANALES.Rows)
+            //    {
+            //        if (Convert.ToBoolean(FILA.Cells[0].Value.ToString()) == true)
+            //        {
+            //            CE_CANALES_EVALUACION CE_C = new CE_CANALES_EVALUACION();
+            //            CE_C.ID_EVALUACION = ID_EVALUACION;
+            //            CE_C.ID_CANAL = Convert.ToInt32(FILA.Cells[1].Value.ToString());
+            //            CE_C.SEL = Convert.ToBoolean(FILA.Cells[0].Value.ToString());
+            //            CN_CANALES_EVALUACION.INSERTAR(CE_C);
+            //        }
+            //    }
+
+            //}
+
+            //if (txt_observacion.Text.Trim().Length > 0)
+            //{
+            //    CE_OBSERVACION CE_O = new CE_OBSERVACION();
+            //    CE_O.DESCRIPCION = txt_observacion.Text.Trim();
+            //    CE_O.FECHA = DateTime.Now;
+            //    CE_O.ID_EVALUACION = ID_EVALUACION;
+            //    CE_O.USUARIO = CP_UTILIDADES.DATOS_USUARIO.USUARIO;
+            //    CN_OBSERVACION.INSERTAR(CE_O);
+            //}
+            
+
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+            INSERTAR_ACTUALIZAR();
         }
     }
 }

@@ -91,13 +91,7 @@
             this.txt_canales = new MetroFramework.Controls.MetroTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.DG_CANALES = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.txt_observacion = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.ch_barras = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.txt_id = new MetroFramework.Controls.MetroTextBox();
@@ -110,6 +104,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_agregar = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SELE = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -629,7 +630,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Location = new System.Drawing.Point(23, 63);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(453, 434);
             this.metroTabControl1.TabIndex = 38;
             this.metroTabControl1.UseSelectable = true;
@@ -955,7 +956,7 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
-            this.dataGridViewCheckBoxColumn1});
+            this.SELE});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -974,83 +975,37 @@
             this.DG_CANALES.Size = new System.Drawing.Size(442, 276);
             this.DG_CANALES.TabIndex = 37;
             // 
-            // dataGridViewTextBoxColumn1
+            // txt_observacion
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID_CANAL";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "DESCRIPCION";
-            this.dataGridViewTextBoxColumn2.HeaderText = "DESCRIPCION";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 340;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "VALORACION";
-            this.dataGridViewTextBoxColumn3.HeaderText = "VALORACION";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "NIVEL_RIESGO";
-            this.dataGridViewTextBoxColumn4.HeaderText = "NIVEL RIESGO";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "ESTADO";
-            this.dataGridViewTextBoxColumn5.HeaderText = "ESTADO";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Visible = false;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.HeaderText = "SEL";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.Width = 40;
-            // 
-            // metroTextBox2
-            // 
-            this.metroTextBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_observacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             // 
             // 
             // 
-            this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(388, 1);
-            this.metroTextBox2.CustomButton.Name = "";
-            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(51, 51);
-            this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox2.CustomButton.TabIndex = 1;
-            this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox2.CustomButton.UseSelectable = true;
-            this.metroTextBox2.CustomButton.Visible = false;
-            this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(27, 514);
-            this.metroTextBox2.MaxLength = 4000;
-            this.metroTextBox2.Multiline = true;
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.PasswordChar = '\0';
-            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.metroTextBox2.SelectedText = "";
-            this.metroTextBox2.SelectionLength = 0;
-            this.metroTextBox2.SelectionStart = 0;
-            this.metroTextBox2.ShortcutsEnabled = true;
-            this.metroTextBox2.Size = new System.Drawing.Size(440, 53);
-            this.metroTextBox2.TabIndex = 39;
-            this.metroTextBox2.UseSelectable = true;
-            this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_observacion.CustomButton.Image = null;
+            this.txt_observacion.CustomButton.Location = new System.Drawing.Point(388, 1);
+            this.txt_observacion.CustomButton.Name = "";
+            this.txt_observacion.CustomButton.Size = new System.Drawing.Size(51, 51);
+            this.txt_observacion.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_observacion.CustomButton.TabIndex = 1;
+            this.txt_observacion.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_observacion.CustomButton.UseSelectable = true;
+            this.txt_observacion.CustomButton.Visible = false;
+            this.txt_observacion.Lines = new string[0];
+            this.txt_observacion.Location = new System.Drawing.Point(27, 514);
+            this.txt_observacion.MaxLength = 4000;
+            this.txt_observacion.Multiline = true;
+            this.txt_observacion.Name = "txt_observacion";
+            this.txt_observacion.PasswordChar = '\0';
+            this.txt_observacion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txt_observacion.SelectedText = "";
+            this.txt_observacion.SelectionLength = 0;
+            this.txt_observacion.SelectionStart = 0;
+            this.txt_observacion.ShortcutsEnabled = true;
+            this.txt_observacion.Size = new System.Drawing.Size(440, 53);
+            this.txt_observacion.TabIndex = 39;
+            this.txt_observacion.UseSelectable = true;
+            this.txt_observacion.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_observacion.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel10
             // 
@@ -1286,15 +1241,83 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Niveles de Riesgo";
             // 
+            // btn_agregar
+            // 
+            this.btn_agregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_agregar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
+            this.btn_agregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btn_agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregar.ForeColor = System.Drawing.Color.White;
+            this.btn_agregar.Image = ((System.Drawing.Image)(resources.GetObject("btn_agregar.Image")));
+            this.btn_agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_agregar.Location = new System.Drawing.Point(27, 588);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Size = new System.Drawing.Size(101, 43);
+            this.btn_agregar.TabIndex = 52;
+            this.btn_agregar.Text = "  Guardar";
+            this.btn_agregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID_CANAL";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "DESCRIPCION";
+            this.dataGridViewTextBoxColumn2.HeaderText = "DESCRIPCION";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 340;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "VALORACION";
+            this.dataGridViewTextBoxColumn3.HeaderText = "VALORACION";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "NIVEL_RIESGO";
+            this.dataGridViewTextBoxColumn4.HeaderText = "NIVEL RIESGO";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "ESTADO";
+            this.dataGridViewTextBoxColumn5.HeaderText = "ESTADO";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Visible = false;
+            // 
+            // SELE
+            // 
+            this.SELE.HeaderText = "SEL";
+            this.SELE.Name = "SELE";
+            this.SELE.Width = 40;
+            // 
             // FRM_EVALUACION
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(887, 608);
+            this.ClientSize = new System.Drawing.Size(887, 654);
+            this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.txt_total);
             this.Controls.Add(this.txt_id);
             this.Controls.Add(this.metroLabel10);
-            this.Controls.Add(this.metroTextBox2);
+            this.Controls.Add(this.txt_observacion);
             this.Controls.Add(this.metroTabControl1);
             this.Controls.Add(this.ch_barras);
             this.Controls.Add(this.ch_columnas);
@@ -1370,7 +1393,7 @@
         private System.Windows.Forms.DataGridView DG_PRODUCTOS;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView DG_CANALES;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroTextBox txt_observacion;
         private MetroFramework.Controls.MetroLabel metroLabel10;
         private System.Windows.Forms.DataVisualization.Charting.Chart ch_barras;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_PRODUCTO;
@@ -1379,12 +1402,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NIVEL_RIESGO;
         private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO;
         private System.Windows.Forms.DataGridViewCheckBoxColumn SEL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private MetroFramework.Controls.MetroTextBox txt_id;
         public MetroFramework.Controls.MetroTextBox txt_id_cliente;
         public System.Windows.Forms.ComboBox cb_oficina;
@@ -1407,5 +1424,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btn_agregar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn SELE;
     }
 }

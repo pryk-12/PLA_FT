@@ -209,6 +209,17 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             }   
         }
 
+        private void btn_conf_recomendaciones_Click(object sender, EventArgs e)
+        {
+            Form FRM_MANT_RECOMENDACIONES = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "FRM_MANT_RECOMENDACIONES").SingleOrDefault();
+            if (FRM_MANT_RECOMENDACIONES == null)
+            {
+                FRM_MANT_RECOMENDACIONES frm = new FRM_MANT_RECOMENDACIONES();
+                frm.MdiParent = this;
+                frm.Show();
+            }   
+        }
+
        
     }
 }

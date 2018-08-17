@@ -50,6 +50,9 @@
             this.btn_configuraciones = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btn_procesos = new System.Windows.Forms.Button();
+            this.mn_procesos = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.mn_proc_evaluaciones = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_mantenimiento = new System.Windows.Forms.Button();
             this.mn_mantenimientos = new MetroFramework.Controls.MetroContextMenu(this.components);
             this.mn_mant_oficina = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,15 +73,14 @@
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.mn_procesos = new MetroFramework.Controls.MetroContextMenu(this.components);
-            this.mn_proc_evaluaciones = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_conf_recomendaciones = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.mn_configuraciones.SuspendLayout();
+            this.mn_procesos.SuspendLayout();
             this.mn_mantenimientos.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
-            this.mn_procesos.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -148,9 +150,11 @@
             this.toolStripSeparator8,
             this.mn_conf_oficina,
             this.toolStripSeparator10,
-            this.mn_conf_cantidad_efectivo});
+            this.mn_conf_cantidad_efectivo,
+            this.toolStripSeparator13,
+            this.btn_conf_recomendaciones});
             this.mn_configuraciones.Name = "metroContextMenu1";
-            this.mn_configuraciones.Size = new System.Drawing.Size(237, 208);
+            this.mn_configuraciones.Size = new System.Drawing.Size(237, 260);
             // 
             // mn_conf_actividad_economica
             // 
@@ -312,6 +316,29 @@
             this.btn_procesos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_procesos.UseVisualStyleBackColor = false;
             this.btn_procesos.Click += new System.EventHandler(this.btn_procesos_Click);
+            // 
+            // mn_procesos
+            // 
+            this.mn_procesos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mn_proc_evaluaciones,
+            this.toolStripSeparator12});
+            this.mn_procesos.Name = "metroContextMenu1";
+            this.mn_procesos.Size = new System.Drawing.Size(197, 34);
+            // 
+            // mn_proc_evaluaciones
+            // 
+            this.mn_proc_evaluaciones.BackColor = System.Drawing.SystemColors.Control;
+            this.mn_proc_evaluaciones.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.mn_proc_evaluaciones.Image = ((System.Drawing.Image)(resources.GetObject("mn_proc_evaluaciones.Image")));
+            this.mn_proc_evaluaciones.Name = "mn_proc_evaluaciones";
+            this.mn_proc_evaluaciones.Size = new System.Drawing.Size(196, 24);
+            this.mn_proc_evaluaciones.Text = "Evaluación Riesgo";
+            this.mn_proc_evaluaciones.Click += new System.EventHandler(this.mn_proc_evaluaciones_Click);
+            // 
+            // toolStripSeparator12
+            // 
+            this.toolStripSeparator12.Name = "toolStripSeparator12";
+            this.toolStripSeparator12.Size = new System.Drawing.Size(193, 6);
             // 
             // btn_mantenimiento
             // 
@@ -496,28 +523,19 @@
             this.statusStrip1.TabIndex = 10;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // mn_procesos
+            // btn_conf_recomendaciones
             // 
-            this.mn_procesos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mn_proc_evaluaciones,
-            this.toolStripSeparator12});
-            this.mn_procesos.Name = "metroContextMenu1";
-            this.mn_procesos.Size = new System.Drawing.Size(197, 56);
+            this.btn_conf_recomendaciones.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_conf_recomendaciones.Image = ((System.Drawing.Image)(resources.GetObject("btn_conf_recomendaciones.Image")));
+            this.btn_conf_recomendaciones.Name = "btn_conf_recomendaciones";
+            this.btn_conf_recomendaciones.Size = new System.Drawing.Size(236, 24);
+            this.btn_conf_recomendaciones.Text = "Recomendaciones";
+            this.btn_conf_recomendaciones.Click += new System.EventHandler(this.btn_conf_recomendaciones_Click);
             // 
-            // mn_proc_evaluaciones
+            // toolStripSeparator13
             // 
-            this.mn_proc_evaluaciones.BackColor = System.Drawing.SystemColors.Control;
-            this.mn_proc_evaluaciones.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.mn_proc_evaluaciones.Image = ((System.Drawing.Image)(resources.GetObject("mn_proc_evaluaciones.Image")));
-            this.mn_proc_evaluaciones.Name = "mn_proc_evaluaciones";
-            this.mn_proc_evaluaciones.Size = new System.Drawing.Size(196, 24);
-            this.mn_proc_evaluaciones.Text = "Evaluación Riesgo";
-            this.mn_proc_evaluaciones.Click += new System.EventHandler(this.mn_proc_evaluaciones_Click);
-            // 
-            // toolStripSeparator12
-            // 
-            this.toolStripSeparator12.Name = "toolStripSeparator12";
-            this.toolStripSeparator12.Size = new System.Drawing.Size(193, 6);
+            this.toolStripSeparator13.Name = "toolStripSeparator13";
+            this.toolStripSeparator13.Size = new System.Drawing.Size(233, 6);
             // 
             // FRM_PRINCIPAL
             // 
@@ -534,9 +552,9 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.mn_configuraciones.ResumeLayout(false);
+            this.mn_procesos.ResumeLayout(false);
             this.mn_mantenimientos.ResumeLayout(false);
             this.metroContextMenu1.ResumeLayout(false);
-            this.mn_procesos.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -586,5 +604,7 @@
         private MetroFramework.Controls.MetroContextMenu mn_procesos;
         private System.Windows.Forms.ToolStripMenuItem mn_proc_evaluaciones;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator13;
+        private System.Windows.Forms.ToolStripMenuItem btn_conf_recomendaciones;
     }
 }

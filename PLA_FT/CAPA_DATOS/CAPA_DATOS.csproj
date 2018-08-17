@@ -45,15 +45,20 @@
   <ItemGroup>
     <Compile Include="CD_ACTIVIDAD_ECONOMICA.cs" />
     <Compile Include="CD_CANAL.cs" />
+    <Compile Include="CD_CANALES_EVALUACION.cs" />
     <Compile Include="CD_CANTIDAD_EFECTIVO.cs" />
     <Compile Include="CD_CLIENTE.cs" />
     <Compile Include="CD_CONEXION.cs" />
     <Compile Include="CD_DEPARTAMENTO.cs" />
+    <Compile Include="CD_EVALUACION.cs" />
+    <Compile Include="CD_OBSERVACION.cs" />
     <Compile Include="CD_OFICINA.cs" />
     <Compile Include="CD_PAIS.cs" />
     <Compile Include="CD_PRODUCTO.cs" />
+    <Compile Include="CD_PRODUCTO_EVALUACION.cs" />
     <Compile Include="CD_PROVINCIA.cs" />
     <Compile Include="CD_PUESTO.cs" />
+    <Compile Include="CD_RECOMENDACION.cs" />
     <Compile Include="CD_USUARIO.cs" />
     <Compile Include="CD_UTILIDADES.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

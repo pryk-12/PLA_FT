@@ -44,14 +44,19 @@
   <ItemGroup>
     <Compile Include="CN_ACTIVIDAD_ECONOMICA.cs" />
     <Compile Include="CN_CANAL.cs" />
+    <Compile Include="CN_CANALES_EVALUACION.cs" />
     <Compile Include="CN_CANTIDAD_EFECTIVO.cs" />
     <Compile Include="CN_CLIENTE.cs" />
     <Compile Include="CN_DEPARTAMENTO.cs" />
+    <Compile Include="CN_EVALUACION.cs" />
+    <Compile Include="CN_OBSERVACION.cs" />
     <Compile Include="CN_OFICINA.cs" />
     <Compile Include="CN_PAIS.cs" />
     <Compile Include="CN_PRODUCTO.cs" />
+    <Compile Include="CN_PRODUCTOS_EVALUACION.cs" />
     <Compile Include="CN_PROVINCIA.cs" />
     <Compile Include="CN_PUESTO.cs" />
+    <Compile Include="CN_RECOMENDACION.cs" />
     <Compile Include="CN_USUARIO.cs" />
     <Compile Include="CN_UTILIDADES.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
