@@ -27,7 +27,7 @@ namespace CAPA_DATOS
         public void INSERTAR(CE_OBSERVACION obj)
         {
             cn.Close();
-            da.InsertCommand = new SqlCommand("SP_RECOMENDACIONES", cn);
+            da.InsertCommand = new SqlCommand("SP_OBSERVACIONES", cn);
             da.InsertCommand.CommandType = CommandType.StoredProcedure;
             da.InsertCommand.Parameters.AddWithValue("@OPCION", "INSERTAR");
             da.InsertCommand.Parameters.AddWithValue("@ID_EVALUACION", obj.ID_EVALUACION);

@@ -32,7 +32,6 @@ namespace CAPA_DATOS
             da.InsertCommand.Parameters.AddWithValue("@OPCION", "AGREGAR");
             da.InsertCommand.Parameters.AddWithValue("@ID_EVALUACION", obj.ID_EVALUACION);
             da.InsertCommand.Parameters.AddWithValue("@ID_PRODUCTO", obj.ID_PRODUCTO);
-            da.InsertCommand.Parameters.AddWithValue("@SEL", obj.SEL);
             cn.Open();
             da.InsertCommand.ExecuteNonQuery();
             cn.Close();
