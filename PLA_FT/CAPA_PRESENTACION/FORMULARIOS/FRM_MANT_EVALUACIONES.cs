@@ -75,5 +75,16 @@ namespace CAPA_PRESENTACION.FORMULARIOS
         {
             PASAR_DATOS();
         }
+
+        private void verObservaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(DG.RowCount==0)
+            {
+                return;
+            }
+            FRM_VER_OBSERVACIONES FRM = new FRM_VER_OBSERVACIONES();
+            FRM.CARGAR_OBSERVACION( Convert.ToInt32(DG.SelectedCells[0].Value.ToString()));
+            FRM.ShowDialog();
+        }
     }
 }

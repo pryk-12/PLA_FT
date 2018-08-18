@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_MANT_EVALUACIONES));
@@ -64,7 +65,10 @@
             this.lbl_total = new MetroFramework.Controls.MetroLabel();
             this.btn_agregar = new System.Windows.Forms.Button();
             this.txt_buscar = new MetroFramework.Controls.MetroTextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.verObservaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DG)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DG
@@ -112,6 +116,7 @@
             this.ID_RECOMENDACION,
             this.RECOMENDACION,
             this.VALOR_TOTAL});
+            this.DG.ContextMenuStrip = this.contextMenuStrip1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -436,6 +441,21 @@
             this.txt_buscar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txt_buscar.TextChanged += new System.EventHandler(this.txt_buscar_TextChanged);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.verObservaciónToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(166, 26);
+            // 
+            // verObservaciónToolStripMenuItem
+            // 
+            this.verObservaciónToolStripMenuItem.Name = "verObservaciónToolStripMenuItem";
+            this.verObservaciónToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.verObservaciónToolStripMenuItem.Text = "Ver Observación";
+            this.verObservaciónToolStripMenuItem.Click += new System.EventHandler(this.verObservaciónToolStripMenuItem_Click);
+            // 
             // FRM_MANT_EVALUACIONES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -449,6 +469,7 @@
             this.Text = "Evaluaciones de Riesgo";
             this.Load += new System.EventHandler(this.FRM_MANT_EVALUACIONES_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DG)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -488,5 +509,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_RECOMENDACION;
         private System.Windows.Forms.DataGridViewTextBoxColumn RECOMENDACION;
         private System.Windows.Forms.DataGridViewTextBoxColumn VALOR_TOTAL;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem verObservaciónToolStripMenuItem;
     }
 }
