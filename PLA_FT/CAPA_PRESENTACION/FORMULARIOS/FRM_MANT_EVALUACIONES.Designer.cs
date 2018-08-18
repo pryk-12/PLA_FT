@@ -32,10 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_MANT_EVALUACIONES));
             this.DG = new System.Windows.Forms.DataGridView();
-            this.btn_editar = new System.Windows.Forms.Button();
-            this.lbl_total = new MetroFramework.Controls.MetroLabel();
-            this.btn_agregar = new System.Windows.Forms.Button();
-            this.txt_buscar = new MetroFramework.Controls.MetroTextBox();
             this.ID_EVALUACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,6 +60,10 @@
             this.ID_RECOMENDACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RECOMENDACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VALOR_TOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_editar = new System.Windows.Forms.Button();
+            this.lbl_total = new MetroFramework.Controls.MetroLabel();
+            this.btn_agregar = new System.Windows.Forms.Button();
+            this.txt_buscar = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,88 +130,6 @@
             this.DG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DG.Size = new System.Drawing.Size(813, 356);
             this.DG.TabIndex = 26;
-            // 
-            // btn_editar
-            // 
-            this.btn_editar.BackColor = System.Drawing.Color.SteelBlue;
-            this.btn_editar.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
-            this.btn_editar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btn_editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_editar.ForeColor = System.Drawing.Color.White;
-            this.btn_editar.Image = ((System.Drawing.Image)(resources.GetObject("btn_editar.Image")));
-            this.btn_editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_editar.Location = new System.Drawing.Point(125, 456);
-            this.btn_editar.Name = "btn_editar";
-            this.btn_editar.Size = new System.Drawing.Size(101, 43);
-            this.btn_editar.TabIndex = 25;
-            this.btn_editar.Text = "  Editar";
-            this.btn_editar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_editar.UseVisualStyleBackColor = false;
-            // 
-            // lbl_total
-            // 
-            this.lbl_total.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lbl_total.Location = new System.Drawing.Point(457, 474);
-            this.lbl_total.Name = "lbl_total";
-            this.lbl_total.Size = new System.Drawing.Size(377, 25);
-            this.lbl_total.TabIndex = 23;
-            this.lbl_total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btn_agregar
-            // 
-            this.btn_agregar.BackColor = System.Drawing.Color.SteelBlue;
-            this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
-            this.btn_agregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btn_agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar.ForeColor = System.Drawing.Color.White;
-            this.btn_agregar.Image = ((System.Drawing.Image)(resources.GetObject("btn_agregar.Image")));
-            this.btn_agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_agregar.Location = new System.Drawing.Point(21, 456);
-            this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.Size = new System.Drawing.Size(101, 43);
-            this.btn_agregar.TabIndex = 24;
-            this.btn_agregar.Text = "  Agregar";
-            this.btn_agregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_agregar.UseVisualStyleBackColor = false;
-            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
-            // 
-            // txt_buscar
-            // 
-            // 
-            // 
-            // 
-            this.txt_buscar.CustomButton.Image = null;
-            this.txt_buscar.CustomButton.Location = new System.Drawing.Point(308, 1);
-            this.txt_buscar.CustomButton.Name = "";
-            this.txt_buscar.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_buscar.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_buscar.CustomButton.TabIndex = 1;
-            this.txt_buscar.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_buscar.CustomButton.UseSelectable = true;
-            this.txt_buscar.CustomButton.Visible = false;
-            this.txt_buscar.DisplayIcon = true;
-            this.txt_buscar.Icon = ((System.Drawing.Image)(resources.GetObject("txt_buscar.Icon")));
-            this.txt_buscar.Lines = new string[0];
-            this.txt_buscar.Location = new System.Drawing.Point(23, 67);
-            this.txt_buscar.MaxLength = 32767;
-            this.txt_buscar.Name = "txt_buscar";
-            this.txt_buscar.PasswordChar = '\0';
-            this.txt_buscar.PromptText = "Ingrese la Descripción o ID a Buscar";
-            this.txt_buscar.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_buscar.SelectedText = "";
-            this.txt_buscar.SelectionLength = 0;
-            this.txt_buscar.SelectionStart = 0;
-            this.txt_buscar.ShortcutsEnabled = true;
-            this.txt_buscar.Size = new System.Drawing.Size(330, 23);
-            this.txt_buscar.TabIndex = 22;
-            this.txt_buscar.UseSelectable = true;
-            this.txt_buscar.WaterMark = "Ingrese la Descripción o ID a Buscar";
-            this.txt_buscar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_buscar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // ID_EVALUACION
             // 
@@ -434,6 +352,90 @@
             this.VALOR_TOTAL.Name = "VALOR_TOTAL";
             this.VALOR_TOTAL.ReadOnly = true;
             // 
+            // btn_editar
+            // 
+            this.btn_editar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_editar.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
+            this.btn_editar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btn_editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editar.ForeColor = System.Drawing.Color.White;
+            this.btn_editar.Image = ((System.Drawing.Image)(resources.GetObject("btn_editar.Image")));
+            this.btn_editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_editar.Location = new System.Drawing.Point(125, 456);
+            this.btn_editar.Name = "btn_editar";
+            this.btn_editar.Size = new System.Drawing.Size(101, 43);
+            this.btn_editar.TabIndex = 25;
+            this.btn_editar.Text = "  Editar";
+            this.btn_editar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_editar.UseVisualStyleBackColor = false;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
+            // 
+            // lbl_total
+            // 
+            this.lbl_total.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_total.Location = new System.Drawing.Point(457, 474);
+            this.lbl_total.Name = "lbl_total";
+            this.lbl_total.Size = new System.Drawing.Size(377, 25);
+            this.lbl_total.TabIndex = 23;
+            this.lbl_total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btn_agregar
+            // 
+            this.btn_agregar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
+            this.btn_agregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btn_agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregar.ForeColor = System.Drawing.Color.White;
+            this.btn_agregar.Image = ((System.Drawing.Image)(resources.GetObject("btn_agregar.Image")));
+            this.btn_agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_agregar.Location = new System.Drawing.Point(21, 456);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Size = new System.Drawing.Size(101, 43);
+            this.btn_agregar.TabIndex = 24;
+            this.btn_agregar.Text = "  Agregar";
+            this.btn_agregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
+            // 
+            // txt_buscar
+            // 
+            // 
+            // 
+            // 
+            this.txt_buscar.CustomButton.Image = null;
+            this.txt_buscar.CustomButton.Location = new System.Drawing.Point(308, 1);
+            this.txt_buscar.CustomButton.Name = "";
+            this.txt_buscar.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_buscar.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_buscar.CustomButton.TabIndex = 1;
+            this.txt_buscar.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_buscar.CustomButton.UseSelectable = true;
+            this.txt_buscar.CustomButton.Visible = false;
+            this.txt_buscar.DisplayIcon = true;
+            this.txt_buscar.Icon = ((System.Drawing.Image)(resources.GetObject("txt_buscar.Icon")));
+            this.txt_buscar.Lines = new string[0];
+            this.txt_buscar.Location = new System.Drawing.Point(23, 67);
+            this.txt_buscar.MaxLength = 32767;
+            this.txt_buscar.Name = "txt_buscar";
+            this.txt_buscar.PasswordChar = '\0';
+            this.txt_buscar.PromptText = "Ingrese la Descripción o ID a Buscar";
+            this.txt_buscar.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_buscar.SelectedText = "";
+            this.txt_buscar.SelectionLength = 0;
+            this.txt_buscar.SelectionStart = 0;
+            this.txt_buscar.ShortcutsEnabled = true;
+            this.txt_buscar.Size = new System.Drawing.Size(330, 23);
+            this.txt_buscar.TabIndex = 22;
+            this.txt_buscar.UseSelectable = true;
+            this.txt_buscar.WaterMark = "Ingrese la Descripción o ID a Buscar";
+            this.txt_buscar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_buscar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_buscar.TextChanged += new System.EventHandler(this.txt_buscar_TextChanged);
+            // 
             // FRM_MANT_EVALUACIONES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -445,6 +447,7 @@
             this.Controls.Add(this.txt_buscar);
             this.Name = "FRM_MANT_EVALUACIONES";
             this.Text = "Evaluaciones de Riesgo";
+            this.Load += new System.EventHandler(this.FRM_MANT_EVALUACIONES_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DG)).EndInit();
             this.ResumeLayout(false);
 

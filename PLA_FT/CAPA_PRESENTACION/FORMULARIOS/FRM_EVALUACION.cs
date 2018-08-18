@@ -26,6 +26,64 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             CN_UTILIDADES.LLENAR_COMBOBOX(cb_canales, "SP_LLENAR_COMBOBOX", "CANALES", "DESCRIPCION", "ID_CANAL", "DESCRIPCION LIKE'%" + "" + "%' AND ESTADO='A'");
         }
 
+        public void RECIBIR_DATOS(CE_EVALUACION CE)
+        {
+            txt_actividad_economica.Text = CE.VALOR_ACTIVIDAD.ToString();
+            txt_canales.Text = CE.VALOR_CANAL.ToString();
+            txt_cantidad_efectivo.Text = CE.VALOR_CANTIDAD.ToString();
+            txt_id.Text = CE.ID_EVALUACION.ToString();
+            txt_id_cliente.Text = CE.ID_CLIENTE.ToString();
+            txt_nacionalidad.Text = CE.VALOR_NACIONALIDAD.ToString();
+            txt_pais.Text = CE.VALOR_PAIS.ToString();
+            txt_producto.Text = CE.VALOR_PRODUCTO.ToString();
+            txt_provincia.Text = CE.VALOR_PROVINCIA.ToString();
+            txt_total.Text = CE.VALOR_TOTAL.ToString();
+
+            cb_actividad_economica.SelectedValue = CE.ID_ACTIVIDAD;
+            cb_cantidades_efectivo.SelectedValue = CE.ID_CANTIDAD;
+            cb_nacionalidades.SelectedValue = CE.ID_NACIONALIDAD;
+            cb_paises.SelectedValue = CE.ID_PAIS;
+            cb_provincias.SelectedValue = CE.ID_PROVINCIA;
+
+            txt_nombre.Text = CN_CLIENTE.CONSULTAR("A.ID_CLIENTE="+ CE.ID_CLIENTE +"").Rows[0]["NOMBRE"].ToString();
+            txt_identificacion.Text = CN_CLIENTE.CONSULTAR("A.ID_CLIENTE=" + CE.ID_CLIENTE + "").Rows[0]["IDENTIFICACION"].ToString();
+            cb_tipo.Text = CN_CLIENTE.CONSULTAR("A.ID_CLIENTE=" + CE.ID_CLIENTE + "").Rows[0]["TIPO"].ToString();
+            cb_oficina.Text = CN_CLIENTE.CONSULTAR("A.ID_CLIENTE=" + CE.ID_CLIENTE + "").Rows[0]["OFICINA"].ToString();
+
+            txt_recomendacion.Text = CN_RECOMENDACION.CONSULTAR("ID_RECOMENDACION="+ CE.ID_RECOMENDACION +"").Rows[0]["DESCRIPCION"].ToString();
+
+            int i;
+            for (i = 0; (i
+                        <= (CN_PRODUCTOS_EVALUACION.CONSULTAR("A.ID_EVALUACION="+ CE.ID_EVALUACION +"")).Rows.Count - 1); i++)
+            {
+                DG_PRODUCTOS.Rows.Add();
+                DG_PRODUCTOS.Rows[i].Cells[0].Value = CN_PRODUCTOS_EVALUACION.CONSULTAR("A.ID_EVALUACION="+ CE.ID_EVALUACION +"").Rows[i]["ID_PRODUCTO"];
+                DG_PRODUCTOS.Rows[i].Cells[1].Value = CN_PRODUCTOS_EVALUACION.CONSULTAR("A.ID_EVALUACION=" + CE.ID_EVALUACION + "").Rows[i]["DESCRIPCION"];
+                DG_PRODUCTOS.Rows[i].Cells[2].Value = CN_PRODUCTOS_EVALUACION.CONSULTAR("A.ID_EVALUACION=" + CE.ID_EVALUACION + "").Rows[i]["VALORACION"];
+                DG_PRODUCTOS.Rows[i].Cells[3].Value = CN_PRODUCTOS_EVALUACION.CONSULTAR("A.ID_EVALUACION=" + CE.ID_EVALUACION + "").Rows[i]["NIVEL_RIESGO"];
+                DG_PRODUCTOS.Rows[i].Cells[4].Value = CN_PRODUCTOS_EVALUACION.CONSULTAR("A.ID_EVALUACION=" + CE.ID_EVALUACION + "").Rows[i]["ESTADO"];
+            }
+
+            DG_PRODUCTOS.DataSource = null;
+
+
+            int e;
+            for (e = 0; (e
+                        <= (CN_CANALES_EVALUACION.CONSULTAR("A.ID_EVALUACION=" + CE.ID_EVALUACION + "")).Rows.Count - 1); e++)
+            {
+                DG_CANALES.Rows.Add();
+                DG_CANALES.Rows[e].Cells[0].Value = CN_CANALES_EVALUACION.CONSULTAR("A.ID_EVALUACION=" + CE.ID_EVALUACION + "").Rows[e]["ID_CANAL"];
+                DG_CANALES.Rows[e].Cells[1].Value = CN_CANALES_EVALUACION.CONSULTAR("A.ID_EVALUACION=" + CE.ID_EVALUACION + "").Rows[e]["DESCRIPCION"];
+                DG_CANALES.Rows[e].Cells[2].Value = CN_CANALES_EVALUACION.CONSULTAR("A.ID_EVALUACION=" + CE.ID_EVALUACION + "").Rows[e]["VALORACION"];
+                DG_CANALES.Rows[e].Cells[3].Value = CN_CANALES_EVALUACION.CONSULTAR("A.ID_EVALUACION=" + CE.ID_EVALUACION + "").Rows[e]["NIVEL_RIESGO"];
+                DG_CANALES.Rows[e].Cells[4].Value = CN_CANALES_EVALUACION.CONSULTAR("A.ID_EVALUACION=" + CE.ID_EVALUACION + "").Rows[e]["ESTADO"];
+            }
+
+            DG_CANALES.DataSource = null;
+
+            GRAFICO_BARRA();
+            GRAFICO_COLUMNAS();
+        }
 
         private void FRM_EVALUACION_Load(object sender, EventArgs e)
         {
@@ -85,7 +143,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
 
         public void GRAFICO_BARRA()
         {
-            int total = txt_total.Text.Length == 0 ? 0 : Convert.ToInt32(txt_total.Text);
+            double total = txt_total.Text.Length == 0 ? 0 : Convert.ToDouble(txt_total.Text);
 
             ch_barras.Series["BARRAS"].Points.Clear();
             ch_barras.Series["BARRAS"].Points.Add(total);
@@ -111,13 +169,13 @@ namespace CAPA_PRESENTACION.FORMULARIOS
 
         public void GRAFICO_COLUMNAS()
         {
-            int actividad_economica = txt_actividad_economica.Text.Length == 0 ? 0 : Convert.ToInt32(txt_actividad_economica.Text);
-            int nacionalidad = txt_nacionalidad.Text.Length == 0 ? 0 : Convert.ToInt32(txt_nacionalidad.Text);
-            int pais = txt_pais.Text.Length == 0 ? 0 : Convert.ToInt32(txt_pais.Text);
-            int provincia = txt_provincia.Text.Length == 0 ? 0 : Convert.ToInt32(txt_provincia.Text);
-            int cantidad_efectivo = txt_cantidad_efectivo.Text.Length == 0 ? 0 : Convert.ToInt32(txt_cantidad_efectivo.Text);
-            int productos = txt_producto.Text.Length == 0 ? 0 : Convert.ToInt32(txt_producto.Text);
-            int canales = txt_canales.Text.Length == 0 ? 0 : Convert.ToInt32(txt_canales.Text);
+            double actividad_economica = txt_actividad_economica.Text.Length == 0 ? 0 : Convert.ToDouble(txt_actividad_economica.Text);
+            double nacionalidad = txt_nacionalidad.Text.Length == 0 ? 0 : Convert.ToDouble(txt_nacionalidad.Text);
+            double pais = txt_pais.Text.Length == 0 ? 0 : Convert.ToDouble(txt_pais.Text);
+            double provincia = txt_provincia.Text.Length == 0 ? 0 : Convert.ToDouble(txt_provincia.Text);
+            double cantidad_efectivo = txt_cantidad_efectivo.Text.Length == 0 ? 0 : Convert.ToDouble(txt_cantidad_efectivo.Text);
+            double productos = txt_producto.Text.Length == 0 ? 0 : Convert.ToDouble(txt_producto.Text);
+            double canales = txt_canales.Text.Length == 0 ? 0 : Convert.ToDouble(txt_canales.Text);
 
             ch_columnas.Series["BARRAS"].Points.Clear();
 
@@ -399,6 +457,8 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             string NIVEL_RIESGO = CN_PRODUCTO.CONSULTAR("ID_PRODUCTO=" + cb_productos.SelectedValue + "").Rows[0]["NIVEL_RIESGO"].ToString();
             string ESTADO = CN_PRODUCTO.CONSULTAR("ID_PRODUCTO=" + cb_productos.SelectedValue + "").Rows[0]["ESTADO"].ToString();
 
+           
+            
             DG_PRODUCTOS.Rows.Add(ID,DESCRIPCION,VALORACION,NIVEL_RIESGO,ESTADO);
             cb_productos.SelectedItem = null;
         }
@@ -434,7 +494,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             decimal VALORACION = Convert.ToDecimal(CN_CANAL.CONSULTAR("ID_CANAL=" + cb_canales.SelectedValue + "").Rows[0]["VALORACION"].ToString());
             string NIVEL_RIESGO = CN_CANAL.CONSULTAR("ID_CANAL=" + cb_canales.SelectedValue + "").Rows[0]["NIVEL_RIESGO"].ToString();
             string ESTADO = CN_CANAL.CONSULTAR("ID_CANAL=" + cb_canales.SelectedValue + "").Rows[0]["ESTADO"].ToString();
-
+            DG_CANALES.DataSource = null;
 
             DG_CANALES.Rows.Add(ID, DESCRIPCION, VALORACION, NIVEL_RIESGO, ESTADO);
             cb_canales.SelectedItem = null;
