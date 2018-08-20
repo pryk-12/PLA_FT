@@ -1,13 +1,9 @@
 ﻿using CAPA_NEGOCIOS;
 using CAPA_ENTIDAD;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
+using System.Linq;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
 
 namespace CAPA_PRESENTACION.FORMULARIOS
 {
@@ -80,6 +76,51 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             }
 
             DG_CANALES.DataSource = null;
+            CALCULOS();
+            GRAFICO_BARRA();
+            GRAFICO_COLUMNAS();
+        }
+
+        public void CALCULOS()
+        {
+            decimal pond_actividad = Convert.ToDecimal(CN_PONDERACION.CONSULTAR(1).Rows[0]["PORCIENTO"].ToString());
+            decimal pond_cantidad = Convert.ToDecimal(CN_PONDERACION.CONSULTAR(4).Rows[0]["PORCIENTO"].ToString());
+            decimal pond_nacionalidad = Convert.ToDecimal(CN_PONDERACION.CONSULTAR(5).Rows[0]["PORCIENTO"].ToString());
+            decimal pond_pais = Convert.ToDecimal(CN_PONDERACION.CONSULTAR(6).Rows[0]["PORCIENTO"].ToString());
+            decimal pond_provincia = Convert.ToDecimal(CN_PONDERACION.CONSULTAR(7).Rows[0]["PORCIENTO"].ToString());
+            decimal pond_producto = Convert.ToDecimal(CN_PONDERACION.CONSULTAR(2).Rows[0]["PORCIENTO"].ToString());
+            decimal pond_canal = Convert.ToDecimal(CN_PONDERACION.CONSULTAR(3).Rows[0]["PORCIENTO"].ToString());
+            //suma de la columna de valoracion / cantidad de filas
+            decimal valoracion_producto = 0;
+            decimal valoracion_canal = 0;
+
+            if(DG_PRODUCTOS.Rows.Count>0)
+            {
+                valoracion_producto = Convert.ToDecimal(DG_PRODUCTOS.Rows.Cast<DataGridViewRow>().Sum(x => Convert.ToDouble(x.Cells["VALORACION"].Value.ToString()))) / Convert.ToDecimal(DG_PRODUCTOS.Rows.Cast<DataGridViewRow>().Count());
+            }
+            if(DG_CANALES.Rows.Count>0)
+            {
+                valoracion_canal = Convert.ToDecimal(DG_CANALES.Rows.Cast<DataGridViewRow>().Sum(x => Convert.ToDouble(x.Cells["VALORACION1"].Value.ToString()))) / Convert.ToDecimal(DG_CANALES.Rows.Cast<DataGridViewRow>().Count()); 
+            }
+           
+           
+            decimal actividad = ((cb_actividad_economica.Text ==""? 0 : Convert.ToDecimal(CN_ACTIVIDAD_ECONOMICA.CONSULTAR("ID_ACTIVIDAD="+ cb_actividad_economica.SelectedValue +"").Rows[0]["VALORACION"].ToString()) * pond_actividad) * 10/100);
+            decimal cantidad = ((cb_cantidades_efectivo.Text ==""? 0 : Convert.ToDecimal(CN_CANTIDAD_EFECTIVO.CONSULTAR("ID_CANTIDAD="+ cb_cantidades_efectivo.SelectedValue +"").Rows[0]["VALORACION"].ToString()) * pond_cantidad ) * 10/100);
+            decimal nacionalidad = ((cb_nacionalidades.Text == "" ? 0 : Convert.ToDecimal(CN_PAIS.CONSULTAR("ID_PAIS=" + cb_nacionalidades.SelectedValue + "").Rows[0]["VALORACION"].ToString()) * pond_nacionalidad ) * 10/100);
+            decimal pais = ((cb_paises.Text == "" ? 0 : Convert.ToDecimal(CN_PAIS.CONSULTAR("ID_PAIS=" + cb_paises.SelectedValue + "").Rows[0]["VALORACION"].ToString()) * pond_pais ) * 10/100);
+            decimal provincia = ((cb_provincias.Text == "" ? 0 : Convert.ToDecimal(CN_PROVINCIA.CONSULTAR("ID_PROVINCIA=" + cb_provincias.SelectedValue + "").Rows[0]["VALORACION"].ToString()) * pond_provincia ) * 10/100);
+            decimal producto = ((valoracion_producto * pond_producto) * 10/100);
+            decimal canal = ((valoracion_canal * pond_canal) * 10 / 100);          
+            decimal total = (actividad + cantidad + nacionalidad + pais + provincia + producto + canal );
+
+            txt_actividad_economica.Text = actividad.ToString("n2");
+            txt_cantidad_efectivo.Text = cantidad.ToString("n2");
+            txt_nacionalidad.Text = nacionalidad.ToString("n2");
+            txt_pais.Text = pais.ToString("n2");
+            txt_provincia.Text = provincia.ToString("n2");
+            txt_producto.Text = producto.ToString("n2");
+            txt_canales.Text = canal.ToString("n2");
+            txt_total.Text = total.ToString("n2");
 
             GRAFICO_BARRA();
             GRAFICO_COLUMNAS();
@@ -170,148 +211,160 @@ namespace CAPA_PRESENTACION.FORMULARIOS
 
         public void GRAFICO_COLUMNAS()
         {
-            double actividad_economica = txt_actividad_economica.Text.Length == 0 ? 0 : Convert.ToDouble(txt_actividad_economica.Text);
-            double nacionalidad = txt_nacionalidad.Text.Length == 0 ? 0 : Convert.ToDouble(txt_nacionalidad.Text);
-            double pais = txt_pais.Text.Length == 0 ? 0 : Convert.ToDouble(txt_pais.Text);
-            double provincia = txt_provincia.Text.Length == 0 ? 0 : Convert.ToDouble(txt_provincia.Text);
-            double cantidad_efectivo = txt_cantidad_efectivo.Text.Length == 0 ? 0 : Convert.ToDouble(txt_cantidad_efectivo.Text);
-            double productos = txt_producto.Text.Length == 0 ? 0 : Convert.ToDouble(txt_producto.Text);
-            double canales = txt_canales.Text.Length == 0 ? 0 : Convert.ToDouble(txt_canales.Text);
+            try
+            {
+                double actividad_economica = txt_actividad_economica.Text.Length == 0 ? 0 : Convert.ToDouble(txt_actividad_economica.Text);
+                double nacionalidad = txt_nacionalidad.Text.Length == 0 ? 0 : Convert.ToDouble(txt_nacionalidad.Text);
+                double pais = txt_pais.Text.Length == 0 ? 0 : Convert.ToDouble(txt_pais.Text);
+                double provincia = txt_provincia.Text.Length == 0 ? 0 : Convert.ToDouble(txt_provincia.Text);
+                double cantidad_efectivo = txt_cantidad_efectivo.Text.Length == 0 ? 0 : Convert.ToDouble(txt_cantidad_efectivo.Text);
+                double productos = txt_producto.Text.Length == 0 ? 0 : Convert.ToDouble(txt_producto.Text);
+                double canales = txt_canales.Text.Length == 0 ? 0 : Convert.ToDouble(txt_canales.Text);
 
-            ch_columnas.Series["BARRAS"].Points.Clear();
+                ch_columnas.Series["BARRAS"].Points.Clear();
 
-            //Actividad Economica
-            ch_columnas.Series["BARRAS"].Points.Add(actividad_economica);
-            ch_columnas.Series["BARRAS"].Points[0].AxisLabel = "Actividad Economíca";
-            ch_columnas.Series["BARRAS"].Points[0].Label = actividad_economica.ToString() + " %";
-            ch_columnas.Series["BARRAS"].Points[0].LabelForeColor = Color.Black;
-            if (actividad_economica <= 30)
-            {
-                ch_columnas.Series["BARRAS"].Points[0].Color = Color.Green;
-            }
-            else if (actividad_economica > 30 && actividad_economica < 60)
-            {
-                ch_columnas.Series["BARRAS"].Points[0].Color = Color.Orange;
-            }
-            else
-            {
-                ch_columnas.Series["BARRAS"].Points[0].Color = Color.Red;
-            }
-            //nacionalidad
-            ch_columnas.Series["BARRAS"].Points.Add(nacionalidad);
-            ch_columnas.Series["BARRAS"].Points[1].AxisLabel = "Nacionalidad";
-            ch_columnas.Series["BARRAS"].Points[1].Label = nacionalidad.ToString() + " %";
-            ch_columnas.Series["BARRAS"].Points[1].LabelForeColor = Color.Black;
-            if (nacionalidad <= 30)
-            {
-                ch_columnas.Series["BARRAS"].Points[1].Color = Color.Green;
-            }
-            else if (nacionalidad > 30 && nacionalidad < 60)
-            {
-                ch_columnas.Series["BARRAS"].Points[1].Color = Color.Orange;
-            }
-            else
-            {
-                ch_columnas.Series["BARRAS"].Points[1].Color = Color.Red;
-            }
+                //Actividad Economica
+                ch_columnas.Series["BARRAS"].Points.Add(actividad_economica);
+                ch_columnas.Series["BARRAS"].Points[0].AxisLabel = "Actividad Economíca";
+                ch_columnas.Series["BARRAS"].Points[0].Label = actividad_economica.ToString() + " %";
+                ch_columnas.Series["BARRAS"].Points[0].LabelForeColor = Color.Black;
 
-            //pais
-            ch_columnas.Series["BARRAS"].Points.Add(pais);
-            ch_columnas.Series["BARRAS"].Points[2].AxisLabel = "Pais";
-            ch_columnas.Series["BARRAS"].Points[2].Label = pais.ToString() + " %";
-            ch_columnas.Series["BARRAS"].Points[2].LabelForeColor = Color.Black;
-            if (pais <= 30)
-            {
-                ch_columnas.Series["BARRAS"].Points[2].Color = Color.Green;
-            }
-            else if (pais > 30 && pais < 60)
-            {
-                ch_columnas.Series["BARRAS"].Points[2].Color = Color.Orange;
-            }
-            else
-            {
-                ch_columnas.Series["BARRAS"].Points[2].Color = Color.Red;
-            }
+                if (CN_ACTIVIDAD_ECONOMICA.CONSULTAR("ID_ACTIVIDAD=" + cb_actividad_economica.SelectedValue + "").Rows[0]["NIVEL_RIESGO"].ToString() == "ALTO")
+                {
+                    ch_columnas.Series["BARRAS"].Points[0].Color = Color.Red;
+                }
+                if (CN_ACTIVIDAD_ECONOMICA.CONSULTAR("ID_ACTIVIDAD=" + cb_actividad_economica.SelectedValue + "").Rows[0]["NIVEL_RIESGO"].ToString() == "MEDIO")
+                {
+                    ch_columnas.Series["BARRAS"].Points[0].Color = Color.Orange;
+                }
+                if (CN_ACTIVIDAD_ECONOMICA.CONSULTAR("ID_ACTIVIDAD=" + cb_actividad_economica.SelectedValue + "").Rows[0]["NIVEL_RIESGO"].ToString() == "BAJO")
+                {
+                    ch_columnas.Series["BARRAS"].Points[0].Color = Color.Green;
+                }
 
-            //provincia
-            ch_columnas.Series["BARRAS"].Points.Add(provincia);
-            ch_columnas.Series["BARRAS"].Points[3].AxisLabel = "Provincia";
-            ch_columnas.Series["BARRAS"].Points[3].Label = provincia.ToString() + " %";
-            ch_columnas.Series["BARRAS"].Points[3].LabelForeColor = Color.Black;
-            if (provincia <= 30)
-            {
-                ch_columnas.Series["BARRAS"].Points[3].Color = Color.Green;
-            }
-            else if (provincia > 30 && provincia < 60)
-            {
-                ch_columnas.Series["BARRAS"].Points[3].Color = Color.Orange;
-            }
-            else
-            {
-                ch_columnas.Series["BARRAS"].Points[3].Color = Color.Red;
-            }
+                //nacionalidad
+                ch_columnas.Series["BARRAS"].Points.Add(nacionalidad);
+                ch_columnas.Series["BARRAS"].Points[1].AxisLabel = "Nacionalidad";
+                ch_columnas.Series["BARRAS"].Points[1].Label = nacionalidad.ToString() + " %";
+                ch_columnas.Series["BARRAS"].Points[1].LabelForeColor = Color.Black;
 
-            //cantidad efectivo
-            ch_columnas.Series["BARRAS"].Points.Add(cantidad_efectivo);
-            ch_columnas.Series["BARRAS"].Points[4].AxisLabel = "Cantidad Efectivo";
-            ch_columnas.Series["BARRAS"].Points[4].Label = cantidad_efectivo.ToString() + " %";
-            ch_columnas.Series["BARRAS"].Points[4].LabelForeColor = Color.Black;
-            if (cantidad_efectivo <= 30)
-            {
-                ch_columnas.Series["BARRAS"].Points[4].Color = Color.Green;
-            }
-            else if (cantidad_efectivo > 30 && cantidad_efectivo < 60)
-            {
-                ch_columnas.Series["BARRAS"].Points[4].Color = Color.Orange;
-            }
-            else
-            {
-                ch_columnas.Series["BARRAS"].Points[4].Color = Color.Red;
-            }
+                if (CN_PAIS.CONSULTAR("ID_PAIS=" + cb_nacionalidades.SelectedValue + "").Rows[0]["NIVEL_RIESGO"].ToString() == "ALTO")
+                {
+                    ch_columnas.Series["BARRAS"].Points[1].Color = Color.Red;
+                }
+                if (CN_PAIS.CONSULTAR("ID_PAIS=" + cb_nacionalidades.SelectedValue + "").Rows[0]["NIVEL_RIESGO"].ToString() == "MEDIO")
+                {
+                    ch_columnas.Series["BARRAS"].Points[1].Color = Color.Orange;
+                }
+                if (CN_PAIS.CONSULTAR("ID_PAIS=" + cb_nacionalidades.SelectedValue + "").Rows[0]["NIVEL_RIESGO"].ToString() == "BAJO")
+                {
+                    ch_columnas.Series["BARRAS"].Points[1].Color = Color.Green;
+                }
 
-            //productos
-            ch_columnas.Series["BARRAS"].Points.Add(productos);
-            ch_columnas.Series["BARRAS"].Points[5].AxisLabel = "Productos";
-            ch_columnas.Series["BARRAS"].Points[5].Label = productos.ToString() + " %";
-            ch_columnas.Series["BARRAS"].Points[5].LabelForeColor = Color.Black;
-            if (productos <= 30)
-            {
-                ch_columnas.Series["BARRAS"].Points[5].Color = Color.Green;
-            }
-            else if (productos > 30 && productos < 60)
-            {
-                ch_columnas.Series["BARRAS"].Points[5].Color = Color.Orange;
-            }
-            else
-            {
-                ch_columnas.Series["BARRAS"].Points[5].Color = Color.Red;
-            }
+                //pais
+                ch_columnas.Series["BARRAS"].Points.Add(pais);
+                ch_columnas.Series["BARRAS"].Points[2].AxisLabel = "Pais";
+                ch_columnas.Series["BARRAS"].Points[2].Label = pais.ToString() + " %";
+                ch_columnas.Series["BARRAS"].Points[2].LabelForeColor = Color.Black;
 
-            //canales
-            ch_columnas.Series["BARRAS"].Points.Add(canales);
-            ch_columnas.Series["BARRAS"].Points[6].AxisLabel = "Canales";
-            ch_columnas.Series["BARRAS"].Points[6].Label = canales.ToString() + " %";
-            ch_columnas.Series["BARRAS"].Points[6].LabelForeColor = Color.Black;
-            if (canales <= 30)
-            {
-                ch_columnas.Series["BARRAS"].Points[6].Color = Color.Green;
+                if (CN_PAIS.CONSULTAR("ID_PAIS=" + cb_paises.SelectedValue + "").Rows[0]["NIVEL_RIESGO"].ToString() == "ALTO")
+                {
+                    ch_columnas.Series["BARRAS"].Points[2].Color = Color.Red;
+                }
+                if (CN_PAIS.CONSULTAR("ID_PAIS=" + cb_paises.SelectedValue + "").Rows[0]["NIVEL_RIESGO"].ToString() == "MEDIO")
+                {
+                    ch_columnas.Series["BARRAS"].Points[2].Color = Color.Orange;
+                }
+                if (CN_PAIS.CONSULTAR("ID_PAIS=" + cb_paises.SelectedValue + "").Rows[0]["NIVEL_RIESGO"].ToString() == "BAJO")
+                {
+                    ch_columnas.Series["BARRAS"].Points[2].Color = Color.Green;
+                }
+
+                //provincia
+                ch_columnas.Series["BARRAS"].Points.Add(provincia);
+                ch_columnas.Series["BARRAS"].Points[3].AxisLabel = "Provincia";
+                ch_columnas.Series["BARRAS"].Points[3].Label = provincia.ToString() + " %";
+                ch_columnas.Series["BARRAS"].Points[3].LabelForeColor = Color.Black;
+
+                if (CN_PROVINCIA.CONSULTAR("ID_PROVINCIA=" + cb_provincias.SelectedValue + "").Rows[0]["NIVEL_RIESGO"].ToString() == "ALTO")
+                {
+                    ch_columnas.Series["BARRAS"].Points[3].Color = Color.Red;
+                }
+                if (CN_PROVINCIA.CONSULTAR("ID_PROVINCIA=" + cb_provincias.SelectedValue + "").Rows[0]["NIVEL_RIESGO"].ToString() == "MEDIO")
+                {
+                    ch_columnas.Series["BARRAS"].Points[3].Color = Color.Orange;
+                }
+                if (CN_PROVINCIA.CONSULTAR("ID_PROVINCIA=" + cb_provincias.SelectedValue + "").Rows[0]["NIVEL_RIESGO"].ToString() == "BAJO")
+                {
+                    ch_columnas.Series["BARRAS"].Points[3].Color = Color.Green;
+                }
+
+                //cantidad efectivo
+                ch_columnas.Series["BARRAS"].Points.Add(cantidad_efectivo);
+                ch_columnas.Series["BARRAS"].Points[4].AxisLabel = "Cantidad Efectivo";
+                ch_columnas.Series["BARRAS"].Points[4].Label = cantidad_efectivo.ToString() + " %";
+                ch_columnas.Series["BARRAS"].Points[4].LabelForeColor = Color.Black;
+
+                if (CN_CANTIDAD_EFECTIVO.CONSULTAR("ID_CANTIDAD=" + cb_cantidades_efectivo.SelectedValue + "").Rows[0]["NIVEL_RIESGO"].ToString() == "ALTO")
+                {
+                    ch_columnas.Series["BARRAS"].Points[4].Color = Color.Red;
+                }
+                if (CN_CANTIDAD_EFECTIVO.CONSULTAR("ID_CANTIDAD=" + cb_cantidades_efectivo.SelectedValue + "").Rows[0]["NIVEL_RIESGO"].ToString() == "MEDIO")
+                {
+                    ch_columnas.Series["BARRAS"].Points[4].Color = Color.Orange;
+                }
+                if (CN_CANTIDAD_EFECTIVO.CONSULTAR("ID_CANTIDAD=" + cb_cantidades_efectivo.SelectedValue + "").Rows[0]["NIVEL_RIESGO"].ToString() == "BAJO")
+                {
+                    ch_columnas.Series["BARRAS"].Points[4].Color = Color.Green;
+                }
+
+
+                //productos
+                ch_columnas.Series["BARRAS"].Points.Add(productos);
+                ch_columnas.Series["BARRAS"].Points[5].AxisLabel = "Productos";
+                ch_columnas.Series["BARRAS"].Points[5].Label = productos.ToString() + " %";
+                ch_columnas.Series["BARRAS"].Points[5].LabelForeColor = Color.Black;
+
+                if (productos <= 6)
+                {
+                    ch_columnas.Series["BARRAS"].Points[5].Color = Color.Green;
+                }
+                else if (productos > 6 && productos < 12)
+                {
+                    ch_columnas.Series["BARRAS"].Points[5].Color = Color.Orange;
+                }
+                else
+                {
+                    ch_columnas.Series["BARRAS"].Points[5].Color = Color.Red;
+                }
+
+                //canales
+                ch_columnas.Series["BARRAS"].Points.Add(canales);
+                ch_columnas.Series["BARRAS"].Points[6].AxisLabel = "Canales";
+                ch_columnas.Series["BARRAS"].Points[6].Label = canales.ToString() + " %";
+                ch_columnas.Series["BARRAS"].Points[6].LabelForeColor = Color.Black;
+
+                if (canales <= 8)
+                {
+                    ch_columnas.Series["BARRAS"].Points[6].Color = Color.Green;
+                }
+                else if (canales > 8 && canales <= 12)
+                {
+                    ch_columnas.Series["BARRAS"].Points[6].Color = Color.Orange;
+                }
+                else
+                {
+                    ch_columnas.Series["BARRAS"].Points[6].Color = Color.Red;
+                }
             }
-            else if (canales > 30 && canales < 60)
+            catch
             {
-                ch_columnas.Series["BARRAS"].Points[6].Color = Color.Orange;
-            }
-            else
-            {
-                ch_columnas.Series["BARRAS"].Points[6].Color = Color.Red;
-            }
+
+            }          
         }
 
         private void txt_actividad_economica_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                GRAFICO_COLUMNAS();
-            }
         }
 
         public void INSERTAR_ACTUALIZAR()
@@ -335,6 +388,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 CE.VALOR_PRODUCTO = txt_producto.Text.Length == 0 ? 0 : Convert.ToDecimal(txt_producto.Text);
                 CE.VALOR_PROVINCIA = txt_provincia.Text.Length == 0 ? 0 : Convert.ToDecimal(txt_provincia.Text);
                 CE.VALOR_TOTAL = txt_total.Text.Length == 0 ? 0 : Convert.ToDecimal(txt_total.Text);
+                CE.USUARIO = CP_UTILIDADES.DATOS_USUARIO.USUARIO;
 
                 if (CE.VALOR_TOTAL <= 10)
                 {
@@ -439,18 +493,12 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                         break;
                     }
                 }
-
                 Close();
             }
             catch (Exception ex)
             {
                 CP_UTILIDADES.MENSAJE_ERROR(ex.Message, this);
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_agregar_Click(object sender, EventArgs e)
@@ -482,6 +530,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             string ESTADO = CN_PRODUCTO.CONSULTAR("ID_PRODUCTO=" + cb_productos.SelectedValue + "").Rows[0]["ESTADO"].ToString();
 
             DG_PRODUCTOS.Rows.Add(ID, DESCRIPCION, VALORACION, NIVEL_RIESGO, ESTADO);
+            CALCULOS();
             cb_productos.SelectedItem = null;
         }
 
@@ -492,6 +541,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 return;
             }
             DG_PRODUCTOS.Rows.Remove(DG_PRODUCTOS.CurrentRow);
+            CALCULOS();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -519,6 +569,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             DG_CANALES.DataSource = null;
 
             DG_CANALES.Rows.Add(ID, DESCRIPCION, VALORACION, NIVEL_RIESGO, ESTADO);
+            CALCULOS();
             cb_canales.SelectedItem = null;
         }
 
@@ -528,7 +579,69 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             {
                 return;
             }
+            
             DG_CANALES.Rows.Remove(DG_CANALES.CurrentRow);
+            CALCULOS();
+        }
+
+        private void cb_actividad_economica_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                CALCULOS();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void cb_nacionalidades_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                CALCULOS();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void cb_paises_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                CALCULOS();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void cb_provincias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                CALCULOS();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void cb_cantidades_efectivo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                CALCULOS();
+            }
+            catch
+            {
+
+            }
         }
     }
 }

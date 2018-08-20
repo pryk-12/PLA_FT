@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_EVALUACION));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title7 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title8 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.txt_recomendacion = new MetroFramework.Controls.MetroTextBox();
@@ -111,13 +111,13 @@
             this.txt_canales = new MetroFramework.Controls.MetroTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.DG_CANALES = new System.Windows.Forms.DataGridView();
-            this.ch_barras = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.ch_columnas = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DESCRIP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VALORACION1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ch_barras = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.ch_columnas = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
             this.groupBox2.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
@@ -225,7 +225,7 @@
             this.groupBox2.Controls.Add(this.panel12);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(604, 22);
+            this.groupBox2.Location = new System.Drawing.Point(635, 22);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(257, 43);
             this.groupBox2.TabIndex = 51;
@@ -288,7 +288,6 @@
             this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 48;
             this.label1.Text = "Alto";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txt_total
             // 
@@ -298,7 +297,7 @@
             // 
             // 
             this.txt_total.CustomButton.Image = null;
-            this.txt_total.CustomButton.Location = new System.Drawing.Point(21, 1);
+            this.txt_total.CustomButton.Location = new System.Drawing.Point(43, 1);
             this.txt_total.CustomButton.Name = "";
             this.txt_total.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_total.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -306,6 +305,7 @@
             this.txt_total.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_total.CustomButton.UseSelectable = true;
             this.txt_total.CustomButton.Visible = false;
+            this.txt_total.Enabled = false;
             this.txt_total.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txt_total.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
             this.txt_total.Lines = new string[0];
@@ -473,6 +473,7 @@
             this.txt_cantidad_efectivo.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_cantidad_efectivo.CustomButton.UseSelectable = true;
             this.txt_cantidad_efectivo.CustomButton.Visible = false;
+            this.txt_cantidad_efectivo.Enabled = false;
             this.txt_cantidad_efectivo.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
             this.txt_cantidad_efectivo.Lines = new string[0];
             this.txt_cantidad_efectivo.Location = new System.Drawing.Point(3, 5);
@@ -502,6 +503,7 @@
             this.cb_cantidades_efectivo.Name = "cb_cantidades_efectivo";
             this.cb_cantidades_efectivo.Size = new System.Drawing.Size(289, 23);
             this.cb_cantidades_efectivo.TabIndex = 25;
+            this.cb_cantidades_efectivo.SelectedIndexChanged += new System.EventHandler(this.cb_cantidades_efectivo_SelectedIndexChanged);
             // 
             // metroLabel9
             // 
@@ -551,6 +553,7 @@
             this.txt_provincia.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_provincia.CustomButton.UseSelectable = true;
             this.txt_provincia.CustomButton.Visible = false;
+            this.txt_provincia.Enabled = false;
             this.txt_provincia.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
             this.txt_provincia.Lines = new string[0];
             this.txt_provincia.Location = new System.Drawing.Point(3, 5);
@@ -580,6 +583,7 @@
             this.cb_provincias.Name = "cb_provincias";
             this.cb_provincias.Size = new System.Drawing.Size(289, 23);
             this.cb_provincias.TabIndex = 25;
+            this.cb_provincias.SelectedIndexChanged += new System.EventHandler(this.cb_provincias_SelectedIndexChanged);
             // 
             // metroLabel8
             // 
@@ -629,6 +633,7 @@
             this.txt_pais.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_pais.CustomButton.UseSelectable = true;
             this.txt_pais.CustomButton.Visible = false;
+            this.txt_pais.Enabled = false;
             this.txt_pais.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
             this.txt_pais.Lines = new string[0];
             this.txt_pais.Location = new System.Drawing.Point(3, 5);
@@ -658,6 +663,7 @@
             this.cb_paises.Name = "cb_paises";
             this.cb_paises.Size = new System.Drawing.Size(289, 23);
             this.cb_paises.TabIndex = 25;
+            this.cb_paises.SelectedIndexChanged += new System.EventHandler(this.cb_paises_SelectedIndexChanged);
             // 
             // metroLabel6
             // 
@@ -904,6 +910,7 @@
             this.txt_nacionalidad.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_nacionalidad.CustomButton.UseSelectable = true;
             this.txt_nacionalidad.CustomButton.Visible = false;
+            this.txt_nacionalidad.Enabled = false;
             this.txt_nacionalidad.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
             this.txt_nacionalidad.Lines = new string[0];
             this.txt_nacionalidad.Location = new System.Drawing.Point(3, 5);
@@ -933,6 +940,7 @@
             this.cb_nacionalidades.Name = "cb_nacionalidades";
             this.cb_nacionalidades.Size = new System.Drawing.Size(289, 23);
             this.cb_nacionalidades.TabIndex = 25;
+            this.cb_nacionalidades.SelectedIndexChanged += new System.EventHandler(this.cb_nacionalidades_SelectedIndexChanged);
             // 
             // metroLabel4
             // 
@@ -982,6 +990,7 @@
             this.txt_actividad_economica.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_actividad_economica.CustomButton.UseSelectable = true;
             this.txt_actividad_economica.CustomButton.Visible = false;
+            this.txt_actividad_economica.Enabled = false;
             this.txt_actividad_economica.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
             this.txt_actividad_economica.Lines = new string[0];
             this.txt_actividad_economica.Location = new System.Drawing.Point(3, 5);
@@ -1012,6 +1021,7 @@
             this.cb_actividad_economica.Name = "cb_actividad_economica";
             this.cb_actividad_economica.Size = new System.Drawing.Size(289, 23);
             this.cb_actividad_economica.TabIndex = 25;
+            this.cb_actividad_economica.SelectedIndexChanged += new System.EventHandler(this.cb_actividad_economica_SelectedIndexChanged);
             // 
             // metroLabel3
             // 
@@ -1090,6 +1100,7 @@
             this.txt_producto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_producto.CustomButton.UseSelectable = true;
             this.txt_producto.CustomButton.Visible = false;
+            this.txt_producto.Enabled = false;
             this.txt_producto.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
             this.txt_producto.Lines = new string[0];
             this.txt_producto.Location = new System.Drawing.Point(401, 295);
@@ -1128,14 +1139,14 @@
             this.DG_PRODUCTOS.AllowUserToResizeColumns = false;
             this.DG_PRODUCTOS.AllowUserToResizeRows = false;
             this.DG_PRODUCTOS.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG_PRODUCTOS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG_PRODUCTOS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DG_PRODUCTOS.ColumnHeadersHeight = 25;
             this.DG_PRODUCTOS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_PRODUCTO,
@@ -1143,14 +1154,14 @@
             this.VALORACION,
             this.NIVEL_RIESGO,
             this.ESTADO});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DG_PRODUCTOS.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG_PRODUCTOS.DefaultCellStyle = dataGridViewCellStyle2;
             this.DG_PRODUCTOS.EnableHeadersVisualStyles = false;
             this.DG_PRODUCTOS.GridColor = System.Drawing.Color.Gray;
             this.DG_PRODUCTOS.Location = new System.Drawing.Point(14, 91);
@@ -1267,6 +1278,7 @@
             this.txt_canales.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_canales.CustomButton.UseSelectable = true;
             this.txt_canales.CustomButton.Visible = false;
+            this.txt_canales.Enabled = false;
             this.txt_canales.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
             this.txt_canales.Lines = new string[0];
             this.txt_canales.Location = new System.Drawing.Point(401, 295);
@@ -1305,29 +1317,29 @@
             this.DG_CANALES.AllowUserToResizeColumns = false;
             this.DG_CANALES.AllowUserToResizeRows = false;
             this.DG_CANALES.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG_CANALES.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG_CANALES.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DG_CANALES.ColumnHeadersHeight = 25;
             this.DG_CANALES.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.DESCRIP,
-            this.dataGridViewTextBoxColumn3,
+            this.VALORACION1,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DG_CANALES.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG_CANALES.DefaultCellStyle = dataGridViewCellStyle4;
             this.DG_CANALES.EnableHeadersVisualStyles = false;
             this.DG_CANALES.GridColor = System.Drawing.Color.Gray;
             this.DG_CANALES.Location = new System.Drawing.Point(14, 91);
@@ -1337,91 +1349,6 @@
             this.DG_CANALES.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DG_CANALES.Size = new System.Drawing.Size(442, 201);
             this.DG_CANALES.TabIndex = 37;
-            // 
-            // ch_barras
-            // 
-            chartArea7.Area3DStyle.Enable3D = true;
-            chartArea7.Area3DStyle.Inclination = 10;
-            chartArea7.Area3DStyle.PointDepth = 50;
-            chartArea7.Area3DStyle.PointGapDepth = 50;
-            chartArea7.Area3DStyle.Rotation = 20;
-            chartArea7.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea7.AxisX.MajorGrid.LineWidth = 0;
-            chartArea7.AxisX.MinorGrid.LineWidth = 0;
-            chartArea7.AxisY.LabelAutoFitMaxFontSize = 7;
-            chartArea7.AxisY.LabelAutoFitMinFontSize = 5;
-            chartArea7.AxisY.LabelAutoFitStyle = System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.WordWrap;
-            chartArea7.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea7.AxisY.MajorGrid.LineWidth = 0;
-            chartArea7.AxisY.MaximumAutoSize = 50F;
-            chartArea7.AxisY.MinorGrid.LineWidth = 0;
-            chartArea7.AxisY2.LabelStyle.IsEndLabelVisible = false;
-            chartArea7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            chartArea7.BorderWidth = 0;
-            chartArea7.Name = "ChartArea1";
-            this.ch_barras.ChartAreas.Add(chartArea7);
-            this.ch_barras.Location = new System.Drawing.Point(482, 85);
-            this.ch_barras.Name = "ch_barras";
-            series7.BorderColor = System.Drawing.Color.Black;
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
-            series7.EmptyPointStyle.IsVisibleInLegend = false;
-            series7.Name = "BARRAS";
-            this.ch_barras.Series.Add(series7);
-            this.ch_barras.Size = new System.Drawing.Size(422, 120);
-            this.ch_barras.TabIndex = 41;
-            this.ch_barras.Text = "22222";
-            title7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            title7.Name = "Title1";
-            title7.Text = "RIESGO TOTAL";
-            this.ch_barras.Titles.Add(title7);
-            // 
-            // ch_columnas
-            // 
-            chartArea8.Area3DStyle.Enable3D = true;
-            chartArea8.Area3DStyle.Inclination = 10;
-            chartArea8.Area3DStyle.PointDepth = 50;
-            chartArea8.Area3DStyle.Rotation = 20;
-            chartArea8.AxisX.IsLabelAutoFit = false;
-            chartArea8.AxisX.LabelAutoFitMaxFontSize = 12;
-            chartArea8.AxisX.LabelAutoFitStyle = ((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles)(((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep30 | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep45) 
-            | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.WordWrap)));
-            chartArea8.AxisX.LabelStyle.Angle = 45;
-            chartArea8.AxisX.LabelStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            chartArea8.AxisX.MajorGrid.LineWidth = 0;
-            chartArea8.AxisX.MinorGrid.LineWidth = 0;
-            chartArea8.AxisY.IsLabelAutoFit = false;
-            chartArea8.AxisY.LabelAutoFitMinFontSize = 5;
-            chartArea8.AxisY.LabelAutoFitStyle = ((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles)((((((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.IncreaseFont | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.DecreaseFont) 
-            | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.StaggeredLabels) 
-            | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep30) 
-            | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep45) 
-            | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.WordWrap)));
-            chartArea8.AxisY.LabelStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
-            chartArea8.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea8.AxisY.LabelStyle.IsEndLabelVisible = false;
-            chartArea8.AxisY.MajorGrid.LineWidth = 0;
-            chartArea8.AxisY.MaximumAutoSize = 0F;
-            chartArea8.AxisY.MinorGrid.LineWidth = 0;
-            chartArea8.AxisY2.LabelStyle.IsEndLabelVisible = false;
-            chartArea8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            chartArea8.BorderWidth = 0;
-            chartArea8.Name = "ChartArea1";
-            this.ch_columnas.ChartAreas.Add(chartArea8);
-            this.ch_columnas.Location = new System.Drawing.Point(482, 205);
-            this.ch_columnas.Name = "ch_columnas";
-            series8.BorderColor = System.Drawing.Color.Black;
-            series8.ChartArea = "ChartArea1";
-            series8.EmptyPointStyle.IsVisibleInLegend = false;
-            series8.Name = "BARRAS";
-            this.ch_columnas.Series.Add(series8);
-            this.ch_columnas.Size = new System.Drawing.Size(433, 448);
-            this.ch_columnas.TabIndex = 45;
-            this.ch_columnas.Text = "chart1";
-            title8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            title8.Name = "Title1";
-            title8.Text = "RIESGO PARCIAL";
-            this.ch_columnas.Titles.Add(title8);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1439,13 +1366,13 @@
             this.DESCRIP.ReadOnly = true;
             this.DESCRIP.Width = 380;
             // 
-            // dataGridViewTextBoxColumn3
+            // VALORACION1
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "VALORACION";
-            this.dataGridViewTextBoxColumn3.HeaderText = "VALORACION";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Visible = false;
+            this.VALORACION1.DataPropertyName = "VALORACION";
+            this.VALORACION1.HeaderText = "VALORACION";
+            this.VALORACION1.Name = "VALORACION1";
+            this.VALORACION1.ReadOnly = true;
+            this.VALORACION1.Visible = false;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -1462,6 +1389,91 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Visible = false;
+            // 
+            // ch_barras
+            // 
+            chartArea1.Area3DStyle.Enable3D = true;
+            chartArea1.Area3DStyle.Inclination = 10;
+            chartArea1.Area3DStyle.PointDepth = 50;
+            chartArea1.Area3DStyle.PointGapDepth = 50;
+            chartArea1.Area3DStyle.Rotation = 20;
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MajorGrid.LineWidth = 0;
+            chartArea1.AxisX.MinorGrid.LineWidth = 0;
+            chartArea1.AxisY.LabelAutoFitMaxFontSize = 7;
+            chartArea1.AxisY.LabelAutoFitMinFontSize = 5;
+            chartArea1.AxisY.LabelAutoFitStyle = System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.WordWrap;
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY.MajorGrid.LineWidth = 0;
+            chartArea1.AxisY.MaximumAutoSize = 50F;
+            chartArea1.AxisY.MinorGrid.LineWidth = 0;
+            chartArea1.AxisY2.LabelStyle.IsEndLabelVisible = false;
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            chartArea1.BorderWidth = 0;
+            chartArea1.Name = "ChartArea1";
+            this.ch_barras.ChartAreas.Add(chartArea1);
+            this.ch_barras.Location = new System.Drawing.Point(482, 85);
+            this.ch_barras.Name = "ch_barras";
+            series1.BorderColor = System.Drawing.Color.Black;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
+            series1.EmptyPointStyle.IsVisibleInLegend = false;
+            series1.Name = "BARRAS";
+            this.ch_barras.Series.Add(series1);
+            this.ch_barras.Size = new System.Drawing.Size(422, 120);
+            this.ch_barras.TabIndex = 41;
+            this.ch_barras.Text = "22222";
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            title1.Name = "Title1";
+            title1.Text = "RIESGO TOTAL";
+            this.ch_barras.Titles.Add(title1);
+            // 
+            // ch_columnas
+            // 
+            chartArea2.Area3DStyle.Enable3D = true;
+            chartArea2.Area3DStyle.Inclination = 10;
+            chartArea2.Area3DStyle.PointDepth = 50;
+            chartArea2.Area3DStyle.Rotation = 20;
+            chartArea2.AxisX.IsLabelAutoFit = false;
+            chartArea2.AxisX.LabelAutoFitMaxFontSize = 12;
+            chartArea2.AxisX.LabelAutoFitStyle = ((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles)(((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep30 | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep45) 
+            | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.WordWrap)));
+            chartArea2.AxisX.LabelStyle.Angle = 45;
+            chartArea2.AxisX.LabelStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            chartArea2.AxisX.MajorGrid.LineWidth = 0;
+            chartArea2.AxisX.MinorGrid.LineWidth = 0;
+            chartArea2.AxisY.IsLabelAutoFit = false;
+            chartArea2.AxisY.LabelAutoFitMinFontSize = 5;
+            chartArea2.AxisY.LabelAutoFitStyle = ((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles)((((((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.IncreaseFont | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.DecreaseFont) 
+            | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.StaggeredLabels) 
+            | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep30) 
+            | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep45) 
+            | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.WordWrap)));
+            chartArea2.AxisY.LabelStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
+            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea2.AxisY.LabelStyle.IsEndLabelVisible = false;
+            chartArea2.AxisY.MajorGrid.LineWidth = 0;
+            chartArea2.AxisY.MaximumAutoSize = 0F;
+            chartArea2.AxisY.MinorGrid.LineWidth = 0;
+            chartArea2.AxisY2.LabelStyle.IsEndLabelVisible = false;
+            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            chartArea2.BorderWidth = 0;
+            chartArea2.Name = "ChartArea1";
+            this.ch_columnas.ChartAreas.Add(chartArea2);
+            this.ch_columnas.Location = new System.Drawing.Point(482, 205);
+            this.ch_columnas.Name = "ch_columnas";
+            series2.BorderColor = System.Drawing.Color.Black;
+            series2.ChartArea = "ChartArea1";
+            series2.EmptyPointStyle.IsVisibleInLegend = false;
+            series2.Name = "BARRAS";
+            this.ch_columnas.Series.Add(series2);
+            this.ch_columnas.Size = new System.Drawing.Size(433, 448);
+            this.ch_columnas.TabIndex = 45;
+            this.ch_columnas.Text = "chart1";
+            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            title2.Name = "Title1";
+            title2.Text = "RIESGO PARCIAL";
+            this.ch_columnas.Titles.Add(title2);
             // 
             // metroLabel13
             // 
@@ -1604,11 +1616,11 @@
         private MetroFramework.Controls.MetroTextBox txt_recomendacion;
         private MetroFramework.Controls.MetroLabel metroLabel11;
         private MetroFramework.Controls.MetroLabel metroLabel12;
+        private MetroFramework.Controls.MetroLabel metroLabel13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VALORACION1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private MetroFramework.Controls.MetroLabel metroLabel13;
     }
 }

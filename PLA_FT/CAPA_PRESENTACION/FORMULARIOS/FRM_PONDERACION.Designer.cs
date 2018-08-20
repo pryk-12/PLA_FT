@@ -48,6 +48,7 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txt_actividad = new MetroFramework.Controls.MetroTextBox();
             this.txt_id = new MetroFramework.Controls.MetroTextBox();
+            this.lbl_total = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +70,7 @@
             this.btn_agregar.Text = "  Guardar";
             this.btn_agregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // metroPanel1
             // 
@@ -94,7 +96,7 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(20, 62);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(446, 219);
+            this.metroPanel1.Size = new System.Drawing.Size(430, 219);
             this.metroPanel1.TabIndex = 14;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -107,7 +109,7 @@
             // 
             // 
             this.txt_porc_provincia.CustomButton.Image = null;
-            this.txt_porc_provincia.CustomButton.Location = new System.Drawing.Point(42, 1);
+            this.txt_porc_provincia.CustomButton.Location = new System.Drawing.Point(32, 1);
             this.txt_porc_provincia.CustomButton.Name = "";
             this.txt_porc_provincia.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_porc_provincia.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -116,7 +118,7 @@
             this.txt_porc_provincia.CustomButton.UseSelectable = true;
             this.txt_porc_provincia.CustomButton.Visible = false;
             this.txt_porc_provincia.Lines = new string[0];
-            this.txt_porc_provincia.Location = new System.Drawing.Point(362, 180);
+            this.txt_porc_provincia.Location = new System.Drawing.Point(360, 178);
             this.txt_porc_provincia.MaxLength = 100;
             this.txt_porc_provincia.Name = "txt_porc_provincia";
             this.txt_porc_provincia.PasswordChar = '\0';
@@ -125,12 +127,13 @@
             this.txt_porc_provincia.SelectionLength = 0;
             this.txt_porc_provincia.SelectionStart = 0;
             this.txt_porc_provincia.ShortcutsEnabled = true;
-            this.txt_porc_provincia.Size = new System.Drawing.Size(64, 23);
+            this.txt_porc_provincia.Size = new System.Drawing.Size(54, 23);
             this.txt_porc_provincia.TabIndex = 23;
             this.txt_porc_provincia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_porc_provincia.UseSelectable = true;
             this.txt_porc_provincia.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_porc_provincia.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_porc_provincia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_porc_provincia_KeyPress);
             // 
             // txt_provincia
             // 
@@ -147,8 +150,9 @@
             this.txt_provincia.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_provincia.CustomButton.UseSelectable = true;
             this.txt_provincia.CustomButton.Visible = false;
+            this.txt_provincia.Enabled = false;
             this.txt_provincia.Lines = new string[0];
-            this.txt_provincia.Location = new System.Drawing.Point(17, 180);
+            this.txt_provincia.Location = new System.Drawing.Point(15, 178);
             this.txt_provincia.MaxLength = 100;
             this.txt_provincia.Name = "txt_provincia";
             this.txt_provincia.PasswordChar = '\0';
@@ -170,7 +174,7 @@
             // 
             // 
             this.txt_porc_pais.CustomButton.Image = null;
-            this.txt_porc_pais.CustomButton.Location = new System.Drawing.Point(42, 1);
+            this.txt_porc_pais.CustomButton.Location = new System.Drawing.Point(32, 1);
             this.txt_porc_pais.CustomButton.Name = "";
             this.txt_porc_pais.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_porc_pais.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -179,7 +183,7 @@
             this.txt_porc_pais.CustomButton.UseSelectable = true;
             this.txt_porc_pais.CustomButton.Visible = false;
             this.txt_porc_pais.Lines = new string[0];
-            this.txt_porc_pais.Location = new System.Drawing.Point(362, 155);
+            this.txt_porc_pais.Location = new System.Drawing.Point(360, 153);
             this.txt_porc_pais.MaxLength = 100;
             this.txt_porc_pais.Name = "txt_porc_pais";
             this.txt_porc_pais.PasswordChar = '\0';
@@ -188,12 +192,13 @@
             this.txt_porc_pais.SelectionLength = 0;
             this.txt_porc_pais.SelectionStart = 0;
             this.txt_porc_pais.ShortcutsEnabled = true;
-            this.txt_porc_pais.Size = new System.Drawing.Size(64, 23);
+            this.txt_porc_pais.Size = new System.Drawing.Size(54, 23);
             this.txt_porc_pais.TabIndex = 20;
             this.txt_porc_pais.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_porc_pais.UseSelectable = true;
             this.txt_porc_pais.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_porc_pais.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_porc_pais.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_porc_pais_KeyPress);
             // 
             // txt_pais
             // 
@@ -210,8 +215,9 @@
             this.txt_pais.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_pais.CustomButton.UseSelectable = true;
             this.txt_pais.CustomButton.Visible = false;
+            this.txt_pais.Enabled = false;
             this.txt_pais.Lines = new string[0];
-            this.txt_pais.Location = new System.Drawing.Point(17, 155);
+            this.txt_pais.Location = new System.Drawing.Point(15, 153);
             this.txt_pais.MaxLength = 100;
             this.txt_pais.Name = "txt_pais";
             this.txt_pais.PasswordChar = '\0';
@@ -233,7 +239,7 @@
             // 
             // 
             this.txt_porc_nacionalidad.CustomButton.Image = null;
-            this.txt_porc_nacionalidad.CustomButton.Location = new System.Drawing.Point(42, 1);
+            this.txt_porc_nacionalidad.CustomButton.Location = new System.Drawing.Point(32, 1);
             this.txt_porc_nacionalidad.CustomButton.Name = "";
             this.txt_porc_nacionalidad.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_porc_nacionalidad.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -242,7 +248,7 @@
             this.txt_porc_nacionalidad.CustomButton.UseSelectable = true;
             this.txt_porc_nacionalidad.CustomButton.Visible = false;
             this.txt_porc_nacionalidad.Lines = new string[0];
-            this.txt_porc_nacionalidad.Location = new System.Drawing.Point(362, 130);
+            this.txt_porc_nacionalidad.Location = new System.Drawing.Point(360, 128);
             this.txt_porc_nacionalidad.MaxLength = 100;
             this.txt_porc_nacionalidad.Name = "txt_porc_nacionalidad";
             this.txt_porc_nacionalidad.PasswordChar = '\0';
@@ -251,12 +257,13 @@
             this.txt_porc_nacionalidad.SelectionLength = 0;
             this.txt_porc_nacionalidad.SelectionStart = 0;
             this.txt_porc_nacionalidad.ShortcutsEnabled = true;
-            this.txt_porc_nacionalidad.Size = new System.Drawing.Size(64, 23);
+            this.txt_porc_nacionalidad.Size = new System.Drawing.Size(54, 23);
             this.txt_porc_nacionalidad.TabIndex = 17;
             this.txt_porc_nacionalidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_porc_nacionalidad.UseSelectable = true;
             this.txt_porc_nacionalidad.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_porc_nacionalidad.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_porc_nacionalidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_porc_nacionalidad_KeyPress);
             // 
             // txt_nacionalidad
             // 
@@ -273,8 +280,9 @@
             this.txt_nacionalidad.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_nacionalidad.CustomButton.UseSelectable = true;
             this.txt_nacionalidad.CustomButton.Visible = false;
+            this.txt_nacionalidad.Enabled = false;
             this.txt_nacionalidad.Lines = new string[0];
-            this.txt_nacionalidad.Location = new System.Drawing.Point(17, 130);
+            this.txt_nacionalidad.Location = new System.Drawing.Point(15, 128);
             this.txt_nacionalidad.MaxLength = 100;
             this.txt_nacionalidad.Name = "txt_nacionalidad";
             this.txt_nacionalidad.PasswordChar = '\0';
@@ -296,7 +304,7 @@
             // 
             // 
             this.txt_porc_cantidad.CustomButton.Image = null;
-            this.txt_porc_cantidad.CustomButton.Location = new System.Drawing.Point(42, 1);
+            this.txt_porc_cantidad.CustomButton.Location = new System.Drawing.Point(32, 1);
             this.txt_porc_cantidad.CustomButton.Name = "";
             this.txt_porc_cantidad.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_porc_cantidad.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -305,7 +313,7 @@
             this.txt_porc_cantidad.CustomButton.UseSelectable = true;
             this.txt_porc_cantidad.CustomButton.Visible = false;
             this.txt_porc_cantidad.Lines = new string[0];
-            this.txt_porc_cantidad.Location = new System.Drawing.Point(362, 105);
+            this.txt_porc_cantidad.Location = new System.Drawing.Point(360, 103);
             this.txt_porc_cantidad.MaxLength = 100;
             this.txt_porc_cantidad.Name = "txt_porc_cantidad";
             this.txt_porc_cantidad.PasswordChar = '\0';
@@ -314,12 +322,13 @@
             this.txt_porc_cantidad.SelectionLength = 0;
             this.txt_porc_cantidad.SelectionStart = 0;
             this.txt_porc_cantidad.ShortcutsEnabled = true;
-            this.txt_porc_cantidad.Size = new System.Drawing.Size(64, 23);
+            this.txt_porc_cantidad.Size = new System.Drawing.Size(54, 23);
             this.txt_porc_cantidad.TabIndex = 14;
             this.txt_porc_cantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_porc_cantidad.UseSelectable = true;
             this.txt_porc_cantidad.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_porc_cantidad.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_porc_cantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_porc_cantidad_KeyPress);
             // 
             // txt_cantidad
             // 
@@ -336,8 +345,9 @@
             this.txt_cantidad.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_cantidad.CustomButton.UseSelectable = true;
             this.txt_cantidad.CustomButton.Visible = false;
+            this.txt_cantidad.Enabled = false;
             this.txt_cantidad.Lines = new string[0];
-            this.txt_cantidad.Location = new System.Drawing.Point(17, 105);
+            this.txt_cantidad.Location = new System.Drawing.Point(15, 103);
             this.txt_cantidad.MaxLength = 100;
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.PasswordChar = '\0';
@@ -359,7 +369,7 @@
             // 
             // 
             this.txt_porc_canal.CustomButton.Image = null;
-            this.txt_porc_canal.CustomButton.Location = new System.Drawing.Point(42, 1);
+            this.txt_porc_canal.CustomButton.Location = new System.Drawing.Point(32, 1);
             this.txt_porc_canal.CustomButton.Name = "";
             this.txt_porc_canal.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_porc_canal.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -368,7 +378,7 @@
             this.txt_porc_canal.CustomButton.UseSelectable = true;
             this.txt_porc_canal.CustomButton.Visible = false;
             this.txt_porc_canal.Lines = new string[0];
-            this.txt_porc_canal.Location = new System.Drawing.Point(362, 80);
+            this.txt_porc_canal.Location = new System.Drawing.Point(360, 78);
             this.txt_porc_canal.MaxLength = 100;
             this.txt_porc_canal.Name = "txt_porc_canal";
             this.txt_porc_canal.PasswordChar = '\0';
@@ -377,12 +387,13 @@
             this.txt_porc_canal.SelectionLength = 0;
             this.txt_porc_canal.SelectionStart = 0;
             this.txt_porc_canal.ShortcutsEnabled = true;
-            this.txt_porc_canal.Size = new System.Drawing.Size(64, 23);
+            this.txt_porc_canal.Size = new System.Drawing.Size(54, 23);
             this.txt_porc_canal.TabIndex = 11;
             this.txt_porc_canal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_porc_canal.UseSelectable = true;
             this.txt_porc_canal.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_porc_canal.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_porc_canal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_porc_canal_KeyPress);
             // 
             // txt_canal
             // 
@@ -399,8 +410,9 @@
             this.txt_canal.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_canal.CustomButton.UseSelectable = true;
             this.txt_canal.CustomButton.Visible = false;
+            this.txt_canal.Enabled = false;
             this.txt_canal.Lines = new string[0];
-            this.txt_canal.Location = new System.Drawing.Point(17, 80);
+            this.txt_canal.Location = new System.Drawing.Point(15, 78);
             this.txt_canal.MaxLength = 100;
             this.txt_canal.Name = "txt_canal";
             this.txt_canal.PasswordChar = '\0';
@@ -422,7 +434,7 @@
             // 
             // 
             this.txt_porc_producto.CustomButton.Image = null;
-            this.txt_porc_producto.CustomButton.Location = new System.Drawing.Point(42, 1);
+            this.txt_porc_producto.CustomButton.Location = new System.Drawing.Point(32, 1);
             this.txt_porc_producto.CustomButton.Name = "";
             this.txt_porc_producto.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_porc_producto.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -431,7 +443,7 @@
             this.txt_porc_producto.CustomButton.UseSelectable = true;
             this.txt_porc_producto.CustomButton.Visible = false;
             this.txt_porc_producto.Lines = new string[0];
-            this.txt_porc_producto.Location = new System.Drawing.Point(362, 55);
+            this.txt_porc_producto.Location = new System.Drawing.Point(360, 53);
             this.txt_porc_producto.MaxLength = 100;
             this.txt_porc_producto.Name = "txt_porc_producto";
             this.txt_porc_producto.PasswordChar = '\0';
@@ -440,12 +452,13 @@
             this.txt_porc_producto.SelectionLength = 0;
             this.txt_porc_producto.SelectionStart = 0;
             this.txt_porc_producto.ShortcutsEnabled = true;
-            this.txt_porc_producto.Size = new System.Drawing.Size(64, 23);
+            this.txt_porc_producto.Size = new System.Drawing.Size(54, 23);
             this.txt_porc_producto.TabIndex = 8;
             this.txt_porc_producto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_porc_producto.UseSelectable = true;
             this.txt_porc_producto.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_porc_producto.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_porc_producto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_porc_producto_KeyPress);
             // 
             // txt_producto
             // 
@@ -462,8 +475,9 @@
             this.txt_producto.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_producto.CustomButton.UseSelectable = true;
             this.txt_producto.CustomButton.Visible = false;
+            this.txt_producto.Enabled = false;
             this.txt_producto.Lines = new string[0];
-            this.txt_producto.Location = new System.Drawing.Point(17, 55);
+            this.txt_producto.Location = new System.Drawing.Point(15, 53);
             this.txt_producto.MaxLength = 100;
             this.txt_producto.Name = "txt_producto";
             this.txt_producto.PasswordChar = '\0';
@@ -485,7 +499,7 @@
             // 
             // 
             this.txt_porc_actividad.CustomButton.Image = null;
-            this.txt_porc_actividad.CustomButton.Location = new System.Drawing.Point(42, 1);
+            this.txt_porc_actividad.CustomButton.Location = new System.Drawing.Point(32, 1);
             this.txt_porc_actividad.CustomButton.Name = "";
             this.txt_porc_actividad.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_porc_actividad.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -494,7 +508,7 @@
             this.txt_porc_actividad.CustomButton.UseSelectable = true;
             this.txt_porc_actividad.CustomButton.Visible = false;
             this.txt_porc_actividad.Lines = new string[0];
-            this.txt_porc_actividad.Location = new System.Drawing.Point(362, 30);
+            this.txt_porc_actividad.Location = new System.Drawing.Point(360, 28);
             this.txt_porc_actividad.MaxLength = 100;
             this.txt_porc_actividad.Name = "txt_porc_actividad";
             this.txt_porc_actividad.PasswordChar = '\0';
@@ -503,30 +517,31 @@
             this.txt_porc_actividad.SelectionLength = 0;
             this.txt_porc_actividad.SelectionStart = 0;
             this.txt_porc_actividad.ShortcutsEnabled = true;
-            this.txt_porc_actividad.Size = new System.Drawing.Size(64, 23);
+            this.txt_porc_actividad.Size = new System.Drawing.Size(54, 23);
             this.txt_porc_actividad.TabIndex = 1;
             this.txt_porc_actividad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_porc_actividad.UseSelectable = true;
             this.txt_porc_actividad.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_porc_actividad.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_porc_actividad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_porc_actividad_KeyPress);
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.Location = new System.Drawing.Point(362, 14);
+            this.metroLabel2.Location = new System.Drawing.Point(373, 5);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(61, 15);
+            this.metroLabel2.Size = new System.Drawing.Size(28, 25);
             this.metroLabel2.TabIndex = 5;
-            this.metroLabel2.Text = "Porciento";
+            this.metroLabel2.Text = "%";
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(16, 14);
+            this.metroLabel1.Location = new System.Drawing.Point(14, 12);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(72, 15);
             this.metroLabel1.TabIndex = 3;
@@ -547,8 +562,9 @@
             this.txt_actividad.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_actividad.CustomButton.UseSelectable = true;
             this.txt_actividad.CustomButton.Visible = false;
+            this.txt_actividad.Enabled = false;
             this.txt_actividad.Lines = new string[0];
-            this.txt_actividad.Location = new System.Drawing.Point(17, 30);
+            this.txt_actividad.Location = new System.Drawing.Point(15, 28);
             this.txt_actividad.MaxLength = 100;
             this.txt_actividad.Name = "txt_actividad";
             this.txt_actividad.PasswordChar = '\0';
@@ -580,7 +596,7 @@
             this.txt_id.CustomButton.UseSelectable = true;
             this.txt_id.CustomButton.Visible = false;
             this.txt_id.Lines = new string[0];
-            this.txt_id.Location = new System.Drawing.Point(117, 47);
+            this.txt_id.Location = new System.Drawing.Point(99, 47);
             this.txt_id.MaxLength = 100;
             this.txt_id.Name = "txt_id";
             this.txt_id.PasswordChar = '\0';
@@ -596,10 +612,21 @@
             this.txt_id.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_id.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // lbl_total
+            // 
+            this.lbl_total.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_total.Location = new System.Drawing.Point(349, 294);
+            this.lbl_total.Name = "lbl_total";
+            this.lbl_total.Size = new System.Drawing.Size(86, 25);
+            this.lbl_total.TabIndex = 17;
+            this.lbl_total.Text = "0";
+            this.lbl_total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // FRM_PONDERACION
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(484, 345);
+            this.ClientSize = new System.Drawing.Size(466, 345);
+            this.Controls.Add(this.lbl_total);
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.txt_id);
@@ -633,5 +660,6 @@
         private MetroFramework.Controls.MetroTextBox txt_canal;
         private MetroFramework.Controls.MetroTextBox txt_porc_producto;
         private MetroFramework.Controls.MetroTextBox txt_producto;
+        private MetroFramework.Controls.MetroLabel lbl_total;
     }
 }

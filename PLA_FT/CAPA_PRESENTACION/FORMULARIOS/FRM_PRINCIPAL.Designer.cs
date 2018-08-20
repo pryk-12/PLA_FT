@@ -49,6 +49,8 @@
             this.mn_conf_cantidad_efectivo = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_conf_recomendaciones = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_conf_ponderaciones = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_configuraciones = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btn_procesos = new System.Windows.Forms.Button();
@@ -75,8 +77,8 @@
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.btn_conf_ponderaciones = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_conf_empresa = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.mn_configuraciones.SuspendLayout();
@@ -156,9 +158,11 @@
             this.toolStripSeparator13,
             this.btn_conf_recomendaciones,
             this.toolStripSeparator14,
-            this.btn_conf_ponderaciones});
+            this.btn_conf_ponderaciones,
+            this.toolStripSeparator15,
+            this.btn_conf_empresa});
             this.mn_configuraciones.Name = "metroContextMenu1";
-            this.mn_configuraciones.Size = new System.Drawing.Size(237, 290);
+            this.mn_configuraciones.Size = new System.Drawing.Size(237, 320);
             // 
             // mn_conf_actividad_economica
             // 
@@ -270,6 +274,20 @@
             this.btn_conf_recomendaciones.Size = new System.Drawing.Size(236, 24);
             this.btn_conf_recomendaciones.Text = "Recomendaciones";
             this.btn_conf_recomendaciones.Click += new System.EventHandler(this.btn_conf_recomendaciones_Click);
+            // 
+            // toolStripSeparator14
+            // 
+            this.toolStripSeparator14.Name = "toolStripSeparator14";
+            this.toolStripSeparator14.Size = new System.Drawing.Size(233, 6);
+            // 
+            // btn_conf_ponderaciones
+            // 
+            this.btn_conf_ponderaciones.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_conf_ponderaciones.Image = ((System.Drawing.Image)(resources.GetObject("btn_conf_ponderaciones.Image")));
+            this.btn_conf_ponderaciones.Name = "btn_conf_ponderaciones";
+            this.btn_conf_ponderaciones.Size = new System.Drawing.Size(236, 24);
+            this.btn_conf_ponderaciones.Text = "Ponderaciones";
+            this.btn_conf_ponderaciones.Click += new System.EventHandler(this.btn_conf_ponderaciones_Click);
             // 
             // btn_configuraciones
             // 
@@ -541,19 +559,19 @@
             this.statusStrip1.TabIndex = 10;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // btn_conf_ponderaciones
+            // btn_conf_empresa
             // 
-            this.btn_conf_ponderaciones.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btn_conf_ponderaciones.Image = ((System.Drawing.Image)(resources.GetObject("btn_conf_ponderaciones.Image")));
-            this.btn_conf_ponderaciones.Name = "btn_conf_ponderaciones";
-            this.btn_conf_ponderaciones.Size = new System.Drawing.Size(236, 24);
-            this.btn_conf_ponderaciones.Text = "Ponderaciones";
-            this.btn_conf_ponderaciones.Click += new System.EventHandler(this.btn_conf_ponderaciones_Click);
+            this.btn_conf_empresa.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_conf_empresa.Image = ((System.Drawing.Image)(resources.GetObject("btn_conf_empresa.Image")));
+            this.btn_conf_empresa.Name = "btn_conf_empresa";
+            this.btn_conf_empresa.Size = new System.Drawing.Size(236, 24);
+            this.btn_conf_empresa.Text = "Datos Empresa";
+            this.btn_conf_empresa.Click += new System.EventHandler(this.btn_conf_empresa_Click);
             // 
-            // toolStripSeparator14
+            // toolStripSeparator15
             // 
-            this.toolStripSeparator14.Name = "toolStripSeparator14";
-            this.toolStripSeparator14.Size = new System.Drawing.Size(233, 6);
+            this.toolStripSeparator15.Name = "toolStripSeparator15";
+            this.toolStripSeparator15.Size = new System.Drawing.Size(233, 6);
             // 
             // FRM_PRINCIPAL
             // 
@@ -626,5 +644,7 @@
         private System.Windows.Forms.ToolStripMenuItem btn_conf_recomendaciones;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
         private System.Windows.Forms.ToolStripMenuItem btn_conf_ponderaciones;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator15;
+        private System.Windows.Forms.ToolStripMenuItem btn_conf_empresa;
     }
 }

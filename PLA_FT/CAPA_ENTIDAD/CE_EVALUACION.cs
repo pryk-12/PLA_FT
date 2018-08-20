@@ -21,6 +21,7 @@ namespace CAPA_ENTIDAD
        public decimal VALOR_CANAL { get; set; }
        public int ID_RECOMENDACION { get; set; }
        public decimal VALOR_TOTAL { get; set; }
+       public string USUARIO { get; set; }
     }
 }
 

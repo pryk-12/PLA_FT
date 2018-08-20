@@ -50,6 +50,7 @@
     <Compile Include="CD_CLIENTE.cs" />
     <Compile Include="CD_CONEXION.cs" />
     <Compile Include="CD_DEPARTAMENTO.cs" />
+    <Compile Include="CD_EMPRESA.cs" />
     <Compile Include="CD_EVALUACION.cs" />
     <Compile Include="CD_OBSERVACION.cs" />
     <Compile Include="CD_OFICINA.cs" />

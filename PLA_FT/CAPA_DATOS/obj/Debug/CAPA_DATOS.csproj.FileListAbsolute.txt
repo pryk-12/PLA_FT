@@ -5,13 +5,6 @@ C:\PLA_FT\CAPA_DATOS\bin\Debug\CAPA_ENTIDAD.pdb
 C:\PLA_FT\CAPA_DATOS\obj\Debug\CAPA_DATOS.csprojResolveAssemblyReference.cache
 C:\PLA_FT\CAPA_DATOS\obj\Debug\CAPA_DATOS.dll
 C:\PLA_FT\CAPA_DATOS\obj\Debug\CAPA_DATOS.pdb
-D:\PLA_FT\PLA_FT\CAPA_DATOS\bin\Debug\CAPA_DATOS.dll
-D:\PLA_FT\PLA_FT\CAPA_DATOS\bin\Debug\CAPA_DATOS.pdb
-D:\PLA_FT\PLA_FT\CAPA_DATOS\bin\Debug\CAPA_ENTIDAD.dll
-D:\PLA_FT\PLA_FT\CAPA_DATOS\bin\Debug\CAPA_ENTIDAD.pdb
-D:\PLA_FT\PLA_FT\CAPA_DATOS\obj\Debug\CAPA_DATOS.csprojResolveAssemblyReference.cache
-D:\PLA_FT\PLA_FT\CAPA_DATOS\obj\Debug\CAPA_DATOS.dll
-D:\PLA_FT\PLA_FT\CAPA_DATOS\obj\Debug\CAPA_DATOS.pdb
 C:\Users\JAMC\Documents\GitHub\PLA_FT\PLA_FT\CAPA_DATOS\bin\Debug\CAPA_DATOS.dll
 C:\Users\JAMC\Documents\GitHub\PLA_FT\PLA_FT\CAPA_DATOS\bin\Debug\CAPA_DATOS.pdb
 C:\Users\JAMC\Documents\GitHub\PLA_FT\PLA_FT\CAPA_DATOS\bin\Debug\CAPA_ENTIDAD.dll
@@ -19,3 +12,10 @@ C:\Users\JAMC\Documents\GitHub\PLA_FT\PLA_FT\CAPA_DATOS\bin\Debug\CAPA_ENTIDAD.p
 C:\Users\JAMC\Documents\GitHub\PLA_FT\PLA_FT\CAPA_DATOS\obj\Debug\CAPA_DATOS.csprojResolveAssemblyReference.cache
 C:\Users\JAMC\Documents\GitHub\PLA_FT\PLA_FT\CAPA_DATOS\obj\Debug\CAPA_DATOS.dll
 C:\Users\JAMC\Documents\GitHub\PLA_FT\PLA_FT\CAPA_DATOS\obj\Debug\CAPA_DATOS.pdb
+D:\PLA_FT\PLA_FT\CAPA_DATOS\bin\Debug\CAPA_DATOS.dll
+D:\PLA_FT\PLA_FT\CAPA_DATOS\bin\Debug\CAPA_DATOS.pdb
+D:\PLA_FT\PLA_FT\CAPA_DATOS\bin\Debug\CAPA_ENTIDAD.dll
+D:\PLA_FT\PLA_FT\CAPA_DATOS\bin\Debug\CAPA_ENTIDAD.pdb
+D:\PLA_FT\PLA_FT\CAPA_DATOS\obj\Debug\CAPA_DATOS.csprojResolveAssemblyReference.cache
+D:\PLA_FT\PLA_FT\CAPA_DATOS\obj\Debug\CAPA_DATOS.dll
+D:\PLA_FT\PLA_FT\CAPA_DATOS\obj\Debug\CAPA_DATOS.pdb

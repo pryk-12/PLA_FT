@@ -30,9 +30,31 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_MANT_EVALUACIONES));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DG = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.verObservaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDeBarrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDePastelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_editar = new System.Windows.Forms.Button();
+            this.lbl_total = new MetroFramework.Controls.MetroLabel();
+            this.btn_agregar = new System.Windows.Forms.Button();
+            this.txt_buscar = new MetroFramework.Controls.MetroTextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbl_juridico = new System.Windows.Forms.Label();
+            this.lbl_fisico = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.lbl_alto = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.lbl_bajo = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.lbl_medio = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.ID_EVALUACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,14 +83,13 @@
             this.ID_RECOMENDACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RECOMENDACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VALOR_TOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_editar = new System.Windows.Forms.Button();
-            this.lbl_total = new MetroFramework.Controls.MetroLabel();
-            this.btn_agregar = new System.Windows.Forms.Button();
-            this.txt_buscar = new MetroFramework.Controls.MetroTextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.verObservaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DG)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // DG
@@ -117,24 +138,278 @@
             this.RECOMENDACION,
             this.VALOR_TOTAL});
             this.DG.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DG.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG.DefaultCellStyle = dataGridViewCellStyle3;
             this.DG.EnableHeadersVisualStyles = false;
             this.DG.GridColor = System.Drawing.Color.Gray;
-            this.DG.Location = new System.Drawing.Point(22, 96);
+            this.DG.Location = new System.Drawing.Point(22, 94);
             this.DG.MultiSelect = false;
             this.DG.Name = "DG";
             this.DG.ReadOnly = true;
             this.DG.RowHeadersVisible = false;
             this.DG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG.Size = new System.Drawing.Size(813, 356);
+            this.DG.Size = new System.Drawing.Size(909, 423);
             this.DG.TabIndex = 26;
+            this.DG.DoubleClick += new System.EventHandler(this.DG_DoubleClick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.verObservaciónToolStripMenuItem,
+            this.reporteDeBarrasToolStripMenuItem,
+            this.reporteDePastelToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(176, 70);
+            // 
+            // verObservaciónToolStripMenuItem
+            // 
+            this.verObservaciónToolStripMenuItem.Name = "verObservaciónToolStripMenuItem";
+            this.verObservaciónToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.verObservaciónToolStripMenuItem.Text = "Ver Observación";
+            this.verObservaciónToolStripMenuItem.Click += new System.EventHandler(this.verObservaciónToolStripMenuItem_Click);
+            // 
+            // reporteDeBarrasToolStripMenuItem
+            // 
+            this.reporteDeBarrasToolStripMenuItem.Name = "reporteDeBarrasToolStripMenuItem";
+            this.reporteDeBarrasToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.reporteDeBarrasToolStripMenuItem.Text = "Reporte de Barras";
+            this.reporteDeBarrasToolStripMenuItem.Click += new System.EventHandler(this.reporteDeBarrasToolStripMenuItem_Click);
+            // 
+            // reporteDePastelToolStripMenuItem
+            // 
+            this.reporteDePastelToolStripMenuItem.Name = "reporteDePastelToolStripMenuItem";
+            this.reporteDePastelToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.reporteDePastelToolStripMenuItem.Text = "Reporte de Pastel";
+            this.reporteDePastelToolStripMenuItem.Click += new System.EventHandler(this.reporteDePastelToolStripMenuItem_Click);
+            // 
+            // btn_editar
+            // 
+            this.btn_editar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_editar.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
+            this.btn_editar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btn_editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editar.ForeColor = System.Drawing.Color.White;
+            this.btn_editar.Image = ((System.Drawing.Image)(resources.GetObject("btn_editar.Image")));
+            this.btn_editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_editar.Location = new System.Drawing.Point(125, 520);
+            this.btn_editar.Name = "btn_editar";
+            this.btn_editar.Size = new System.Drawing.Size(101, 43);
+            this.btn_editar.TabIndex = 25;
+            this.btn_editar.Text = "  Editar";
+            this.btn_editar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_editar.UseVisualStyleBackColor = false;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
+            // 
+            // lbl_total
+            // 
+            this.lbl_total.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_total.Location = new System.Drawing.Point(628, 535);
+            this.lbl_total.Name = "lbl_total";
+            this.lbl_total.Size = new System.Drawing.Size(301, 25);
+            this.lbl_total.TabIndex = 23;
+            this.lbl_total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btn_agregar
+            // 
+            this.btn_agregar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
+            this.btn_agregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btn_agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_agregar.ForeColor = System.Drawing.Color.White;
+            this.btn_agregar.Image = ((System.Drawing.Image)(resources.GetObject("btn_agregar.Image")));
+            this.btn_agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_agregar.Location = new System.Drawing.Point(21, 520);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Size = new System.Drawing.Size(101, 43);
+            this.btn_agregar.TabIndex = 24;
+            this.btn_agregar.Text = "  Agregar";
+            this.btn_agregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
+            // 
+            // txt_buscar
+            // 
+            // 
+            // 
+            // 
+            this.txt_buscar.CustomButton.Image = null;
+            this.txt_buscar.CustomButton.Location = new System.Drawing.Point(308, 1);
+            this.txt_buscar.CustomButton.Name = "";
+            this.txt_buscar.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_buscar.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_buscar.CustomButton.TabIndex = 1;
+            this.txt_buscar.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_buscar.CustomButton.UseSelectable = true;
+            this.txt_buscar.CustomButton.Visible = false;
+            this.txt_buscar.DisplayIcon = true;
+            this.txt_buscar.Icon = ((System.Drawing.Image)(resources.GetObject("txt_buscar.Icon")));
+            this.txt_buscar.Lines = new string[0];
+            this.txt_buscar.Location = new System.Drawing.Point(23, 67);
+            this.txt_buscar.MaxLength = 32767;
+            this.txt_buscar.Name = "txt_buscar";
+            this.txt_buscar.PasswordChar = '\0';
+            this.txt_buscar.PromptText = "Ingrese la Descripción o ID a Buscar";
+            this.txt_buscar.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_buscar.SelectedText = "";
+            this.txt_buscar.SelectionLength = 0;
+            this.txt_buscar.SelectionStart = 0;
+            this.txt_buscar.ShortcutsEnabled = true;
+            this.txt_buscar.Size = new System.Drawing.Size(330, 23);
+            this.txt_buscar.TabIndex = 22;
+            this.txt_buscar.UseSelectable = true;
+            this.txt_buscar.WaterMark = "Ingrese la Descripción o ID a Buscar";
+            this.txt_buscar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_buscar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_buscar.TextChanged += new System.EventHandler(this.txt_buscar_TextChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lbl_juridico);
+            this.groupBox1.Controls.Add(this.lbl_fisico);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(381, 522);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(230, 42);
+            this.groupBox1.TabIndex = 27;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tipo Clientes";
+            // 
+            // lbl_juridico
+            // 
+            this.lbl_juridico.AutoSize = true;
+            this.lbl_juridico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_juridico.Location = new System.Drawing.Point(134, 20);
+            this.lbl_juridico.Name = "lbl_juridico";
+            this.lbl_juridico.Size = new System.Drawing.Size(14, 13);
+            this.lbl_juridico.TabIndex = 1;
+            this.lbl_juridico.Text = "0";
+            // 
+            // lbl_fisico
+            // 
+            this.lbl_fisico.AutoSize = true;
+            this.lbl_fisico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fisico.Location = new System.Drawing.Point(12, 20);
+            this.lbl_fisico.Name = "lbl_fisico";
+            this.lbl_fisico.Size = new System.Drawing.Size(14, 13);
+            this.lbl_fisico.TabIndex = 0;
+            this.lbl_fisico.Text = "0";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.panel13);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.panel11);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.panel12);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(673, 44);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(257, 47);
+            this.groupBox2.TabIndex = 52;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Niveles de Riesgo";
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.Red;
+            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel13.Controls.Add(this.lbl_alto);
+            this.panel13.Location = new System.Drawing.Point(208, 22);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(37, 19);
+            this.panel13.TabIndex = 47;
+            // 
+            // lbl_alto
+            // 
+            this.lbl_alto.AutoSize = true;
+            this.lbl_alto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_alto.Location = new System.Drawing.Point(1, 2);
+            this.lbl_alto.Name = "lbl_alto";
+            this.lbl_alto.Size = new System.Drawing.Size(14, 13);
+            this.lbl_alto.TabIndex = 50;
+            this.lbl_alto.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(87, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 13);
+            this.label3.TabIndex = 50;
+            this.label3.Text = "Medio";
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Green;
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel11.Controls.Add(this.lbl_bajo);
+            this.panel11.Location = new System.Drawing.Point(42, 22);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(37, 19);
+            this.panel11.TabIndex = 46;
+            // 
+            // lbl_bajo
+            // 
+            this.lbl_bajo.AutoSize = true;
+            this.lbl_bajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_bajo.Location = new System.Drawing.Point(1, 2);
+            this.lbl_bajo.Name = "lbl_bajo";
+            this.lbl_bajo.Size = new System.Drawing.Size(14, 13);
+            this.lbl_bajo.TabIndex = 50;
+            this.lbl_bajo.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(7, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.TabIndex = 49;
+            this.label2.Text = "Bajo";
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.Orange;
+            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel12.Controls.Add(this.lbl_medio);
+            this.panel12.Location = new System.Drawing.Point(131, 22);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(37, 19);
+            this.panel12.TabIndex = 47;
+            // 
+            // lbl_medio
+            // 
+            this.lbl_medio.AutoSize = true;
+            this.lbl_medio.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_medio.Location = new System.Drawing.Point(1, 2);
+            this.lbl_medio.Name = "lbl_medio";
+            this.lbl_medio.Size = new System.Drawing.Size(14, 13);
+            this.lbl_medio.TabIndex = 50;
+            this.lbl_medio.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(177, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.TabIndex = 48;
+            this.label1.Text = "Alto";
             // 
             // ID_EVALUACION
             // 
@@ -155,10 +430,10 @@
             // ID_CLIENTE
             // 
             this.ID_CLIENTE.DataPropertyName = "ID_CLIENTE";
-            this.ID_CLIENTE.HeaderText = "ID_CLIENTE";
+            this.ID_CLIENTE.HeaderText = "ID CLIENTE";
             this.ID_CLIENTE.Name = "ID_CLIENTE";
             this.ID_CLIENTE.ReadOnly = true;
-            this.ID_CLIENTE.Visible = false;
+            this.ID_CLIENTE.Width = 90;
             // 
             // NOMBRE
             // 
@@ -166,7 +441,7 @@
             this.NOMBRE.HeaderText = "CLIENTE";
             this.NOMBRE.Name = "NOMBRE";
             this.NOMBRE.ReadOnly = true;
-            this.NOMBRE.Width = 365;
+            this.NOMBRE.Width = 360;
             // 
             // IDENTIFICACION
             // 
@@ -174,6 +449,7 @@
             this.IDENTIFICACION.HeaderText = "IDENTIFICACION";
             this.IDENTIFICACION.Name = "IDENTIFICACION";
             this.IDENTIFICACION.ReadOnly = true;
+            this.IDENTIFICACION.Width = 120;
             // 
             // ID_OFICINA
             // 
@@ -353,113 +629,18 @@
             // VALOR_TOTAL
             // 
             this.VALOR_TOTAL.DataPropertyName = "VALOR_TOTAL";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.VALOR_TOTAL.DefaultCellStyle = dataGridViewCellStyle2;
             this.VALOR_TOTAL.HeaderText = "VALOR_TOTAL";
             this.VALOR_TOTAL.Name = "VALOR_TOTAL";
             this.VALOR_TOTAL.ReadOnly = true;
             // 
-            // btn_editar
-            // 
-            this.btn_editar.BackColor = System.Drawing.Color.SteelBlue;
-            this.btn_editar.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
-            this.btn_editar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btn_editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_editar.ForeColor = System.Drawing.Color.White;
-            this.btn_editar.Image = ((System.Drawing.Image)(resources.GetObject("btn_editar.Image")));
-            this.btn_editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_editar.Location = new System.Drawing.Point(125, 456);
-            this.btn_editar.Name = "btn_editar";
-            this.btn_editar.Size = new System.Drawing.Size(101, 43);
-            this.btn_editar.TabIndex = 25;
-            this.btn_editar.Text = "  Editar";
-            this.btn_editar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_editar.UseVisualStyleBackColor = false;
-            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
-            // 
-            // lbl_total
-            // 
-            this.lbl_total.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lbl_total.Location = new System.Drawing.Point(457, 474);
-            this.lbl_total.Name = "lbl_total";
-            this.lbl_total.Size = new System.Drawing.Size(377, 25);
-            this.lbl_total.TabIndex = 23;
-            this.lbl_total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btn_agregar
-            // 
-            this.btn_agregar.BackColor = System.Drawing.Color.SteelBlue;
-            this.btn_agregar.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
-            this.btn_agregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btn_agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar.ForeColor = System.Drawing.Color.White;
-            this.btn_agregar.Image = ((System.Drawing.Image)(resources.GetObject("btn_agregar.Image")));
-            this.btn_agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_agregar.Location = new System.Drawing.Point(21, 456);
-            this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.Size = new System.Drawing.Size(101, 43);
-            this.btn_agregar.TabIndex = 24;
-            this.btn_agregar.Text = "  Agregar";
-            this.btn_agregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_agregar.UseVisualStyleBackColor = false;
-            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
-            // 
-            // txt_buscar
-            // 
-            // 
-            // 
-            // 
-            this.txt_buscar.CustomButton.Image = null;
-            this.txt_buscar.CustomButton.Location = new System.Drawing.Point(308, 1);
-            this.txt_buscar.CustomButton.Name = "";
-            this.txt_buscar.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_buscar.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_buscar.CustomButton.TabIndex = 1;
-            this.txt_buscar.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_buscar.CustomButton.UseSelectable = true;
-            this.txt_buscar.CustomButton.Visible = false;
-            this.txt_buscar.DisplayIcon = true;
-            this.txt_buscar.Icon = ((System.Drawing.Image)(resources.GetObject("txt_buscar.Icon")));
-            this.txt_buscar.Lines = new string[0];
-            this.txt_buscar.Location = new System.Drawing.Point(23, 67);
-            this.txt_buscar.MaxLength = 32767;
-            this.txt_buscar.Name = "txt_buscar";
-            this.txt_buscar.PasswordChar = '\0';
-            this.txt_buscar.PromptText = "Ingrese la Descripción o ID a Buscar";
-            this.txt_buscar.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_buscar.SelectedText = "";
-            this.txt_buscar.SelectionLength = 0;
-            this.txt_buscar.SelectionStart = 0;
-            this.txt_buscar.ShortcutsEnabled = true;
-            this.txt_buscar.Size = new System.Drawing.Size(330, 23);
-            this.txt_buscar.TabIndex = 22;
-            this.txt_buscar.UseSelectable = true;
-            this.txt_buscar.WaterMark = "Ingrese la Descripción o ID a Buscar";
-            this.txt_buscar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_buscar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txt_buscar.TextChanged += new System.EventHandler(this.txt_buscar_TextChanged);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.verObservaciónToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(166, 26);
-            // 
-            // verObservaciónToolStripMenuItem
-            // 
-            this.verObservaciónToolStripMenuItem.Name = "verObservaciónToolStripMenuItem";
-            this.verObservaciónToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.verObservaciónToolStripMenuItem.Text = "Ver Observación";
-            this.verObservaciónToolStripMenuItem.Click += new System.EventHandler(this.verObservaciónToolStripMenuItem_Click);
-            // 
             // FRM_MANT_EVALUACIONES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(857, 519);
+            this.ClientSize = new System.Drawing.Size(954, 583);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.DG);
             this.Controls.Add(this.btn_editar);
             this.Controls.Add(this.lbl_total);
@@ -467,9 +648,20 @@
             this.Controls.Add(this.txt_buscar);
             this.Name = "FRM_MANT_EVALUACIONES";
             this.Text = "Evaluaciones de Riesgo";
+            this.Activated += new System.EventHandler(this.FRM_MANT_EVALUACIONES_Activated);
             this.Load += new System.EventHandler(this.FRM_MANT_EVALUACIONES_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DG)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -481,6 +673,23 @@
         private MetroFramework.Controls.MetroLabel lbl_total;
         private System.Windows.Forms.Button btn_agregar;
         private MetroFramework.Controls.MetroTextBox txt_buscar;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem verObservaciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteDeBarrasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteDePastelToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lbl_juridico;
+        private System.Windows.Forms.Label lbl_fisico;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_alto;
+        private System.Windows.Forms.Label lbl_bajo;
+        private System.Windows.Forms.Label lbl_medio;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_EVALUACION;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_CLIENTE;
@@ -509,7 +718,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_RECOMENDACION;
         private System.Windows.Forms.DataGridViewTextBoxColumn RECOMENDACION;
         private System.Windows.Forms.DataGridViewTextBoxColumn VALOR_TOTAL;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem verObservaciónToolStripMenuItem;
     }
 }

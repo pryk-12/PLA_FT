@@ -1,12 +1,10 @@
 ﻿using CAPA_ENTIDAD;
 using CAPA_NEGOCIOS;
+using DevExpress.XtraReports.UI;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
+using System.Linq;
+using System.Drawing;
 
 namespace CAPA_PRESENTACION.FORMULARIOS
 {
@@ -23,8 +21,41 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             string CONDICION = "(A.ID_CLIENTE LIKE'%" + txt_buscar.Text + "%' OR B.NOMBRE LIKE'%" + txt_buscar.Text + "%')";
             DG.DataSource = CN_EVALUACION.CONSULTAR(CONDICION);
             lbl_total.Text = "Total de Registro(s):  " + DG.Rows.Count.ToString();
-        }
 
+            lbl_fisico.Text = "Fisico: "+ Convert.ToDecimal(DG.Rows.Cast<DataGridViewRow>().Count(a => a.Cells["TIPO"].Value.ToString()=="FISICO"));
+            lbl_juridico.Text = "Juridico: " + Convert.ToDecimal(DG.Rows.Cast<DataGridViewRow>().Count(a => a.Cells["TIPO"].Value.ToString() == "JURIDICO"));
+            COLOR_FILAS();
+        }
+        public void COLOR_FILAS()
+        {
+            int alto = 0;
+            int bajo = 0;
+            int medio = 0;
+            foreach (DataGridViewRow row in DG.Rows)
+            {
+                if (Convert.ToDecimal(row.Cells["VALOR_TOTAL"].Value.ToString()) <=30)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Green;
+                    bajo++;
+                }
+                else if(Convert.ToDecimal(row.Cells["VALOR_TOTAL"].Value.ToString()) > 30 && Convert.ToDecimal(row.Cells["VALOR_TOTAL"].Value.ToString()) <= 60)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Orange;
+                    medio++;
+                }
+                else
+                {
+                    row.DefaultCellStyle.BackColor = Color.Red;
+                    alto++;
+                }
+            }
+            lbl_alto.Text = alto.ToString();
+            lbl_bajo.Text = bajo.ToString();
+            lbl_medio.Text = medio.ToString();
+
+            DG.ClearSelection();
+        }
+         
         private void btn_agregar_Click(object sender, EventArgs e)
         {
             FRM_EVALUACION FRM = new FRM_EVALUACION();
@@ -33,7 +64,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
 
         private void FRM_MANT_EVALUACIONES_Load(object sender, EventArgs e)
         {
-            CONSULTAR();
+            CONSULTAR();            
         }
 
         private void txt_buscar_TextChanged(object sender, EventArgs e)
@@ -85,6 +116,46 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             FRM_VER_OBSERVACIONES FRM = new FRM_VER_OBSERVACIONES();
             FRM.CARGAR_OBSERVACION( Convert.ToInt32(DG.SelectedCells[0].Value.ToString()));
             FRM.ShowDialog();
+        }
+
+        private void DG_DoubleClick(object sender, EventArgs e)
+        {
+            btn_editar.PerformClick();
+        }
+
+        private void reporteDeBarrasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (DG.RowCount == 0)
+            {
+                return;
+            }
+            string condicion = "";
+            condicion = @"([ID_EVALUACION] =" + DG.SelectedCells[0].Value.ToString() +")";
+
+            REPORTES.REP_GRAFICO_BARRAS report = new REPORTES.REP_GRAFICO_BARRAS();
+            report.FilterString = condicion;
+            ReportPrintTool tool = new ReportPrintTool(report);
+            tool.ShowPreview();
+        }
+
+        private void reporteDePastelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (DG.RowCount == 0)
+            {
+                return;
+            }
+            string condicion = "";
+            condicion = @"([ID_EVALUACION] =" + DG.SelectedCells[0].Value.ToString() + ")";
+
+            REPORTES.REP_GRAFICO_CIRCULAR report = new REPORTES.REP_GRAFICO_CIRCULAR();
+            report.FilterString = condicion;
+            ReportPrintTool tool = new ReportPrintTool(report);
+            tool.ShowPreview();
+        }
+
+        private void FRM_MANT_EVALUACIONES_Activated(object sender, EventArgs e)
+        {
+            COLOR_FILAS();
         }
     }
 }

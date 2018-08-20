@@ -230,5 +230,16 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 frm.Show();
             }
         }
+
+        private void btn_conf_empresa_Click(object sender, EventArgs e)
+        {
+            Form FRM_EMPRESA = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "FRM_EMPRESA").SingleOrDefault();
+            if (FRM_EMPRESA == null)
+            {
+                FRM_EMPRESA frm = new FRM_EMPRESA();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
     }
 }

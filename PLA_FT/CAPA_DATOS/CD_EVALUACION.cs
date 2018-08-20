@@ -60,8 +60,7 @@ namespace CAPA_DATOS
             da.InsertCommand.Parameters.AddWithValue("@VALOR_PRODUCTO", obj.VALOR_PRODUCTO);
             da.InsertCommand.Parameters.AddWithValue("@VALOR_PROVINCIA", obj.VALOR_PROVINCIA);
             da.InsertCommand.Parameters.AddWithValue("@VALOR_TOTAL", obj.VALOR_TOTAL);
-
-
+            da.InsertCommand.Parameters.AddWithValue("@USUARIO", obj.USUARIO);
             cn.Open();
             da.InsertCommand.ExecuteNonQuery();
             cn.Close();
