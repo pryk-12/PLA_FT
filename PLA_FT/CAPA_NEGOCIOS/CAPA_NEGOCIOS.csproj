@@ -52,6 +52,7 @@
     <Compile Include="CN_OBSERVACION.cs" />
     <Compile Include="CN_OFICINA.cs" />
     <Compile Include="CN_PAIS.cs" />
+    <Compile Include="CN_PONDERACION.cs" />
     <Compile Include="CN_PRODUCTO.cs" />
     <Compile Include="CN_PRODUCTOS_EVALUACION.cs" />
     <Compile Include="CN_PROVINCIA.cs" />

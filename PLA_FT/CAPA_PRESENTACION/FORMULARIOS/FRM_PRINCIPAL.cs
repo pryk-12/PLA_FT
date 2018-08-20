@@ -220,6 +220,15 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             }   
         }
 
-       
+        private void btn_conf_ponderaciones_Click(object sender, EventArgs e)
+        {
+            Form FRM_PONDERACION = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "FRM_PONDERACION").SingleOrDefault();
+            if (FRM_PONDERACION == null)
+            {
+                FRM_PONDERACION frm = new FRM_PONDERACION();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
     }
 }
