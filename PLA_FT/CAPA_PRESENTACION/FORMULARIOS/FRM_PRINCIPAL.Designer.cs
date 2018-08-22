@@ -51,8 +51,13 @@
             this.btn_conf_recomendaciones = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_conf_ponderaciones = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_conf_empresa = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_configuraciones = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_reportes = new System.Windows.Forms.Button();
+            this.mn_reportes = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.mn_rep_listado = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_procesos = new System.Windows.Forms.Button();
             this.mn_procesos = new MetroFramework.Controls.MetroContextMenu(this.components);
             this.mn_proc_evaluaciones = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,11 +82,10 @@
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.btn_conf_empresa = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.mn_configuraciones.SuspendLayout();
+            this.mn_reportes.SuspendLayout();
             this.mn_procesos.SuspendLayout();
             this.mn_mantenimientos.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
@@ -94,7 +98,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btn_usuario);
             this.panel1.Controls.Add(this.btn_configuraciones);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btn_reportes);
             this.panel1.Controls.Add(this.btn_procesos);
             this.panel1.Controls.Add(this.btn_mantenimiento);
             this.panel1.Controls.Add(this.label1);
@@ -162,7 +166,7 @@
             this.toolStripSeparator15,
             this.btn_conf_empresa});
             this.mn_configuraciones.Name = "metroContextMenu1";
-            this.mn_configuraciones.Size = new System.Drawing.Size(237, 320);
+            this.mn_configuraciones.Size = new System.Drawing.Size(237, 298);
             // 
             // mn_conf_actividad_economica
             // 
@@ -289,6 +293,20 @@
             this.btn_conf_ponderaciones.Text = "Ponderaciones";
             this.btn_conf_ponderaciones.Click += new System.EventHandler(this.btn_conf_ponderaciones_Click);
             // 
+            // toolStripSeparator15
+            // 
+            this.toolStripSeparator15.Name = "toolStripSeparator15";
+            this.toolStripSeparator15.Size = new System.Drawing.Size(233, 6);
+            // 
+            // btn_conf_empresa
+            // 
+            this.btn_conf_empresa.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_conf_empresa.Image = ((System.Drawing.Image)(resources.GetObject("btn_conf_empresa.Image")));
+            this.btn_conf_empresa.Name = "btn_conf_empresa";
+            this.btn_conf_empresa.Size = new System.Drawing.Size(236, 24);
+            this.btn_conf_empresa.Text = "Datos Empresa";
+            this.btn_conf_empresa.Click += new System.EventHandler(this.btn_conf_empresa_Click);
+            // 
             // btn_configuraciones
             // 
             this.btn_configuraciones.BackColor = System.Drawing.Color.SteelBlue;
@@ -311,25 +329,50 @@
             this.btn_configuraciones.UseVisualStyleBackColor = false;
             this.btn_configuraciones.Click += new System.EventHandler(this.btn_configuraciones_Click);
             // 
-            // button2
+            // btn_reportes
             // 
-            this.button2.BackColor = System.Drawing.Color.SteelBlue;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(1, 233);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(180, 43);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "  Reportes";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_reportes.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_reportes.ContextMenuStrip = this.mn_reportes;
+            this.btn_reportes.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_reportes.FlatAppearance.BorderSize = 0;
+            this.btn_reportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btn_reportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btn_reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_reportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reportes.ForeColor = System.Drawing.Color.White;
+            this.btn_reportes.Image = ((System.Drawing.Image)(resources.GetObject("btn_reportes.Image")));
+            this.btn_reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_reportes.Location = new System.Drawing.Point(1, 233);
+            this.btn_reportes.Name = "btn_reportes";
+            this.btn_reportes.Size = new System.Drawing.Size(180, 43);
+            this.btn_reportes.TabIndex = 23;
+            this.btn_reportes.Text = "  Reportes";
+            this.btn_reportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_reportes.UseVisualStyleBackColor = false;
+            this.btn_reportes.Click += new System.EventHandler(this.btn_reportes_Click);
+            // 
+            // mn_reportes
+            // 
+            this.mn_reportes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mn_rep_listado,
+            this.toolStripSeparator16});
+            this.mn_reportes.Name = "metroContextMenu1";
+            this.mn_reportes.Size = new System.Drawing.Size(214, 34);
+            // 
+            // mn_rep_listado
+            // 
+            this.mn_rep_listado.BackColor = System.Drawing.SystemColors.Control;
+            this.mn_rep_listado.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.mn_rep_listado.Image = ((System.Drawing.Image)(resources.GetObject("mn_rep_listado.Image")));
+            this.mn_rep_listado.Name = "mn_rep_listado";
+            this.mn_rep_listado.Size = new System.Drawing.Size(213, 24);
+            this.mn_rep_listado.Text = "Listado Evaluaciones";
+            this.mn_rep_listado.Click += new System.EventHandler(this.mn_rep_listado_Click);
+            // 
+            // toolStripSeparator16
+            // 
+            this.toolStripSeparator16.Name = "toolStripSeparator16";
+            this.toolStripSeparator16.Size = new System.Drawing.Size(210, 6);
             // 
             // btn_procesos
             // 
@@ -559,20 +602,6 @@
             this.statusStrip1.TabIndex = 10;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // btn_conf_empresa
-            // 
-            this.btn_conf_empresa.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btn_conf_empresa.Image = ((System.Drawing.Image)(resources.GetObject("btn_conf_empresa.Image")));
-            this.btn_conf_empresa.Name = "btn_conf_empresa";
-            this.btn_conf_empresa.Size = new System.Drawing.Size(236, 24);
-            this.btn_conf_empresa.Text = "Datos Empresa";
-            this.btn_conf_empresa.Click += new System.EventHandler(this.btn_conf_empresa_Click);
-            // 
-            // toolStripSeparator15
-            // 
-            this.toolStripSeparator15.Name = "toolStripSeparator15";
-            this.toolStripSeparator15.Size = new System.Drawing.Size(233, 6);
-            // 
             // FRM_PRINCIPAL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -588,6 +617,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.mn_configuraciones.ResumeLayout(false);
+            this.mn_reportes.ResumeLayout(false);
             this.mn_procesos.ResumeLayout(false);
             this.mn_mantenimientos.ResumeLayout(false);
             this.metroContextMenu1.ResumeLayout(false);
@@ -599,7 +629,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_configuraciones;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_reportes;
         private System.Windows.Forms.Button btn_procesos;
         private System.Windows.Forms.Button btn_mantenimiento;
         private MetroFramework.Controls.MetroContextMenu metroContextMenu1;
@@ -646,5 +676,8 @@
         private System.Windows.Forms.ToolStripMenuItem btn_conf_ponderaciones;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator15;
         private System.Windows.Forms.ToolStripMenuItem btn_conf_empresa;
+        private MetroFramework.Controls.MetroContextMenu mn_reportes;
+        private System.Windows.Forms.ToolStripMenuItem mn_rep_listado;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator16;
     }
 }

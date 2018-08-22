@@ -16,6 +16,7 @@ namespace CAPA_PRESENTACION
         {
             public static string USUARIO;
             public static string NOMBRE;
+            public static int OPCION;
         }
 
         public static void MENSAJE_INFORMACION(string mensaje, Form obj)

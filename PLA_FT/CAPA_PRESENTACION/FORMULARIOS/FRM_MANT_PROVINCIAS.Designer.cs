@@ -193,7 +193,6 @@
             this.txt_buscar.MaxLength = 32767;
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.PasswordChar = '\0';
-            this.txt_buscar.PromptText = "Ingrese la Descripción o ID a Buscar";
             this.txt_buscar.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_buscar.SelectedText = "";
             this.txt_buscar.SelectionLength = 0;

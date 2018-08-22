@@ -254,6 +254,12 @@
     <Compile Include="FORMULARIOS\FRM_PUESTO.Designer.cs">
       <DependentUpon>FRM_PUESTO.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMULARIOS\FRM_REPORTES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_REPORTES.Designer.cs">
+      <DependentUpon>FRM_REPORTES.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMULARIOS\FRM_USUARIO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -290,6 +296,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="REPORTES\REP_DETALLES.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTES\REP_DETALLES.Designer.cs">
+      <DependentUpon>REP_DETALLES.cs</DependentUpon>
+    </Compile>
     <Compile Include="REPORTES\REP_GRAFICO_BARRAS.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -301,6 +313,12 @@
     </Compile>
     <Compile Include="REPORTES\REP_GRAFICO_CIRCULAR.Designer.cs">
       <DependentUpon>REP_GRAFICO_CIRCULAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTES\REP_LISTADO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTES\REP_LISTADO.Designer.cs">
+      <DependentUpon>REP_LISTADO.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FORMULARIOS\FRM_ACTIVIDAD_ECONOMICA.resx">
       <DependentUpon>FRM_ACTIVIDAD_ECONOMICA.cs</DependentUpon>
@@ -398,6 +416,9 @@
     <EmbeddedResource Include="FORMULARIOS\FRM_RECOMENDACION.resx">
       <DependentUpon>FRM_RECOMENDACION.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_REPORTES.resx">
+      <DependentUpon>FRM_REPORTES.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_USUARIO.resx">
       <DependentUpon>FRM_USUARIO.cs</DependentUpon>
     </EmbeddedResource>
@@ -409,11 +430,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\REP_DETALLES.resx">
+      <DependentUpon>REP_DETALLES.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="REPORTES\REP_GRAFICO_BARRAS.resx">
       <DependentUpon>REP_GRAFICO_BARRAS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="REPORTES\REP_GRAFICO_CIRCULAR.resx">
       <DependentUpon>REP_GRAFICO_CIRCULAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\REP_LISTADO.resx">
+      <DependentUpon>REP_LISTADO.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
   </ItemGroup>

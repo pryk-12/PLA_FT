@@ -83,7 +83,6 @@
             this.txt_confirmar_clave.MaxLength = 32767;
             this.txt_confirmar_clave.Name = "txt_confirmar_clave";
             this.txt_confirmar_clave.PasswordChar = '●';
-            this.txt_confirmar_clave.PromptText = "Corfirmar la Clave";
             this.txt_confirmar_clave.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_confirmar_clave.SelectedText = "";
             this.txt_confirmar_clave.SelectionLength = 0;
@@ -136,7 +135,6 @@
             this.txt_clave.MaxLength = 32767;
             this.txt_clave.Name = "txt_clave";
             this.txt_clave.PasswordChar = '●';
-            this.txt_clave.PromptText = "Ingrese la Clave";
             this.txt_clave.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_clave.SelectedText = "";
             this.txt_clave.SelectionLength = 0;
@@ -171,7 +169,6 @@
             this.txt_usuario.MaxLength = 32767;
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.PasswordChar = '\0';
-            this.txt_usuario.PromptText = "Ingrese el Usuario";
             this.txt_usuario.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_usuario.SelectedText = "";
             this.txt_usuario.SelectionLength = 0;

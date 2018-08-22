@@ -143,6 +143,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
 
         private void button1_Click(object sender, EventArgs e)
         {
+            CP_UTILIDADES.DATOS_USUARIO.OPCION = 0;
             FRM_CONSULTAR_CLIENTES FRM = new FRM_CONSULTAR_CLIENTES();
             FRM.ShowDialog();
         }
@@ -197,7 +198,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             {
                 ch_barras.Series["BARRAS"].Points[0].Color = Color.Green;
             }
-            else if (total > 30 && total < 60)
+            else if (total > 30 && total <= 60)
             {
                 ch_barras.Series["BARRAS"].Points[0].Color = Color.Orange;
             }

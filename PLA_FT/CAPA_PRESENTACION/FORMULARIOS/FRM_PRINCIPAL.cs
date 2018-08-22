@@ -241,5 +241,23 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 frm.Show();
             }
         }
+
+        private void mn_rep_listado_Click(object sender, EventArgs e)
+        {
+            Form FRM_REPORTES = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "FRM_REPORTES").SingleOrDefault();
+            if (FRM_REPORTES == null)
+            {
+                FRM_REPORTES frm = new FRM_REPORTES();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
+
+        private void btn_reportes_Click(object sender, EventArgs e)
+        {
+            this.mn_reportes.Show(btn_reportes, 5, btn_reportes.Height);
+        }
+
+
     }
 }

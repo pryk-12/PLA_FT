@@ -32,19 +32,36 @@ namespace CAPA_PRESENTACION.FORMULARIOS
         private void btn_agregar_Click(object sender, EventArgs e)
         {
             FRM_EVALUACION FRM = new FRM_EVALUACION();
+            FRM_REPORTES FRM_R = new FRM_REPORTES();
+
             foreach (Form frm in Application.OpenForms)
             {
-                if (frm.Name == "FRM_EVALUACION")
+                if(CP_UTILIDADES.DATOS_USUARIO.OPCION == 0)
                 {
-                    FRM = (FRM_EVALUACION)frm;
-                    FRM.txt_id_cliente.Text = DG.Rows[DG.CurrentRow.Index].Cells["ID_CLIENTE"].Value.ToString();
-                    FRM.txt_nombre.Text = DG.Rows[DG.CurrentRow.Index].Cells["NOMBRE"].Value.ToString();
-                    FRM.txt_identificacion.Text = DG.Rows[DG.CurrentRow.Index].Cells["IDENTIFICACION"].Value.ToString();
-                    FRM.cb_oficina.Text = DG.Rows[DG.CurrentRow.Index].Cells["OFICINA"].Value.ToString();
-                    FRM.cb_tipo.Text = DG.Rows[DG.CurrentRow.Index].Cells["TIPO"].Value.ToString();
-                    this.Close();
-                    break;
+                    if (frm.Name == "FRM_EVALUACION")
+                    {
+                        FRM = (FRM_EVALUACION)frm;
+                        FRM.txt_id_cliente.Text = DG.Rows[DG.CurrentRow.Index].Cells["ID_CLIENTE"].Value.ToString();
+                        FRM.txt_nombre.Text = DG.Rows[DG.CurrentRow.Index].Cells["NOMBRE"].Value.ToString();
+                        FRM.txt_identificacion.Text = DG.Rows[DG.CurrentRow.Index].Cells["IDENTIFICACION"].Value.ToString();
+                        FRM.cb_oficina.Text = DG.Rows[DG.CurrentRow.Index].Cells["OFICINA"].Value.ToString();
+                        FRM.cb_tipo.Text = DG.Rows[DG.CurrentRow.Index].Cells["TIPO"].Value.ToString();
+                        this.Close();
+                        break;
+                    }
                 }
+                if (CP_UTILIDADES.DATOS_USUARIO.OPCION == 1)
+                {
+                    if (frm.Name == "FRM_REPORTES")
+                    {
+                        FRM_R = (FRM_REPORTES)frm;
+                        FRM_R.txt_id_cliente.Text = DG.Rows[DG.CurrentRow.Index].Cells["ID_CLIENTE"].Value.ToString();
+                        FRM_R.txt_nombre_cliente.Text = DG.Rows[DG.CurrentRow.Index].Cells["NOMBRE"].Value.ToString();
+                        this.Close();
+                        break;
+                    }
+                }
+               
             }
         }
 
