@@ -218,6 +218,12 @@
     <Compile Include="FORMULARIOS\FRM_PAIS.Designer.cs">
       <DependentUpon>FRM_PAIS.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMULARIOS\FRM_PERMISOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_PERMISOS.Designer.cs">
+      <DependentUpon>FRM_PERMISOS.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMULARIOS\FRM_PLANTILLA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -394,6 +400,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_PAIS.resx">
       <DependentUpon>FRM_PAIS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_PERMISOS.resx">
+      <DependentUpon>FRM_PERMISOS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_PLANTILLA.resx">
       <DependentUpon>FRM_PLANTILLA.cs</DependentUpon>

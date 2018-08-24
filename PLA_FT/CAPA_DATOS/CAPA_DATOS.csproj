@@ -55,6 +55,7 @@
     <Compile Include="CD_OBSERVACION.cs" />
     <Compile Include="CD_OFICINA.cs" />
     <Compile Include="CD_PAIS.cs" />
+    <Compile Include="CD_PERMISO.cs" />
     <Compile Include="CD_PONDERACION.cs" />
     <Compile Include="CD_PRODUCTO.cs" />
     <Compile Include="CD_PRODUCTO_EVALUACION.cs" />

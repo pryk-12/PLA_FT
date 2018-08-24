@@ -258,6 +258,17 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             this.mn_reportes.Show(btn_reportes, 5, btn_reportes.Height);
         }
 
+        private void btn_conf_permisos_Click(object sender, EventArgs e)
+        {
+            Form FRM_PERMISOS = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "FRM_PERMISOS").SingleOrDefault();
+            if (FRM_PERMISOS == null)
+            {
+                FRM_PERMISOS frm = new FRM_PERMISOS();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
+
 
     }
 }

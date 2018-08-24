@@ -52,6 +52,7 @@
     <Compile Include="CE_OBSERVACION.cs" />
     <Compile Include="CE_OFICINA.cs" />
     <Compile Include="CE_PAIS.cs" />
+    <Compile Include="CE_PERMISO.cs" />
     <Compile Include="CE_PONDERACION.cs" />
     <Compile Include="CE_PRODUCTO.cs" />
     <Compile Include="CE_PRODUCTO_EVALUACION.cs" />

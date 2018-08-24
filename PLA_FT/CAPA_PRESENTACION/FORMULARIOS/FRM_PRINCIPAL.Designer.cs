@@ -81,7 +81,8 @@
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_conf_permisos = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.mn_configuraciones.SuspendLayout();
@@ -164,9 +165,11 @@
             this.toolStripSeparator14,
             this.btn_conf_ponderaciones,
             this.toolStripSeparator15,
-            this.btn_conf_empresa});
+            this.btn_conf_empresa,
+            this.toolStripSeparator17,
+            this.btn_conf_permisos});
             this.mn_configuraciones.Name = "metroContextMenu1";
-            this.mn_configuraciones.Size = new System.Drawing.Size(237, 298);
+            this.mn_configuraciones.Size = new System.Drawing.Size(237, 350);
             // 
             // mn_conf_actividad_economica
             // 
@@ -593,21 +596,25 @@
             this.cambiarClaveToolStripMenuItem.Text = "Cambiar Clave";
             this.cambiarClaveToolStripMenuItem.Click += new System.EventHandler(this.cambiarClaveToolStripMenuItem_Click);
             // 
-            // statusStrip1
+            // toolStripSeparator17
             // 
-            this.statusStrip1.AutoSize = false;
-            this.statusStrip1.Location = new System.Drawing.Point(183, 527);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(865, 30);
-            this.statusStrip1.TabIndex = 10;
-            this.statusStrip1.Text = "statusStrip1";
+            this.toolStripSeparator17.Name = "toolStripSeparator17";
+            this.toolStripSeparator17.Size = new System.Drawing.Size(233, 6);
+            // 
+            // btn_conf_permisos
+            // 
+            this.btn_conf_permisos.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_conf_permisos.Image = ((System.Drawing.Image)(resources.GetObject("btn_conf_permisos.Image")));
+            this.btn_conf_permisos.Name = "btn_conf_permisos";
+            this.btn_conf_permisos.Size = new System.Drawing.Size(236, 24);
+            this.btn_conf_permisos.Text = "Permisos";
+            this.btn_conf_permisos.Click += new System.EventHandler(this.btn_conf_permisos_Click);
             // 
             // FRM_PRINCIPAL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1048, 557);
-            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;
             this.Name = "FRM_PRINCIPAL";
@@ -635,7 +642,6 @@
         private MetroFramework.Controls.MetroContextMenu metroContextMenu1;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cambiarClaveToolStripMenuItem;
-        private System.Windows.Forms.StatusStrip statusStrip1;
         private MetroFramework.Controls.MetroContextMenu mn_mantenimientos;
         private System.Windows.Forms.ToolStripMenuItem mn_mant_oficina;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -679,5 +685,7 @@
         private MetroFramework.Controls.MetroContextMenu mn_reportes;
         private System.Windows.Forms.ToolStripMenuItem mn_rep_listado;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator16;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator17;
+        private System.Windows.Forms.ToolStripMenuItem btn_conf_permisos;
     }
 }
