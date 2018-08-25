@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CAPA_NEGOCIOS;
+using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -9,6 +12,110 @@ namespace CAPA_PRESENTACION.FORMULARIOS
         public FRM_PRINCIPAL()
         {
             InitializeComponent();
+        }
+
+        public void Permiso_Menu()
+        {
+            String Mantenimientos = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND MENU = 'Mantenimientos'";
+            String Procesos = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND MENU = 'Procesos'";
+            String Reportes = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND MENU = 'Reportes'";
+            String Configuraciones = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND MENU = 'Configuraciones'";
+
+            var Mantenimiento = CN_PERMISO.CONSULTAR_PERMISO_MENU(Mantenimientos);
+            var Proceso = CN_PERMISO.CONSULTAR_PERMISO_MENU(Procesos);
+            var Reporte = CN_PERMISO.CONSULTAR_PERMISO_MENU(Reportes);
+            var Configuracione = CN_PERMISO.CONSULTAR_PERMISO_MENU(Configuraciones);
+            
+            //Menu mantenimientos
+            btn_mantenimiento.Enabled = Convert.ToBoolean(Mantenimiento.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+           
+            //Menu procesos
+            btn_procesos.Enabled = Convert.ToBoolean(Proceso.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+           
+            //Menu reportes
+            btn_reportes.Enabled = Convert.ToBoolean(Reporte.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+            
+            //Menu configuraciones
+            btn_configuraciones.Enabled = Convert.ToBoolean(Configuracione.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+        }
+
+        public void Permiso_Acceso_Panatallas()
+        {
+            if (CN_PERMISO.CONSULTAR_PERMISO("USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "'").Rows.Count == 0)
+            {
+                mn_configuraciones.Enabled = false;
+                mn_mantenimientos.Enabled = false;
+                mn_procesos.Enabled = false;
+                mn_reportes.Enabled = false;
+                return;
+            }
+
+            String Mant_Oficinas = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Mantenimientos - Oficinas'";
+            String Mant_Departamentos = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Mantenimientos - Departamentos'";
+            String Mant_Puestos = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Mantenimientos - Puestos'";
+            String Mant_Usuarios = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Mantenimientos - Usuarios'";
+            String Mant_Clientes = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Mantenimientos - Clientes'";
+
+            String Procesos = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Procesos - Evaluación de Riesgo'";
+
+            String Reportes = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Reportes - Listado de Evaluaciónes'";
+
+            String Conf_Actividades_Economicas = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Configuraciones - Actividades Economícas'";
+            String Conf_Canales = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Configuraciones - Canales'";
+            String Conf_Cantidades = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Configuraciones - Cantidades Efectivo'";
+            String Conf_Paises = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Configuraciones - Paises'";
+            String Conf_Productos = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Configuraciones - Productos'";
+            String Conf_Provincias = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Configuraciones - Provincias'";
+            String Conf_Recomendaciones = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Configuraciones - Recomendaciones'";
+            String Conf_Ponderaciones = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Configuraciones - Ponderaciones'";
+            String Conf_Empresas = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Configuraciones - Datos de Empresa'";
+            String Conf_Permisos = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Configuraciones - Permisos'";
+
+            var Mant_Oficina = CN_PERMISO.CONSULTAR_PERMISO(Mant_Oficinas);
+            var Mant_Departamento = CN_PERMISO.CONSULTAR_PERMISO(Mant_Departamentos);
+            var Mant_Puesto = CN_PERMISO.CONSULTAR_PERMISO(Mant_Puestos);
+            var Mant_Usuario = CN_PERMISO.CONSULTAR_PERMISO(Mant_Usuarios);
+            var Mant_Cliente = CN_PERMISO.CONSULTAR_PERMISO(Mant_Clientes);
+
+            var Proceso = CN_PERMISO.CONSULTAR_PERMISO(Procesos);
+
+            var Reporte = CN_PERMISO.CONSULTAR_PERMISO(Reportes);
+
+            var Conf_Actividad_Economica = CN_PERMISO.CONSULTAR_PERMISO(Conf_Actividades_Economicas);
+            var Conf_Canale = CN_PERMISO.CONSULTAR_PERMISO(Conf_Canales);
+            var Conf_Cantidade = CN_PERMISO.CONSULTAR_PERMISO(Conf_Cantidades);
+            var Conf_Paise = CN_PERMISO.CONSULTAR_PERMISO(Conf_Paises);
+            var Conf_Producto = CN_PERMISO.CONSULTAR_PERMISO(Conf_Productos);
+            var Conf_Provincia = CN_PERMISO.CONSULTAR_PERMISO(Conf_Provincias);
+            var Conf_Recomendacion = CN_PERMISO.CONSULTAR_PERMISO(Conf_Recomendaciones);
+            var Conf_Ponderacion = CN_PERMISO.CONSULTAR_PERMISO(Conf_Ponderaciones);
+            var Conf_Empresa = CN_PERMISO.CONSULTAR_PERMISO(Conf_Empresas);
+            var Conf_Permiso = CN_PERMISO.CONSULTAR_PERMISO(Conf_Permisos);
+
+            //Menu mantenimientos
+            mn_mant_oficina.Enabled = Convert.ToBoolean(Mant_Oficina.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+            mn_mant_departamento.Enabled = Convert.ToBoolean(Mant_Departamento.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+            mn_mant_puesto.Enabled = Convert.ToBoolean(Mant_Puesto.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+            mn_mant_usuario.Enabled = Convert.ToBoolean(Mant_Usuario.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+            mn_mant_clientes.Enabled = Convert.ToBoolean(Mant_Cliente.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+            
+            //Menu procesos
+            mn_proc_evaluaciones.Enabled = Convert.ToBoolean(Proceso.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+            //Menu reportes
+
+            mn_rep_listado.Enabled = Convert.ToBoolean(Reporte.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+            
+            //Menu configuraciones
+            mn_conf_actividad_economica.Enabled = Convert.ToBoolean(Conf_Actividad_Economica.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+            mn_conf_canal.Enabled = Convert.ToBoolean(Conf_Canale.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+            mn_conf_cantidad_efectivo.Enabled = Convert.ToBoolean(Conf_Cantidade.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+            mn_conf_pais.Enabled = Convert.ToBoolean(Conf_Paise.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+            mn_conf_producto.Enabled = Convert.ToBoolean(Conf_Producto.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+            mn_conf_provincia.Enabled = Convert.ToBoolean(Conf_Provincia.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+            btn_conf_recomendaciones.Enabled = Convert.ToBoolean(Conf_Recomendacion.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+            btn_conf_ponderaciones.Enabled = Convert.ToBoolean(Conf_Ponderacion.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+            btn_conf_empresa.Enabled = Convert.ToBoolean(Conf_Empresa.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+            btn_conf_permisos.Enabled = Convert.ToBoolean(Conf_Permiso.Rows[0]["ACCESO"].ToString()) == true ? true : false;
         }
 
         private void FRM_PRINCIPAL_Load(object sender, EventArgs e)
@@ -25,6 +132,9 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             }
 
             btn_usuario.Text ="  "+ CP_UTILIDADES.DATOS_USUARIO.USUARIO;
+
+            Permiso_Menu();
+            Permiso_Acceso_Panatallas();
         }
 
         private void btn_mantenimiento_Click(object sender, EventArgs e)

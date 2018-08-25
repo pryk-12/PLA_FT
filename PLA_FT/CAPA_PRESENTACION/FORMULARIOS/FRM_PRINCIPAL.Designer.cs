@@ -43,8 +43,6 @@
             this.mn_conf_pais = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.mn_conf_provincia = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.mn_conf_oficina = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.mn_conf_cantidad_efectivo = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
@@ -53,6 +51,8 @@
             this.btn_conf_ponderaciones = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_conf_empresa = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_conf_permisos = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_configuraciones = new System.Windows.Forms.Button();
             this.btn_reportes = new System.Windows.Forms.Button();
             this.mn_reportes = new MetroFramework.Controls.MetroContextMenu(this.components);
@@ -81,8 +81,6 @@
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
-            this.btn_conf_permisos = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.mn_configuraciones.SuspendLayout();
@@ -156,8 +154,6 @@
             this.mn_conf_pais,
             this.toolStripSeparator7,
             this.mn_conf_provincia,
-            this.toolStripSeparator8,
-            this.mn_conf_oficina,
             this.toolStripSeparator10,
             this.mn_conf_cantidad_efectivo,
             this.toolStripSeparator13,
@@ -169,7 +165,7 @@
             this.toolStripSeparator17,
             this.btn_conf_permisos});
             this.mn_configuraciones.Name = "metroContextMenu1";
-            this.mn_configuraciones.Size = new System.Drawing.Size(237, 350);
+            this.mn_configuraciones.Size = new System.Drawing.Size(237, 320);
             // 
             // mn_conf_actividad_economica
             // 
@@ -240,20 +236,6 @@
             this.mn_conf_provincia.Text = "Provincias";
             this.mn_conf_provincia.Click += new System.EventHandler(this.mn_conf_provincia_Click);
             // 
-            // toolStripSeparator8
-            // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(233, 6);
-            // 
-            // mn_conf_oficina
-            // 
-            this.mn_conf_oficina.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.mn_conf_oficina.Image = ((System.Drawing.Image)(resources.GetObject("mn_conf_oficina.Image")));
-            this.mn_conf_oficina.Name = "mn_conf_oficina";
-            this.mn_conf_oficina.Size = new System.Drawing.Size(236, 24);
-            this.mn_conf_oficina.Text = "Oficinas";
-            this.mn_conf_oficina.Click += new System.EventHandler(this.mn_conf_oficina_Click);
-            // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
@@ -309,6 +291,20 @@
             this.btn_conf_empresa.Size = new System.Drawing.Size(236, 24);
             this.btn_conf_empresa.Text = "Datos Empresa";
             this.btn_conf_empresa.Click += new System.EventHandler(this.btn_conf_empresa_Click);
+            // 
+            // toolStripSeparator17
+            // 
+            this.toolStripSeparator17.Name = "toolStripSeparator17";
+            this.toolStripSeparator17.Size = new System.Drawing.Size(233, 6);
+            // 
+            // btn_conf_permisos
+            // 
+            this.btn_conf_permisos.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_conf_permisos.Image = ((System.Drawing.Image)(resources.GetObject("btn_conf_permisos.Image")));
+            this.btn_conf_permisos.Name = "btn_conf_permisos";
+            this.btn_conf_permisos.Size = new System.Drawing.Size(236, 24);
+            this.btn_conf_permisos.Text = "Permisos";
+            this.btn_conf_permisos.Click += new System.EventHandler(this.btn_conf_permisos_Click);
             // 
             // btn_configuraciones
             // 
@@ -596,20 +592,6 @@
             this.cambiarClaveToolStripMenuItem.Text = "Cambiar Clave";
             this.cambiarClaveToolStripMenuItem.Click += new System.EventHandler(this.cambiarClaveToolStripMenuItem_Click);
             // 
-            // toolStripSeparator17
-            // 
-            this.toolStripSeparator17.Name = "toolStripSeparator17";
-            this.toolStripSeparator17.Size = new System.Drawing.Size(233, 6);
-            // 
-            // btn_conf_permisos
-            // 
-            this.btn_conf_permisos.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btn_conf_permisos.Image = ((System.Drawing.Image)(resources.GetObject("btn_conf_permisos.Image")));
-            this.btn_conf_permisos.Name = "btn_conf_permisos";
-            this.btn_conf_permisos.Size = new System.Drawing.Size(236, 24);
-            this.btn_conf_permisos.Text = "Permisos";
-            this.btn_conf_permisos.Click += new System.EventHandler(this.btn_conf_permisos_Click);
-            // 
             // FRM_PRINCIPAL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -660,8 +642,6 @@
         private System.Windows.Forms.ToolStripMenuItem mn_conf_pais;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripMenuItem mn_conf_provincia;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-        private System.Windows.Forms.ToolStripMenuItem mn_conf_oficina;
         private System.Windows.Forms.Button btn_usuario;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
         private System.Windows.Forms.Label label1;

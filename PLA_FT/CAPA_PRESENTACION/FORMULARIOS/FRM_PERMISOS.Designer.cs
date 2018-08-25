@@ -184,7 +184,6 @@
             this.DG_MENU.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DG_MENU.Size = new System.Drawing.Size(402, 142);
             this.DG_MENU.TabIndex = 24;
-            this.DG_MENU.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_MENU_CellClick);
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -303,7 +302,6 @@
             this.Controls.Add(this.DG_PERMISO);
             this.Name = "FRM_PERMISOS";
             this.Text = "Permisos";
-            this.Load += new System.EventHandler(this.FRM_PERMISOS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DG_PERMISO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DG_MENU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

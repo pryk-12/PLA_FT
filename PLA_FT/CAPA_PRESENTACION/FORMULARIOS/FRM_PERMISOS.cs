@@ -1,11 +1,6 @@
 ﻿using CAPA_ENTIDAD;
 using CAPA_NEGOCIOS;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace CAPA_PRESENTACION.FORMULARIOS
@@ -50,8 +45,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             catch (Exception ex)
             {
                 CP_UTILIDADES.MENSAJE_ERROR(ex.Message,this);
-            }
-            
+            }          
         }
 
         private void cb_usuario_SelectedIndexChanged(object sender, EventArgs e)
@@ -62,10 +56,11 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 DG_PERMISO.DataSource = null;                
                 return;
             }
-            
+            string usuario = "USUARIO ='" + cb_usuario.Text + "'";
+
             try
             {
-                if (CN_PERMISO.CONSULTAR_PERMISO_MENU(cb_usuario.Text).Rows.Count == 0)
+                if (CN_PERMISO.CONSULTAR_PERMISO_MENU(usuario).Rows.Count == 0)
                 {
                     DG_MENU.DataSource = CN_PERMISO.CONSULTAR_MENU();
                     DG_MENU.Columns[0].Width = 300;
@@ -73,7 +68,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 }
                 else
                 {
-                    DG_MENU.DataSource = CN_PERMISO.CONSULTAR_PERMISO_MENU(cb_usuario.Text);
+                    DG_MENU.DataSource = CN_PERMISO.CONSULTAR_PERMISO_MENU(usuario);
                     DG_MENU.Columns[0].Width = 300;
                     DG_MENU.Columns[1].Width = 80;
                 }
@@ -84,8 +79,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 }
 
                 string condicion = "PANTALLA LIKE '%" +""+ "%'";
-                string usuario = "USUARIO ='" + cb_usuario.Text + "'";
-
+                
                 if (CN_PERMISO.CONSULTAR_PERMISO(usuario).Rows.Count == 0)
                 {
                     DG_PERMISO.DataSource = CN_PERMISO.CONSULTAR_PANTALLAS(condicion);
@@ -106,7 +100,6 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 {
                     DG_PERMISO.Columns[0].ReadOnly = true;
                 }
-
             }
             catch
             {
@@ -121,12 +114,6 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 return;
             }
             Seleccionar(true);
-        }
-
-        private void DG_MENU_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
-            
         }
 
         public void Seleccionar(bool opacion)
@@ -146,11 +133,6 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 return;
             }
             Seleccionar(false);
-        }
-
-        private void FRM_PERMISOS_Load(object sender, EventArgs e)
-        {
-            
         }
 
         private void btn_agregar_Click(object sender, EventArgs e)

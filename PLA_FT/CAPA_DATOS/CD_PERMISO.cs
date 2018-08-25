@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 
 namespace CAPA_DATOS
 {
-   public class CD_PERMISO
+    public class CD_PERMISO
     {
         SqlConnection cn = new SqlConnection(CD_CONEXION.cadena_conexion);
         SqlDataAdapter da = new SqlDataAdapter();
@@ -23,13 +23,13 @@ namespace CAPA_DATOS
             return ds.Tables["MENU"];
         }
 
-        public DataTable CONSULTAR_PERMISO_MENU(string USUARIO)
+        public DataTable CONSULTAR_PERMISO_MENU(string CONDICION)
         {
             cn.Close();
             da.SelectCommand = new SqlCommand("SP_PERMISOS", cn);
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
             da.SelectCommand.Parameters.AddWithValue("@OPCION", "CONSULTAR_PERMISO_MENU");
-            da.SelectCommand.Parameters.AddWithValue("@MENU_USUARIO", USUARIO);
+            da.SelectCommand.Parameters.AddWithValue("@CONDICION", CONDICION);
             cn.Open();
             DataSet ds = new DataSet();
             da.Fill(ds, "PERMISO_MENU");
