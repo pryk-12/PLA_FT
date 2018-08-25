@@ -40,16 +40,18 @@
             this.EDITAR = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btn_agregar = new System.Windows.Forms.Button();
             this.DG_MENU = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ACCESO1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.cb_usuario = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ACCESO1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DG_PERMISO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DG_MENU)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // DG_PERMISO
@@ -83,13 +85,12 @@
             this.DG_PERMISO.DefaultCellStyle = dataGridViewCellStyle2;
             this.DG_PERMISO.EnableHeadersVisualStyles = false;
             this.DG_PERMISO.GridColor = System.Drawing.Color.Gray;
-            this.DG_PERMISO.Location = new System.Drawing.Point(18, 262);
+            this.DG_PERMISO.Location = new System.Drawing.Point(18, 291);
             this.DG_PERMISO.MultiSelect = false;
             this.DG_PERMISO.Name = "DG_PERMISO";
-            this.DG_PERMISO.ReadOnly = true;
             this.DG_PERMISO.RowHeadersVisible = false;
             this.DG_PERMISO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG_PERMISO.Size = new System.Drawing.Size(567, 303);
+            this.DG_PERMISO.Size = new System.Drawing.Size(567, 272);
             this.DG_PERMISO.TabIndex = 22;
             // 
             // PANTALLA
@@ -105,7 +106,6 @@
             this.ACCESO.DataPropertyName = "ACCESO";
             this.ACCESO.HeaderText = "ACCESO";
             this.ACCESO.Name = "ACCESO";
-            this.ACCESO.ReadOnly = true;
             this.ACCESO.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ACCESO.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.ACCESO.Width = 80;
@@ -115,7 +115,6 @@
             this.AGREGAR.DataPropertyName = "AGREGAR";
             this.AGREGAR.HeaderText = "AGREGAR";
             this.AGREGAR.Name = "AGREGAR";
-            this.AGREGAR.ReadOnly = true;
             this.AGREGAR.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.AGREGAR.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.AGREGAR.Width = 80;
@@ -125,7 +124,6 @@
             this.EDITAR.DataPropertyName = "EDITAR";
             this.EDITAR.HeaderText = "EDITAR";
             this.EDITAR.Name = "EDITAR";
-            this.EDITAR.ReadOnly = true;
             this.EDITAR.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.EDITAR.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.EDITAR.Width = 80;
@@ -141,13 +139,14 @@
             this.btn_agregar.ForeColor = System.Drawing.Color.White;
             this.btn_agregar.Image = ((System.Drawing.Image)(resources.GetObject("btn_agregar.Image")));
             this.btn_agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_agregar.Location = new System.Drawing.Point(18, 569);
+            this.btn_agregar.Location = new System.Drawing.Point(18, 568);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(101, 43);
             this.btn_agregar.TabIndex = 23;
             this.btn_agregar.Text = "  Guardar";
             this.btn_agregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // DG_MENU
             // 
@@ -178,87 +177,14 @@
             this.DG_MENU.DefaultCellStyle = dataGridViewCellStyle4;
             this.DG_MENU.EnableHeadersVisualStyles = false;
             this.DG_MENU.GridColor = System.Drawing.Color.Gray;
-            this.DG_MENU.Location = new System.Drawing.Point(17, 124);
+            this.DG_MENU.Location = new System.Drawing.Point(18, 115);
             this.DG_MENU.MultiSelect = false;
             this.DG_MENU.Name = "DG_MENU";
-            this.DG_MENU.ReadOnly = true;
             this.DG_MENU.RowHeadersVisible = false;
             this.DG_MENU.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG_MENU.Size = new System.Drawing.Size(568, 101);
+            this.DG_MENU.Size = new System.Drawing.Size(402, 142);
             this.DG_MENU.TabIndex = 24;
             this.DG_MENU.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_MENU_CellClick);
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel4.Location = new System.Drawing.Point(25, 67);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(60, 19);
-            this.metroLabel4.TabIndex = 26;
-            this.metroLabel4.Text = "Usuario";
-            // 
-            // cb_usuario
-            // 
-            this.cb_usuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_usuario.FormattingEnabled = true;
-            this.cb_usuario.Items.AddRange(new object[] {
-            "",
-            "ACTIVO",
-            "INACTIVO"});
-            this.cb_usuario.Location = new System.Drawing.Point(90, 65);
-            this.cb_usuario.Name = "cb_usuario";
-            this.cb_usuario.Size = new System.Drawing.Size(218, 23);
-            this.cb_usuario.TabIndex = 25;
-            this.cb_usuario.SelectedIndexChanged += new System.EventHandler(this.cb_usuario_SelectedIndexChanged);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(433, 232);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(152, 28);
-            this.button2.TabIndex = 85;
-            this.button2.Text = "          Quitar Selección";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(280, 232);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 28);
-            this.button1.TabIndex = 84;
-            this.button1.Text = "   Seleccionar Todo";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(21, 241);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(146, 19);
-            this.metroLabel1.TabIndex = 86;
-            this.metroLabel1.Text = "Permisos a Pantallas";
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.Location = new System.Drawing.Point(23, 102);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(133, 19);
-            this.metroLabel2.TabIndex = 87;
-            this.metroLabel2.Text = "Opciones de Menu";
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -273,15 +199,99 @@
             this.ACCESO1.DataPropertyName = "ACCESO";
             this.ACCESO1.HeaderText = "ACCESO";
             this.ACCESO1.Name = "ACCESO1";
-            this.ACCESO1.ReadOnly = true;
             this.ACCESO1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ACCESO1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.ACCESO1.Width = 80;
             // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel4.Location = new System.Drawing.Point(23, 65);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(60, 19);
+            this.metroLabel4.TabIndex = 26;
+            this.metroLabel4.Text = "Usuario";
+            // 
+            // cb_usuario
+            // 
+            this.cb_usuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_usuario.FormattingEnabled = true;
+            this.cb_usuario.Items.AddRange(new object[] {
+            "",
+            "ACTIVO",
+            "INACTIVO"});
+            this.cb_usuario.Location = new System.Drawing.Point(86, 63);
+            this.cb_usuario.Name = "cb_usuario";
+            this.cb_usuario.Size = new System.Drawing.Size(158, 23);
+            this.cb_usuario.TabIndex = 25;
+            this.cb_usuario.SelectedIndexChanged += new System.EventHandler(this.cb_usuario_SelectedIndexChanged);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(433, 261);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(152, 28);
+            this.button2.TabIndex = 85;
+            this.button2.Text = "          Quitar Selección";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(280, 261);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(152, 28);
+            this.button1.TabIndex = 84;
+            this.button1.Text = "   Seleccionar Todo";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel1.Location = new System.Drawing.Point(25, 269);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(146, 19);
+            this.metroLabel1.TabIndex = 86;
+            this.metroLabel1.Text = "Permisos a Pantallas";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel2.Location = new System.Drawing.Point(18, 93);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(133, 19);
+            this.metroLabel2.TabIndex = 87;
+            this.metroLabel2.Text = "Opciones de Menu";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(432, 115);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(152, 142);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 88;
+            this.pictureBox1.TabStop = false;
+            // 
             // FRM_PERMISOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(607, 635);
+            this.ClientSize = new System.Drawing.Size(607, 628);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.button2);
@@ -293,8 +303,10 @@
             this.Controls.Add(this.DG_PERMISO);
             this.Name = "FRM_PERMISOS";
             this.Text = "Permisos";
+            this.Load += new System.EventHandler(this.FRM_PERMISOS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DG_PERMISO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DG_MENU)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,5 +329,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn EDITAR;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ACCESO1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
