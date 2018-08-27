@@ -12,6 +12,14 @@ namespace CAPA_PRESENTACION.FORMULARIOS
         {
             InitializeComponent();
         }
+
+        public void Permiso_Acceso_Panatallas()
+        {
+            String condicion = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Configuraciones - Ponderaciones'";
+            var Actividad_Economica = CN_PERMISO.CONSULTAR_PERMISO(condicion);
+            btn_agregar.Enabled = Convert.ToBoolean(Actividad_Economica.Rows[0]["AGREGAR"].ToString()) == true ? true : false;
+        }
+
         public void CONSULTAR()
         {
             txt_actividad.Text = CN_PONDERACION.CONSULTAR(1).Rows[0]["DESCRIPCION"].ToString();
@@ -101,6 +109,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
         private void FRM_PONDERACION_Load(object sender, EventArgs e)
         {
             CONSULTAR();
+            Permiso_Acceso_Panatallas();
         }
 
         private void btn_agregar_Click(object sender, EventArgs e)

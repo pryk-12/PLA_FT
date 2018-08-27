@@ -16,6 +16,15 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             DG.AutoGenerateColumns = false;
         }
 
+        public void Permiso_Acceso_Panatallas()
+        {
+            String condicion = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Procesos - Evaluación de Riesgo'";
+            var Actividad_Economica = CN_PERMISO.CONSULTAR_PERMISO(condicion);
+            btn_agregar.Enabled = Convert.ToBoolean(Actividad_Economica.Rows[0]["AGREGAR"].ToString()) == true ? true : false;
+            btn_editar.Enabled = Convert.ToBoolean(Actividad_Economica.Rows[0]["EDITAR"].ToString()) == true ? true : false;
+        }
+
+
         public void CONSULTAR()
         {
             string CONDICION = "(A.ID_CLIENTE LIKE'%" + txt_buscar.Text + "%' OR B.NOMBRE LIKE'%" + txt_buscar.Text + "%')";
@@ -64,7 +73,8 @@ namespace CAPA_PRESENTACION.FORMULARIOS
 
         private void FRM_MANT_EVALUACIONES_Load(object sender, EventArgs e)
         {
-            CONSULTAR();            
+            CONSULTAR();
+            Permiso_Acceso_Panatallas();
         }
 
         private void txt_buscar_TextChanged(object sender, EventArgs e)

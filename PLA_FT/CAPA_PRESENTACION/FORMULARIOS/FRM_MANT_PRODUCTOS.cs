@@ -19,6 +19,14 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             lbl_total.Text = "Total de Registro(s):  " + DG.Rows.Count.ToString();
         }
 
+        public void Permiso_Acceso_Panatallas()
+        {
+            String condicion = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Configuraciones - Productos'";
+            var Actividad_Economica = CN_PERMISO.CONSULTAR_PERMISO(condicion);
+            btn_agregar.Enabled = Convert.ToBoolean(Actividad_Economica.Rows[0]["AGREGAR"].ToString()) == true ? true : false;
+            btn_editar.Enabled = Convert.ToBoolean(Actividad_Economica.Rows[0]["EDITAR"].ToString()) == true ? true : false;
+        }
+
         public void PASAR_DATOS()
         {
             if (DG.Rows.Count == 0)
@@ -57,6 +65,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
         private void FRM_MANT_PRODUCTOS_Load(object sender, EventArgs e)
         {
             CONSULTAR();
+            Permiso_Acceso_Panatallas();
         }
 
         private void txt_buscar_TextChanged_1(object sender, EventArgs e)
