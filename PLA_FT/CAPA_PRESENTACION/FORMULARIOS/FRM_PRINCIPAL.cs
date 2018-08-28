@@ -379,6 +379,10 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             }
         }
 
-
+        private void actualizarMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Permiso_Acceso_Panatallas();
+            Permiso_Menu();
+        }
     }
 }

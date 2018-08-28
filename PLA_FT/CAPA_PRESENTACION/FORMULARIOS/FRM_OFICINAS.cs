@@ -124,5 +124,10 @@ namespace CAPA_PRESENTACION.FORMULARIOS
 
             INSERTAR_ACTUALIZAR();
         }
+
+        private void txt_valoracion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CP_UTILIDADES.PERMITIR_NUMERO_Y_PUNTO(sender, e, txt_valoracion);
+        }
     }
 }

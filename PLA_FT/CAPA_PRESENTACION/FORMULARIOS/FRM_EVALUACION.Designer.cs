@@ -35,10 +35,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.txt_recomendacion = new MetroFramework.Controls.MetroTextBox();
@@ -119,6 +117,8 @@
             this.ch_barras = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.ch_columnas = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.groupBox2.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
@@ -150,6 +150,7 @@
             this.metroLabel12.Size = new System.Drawing.Size(91, 19);
             this.metroLabel12.TabIndex = 55;
             this.metroLabel12.Text = "Total Riesgo";
+            this.metroLabel12.Visible = false;
             // 
             // metroLabel11
             // 
@@ -324,6 +325,7 @@
             this.txt_total.UseCustomBackColor = true;
             this.txt_total.UseSelectable = true;
             this.txt_total.UseStyleColors = true;
+            this.txt_total.Visible = false;
             this.txt_total.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_total.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txt_total.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_total_KeyPress);
@@ -410,7 +412,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Location = new System.Drawing.Point(13, 60);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 2;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(485, 374);
             this.metroTabControl1.TabIndex = 38;
             this.metroTabControl1.UseSelectable = true;
@@ -758,7 +760,7 @@
             this.cb_oficina.FormattingEnabled = true;
             this.cb_oficina.Location = new System.Drawing.Point(119, 80);
             this.cb_oficina.Name = "cb_oficina";
-            this.cb_oficina.Size = new System.Drawing.Size(205, 23);
+            this.cb_oficina.Size = new System.Drawing.Size(239, 23);
             this.cb_oficina.TabIndex = 23;
             // 
             // txt_identificacion
@@ -803,7 +805,7 @@
             "",
             "FISICO",
             "JURIDICO"});
-            this.cb_tipo.Location = new System.Drawing.Point(329, 80);
+            this.cb_tipo.Location = new System.Drawing.Point(362, 80);
             this.cb_tipo.Name = "cb_tipo";
             this.cb_tipo.Size = new System.Drawing.Size(95, 23);
             this.cb_tipo.TabIndex = 20;
@@ -813,7 +815,7 @@
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel5.Location = new System.Drawing.Point(329, 64);
+            this.metroLabel5.Location = new System.Drawing.Point(362, 64);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(31, 15);
             this.metroLabel5.TabIndex = 21;
@@ -848,7 +850,7 @@
             // 
             // 
             this.txt_nombre.CustomButton.Image = null;
-            this.txt_nombre.CustomButton.Location = new System.Drawing.Point(286, 1);
+            this.txt_nombre.CustomButton.Location = new System.Drawing.Point(319, 1);
             this.txt_nombre.CustomButton.Name = "";
             this.txt_nombre.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_nombre.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -867,7 +869,7 @@
             this.txt_nombre.SelectionLength = 0;
             this.txt_nombre.SelectionStart = 0;
             this.txt_nombre.ShortcutsEnabled = true;
-            this.txt_nombre.Size = new System.Drawing.Size(308, 23);
+            this.txt_nombre.Size = new System.Drawing.Size(341, 23);
             this.txt_nombre.TabIndex = 17;
             this.txt_nombre.UseSelectable = true;
             this.txt_nombre.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -1400,6 +1402,8 @@
             chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
             chartArea1.AxisX.MajorGrid.LineWidth = 0;
             chartArea1.AxisX.MinorGrid.LineWidth = 0;
+            chartArea1.AxisX2.IsLabelAutoFit = false;
+            chartArea1.AxisX2.LabelStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             chartArea1.AxisY.LabelAutoFitMaxFontSize = 7;
             chartArea1.AxisY.LabelAutoFitMinFontSize = 5;
             chartArea1.AxisY.LabelAutoFitStyle = System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.WordWrap;
@@ -1407,26 +1411,25 @@
             chartArea1.AxisY.MajorGrid.LineWidth = 0;
             chartArea1.AxisY.MaximumAutoSize = 50F;
             chartArea1.AxisY.MinorGrid.LineWidth = 0;
+            chartArea1.AxisY2.IsLabelAutoFit = false;
+            chartArea1.AxisY2.LabelStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             chartArea1.AxisY2.LabelStyle.IsEndLabelVisible = false;
             chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             chartArea1.BorderWidth = 0;
             chartArea1.Name = "ChartArea1";
             this.ch_barras.ChartAreas.Add(chartArea1);
-            this.ch_barras.Location = new System.Drawing.Point(482, 85);
+            this.ch_barras.Location = new System.Drawing.Point(502, 531);
             this.ch_barras.Name = "ch_barras";
             series1.BorderColor = System.Drawing.Color.Black;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
             series1.EmptyPointStyle.IsVisibleInLegend = false;
+            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             series1.Name = "BARRAS";
             this.ch_barras.Series.Add(series1);
             this.ch_barras.Size = new System.Drawing.Size(422, 120);
             this.ch_barras.TabIndex = 41;
             this.ch_barras.Text = "22222";
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            title1.Name = "Title1";
-            title1.Text = "RIESGO TOTAL";
-            this.ch_barras.Titles.Add(title1);
             // 
             // ch_columnas
             // 
@@ -1460,20 +1463,17 @@
             chartArea2.BorderWidth = 0;
             chartArea2.Name = "ChartArea1";
             this.ch_columnas.ChartAreas.Add(chartArea2);
-            this.ch_columnas.Location = new System.Drawing.Point(482, 205);
+            this.ch_columnas.Location = new System.Drawing.Point(497, 76);
             this.ch_columnas.Name = "ch_columnas";
             series2.BorderColor = System.Drawing.Color.Black;
             series2.ChartArea = "ChartArea1";
             series2.EmptyPointStyle.IsVisibleInLegend = false;
+            series2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             series2.Name = "BARRAS";
             this.ch_columnas.Series.Add(series2);
-            this.ch_columnas.Size = new System.Drawing.Size(433, 448);
+            this.ch_columnas.Size = new System.Drawing.Size(433, 483);
             this.ch_columnas.TabIndex = 45;
             this.ch_columnas.Text = "chart1";
-            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            title2.Name = "Title1";
-            title2.Text = "RIESGO PARCIAL";
-            this.ch_columnas.Titles.Add(title2);
             // 
             // metroLabel13
             // 
@@ -1486,11 +1486,36 @@
             this.metroLabel13.TabIndex = 56;
             this.metroLabel13.Text = "%";
             this.metroLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroLabel13.Visible = false;
+            // 
+            // metroLabel14
+            // 
+            this.metroLabel14.AutoSize = true;
+            this.metroLabel14.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel14.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel14.Location = new System.Drawing.Point(668, 79);
+            this.metroLabel14.Name = "metroLabel14";
+            this.metroLabel14.Size = new System.Drawing.Size(100, 15);
+            this.metroLabel14.TabIndex = 57;
+            this.metroLabel14.Text = "RIESGO PARCIAL";
+            // 
+            // metroLabel15
+            // 
+            this.metroLabel15.AutoSize = true;
+            this.metroLabel15.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel15.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel15.Location = new System.Drawing.Point(674, 525);
+            this.metroLabel15.Name = "metroLabel15";
+            this.metroLabel15.Size = new System.Drawing.Size(89, 15);
+            this.metroLabel15.TabIndex = 58;
+            this.metroLabel15.Text = "RIESGO TOTAL";
             // 
             // FRM_EVALUACION
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(938, 654);
+            this.Controls.Add(this.metroLabel15);
+            this.Controls.Add(this.metroLabel14);
             this.Controls.Add(this.metroLabel13);
             this.Controls.Add(this.metroLabel12);
             this.Controls.Add(this.metroLabel11);
@@ -1622,5 +1647,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn VALORACION1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private MetroFramework.Controls.MetroLabel metroLabel14;
+        private MetroFramework.Controls.MetroLabel metroLabel15;
     }
 }

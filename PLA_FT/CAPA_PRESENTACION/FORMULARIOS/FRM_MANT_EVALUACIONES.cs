@@ -27,7 +27,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
 
         public void CONSULTAR()
         {
-            string CONDICION = "(A.ID_CLIENTE LIKE'%" + txt_buscar.Text + "%' OR B.NOMBRE LIKE'%" + txt_buscar.Text + "%')";
+            string CONDICION = "(A.ID_CLIENTE LIKE'%" + txt_buscar.Text + "%' OR B.NOMBRE LIKE'%" + txt_buscar.Text + "%') ORDER BY A.ID_EVALUACION DESC";
             DG.DataSource = CN_EVALUACION.CONSULTAR(CONDICION);
             lbl_total.Text = "Total de Registro(s):  " + DG.Rows.Count.ToString();
 

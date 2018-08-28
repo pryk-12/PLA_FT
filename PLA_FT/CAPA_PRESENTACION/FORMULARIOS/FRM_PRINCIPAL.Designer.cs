@@ -81,6 +81,8 @@
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.actualizarMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.mn_configuraciones.SuspendLayout();
@@ -165,7 +167,7 @@
             this.toolStripSeparator17,
             this.btn_conf_permisos});
             this.mn_configuraciones.Name = "metroContextMenu1";
-            this.mn_configuraciones.Size = new System.Drawing.Size(237, 320);
+            this.mn_configuraciones.Size = new System.Drawing.Size(237, 298);
             // 
             // mn_conf_actividad_economica
             // 
@@ -565,32 +567,48 @@
             this.metroContextMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cerrarSesiónToolStripMenuItem,
             this.toolStripSeparator9,
-            this.cambiarClaveToolStripMenuItem});
+            this.cambiarClaveToolStripMenuItem,
+            this.toolStripSeparator8,
+            this.actualizarMenuToolStripMenuItem});
             this.metroContextMenu1.Name = "metroContextMenu1";
-            this.metroContextMenu1.Size = new System.Drawing.Size(175, 58);
+            this.metroContextMenu1.Size = new System.Drawing.Size(185, 88);
             // 
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.cerrarSesiónToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cerrarSesiónToolStripMenuItem.Image")));
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(184, 24);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(171, 6);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(181, 6);
             // 
             // cambiarClaveToolStripMenuItem
             // 
             this.cambiarClaveToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.cambiarClaveToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cambiarClaveToolStripMenuItem.Image")));
             this.cambiarClaveToolStripMenuItem.Name = "cambiarClaveToolStripMenuItem";
-            this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
+            this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(184, 24);
             this.cambiarClaveToolStripMenuItem.Text = "Cambiar Clave";
             this.cambiarClaveToolStripMenuItem.Click += new System.EventHandler(this.cambiarClaveToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(181, 6);
+            // 
+            // actualizarMenuToolStripMenuItem
+            // 
+            this.actualizarMenuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.actualizarMenuToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("actualizarMenuToolStripMenuItem.Image")));
+            this.actualizarMenuToolStripMenuItem.Name = "actualizarMenuToolStripMenuItem";
+            this.actualizarMenuToolStripMenuItem.Size = new System.Drawing.Size(184, 24);
+            this.actualizarMenuToolStripMenuItem.Text = "Actualizar Menu";
+            this.actualizarMenuToolStripMenuItem.Click += new System.EventHandler(this.actualizarMenuToolStripMenuItem_Click);
             // 
             // FRM_PRINCIPAL
             // 
@@ -600,7 +618,7 @@
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;
             this.Name = "FRM_PRINCIPAL";
-            this.Text = "FRM_PRINCIPAL";
+            this.Text = "Menu Principal";
             this.Load += new System.EventHandler(this.FRM_PRINCIPAL_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -667,5 +685,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator16;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator17;
         private System.Windows.Forms.ToolStripMenuItem btn_conf_permisos;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripMenuItem actualizarMenuToolStripMenuItem;
     }
 }

@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_OFICINAS));
             this.btn_agregar = new System.Windows.Forms.Button();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.cb_nivel_riesgo = new System.Windows.Forms.ComboBox();
+            this.txt_valoracion = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.cb_estado = new System.Windows.Forms.ComboBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -40,10 +44,6 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txt_descripcion = new MetroFramework.Controls.MetroTextBox();
             this.txt_id = new MetroFramework.Controls.MetroTextBox();
-            this.cb_nivel_riesgo = new System.Windows.Forms.ComboBox();
-            this.txt_valoracion = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,6 +96,76 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // cb_nivel_riesgo
+            // 
+            this.cb_nivel_riesgo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_nivel_riesgo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_nivel_riesgo.FormattingEnabled = true;
+            this.cb_nivel_riesgo.Items.AddRange(new object[] {
+            "",
+            "ALTO",
+            "MEDIO",
+            "BAJO"});
+            this.cb_nivel_riesgo.Location = new System.Drawing.Point(193, 133);
+            this.cb_nivel_riesgo.Name = "cb_nivel_riesgo";
+            this.cb_nivel_riesgo.Size = new System.Drawing.Size(89, 23);
+            this.cb_nivel_riesgo.TabIndex = 11;
+            // 
+            // txt_valoracion
+            // 
+            this.txt_valoracion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            // 
+            // 
+            // 
+            this.txt_valoracion.CustomButton.Image = null;
+            this.txt_valoracion.CustomButton.Location = new System.Drawing.Point(42, 1);
+            this.txt_valoracion.CustomButton.Name = "";
+            this.txt_valoracion.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_valoracion.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_valoracion.CustomButton.TabIndex = 1;
+            this.txt_valoracion.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_valoracion.CustomButton.UseSelectable = true;
+            this.txt_valoracion.CustomButton.Visible = false;
+            this.txt_valoracion.Lines = new string[0];
+            this.txt_valoracion.Location = new System.Drawing.Point(115, 133);
+            this.txt_valoracion.MaxLength = 100;
+            this.txt_valoracion.Name = "txt_valoracion";
+            this.txt_valoracion.PasswordChar = '\0';
+            this.txt_valoracion.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_valoracion.SelectedText = "";
+            this.txt_valoracion.SelectionLength = 0;
+            this.txt_valoracion.SelectionStart = 0;
+            this.txt_valoracion.ShortcutsEnabled = true;
+            this.txt_valoracion.Size = new System.Drawing.Size(64, 23);
+            this.txt_valoracion.TabIndex = 10;
+            this.txt_valoracion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_valoracion.UseSelectable = true;
+            this.txt_valoracion.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_valoracion.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_valoracion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_valoracion_KeyPress);
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel5.Location = new System.Drawing.Point(194, 117);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(76, 15);
+            this.metroLabel5.TabIndex = 13;
+            this.metroLabel5.Text = "Nivel Riesgo";
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel6.Location = new System.Drawing.Point(115, 117);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(64, 15);
+            this.metroLabel6.TabIndex = 12;
+            this.metroLabel6.Text = "Valoración";
             // 
             // metroLabel4
             // 
@@ -261,75 +331,6 @@
             this.txt_id.Visible = false;
             this.txt_id.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_id.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // cb_nivel_riesgo
-            // 
-            this.cb_nivel_riesgo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_nivel_riesgo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_nivel_riesgo.FormattingEnabled = true;
-            this.cb_nivel_riesgo.Items.AddRange(new object[] {
-            "",
-            "ALTO",
-            "MEDIO",
-            "BAJO"});
-            this.cb_nivel_riesgo.Location = new System.Drawing.Point(193, 133);
-            this.cb_nivel_riesgo.Name = "cb_nivel_riesgo";
-            this.cb_nivel_riesgo.Size = new System.Drawing.Size(89, 23);
-            this.cb_nivel_riesgo.TabIndex = 11;
-            // 
-            // txt_valoracion
-            // 
-            this.txt_valoracion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            // 
-            // 
-            // 
-            this.txt_valoracion.CustomButton.Image = null;
-            this.txt_valoracion.CustomButton.Location = new System.Drawing.Point(42, 1);
-            this.txt_valoracion.CustomButton.Name = "";
-            this.txt_valoracion.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_valoracion.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_valoracion.CustomButton.TabIndex = 1;
-            this.txt_valoracion.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_valoracion.CustomButton.UseSelectable = true;
-            this.txt_valoracion.CustomButton.Visible = false;
-            this.txt_valoracion.Lines = new string[0];
-            this.txt_valoracion.Location = new System.Drawing.Point(115, 133);
-            this.txt_valoracion.MaxLength = 100;
-            this.txt_valoracion.Name = "txt_valoracion";
-            this.txt_valoracion.PasswordChar = '\0';
-            this.txt_valoracion.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_valoracion.SelectedText = "";
-            this.txt_valoracion.SelectionLength = 0;
-            this.txt_valoracion.SelectionStart = 0;
-            this.txt_valoracion.ShortcutsEnabled = true;
-            this.txt_valoracion.Size = new System.Drawing.Size(64, 23);
-            this.txt_valoracion.TabIndex = 10;
-            this.txt_valoracion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt_valoracion.UseSelectable = true;
-            this.txt_valoracion.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_valoracion.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel5.Location = new System.Drawing.Point(194, 117);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(76, 15);
-            this.metroLabel5.TabIndex = 13;
-            this.metroLabel5.Text = "Nivel Riesgo";
-            // 
-            // metroLabel6
-            // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel6.Location = new System.Drawing.Point(115, 117);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(64, 15);
-            this.metroLabel6.TabIndex = 12;
-            this.metroLabel6.Text = "Valoración";
             // 
             // FRM_OFICINAS
             // 

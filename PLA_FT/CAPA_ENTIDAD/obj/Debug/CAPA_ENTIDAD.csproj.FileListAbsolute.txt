@@ -4,7 +4,6 @@ C:\PLA_FT\CAPA_ENTIDAD\obj\Debug\CAPA_ENTIDAD.dll
 C:\PLA_FT\CAPA_ENTIDAD\obj\Debug\CAPA_ENTIDAD.pdb
 C:\Users\JAMC\Documents\GitHub\PLA_FT\PLA_FT\CAPA_ENTIDAD\bin\Debug\CAPA_ENTIDAD.dll
 C:\Users\JAMC\Documents\GitHub\PLA_FT\PLA_FT\CAPA_ENTIDAD\bin\Debug\CAPA_ENTIDAD.pdb
-C:\Users\JAMC\Documents\GitHub\PLA_FT\PLA_FT\CAPA_ENTIDAD\obj\Debug\CAPA_ENTIDAD.csprojResolveAssemblyReference.cache
 C:\Users\JAMC\Documents\GitHub\PLA_FT\PLA_FT\CAPA_ENTIDAD\obj\Debug\CAPA_ENTIDAD.dll
 C:\Users\JAMC\Documents\GitHub\PLA_FT\PLA_FT\CAPA_ENTIDAD\obj\Debug\CAPA_ENTIDAD.pdb
 D:\PLA_FT\PLA_FT\CAPA_ENTIDAD\bin\Debug\CAPA_ENTIDAD.dll
@@ -12,3 +11,4 @@ D:\PLA_FT\PLA_FT\CAPA_ENTIDAD\bin\Debug\CAPA_ENTIDAD.pdb
 D:\PLA_FT\PLA_FT\CAPA_ENTIDAD\obj\Debug\CAPA_ENTIDAD.dll
 D:\PLA_FT\PLA_FT\CAPA_ENTIDAD\obj\Debug\CAPA_ENTIDAD.pdb
 D:\PLA_FT\PLA_FT\CAPA_ENTIDAD\obj\Debug\CAPA_ENTIDAD.csprojResolveAssemblyReference.cache
+C:\Users\JAMC\Documents\GitHub\PLA_FT\PLA_FT\CAPA_ENTIDAD\obj\Debug\CAPA_ENTIDAD.csprojResolveAssemblyReference.cache
