@@ -117,8 +117,56 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 cb_estado.Focus();
                 return;
             }
+            if (cb_tipo.Text == "FISICO")
+            {
+                if(txt_identificacion.Text.Length < 13)
+                {
+                    CP_UTILIDADES.MENSAJE_INFORMACION("El Fotmato de Cedula es Incorrecto, se debe incluir los guiones", this);
+                    return;
+                }
 
+                if (CP_UTILIDADES.VALIDAR_CEDULA(txt_identificacion.Text) == false)
+                {
+                    CP_UTILIDADES.MENSAJE_INFORMACION("El Formato de Cedula es Incorrecto", this);
+                    txt_identificacion.Clear();
+                    return;
+                }
+            }
+            else
+            {
+                if (CP_UTILIDADES.VALIDAR_RNC(txt_identificacion.Text) == false)
+                {
+                    CP_UTILIDADES.MENSAJE_INFORMACION("El Formato de RNC es Incorrecto", this);
+                    txt_identificacion.Clear();
+                    return;
+                }
+            }
             INSERTAR_ACTUALIZAR();
+        }
+
+        private void txt_identificacion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (cb_oficina.Text == "FISICO")
+                {
+                    if (CP_UTILIDADES.VALIDAR_CEDULA(txt_identificacion.Text) == false)
+                    {
+                        CP_UTILIDADES.MENSAJE_INFORMACION("El Fotmato de Cedula es Incorrecto", this);
+                        txt_identificacion.Clear();
+                        return;
+                    }
+                }
+                else
+                {
+                    if (CP_UTILIDADES.VALIDAR_RNC(txt_identificacion.Text) == false)
+                    {
+                        CP_UTILIDADES.MENSAJE_INFORMACION("El Fotmato de RNC es Incorrecto", this);
+                        txt_identificacion.Clear();
+                        return;
+                    }
+                }
+            }
         }
     }
 }

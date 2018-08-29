@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -130,6 +132,11 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                     ctrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(200)))), ((int)(((byte)(208)))));
                 }
             }
+            panel1.Width = 183;
+            byte[] Logo = (byte[])CN_EMPRESA.CONSULTAR().Rows[0]["FONDO_PANTALLA"];
+            System.IO.MemoryStream ms = new MemoryStream(Logo);
+            this.BackgroundImage = Image.FromStream(ms);
+           
 
             btn_usuario.Text ="  "+ CP_UTILIDADES.DATOS_USUARIO.USUARIO;
 
@@ -383,6 +390,26 @@ namespace CAPA_PRESENTACION.FORMULARIOS
         {
             Permiso_Acceso_Panatallas();
             Permiso_Menu();
+
+            byte[] Logo = (byte[])CN_EMPRESA.CONSULTAR().Rows[0]["FONDO_PANTALLA"];
+            System.IO.MemoryStream ms = new MemoryStream(Logo);
+            this.BackgroundImage = Image.FromStream(ms);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(panel1.Width == 183)
+            {
+                panel1.Width = 50;
+            }
+            else
+            {
+                panel1.Width = 183;
+            }
+
+            byte[] Logo = (byte[])CN_EMPRESA.CONSULTAR().Rows[0]["FONDO_PANTALLA"];
+            System.IO.MemoryStream ms = new MemoryStream(Logo);
+            this.BackgroundImage = Image.FromStream(ms);
         }
     }
 }

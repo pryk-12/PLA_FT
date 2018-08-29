@@ -43,6 +43,10 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 this.pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
                 byte[] ruta_imagen = ms.GetBuffer();
 
+                System.IO.MemoryStream ms1 = new MemoryStream();
+                this.pictureBox2.Image.Save(ms1, System.Drawing.Imaging.ImageFormat.Png);
+                byte[] ruta_imagen2 = ms1.GetBuffer();
+
                 CE_EMPRESA obj = new CE_EMPRESA();
                 obj.CELULAR = txt_celular.Text;
                 obj.DIRECCION = txt_direccion.Text.Trim();
@@ -52,6 +56,8 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 obj.LOGO = ruta_imagen;
                 obj.PAGINA_WEB = txt_pagina_web.Text.Trim();
                 obj.TELEFONO = txt_telefono.Text.Trim();
+                obj.POLITICA_CLAVE = cb_politica_clave.Text;
+                obj.FONDO_PANTALLA = ruta_imagen2;
                 this.btn_editar.Enabled = true;
                 this.btn_agregar.Enabled = false;
                 this.metroPanel1.Enabled = false;
@@ -80,7 +86,11 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 txt_identificacion.Text = CN_EMPRESA.CONSULTAR().Rows[0]["IDENTIFICACION"].ToString();
                 byte[] Logo = (byte[])CN_EMPRESA.CONSULTAR().Rows[0]["LOGO"];
                 System.IO.MemoryStream ms = new MemoryStream(Logo);
+                cb_politica_clave.Text = CN_EMPRESA.CONSULTAR().Rows[0]["POLITICA_CLAVE"].ToString();
+                byte[] Logo2 = (byte[])CN_EMPRESA.CONSULTAR().Rows[0]["FONDO_PANTALLA"];
+                System.IO.MemoryStream ms1 = new MemoryStream(Logo2);
                 pictureBox1.Image = Image.FromStream(ms);
+                pictureBox2.Image = Image.FromStream(ms1);
             }
             catch
             {
@@ -129,6 +139,13 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 }
             }
 
+            if (cb_politica_clave.Text.Equals(""))
+            {
+                CP_UTILIDADES.MENSAJE_INFORMACION("Se debe Seleccionar si la Clave es con o sin Politica", this);
+                cb_politica_clave.Focus();
+                return;
+            }
+
             if (!txt_email.Text.Trim().Equals(""))
             {
                 if (!CP_UTILIDADES.VALIDAR_CORREO(txt_email.Text))
@@ -152,6 +169,32 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             this.metroPanel1.Enabled = true;
             this.btn_agregar.Enabled = true;
             this.btn_editar.Enabled = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.InitialDirectory = "C:\\";
+            openFileDialog1.Filter = "JPG(*.jpg)|*.jpg|PNG(*.png)|*.png|GIF(*… *.Png, *.Gif, *.Tiff, *.Jpeg, *.Bmp)|*.Jpg; *.Png; *.Gif; *.Tiff; *.Jpeg; *.Bmp"; //formatos soportados
+            openFileDialog1.FilterIndex = 4;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                this.pictureBox2.Image = Image.FromFile(openFileDialog1.FileName);
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(openFileDialog1.FileName))
+                {
+                    CP_UTILIDADES.MENSAJE_INFORMACION("No ha Seleccionado Ninguna Imagen", this);
+                    return;
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            pictureBox2.Image = global::CAPA_PRESENTACION.Properties.Resources.Logo_Transparente;
         }
     }
 }

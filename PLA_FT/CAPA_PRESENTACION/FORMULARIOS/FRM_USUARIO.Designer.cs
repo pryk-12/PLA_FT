@@ -48,6 +48,12 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txt_nombre = new MetroFramework.Controls.MetroTextBox();
             this.txt_id = new MetroFramework.Controls.MetroTextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,9 +80,6 @@
             // 
             // metroPanel1
             // 
-            this.metroPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.metroPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.metroPanel1.Controls.Add(this.metroLabel8);
             this.metroPanel1.Controls.Add(this.cb_sexo);
@@ -99,7 +102,7 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(19, 57);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(372, 272);
+            this.metroPanel1.Size = new System.Drawing.Size(376, 272);
             this.metroPanel1.TabIndex = 11;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -143,7 +146,6 @@
             // 
             // txt_clave
             // 
-            this.txt_clave.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             // 
             // 
             // 
@@ -364,7 +366,7 @@
             this.txt_id.CustomButton.UseSelectable = true;
             this.txt_id.CustomButton.Visible = false;
             this.txt_id.Lines = new string[0];
-            this.txt_id.Location = new System.Drawing.Point(335, 33);
+            this.txt_id.Location = new System.Drawing.Point(694, 33);
             this.txt_id.MaxLength = 100;
             this.txt_id.Name = "txt_id";
             this.txt_id.PasswordChar = '\0';
@@ -380,10 +382,76 @@
             this.txt_id.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_id.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(255, 352);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(136, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Politica Clave";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(506, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 17);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Politicas de Clave";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(413, 120);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(329, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "1 - La clave debe contener al menos una letra minúscula";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(413, 161);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(333, 13);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "2 - La clave debe contener Al menos una letra mayúscula";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(413, 203);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(339, 13);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "3 - La clave no debe ser menor o mayor que 12 caracteres";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(413, 247);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(352, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "4 - La contraseña debe contener al menos un valor numérico";
+            // 
             // FRM_USUARIO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(413, 396);
+            this.ClientSize = new System.Drawing.Size(772, 396);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.txt_id);
@@ -392,6 +460,7 @@
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -416,5 +485,11 @@
         private MetroFramework.Controls.MetroTextBox txt_usuario;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private System.Windows.Forms.ComboBox cb_puesto;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

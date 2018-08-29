@@ -37,6 +37,8 @@ namespace CAPA_DATOS
             da.UpdateCommand.Parameters.AddWithValue("@IDENTIFICACION", obj.IDENTIFICACION);
             da.UpdateCommand.Parameters.AddWithValue("@PAGINA_WEB", obj.PAGINA_WEB);
             da.UpdateCommand.Parameters.AddWithValue("@LOGO", obj.LOGO);
+            da.UpdateCommand.Parameters.AddWithValue("@POLITICA_CLAVE", obj.POLITICA_CLAVE);
+            da.UpdateCommand.Parameters.AddWithValue("@FONDO_PANTALLA", obj.FONDO_PANTALLA);
             cn.Open();
             da.UpdateCommand.ExecuteNonQuery();
             cn.Close();

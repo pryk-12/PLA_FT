@@ -11,6 +11,8 @@ namespace CAPA_ENTIDAD
         public byte[] LOGO { get; set; }
         public string EMAIL { get; set; }
         public string PAGINA_WEB { get; set; }
+        public string POLITICA_CLAVE { get; set; }
+        public byte[] FONDO_PANTALLA { get; set; }
     }
 }
 

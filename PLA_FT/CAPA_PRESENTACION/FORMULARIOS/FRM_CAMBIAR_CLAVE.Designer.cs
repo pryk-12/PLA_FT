@@ -37,6 +37,12 @@
             this.txt_clave = new MetroFramework.Controls.MetroTextBox();
             this.txt_usuario = new MetroFramework.Controls.MetroTextBox();
             this.btn_mant_oficina = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,6 +89,7 @@
             this.txt_confirmar_clave.MaxLength = 32767;
             this.txt_confirmar_clave.Name = "txt_confirmar_clave";
             this.txt_confirmar_clave.PasswordChar = '●';
+            this.txt_confirmar_clave.PromptText = "Corfirmar la Clave";
             this.txt_confirmar_clave.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_confirmar_clave.SelectedText = "";
             this.txt_confirmar_clave.SelectionLength = 0;
@@ -135,6 +142,7 @@
             this.txt_clave.MaxLength = 32767;
             this.txt_clave.Name = "txt_clave";
             this.txt_clave.PasswordChar = '●';
+            this.txt_clave.PromptText = "Ingrese la Clave";
             this.txt_clave.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_clave.SelectedText = "";
             this.txt_clave.SelectionLength = 0;
@@ -169,6 +177,7 @@
             this.txt_usuario.MaxLength = 32767;
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.PasswordChar = '\0';
+            this.txt_usuario.PromptText = "Ingrese el Usuario";
             this.txt_usuario.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_usuario.SelectedText = "";
             this.txt_usuario.SelectionLength = 0;
@@ -201,17 +210,85 @@
             this.btn_mant_oficina.UseVisualStyleBackColor = false;
             this.btn_mant_oficina.Click += new System.EventHandler(this.btn_mant_oficina_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(259, 206);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(352, 13);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "4 - La contraseña debe contener al menos un valor numérico";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(259, 162);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(339, 13);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "3 - La clave no debe ser menor o mayor que 12 caracteres";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(259, 120);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(333, 13);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "2 - La clave debe contener Al menos una letra mayúscula";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(259, 79);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(329, 13);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "1 - La clave debe contener al menos una letra minúscula";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(352, 37);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(137, 17);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Politicas de Clave";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(138, 232);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 23);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Politica Clave";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FRM_CAMBIAR_CLAVE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(254, 271);
+            this.ClientSize = new System.Drawing.Size(625, 271);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.btn_mant_oficina);
             this.Controls.Add(this.panel2);
             this.Name = "FRM_CAMBIAR_CLAVE";
             this.Text = "Cambiar Clave";
+            this.Load += new System.EventHandler(this.FRM_CAMBIAR_CLAVE_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -225,5 +302,11 @@
         private System.Windows.Forms.Label label3;
         private MetroFramework.Controls.MetroTextBox txt_confirmar_clave;
         private System.Windows.Forms.Button btn_mant_oficina;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button1;
     }
 }

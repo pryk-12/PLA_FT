@@ -83,6 +83,7 @@
             this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.actualizarMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.mn_configuraciones.SuspendLayout();
@@ -96,6 +97,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btn_usuario);
             this.panel1.Controls.Add(this.btn_configuraciones);
@@ -109,13 +111,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(183, 557);
+            this.panel1.Size = new System.Drawing.Size(50, 557);
             this.panel1.TabIndex = 6;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(21, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(40, 53);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(130, 115);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -135,7 +137,7 @@
             this.btn_usuario.ForeColor = System.Drawing.Color.White;
             this.btn_usuario.Image = ((System.Drawing.Image)(resources.GetObject("btn_usuario.Image")));
             this.btn_usuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_usuario.Location = new System.Drawing.Point(1, 361);
+            this.btn_usuario.Location = new System.Drawing.Point(1, 398);
             this.btn_usuario.Name = "btn_usuario";
             this.btn_usuario.Size = new System.Drawing.Size(180, 43);
             this.btn_usuario.TabIndex = 26;
@@ -321,7 +323,7 @@
             this.btn_configuraciones.ForeColor = System.Drawing.Color.White;
             this.btn_configuraciones.Image = ((System.Drawing.Image)(resources.GetObject("btn_configuraciones.Image")));
             this.btn_configuraciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_configuraciones.Location = new System.Drawing.Point(1, 283);
+            this.btn_configuraciones.Location = new System.Drawing.Point(1, 320);
             this.btn_configuraciones.Name = "btn_configuraciones";
             this.btn_configuraciones.Size = new System.Drawing.Size(180, 43);
             this.btn_configuraciones.TabIndex = 24;
@@ -343,7 +345,7 @@
             this.btn_reportes.ForeColor = System.Drawing.Color.White;
             this.btn_reportes.Image = ((System.Drawing.Image)(resources.GetObject("btn_reportes.Image")));
             this.btn_reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_reportes.Location = new System.Drawing.Point(1, 233);
+            this.btn_reportes.Location = new System.Drawing.Point(1, 270);
             this.btn_reportes.Name = "btn_reportes";
             this.btn_reportes.Size = new System.Drawing.Size(180, 43);
             this.btn_reportes.TabIndex = 23;
@@ -388,7 +390,7 @@
             this.btn_procesos.ForeColor = System.Drawing.Color.White;
             this.btn_procesos.Image = ((System.Drawing.Image)(resources.GetObject("btn_procesos.Image")));
             this.btn_procesos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_procesos.Location = new System.Drawing.Point(1, 183);
+            this.btn_procesos.Location = new System.Drawing.Point(1, 220);
             this.btn_procesos.Name = "btn_procesos";
             this.btn_procesos.Size = new System.Drawing.Size(180, 43);
             this.btn_procesos.TabIndex = 22;
@@ -433,7 +435,7 @@
             this.btn_mantenimiento.ForeColor = System.Drawing.Color.White;
             this.btn_mantenimiento.Image = ((System.Drawing.Image)(resources.GetObject("btn_mantenimiento.Image")));
             this.btn_mantenimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_mantenimiento.Location = new System.Drawing.Point(1, 133);
+            this.btn_mantenimiento.Location = new System.Drawing.Point(1, 170);
             this.btn_mantenimiento.Name = "btn_mantenimiento";
             this.btn_mantenimiento.Size = new System.Drawing.Size(180, 43);
             this.btn_mantenimiento.TabIndex = 21;
@@ -529,7 +531,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 167);
+            this.label1.Location = new System.Drawing.Point(0, 204);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 13);
             this.label1.TabIndex = 27;
@@ -538,7 +540,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(0, 217);
+            this.label2.Location = new System.Drawing.Point(0, 254);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(181, 13);
             this.label2.TabIndex = 28;
@@ -547,7 +549,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(0, 267);
+            this.label3.Location = new System.Drawing.Point(0, 304);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(181, 13);
             this.label3.TabIndex = 29;
@@ -556,7 +558,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(0, 317);
+            this.label4.Location = new System.Drawing.Point(0, 354);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(181, 13);
             this.label4.TabIndex = 30;
@@ -610,10 +612,33 @@
             this.actualizarMenuToolStripMenuItem.Text = "Actualizar Menu";
             this.actualizarMenuToolStripMenuItem.Click += new System.EventHandler(this.actualizarMenuToolStripMenuItem_Click);
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.SteelBlue;
+            this.button1.ContextMenuStrip = this.mn_configuraciones;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(2, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(42, 40);
+            this.button1.TabIndex = 32;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FRM_PRINCIPAL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1048, 557);
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;
@@ -687,5 +712,6 @@
         private System.Windows.Forms.ToolStripMenuItem btn_conf_permisos;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripMenuItem actualizarMenuToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }
