@@ -41,9 +41,9 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             cb_paises.SelectedValue = CE.ID_PAIS;
             cb_provincias.SelectedValue = CE.ID_PROVINCIA;
 
-            txt_nombre.Text = CN_CLIENTE.CONSULTAR("A.ID_CLIENTE=" + CE.ID_CLIENTE + "").Rows[0]["NOMBRE"].ToString();
+            txt_nombre.Text = CN_CLIENTE.CONSULTAR("A.ID_CLIENTE=" + CE.ID_CLIENTE + "").Rows[0]["NOMBRES"].ToString() + " " + CN_CLIENTE.CONSULTAR("A.ID_CLIENTE=" + CE.ID_CLIENTE + "").Rows[0]["APELLIDO_PAT"].ToString() + " " + CN_CLIENTE.CONSULTAR("A.ID_CLIENTE=" + CE.ID_CLIENTE + "").Rows[0]["APELLIDO_MAT"].ToString();
             txt_identificacion.Text = CN_CLIENTE.CONSULTAR("A.ID_CLIENTE=" + CE.ID_CLIENTE + "").Rows[0]["IDENTIFICACION"].ToString();
-            cb_tipo.Text = CN_CLIENTE.CONSULTAR("A.ID_CLIENTE=" + CE.ID_CLIENTE + "").Rows[0]["TIPO"].ToString();
+            cb_tipo.Text = CN_CLIENTE.CONSULTAR("A.ID_CLIENTE=" + CE.ID_CLIENTE + "").Rows[0]["TIPO_CLIENTE"].ToString();
             cb_oficina.Text = CN_CLIENTE.CONSULTAR("A.ID_CLIENTE=" + CE.ID_CLIENTE + "").Rows[0]["OFICINA"].ToString();
 
             txt_recomendacion.Text = CN_RECOMENDACION.CONSULTAR("ID_RECOMENDACION=" + CE.ID_RECOMENDACION + "").Rows[0]["DESCRIPCION"].ToString();
@@ -152,14 +152,22 @@ namespace CAPA_PRESENTACION.FORMULARIOS
         {
             if (CN_CLIENTE.VISTA_CLIENTE("ID_CLIENTE=" + txt_id_cliente.Text + "").Rows.Count > 0)
             {
-                txt_nombre.Text = CN_CLIENTE.VISTA_CLIENTE("ID_CLIENTE=" + txt_id_cliente.Text + "").Rows[0]["NOMBRE"].ToString();
+                txt_nombre.Text = CN_CLIENTE.VISTA_CLIENTE("ID_CLIENTE=" + txt_id_cliente.Text + "").Rows[0]["NOMBRES"].ToString() + " " + CN_CLIENTE.VISTA_CLIENTE("ID_CLIENTE=" + txt_id_cliente.Text + "").Rows[0]["APELLIDO_PAT"].ToString() + " " + CN_CLIENTE.VISTA_CLIENTE("ID_CLIENTE=" + txt_id_cliente.Text + "").Rows[0]["APELLIDO_MAT"].ToString();
                 txt_identificacion.Text = CN_CLIENTE.VISTA_CLIENTE("ID_CLIENTE=" + txt_id_cliente.Text + "").Rows[0]["IDENTIFICACION"].ToString();
                 cb_oficina.Text = CN_CLIENTE.VISTA_CLIENTE("ID_CLIENTE=" + txt_id_cliente.Text + "").Rows[0]["OFICINA"].ToString();
-                cb_tipo.Text = CN_CLIENTE.VISTA_CLIENTE("ID_CLIENTE=" + txt_id_cliente.Text + "").Rows[0]["TIPO"].ToString();
+                cb_tipo.Text = CN_CLIENTE.VISTA_CLIENTE("ID_CLIENTE=" + txt_id_cliente.Text + "").Rows[0]["TIPO_CLIENTE"].ToString();
+
+
+                cb_nacionalidades.SelectedValue = CN_CLIENTE.VISTA_CLIENTE("ID_CLIENTE=" + txt_id_cliente.Text + "").Rows[0]["ID_NACIONALIDAD"].ToString();
+                cb_paises.SelectedValue = CN_CLIENTE.VISTA_CLIENTE("ID_CLIENTE=" + txt_id_cliente.Text + "").Rows[0]["ID_NACIONALIDAD"].ToString();
+                cb_provincias.SelectedValue = CN_CLIENTE.VISTA_CLIENTE("ID_CLIENTE=" + txt_id_cliente.Text + "").Rows[0]["ID_PROVINCIA"].ToString();
+                CALCULOS();
+                GRAFICO_BARRA();
+                GRAFICO_COLUMNAS();
             }
             else
             {
-                CP_UTILIDADES.MENSAJE_INFORMACION("Este Cliente No Existe", this);
+                CP_UTILIDADES.MENSAJE_INFORMACION("Este Cliente No Existe, O Esta Inactivo", this);
                 txt_id_cliente.Text = "";
                 txt_nombre.Text = "";
                 txt_identificacion.Text = "";
@@ -173,6 +181,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             if (e.KeyChar == (char)Keys.Enter)
             {
                 BUSCAR_CLIENTE();
+                
             }
         }
 

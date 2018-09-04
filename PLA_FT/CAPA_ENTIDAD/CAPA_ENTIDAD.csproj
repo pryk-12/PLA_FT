@@ -49,7 +49,9 @@
     <Compile Include="CE_DEPARTAMENTO.cs" />
     <Compile Include="CE_EMPRESA.cs" />
     <Compile Include="CE_EVALUACION.cs" />
+    <Compile Include="CE_LISTA_DOCUMENTO.cs" />
     <Compile Include="CE_OBSERVACION.cs" />
+    <Compile Include="CE_OCUPACION.cs" />
     <Compile Include="CE_OFICINA.cs" />
     <Compile Include="CE_PAIS.cs" />
     <Compile Include="CE_PERMISO.cs" />

@@ -131,6 +131,12 @@
     <Compile Include="FORMULARIOS\FRM_EVALUACION.Designer.cs">
       <DependentUpon>FRM_EVALUACION.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMULARIOS\FRM_LISTA_DOCUMENTO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_LISTA_DOCUMENTO.Designer.cs">
+      <DependentUpon>FRM_LISTA_DOCUMENTO.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMULARIOS\FRM_LOGIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,18 @@
     <Compile Include="FORMULARIOS\FRM_MANT_EVALUACIONES.Designer.cs">
       <DependentUpon>FRM_MANT_EVALUACIONES.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_LISTA_DOCUMENTOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_LISTA_DOCUMENTOS.Designer.cs">
+      <DependentUpon>FRM_MANT_LISTA_DOCUMENTOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_OCUPACIONES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_OCUPACIONES.Designer.cs">
+      <DependentUpon>FRM_MANT_OCUPACIONES.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMULARIOS\FRM_MANT_OFICINAS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +226,12 @@
     </Compile>
     <Compile Include="FORMULARIOS\FRM_MANT_USUARIOS.Designer.cs">
       <DependentUpon>FRM_MANT_USUARIOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_OCUPACION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_OCUPACION.Designer.cs">
+      <DependentUpon>FRM_OCUPACION.cs</DependentUpon>
     </Compile>
     <Compile Include="FORMULARIOS\FRM_OFICINAS.cs">
       <SubType>Form</SubType>
@@ -356,6 +380,9 @@
     <EmbeddedResource Include="FORMULARIOS\FRM_EVALUACION.resx">
       <DependentUpon>FRM_EVALUACION.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_LISTA_DOCUMENTO.resx">
+      <DependentUpon>FRM_LISTA_DOCUMENTO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_LOGIN.resx">
       <DependentUpon>FRM_LOGIN.cs</DependentUpon>
     </EmbeddedResource>
@@ -377,6 +404,12 @@
     <EmbeddedResource Include="FORMULARIOS\FRM_MANT_EVALUACIONES.resx">
       <DependentUpon>FRM_MANT_EVALUACIONES.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_MANT_LISTA_DOCUMENTOS.resx">
+      <DependentUpon>FRM_MANT_LISTA_DOCUMENTOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_MANT_OCUPACIONES.resx">
+      <DependentUpon>FRM_MANT_OCUPACIONES.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_MANT_OFICINAS.resx">
       <DependentUpon>FRM_MANT_OFICINAS.cs</DependentUpon>
     </EmbeddedResource>
@@ -397,6 +430,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_MANT_USUARIOS.resx">
       <DependentUpon>FRM_MANT_USUARIOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_OCUPACION.resx">
+      <DependentUpon>FRM_OCUPACION.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_OFICINAS.resx">
       <DependentUpon>FRM_OFICINAS.cs</DependentUpon>

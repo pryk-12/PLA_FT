@@ -51,12 +51,14 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 mn_reportes.Enabled = false;
                 return;
             }
-
+           
             String Mant_Oficinas = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Mantenimientos - Oficinas'";
             String Mant_Departamentos = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Mantenimientos - Departamentos'";
             String Mant_Puestos = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Mantenimientos - Puestos'";
             String Mant_Usuarios = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Mantenimientos - Usuarios'";
             String Mant_Clientes = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Mantenimientos - Clientes'";
+            String Mant_Ocupaciones = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Mantenimientos - Ocupaciones'";
+            String Mant_Lista_Documentos = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Mantenimientos - Lista Documentos Solicitados'";
 
             String Procesos = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Procesos - Evaluación de Riesgo'";
 
@@ -78,6 +80,8 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             var Mant_Puesto = CN_PERMISO.CONSULTAR_PERMISO(Mant_Puestos);
             var Mant_Usuario = CN_PERMISO.CONSULTAR_PERMISO(Mant_Usuarios);
             var Mant_Cliente = CN_PERMISO.CONSULTAR_PERMISO(Mant_Clientes);
+            var Mant_Ocupacion = CN_PERMISO.CONSULTAR_PERMISO(Mant_Ocupaciones);
+            var Mant_Lista_Documento = CN_PERMISO.CONSULTAR_PERMISO(Mant_Lista_Documentos);
 
             var Proceso = CN_PERMISO.CONSULTAR_PERMISO(Procesos);
 
@@ -100,7 +104,8 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             mn_mant_puesto.Enabled = Convert.ToBoolean(Mant_Puesto.Rows[0]["ACCESO"].ToString()) == true ? true : false;
             mn_mant_usuario.Enabled = Convert.ToBoolean(Mant_Usuario.Rows[0]["ACCESO"].ToString()) == true ? true : false;
             mn_mant_clientes.Enabled = Convert.ToBoolean(Mant_Cliente.Rows[0]["ACCESO"].ToString()) == true ? true : false;
-            
+            mn_mant_ocupaciones.Enabled = Convert.ToBoolean(Mant_Ocupacion.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+            mn_mant_listaDocumentos.Enabled = Convert.ToBoolean(Mant_Lista_Documento.Rows[0]["ACCESO"].ToString()) == true ? true : false;
             //Menu procesos
             mn_proc_evaluaciones.Enabled = Convert.ToBoolean(Proceso.Rows[0]["ACCESO"].ToString()) == true ? true : false;
             //Menu reportes
@@ -410,6 +415,28 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             byte[] Logo = (byte[])CN_EMPRESA.CONSULTAR().Rows[0]["FONDO_PANTALLA"];
             System.IO.MemoryStream ms = new MemoryStream(Logo);
             this.BackgroundImage = Image.FromStream(ms);
+        }
+
+        private void mn_mant_ocupaciones_Click(object sender, EventArgs e)
+        {
+            Form FRM_MANT_OCUPACIONES = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "FRM_MANT_OCUPACIONES").SingleOrDefault();
+            if (FRM_MANT_OCUPACIONES == null)
+            {
+                FRM_MANT_OCUPACIONES frm = new FRM_MANT_OCUPACIONES();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
+
+        private void mn_mant_listaDocumentos_Click(object sender, EventArgs e)
+        {
+            Form FRM_MANT_LISTA_DOCUMENTOS = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "FRM_MANT_LISTA_DOCUMENTOS").SingleOrDefault();
+            if (FRM_MANT_LISTA_DOCUMENTOS == null)
+            {
+                FRM_MANT_LISTA_DOCUMENTOS frm = new FRM_MANT_LISTA_DOCUMENTOS();
+                frm.MdiParent = this;
+                frm.Show();
+            }
         }
     }
 }

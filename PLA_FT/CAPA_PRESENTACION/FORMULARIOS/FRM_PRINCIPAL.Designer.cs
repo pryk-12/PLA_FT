@@ -31,8 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_PRINCIPAL));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_usuario = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.mn_configuraciones = new MetroFramework.Controls.MetroContextMenu(this.components);
             this.mn_conf_actividad_economica = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
@@ -53,6 +52,8 @@
             this.btn_conf_empresa = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_conf_permisos = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_usuario = new System.Windows.Forms.Button();
             this.btn_configuraciones = new System.Windows.Forms.Button();
             this.btn_reportes = new System.Windows.Forms.Button();
             this.mn_reportes = new MetroFramework.Controls.MetroContextMenu(this.components);
@@ -73,6 +74,8 @@
             this.mn_mant_usuario = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.mn_mant_clientes = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
+            this.mn_mant_ocupaciones = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -83,10 +86,11 @@
             this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.actualizarMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
+            this.toolStripSeparator19 = new System.Windows.Forms.ToolStripSeparator();
+            this.mn_mant_listaDocumentos = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.mn_configuraciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.mn_reportes.SuspendLayout();
             this.mn_procesos.SuspendLayout();
             this.mn_mantenimientos.SuspendLayout();
@@ -114,37 +118,27 @@
             this.panel1.Size = new System.Drawing.Size(50, 557);
             this.panel1.TabIndex = 6;
             // 
-            // pictureBox1
+            // button1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(40, 53);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 115);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btn_usuario
-            // 
-            this.btn_usuario.BackColor = System.Drawing.Color.SteelBlue;
-            this.btn_usuario.ContextMenuStrip = this.mn_configuraciones;
-            this.btn_usuario.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_usuario.FlatAppearance.BorderSize = 0;
-            this.btn_usuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-            this.btn_usuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.btn_usuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_usuario.ForeColor = System.Drawing.Color.White;
-            this.btn_usuario.Image = ((System.Drawing.Image)(resources.GetObject("btn_usuario.Image")));
-            this.btn_usuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_usuario.Location = new System.Drawing.Point(1, 398);
-            this.btn_usuario.Name = "btn_usuario";
-            this.btn_usuario.Size = new System.Drawing.Size(180, 43);
-            this.btn_usuario.TabIndex = 26;
-            this.btn_usuario.Text = " ";
-            this.btn_usuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_usuario.UseVisualStyleBackColor = false;
-            this.btn_usuario.Click += new System.EventHandler(this.btn_usuario_Click);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.SteelBlue;
+            this.button1.ContextMenuStrip = this.mn_configuraciones;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(2, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(42, 40);
+            this.button1.TabIndex = 32;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // mn_configuraciones
             // 
@@ -310,6 +304,38 @@
             this.btn_conf_permisos.Text = "Permisos";
             this.btn_conf_permisos.Click += new System.EventHandler(this.btn_conf_permisos_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(40, 53);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(130, 115);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btn_usuario
+            // 
+            this.btn_usuario.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn_usuario.ContextMenuStrip = this.mn_configuraciones;
+            this.btn_usuario.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_usuario.FlatAppearance.BorderSize = 0;
+            this.btn_usuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btn_usuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btn_usuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_usuario.ForeColor = System.Drawing.Color.White;
+            this.btn_usuario.Image = ((System.Drawing.Image)(resources.GetObject("btn_usuario.Image")));
+            this.btn_usuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_usuario.Location = new System.Drawing.Point(1, 398);
+            this.btn_usuario.Name = "btn_usuario";
+            this.btn_usuario.Size = new System.Drawing.Size(180, 43);
+            this.btn_usuario.TabIndex = 26;
+            this.btn_usuario.Text = " ";
+            this.btn_usuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_usuario.UseVisualStyleBackColor = false;
+            this.btn_usuario.Click += new System.EventHandler(this.btn_usuario_Click);
+            // 
             // btn_configuraciones
             // 
             this.btn_configuraciones.BackColor = System.Drawing.Color.SteelBlue;
@@ -455,9 +481,13 @@
             this.toolStripSeparator3,
             this.mn_mant_usuario,
             this.toolStripSeparator11,
-            this.mn_mant_clientes});
+            this.mn_mant_clientes,
+            this.toolStripSeparator18,
+            this.mn_mant_ocupaciones,
+            this.toolStripSeparator19,
+            this.mn_mant_listaDocumentos});
             this.mn_mantenimientos.Name = "metroContextMenu1";
-            this.mn_mantenimientos.Size = new System.Drawing.Size(180, 148);
+            this.mn_mantenimientos.Size = new System.Drawing.Size(271, 230);
             // 
             // mn_mant_oficina
             // 
@@ -465,14 +495,14 @@
             this.mn_mant_oficina.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.mn_mant_oficina.Image = ((System.Drawing.Image)(resources.GetObject("mn_mant_oficina.Image")));
             this.mn_mant_oficina.Name = "mn_mant_oficina";
-            this.mn_mant_oficina.Size = new System.Drawing.Size(179, 24);
+            this.mn_mant_oficina.Size = new System.Drawing.Size(270, 24);
             this.mn_mant_oficina.Text = "Oficinas";
             this.mn_mant_oficina.Click += new System.EventHandler(this.mn_mant_oficina_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(176, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(267, 6);
             // 
             // mn_mant_departamento
             // 
@@ -480,14 +510,14 @@
             this.mn_mant_departamento.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.mn_mant_departamento.Image = ((System.Drawing.Image)(resources.GetObject("mn_mant_departamento.Image")));
             this.mn_mant_departamento.Name = "mn_mant_departamento";
-            this.mn_mant_departamento.Size = new System.Drawing.Size(179, 24);
+            this.mn_mant_departamento.Size = new System.Drawing.Size(270, 24);
             this.mn_mant_departamento.Text = "Departamentos";
             this.mn_mant_departamento.Click += new System.EventHandler(this.mn_mant_departamento_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(176, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(267, 6);
             // 
             // mn_mant_puesto
             // 
@@ -495,14 +525,14 @@
             this.mn_mant_puesto.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.mn_mant_puesto.Image = ((System.Drawing.Image)(resources.GetObject("mn_mant_puesto.Image")));
             this.mn_mant_puesto.Name = "mn_mant_puesto";
-            this.mn_mant_puesto.Size = new System.Drawing.Size(179, 24);
+            this.mn_mant_puesto.Size = new System.Drawing.Size(270, 24);
             this.mn_mant_puesto.Text = "Puestos";
             this.mn_mant_puesto.Click += new System.EventHandler(this.mn_mant_puesto_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(176, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(267, 6);
             // 
             // mn_mant_usuario
             // 
@@ -510,23 +540,37 @@
             this.mn_mant_usuario.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.mn_mant_usuario.Image = ((System.Drawing.Image)(resources.GetObject("mn_mant_usuario.Image")));
             this.mn_mant_usuario.Name = "mn_mant_usuario";
-            this.mn_mant_usuario.Size = new System.Drawing.Size(179, 24);
+            this.mn_mant_usuario.Size = new System.Drawing.Size(270, 24);
             this.mn_mant_usuario.Text = "Usuarios";
             this.mn_mant_usuario.Click += new System.EventHandler(this.mn_mant_usuario_Click);
             // 
             // toolStripSeparator11
             // 
             this.toolStripSeparator11.Name = "toolStripSeparator11";
-            this.toolStripSeparator11.Size = new System.Drawing.Size(176, 6);
+            this.toolStripSeparator11.Size = new System.Drawing.Size(267, 6);
             // 
             // mn_mant_clientes
             // 
             this.mn_mant_clientes.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.mn_mant_clientes.Image = ((System.Drawing.Image)(resources.GetObject("mn_mant_clientes.Image")));
             this.mn_mant_clientes.Name = "mn_mant_clientes";
-            this.mn_mant_clientes.Size = new System.Drawing.Size(179, 24);
+            this.mn_mant_clientes.Size = new System.Drawing.Size(270, 24);
             this.mn_mant_clientes.Text = "Clientes";
             this.mn_mant_clientes.Click += new System.EventHandler(this.mn_mant_clientes_Click);
+            // 
+            // toolStripSeparator18
+            // 
+            this.toolStripSeparator18.Name = "toolStripSeparator18";
+            this.toolStripSeparator18.Size = new System.Drawing.Size(267, 6);
+            // 
+            // mn_mant_ocupaciones
+            // 
+            this.mn_mant_ocupaciones.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.mn_mant_ocupaciones.Image = ((System.Drawing.Image)(resources.GetObject("mn_mant_ocupaciones.Image")));
+            this.mn_mant_ocupaciones.Name = "mn_mant_ocupaciones";
+            this.mn_mant_ocupaciones.Size = new System.Drawing.Size(270, 24);
+            this.mn_mant_ocupaciones.Text = "Ocupaciones";
+            this.mn_mant_ocupaciones.Click += new System.EventHandler(this.mn_mant_ocupaciones_Click);
             // 
             // label1
             // 
@@ -612,27 +656,19 @@
             this.actualizarMenuToolStripMenuItem.Text = "Actualizar Menu";
             this.actualizarMenuToolStripMenuItem.Click += new System.EventHandler(this.actualizarMenuToolStripMenuItem_Click);
             // 
-            // button1
+            // toolStripSeparator19
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.ContextMenuStrip = this.mn_configuraciones;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(42, 40);
-            this.button1.TabIndex = 32;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.toolStripSeparator19.Name = "toolStripSeparator19";
+            this.toolStripSeparator19.Size = new System.Drawing.Size(267, 6);
+            // 
+            // mn_mant_listaDocumentos
+            // 
+            this.mn_mant_listaDocumentos.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.mn_mant_listaDocumentos.Image = ((System.Drawing.Image)(resources.GetObject("mn_mant_listaDocumentos.Image")));
+            this.mn_mant_listaDocumentos.Name = "mn_mant_listaDocumentos";
+            this.mn_mant_listaDocumentos.Size = new System.Drawing.Size(270, 24);
+            this.mn_mant_listaDocumentos.Text = "Lista Documentos Solicitados";
+            this.mn_mant_listaDocumentos.Click += new System.EventHandler(this.mn_mant_listaDocumentos_Click);
             // 
             // FRM_PRINCIPAL
             // 
@@ -647,8 +683,8 @@
             this.Load += new System.EventHandler(this.FRM_PRINCIPAL_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.mn_configuraciones.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.mn_reportes.ResumeLayout(false);
             this.mn_procesos.ResumeLayout(false);
             this.mn_mantenimientos.ResumeLayout(false);
@@ -713,5 +749,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripMenuItem actualizarMenuToolStripMenuItem;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator18;
+        private System.Windows.Forms.ToolStripMenuItem mn_mant_ocupaciones;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator19;
+        private System.Windows.Forms.ToolStripMenuItem mn_mant_listaDocumentos;
     }
 }

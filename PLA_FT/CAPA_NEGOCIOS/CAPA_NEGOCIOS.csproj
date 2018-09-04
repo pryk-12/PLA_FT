@@ -50,7 +50,9 @@
     <Compile Include="CN_DEPARTAMENTO.cs" />
     <Compile Include="CN_EMPRESA.cs" />
     <Compile Include="CN_EVALUACION.cs" />
+    <Compile Include="CN_LISTA_DOCUMENTO.cs" />
     <Compile Include="CN_OBSERVACION.cs" />
+    <Compile Include="CN_OCUPACION.cs" />
     <Compile Include="CN_OFICINA.cs" />
     <Compile Include="CN_PAIS.cs" />
     <Compile Include="CN_PERMISO.cs" />

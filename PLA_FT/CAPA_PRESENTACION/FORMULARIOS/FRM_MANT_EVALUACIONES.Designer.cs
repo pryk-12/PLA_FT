@@ -58,7 +58,9 @@
             this.ID_EVALUACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOMBRES = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.APELLIDO_PAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.APELLIDO_MAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDENTIFICACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_OFICINA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OFICINA = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -112,7 +114,9 @@
             this.ID_EVALUACION,
             this.FECHA,
             this.ID_CLIENTE,
-            this.NOMBRE,
+            this.NOMBRES,
+            this.APELLIDO_PAT,
+            this.APELLIDO_MAT,
             this.IDENTIFICACION,
             this.ID_OFICINA,
             this.OFICINA,
@@ -259,6 +263,7 @@
             this.txt_buscar.MaxLength = 32767;
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.PasswordChar = '\0';
+            this.txt_buscar.PromptText = "Ingrese la Descripción o ID a Buscar";
             this.txt_buscar.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_buscar.SelectedText = "";
             this.txt_buscar.SelectionLength = 0;
@@ -434,13 +439,27 @@
             this.ID_CLIENTE.ReadOnly = true;
             this.ID_CLIENTE.Width = 90;
             // 
-            // NOMBRE
+            // NOMBRES
             // 
-            this.NOMBRE.DataPropertyName = "NOMBRE";
-            this.NOMBRE.HeaderText = "CLIENTE";
-            this.NOMBRE.Name = "NOMBRE";
-            this.NOMBRE.ReadOnly = true;
-            this.NOMBRE.Width = 360;
+            this.NOMBRES.DataPropertyName = "NOMBRES";
+            this.NOMBRES.HeaderText = "NOMBRE";
+            this.NOMBRES.Name = "NOMBRES";
+            this.NOMBRES.ReadOnly = true;
+            this.NOMBRES.Width = 200;
+            // 
+            // APELLIDO_PAT
+            // 
+            this.APELLIDO_PAT.DataPropertyName = "APELLIDO_PAT";
+            this.APELLIDO_PAT.HeaderText = "APE PAT";
+            this.APELLIDO_PAT.Name = "APELLIDO_PAT";
+            this.APELLIDO_PAT.ReadOnly = true;
+            // 
+            // APELLIDO_MAT
+            // 
+            this.APELLIDO_MAT.DataPropertyName = "APELLIDO_MAT";
+            this.APELLIDO_MAT.HeaderText = "APE MAT";
+            this.APELLIDO_MAT.Name = "APELLIDO_MAT";
+            this.APELLIDO_MAT.ReadOnly = true;
             // 
             // IDENTIFICACION
             // 
@@ -692,7 +711,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_EVALUACION;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_CLIENTE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRES;
+        private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_PAT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_MAT;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDENTIFICACION;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_OFICINA;
         private System.Windows.Forms.DataGridViewTextBoxColumn OFICINA;

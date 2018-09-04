@@ -52,7 +52,9 @@
     <Compile Include="CD_DEPARTAMENTO.cs" />
     <Compile Include="CD_EMPRESA.cs" />
     <Compile Include="CD_EVALUACION.cs" />
+    <Compile Include="CD_LISTA_DOCUMENTO.cs" />
     <Compile Include="CD_OBSERVACION.cs" />
+    <Compile Include="CD_OCUPACION.cs" />
     <Compile Include="CD_OFICINA.cs" />
     <Compile Include="CD_PAIS.cs" />
     <Compile Include="CD_PERMISO.cs" />
