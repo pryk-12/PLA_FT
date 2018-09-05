@@ -107,6 +107,12 @@
     <Compile Include="FORMULARIOS\FRM_CLIENTE.Designer.cs">
       <DependentUpon>FRM_CLIENTE.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMULARIOS\FRM_CONOZCA_SU_CLIENTE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_CONOZCA_SU_CLIENTE.Designer.cs">
+      <DependentUpon>FRM_CONOZCA_SU_CLIENTE.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMULARIOS\FRM_CONSULTAR_CLIENTES.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,12 @@
     </Compile>
     <Compile Include="FORMULARIOS\FRM_MANT_CLIENTES.Designer.cs">
       <DependentUpon>FRM_MANT_CLIENTES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_CONOZCA_SU_CLIENTE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FRM_MANT_CONOZCA_SU_CLIENTE.Designer.cs">
+      <DependentUpon>FRM_MANT_CONOZCA_SU_CLIENTE.cs</DependentUpon>
     </Compile>
     <Compile Include="FORMULARIOS\FRM_MANT_DEPARTAMENTOS.cs">
       <SubType>Form</SubType>
@@ -368,6 +380,9 @@
     <EmbeddedResource Include="FORMULARIOS\FRM_CLIENTE.resx">
       <DependentUpon>FRM_CLIENTE.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_CONOZCA_SU_CLIENTE.resx">
+      <DependentUpon>FRM_CONOZCA_SU_CLIENTE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_CONSULTAR_CLIENTES.resx">
       <DependentUpon>FRM_CONSULTAR_CLIENTES.cs</DependentUpon>
     </EmbeddedResource>
@@ -397,6 +412,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_MANT_CLIENTES.resx">
       <DependentUpon>FRM_MANT_CLIENTES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FRM_MANT_CONOZCA_SU_CLIENTE.resx">
+      <DependentUpon>FRM_MANT_CONOZCA_SU_CLIENTE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FRM_MANT_DEPARTAMENTOS.resx">
       <DependentUpon>FRM_MANT_DEPARTAMENTOS.cs</DependentUpon>

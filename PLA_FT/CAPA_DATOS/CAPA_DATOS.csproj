@@ -49,6 +49,7 @@
     <Compile Include="CD_CANTIDAD_EFECTIVO.cs" />
     <Compile Include="CD_CLIENTE.cs" />
     <Compile Include="CD_CONEXION.cs" />
+    <Compile Include="CD_CONOZCA_SU_CLIENTE.cs" />
     <Compile Include="CD_DEPARTAMENTO.cs" />
     <Compile Include="CD_EMPRESA.cs" />
     <Compile Include="CD_EVALUACION.cs" />

@@ -513,6 +513,13 @@ namespace CAPA_PRESENTACION.FORMULARIOS
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
+            if (txt_id_cliente.Text.Length == 0)
+            {
+                CP_UTILIDADES.MENSAJE_INFORMACION("El Cliente es Obligatorio", this);
+                txt_id_cliente.Focus();
+                return;
+            }
+
             INSERTAR_ACTUALIZAR();
         }
 

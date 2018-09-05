@@ -438,5 +438,16 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 frm.Show();
             }
         }
+
+        private void mn_proc_conozcaSuCliente_Click(object sender, EventArgs e)
+        {
+            Form FRM_MANT_CONOZCA_SU_CLIENTE = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "FRM_MANT_CONOZCA_SU_CLIENTE").SingleOrDefault();
+            if (FRM_MANT_CONOZCA_SU_CLIENTE == null)
+            {
+                FRM_MANT_CONOZCA_SU_CLIENTE frm = new FRM_MANT_CONOZCA_SU_CLIENTE();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
     }
 }

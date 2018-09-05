@@ -47,6 +47,7 @@
     <Compile Include="CN_CANALES_EVALUACION.cs" />
     <Compile Include="CN_CANTIDAD_EFECTIVO.cs" />
     <Compile Include="CN_CLIENTE.cs" />
+    <Compile Include="CN_CONOZCA_SU_CLIENTE.cs" />
     <Compile Include="CN_DEPARTAMENTO.cs" />
     <Compile Include="CN_EMPRESA.cs" />
     <Compile Include="CN_EVALUACION.cs" />

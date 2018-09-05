@@ -76,6 +76,8 @@
             this.mn_mant_clientes = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
             this.mn_mant_ocupaciones = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator19 = new System.Windows.Forms.ToolStripSeparator();
+            this.mn_mant_listaDocumentos = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -86,8 +88,7 @@
             this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.actualizarMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator19 = new System.Windows.Forms.ToolStripSeparator();
-            this.mn_mant_listaDocumentos = new System.Windows.Forms.ToolStripMenuItem();
+            this.mn_proc_conozcaSuCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.mn_configuraciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -429,9 +430,10 @@
             // 
             this.mn_procesos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mn_proc_evaluaciones,
-            this.toolStripSeparator12});
+            this.toolStripSeparator12,
+            this.mn_proc_conozcaSuCliente});
             this.mn_procesos.Name = "metroContextMenu1";
-            this.mn_procesos.Size = new System.Drawing.Size(197, 34);
+            this.mn_procesos.Size = new System.Drawing.Size(204, 80);
             // 
             // mn_proc_evaluaciones
             // 
@@ -439,14 +441,14 @@
             this.mn_proc_evaluaciones.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.mn_proc_evaluaciones.Image = ((System.Drawing.Image)(resources.GetObject("mn_proc_evaluaciones.Image")));
             this.mn_proc_evaluaciones.Name = "mn_proc_evaluaciones";
-            this.mn_proc_evaluaciones.Size = new System.Drawing.Size(196, 24);
+            this.mn_proc_evaluaciones.Size = new System.Drawing.Size(203, 24);
             this.mn_proc_evaluaciones.Text = "Evaluación Riesgo";
             this.mn_proc_evaluaciones.Click += new System.EventHandler(this.mn_proc_evaluaciones_Click);
             // 
             // toolStripSeparator12
             // 
             this.toolStripSeparator12.Name = "toolStripSeparator12";
-            this.toolStripSeparator12.Size = new System.Drawing.Size(193, 6);
+            this.toolStripSeparator12.Size = new System.Drawing.Size(200, 6);
             // 
             // btn_mantenimiento
             // 
@@ -487,7 +489,7 @@
             this.toolStripSeparator19,
             this.mn_mant_listaDocumentos});
             this.mn_mantenimientos.Name = "metroContextMenu1";
-            this.mn_mantenimientos.Size = new System.Drawing.Size(271, 230);
+            this.mn_mantenimientos.Size = new System.Drawing.Size(271, 208);
             // 
             // mn_mant_oficina
             // 
@@ -571,6 +573,20 @@
             this.mn_mant_ocupaciones.Size = new System.Drawing.Size(270, 24);
             this.mn_mant_ocupaciones.Text = "Ocupaciones";
             this.mn_mant_ocupaciones.Click += new System.EventHandler(this.mn_mant_ocupaciones_Click);
+            // 
+            // toolStripSeparator19
+            // 
+            this.toolStripSeparator19.Name = "toolStripSeparator19";
+            this.toolStripSeparator19.Size = new System.Drawing.Size(267, 6);
+            // 
+            // mn_mant_listaDocumentos
+            // 
+            this.mn_mant_listaDocumentos.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.mn_mant_listaDocumentos.Image = ((System.Drawing.Image)(resources.GetObject("mn_mant_listaDocumentos.Image")));
+            this.mn_mant_listaDocumentos.Name = "mn_mant_listaDocumentos";
+            this.mn_mant_listaDocumentos.Size = new System.Drawing.Size(270, 24);
+            this.mn_mant_listaDocumentos.Text = "Lista Documentos Solicitados";
+            this.mn_mant_listaDocumentos.Click += new System.EventHandler(this.mn_mant_listaDocumentos_Click);
             // 
             // label1
             // 
@@ -656,19 +672,14 @@
             this.actualizarMenuToolStripMenuItem.Text = "Actualizar Menu";
             this.actualizarMenuToolStripMenuItem.Click += new System.EventHandler(this.actualizarMenuToolStripMenuItem_Click);
             // 
-            // toolStripSeparator19
+            // mn_proc_conozcaSuCliente
             // 
-            this.toolStripSeparator19.Name = "toolStripSeparator19";
-            this.toolStripSeparator19.Size = new System.Drawing.Size(267, 6);
-            // 
-            // mn_mant_listaDocumentos
-            // 
-            this.mn_mant_listaDocumentos.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.mn_mant_listaDocumentos.Image = ((System.Drawing.Image)(resources.GetObject("mn_mant_listaDocumentos.Image")));
-            this.mn_mant_listaDocumentos.Name = "mn_mant_listaDocumentos";
-            this.mn_mant_listaDocumentos.Size = new System.Drawing.Size(270, 24);
-            this.mn_mant_listaDocumentos.Text = "Lista Documentos Solicitados";
-            this.mn_mant_listaDocumentos.Click += new System.EventHandler(this.mn_mant_listaDocumentos_Click);
+            this.mn_proc_conozcaSuCliente.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.mn_proc_conozcaSuCliente.Image = ((System.Drawing.Image)(resources.GetObject("mn_proc_conozcaSuCliente.Image")));
+            this.mn_proc_conozcaSuCliente.Name = "mn_proc_conozcaSuCliente";
+            this.mn_proc_conozcaSuCliente.Size = new System.Drawing.Size(203, 24);
+            this.mn_proc_conozcaSuCliente.Text = "Conozca Su Cliente";
+            this.mn_proc_conozcaSuCliente.Click += new System.EventHandler(this.mn_proc_conozcaSuCliente_Click);
             // 
             // FRM_PRINCIPAL
             // 
@@ -753,5 +764,6 @@
         private System.Windows.Forms.ToolStripMenuItem mn_mant_ocupaciones;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator19;
         private System.Windows.Forms.ToolStripMenuItem mn_mant_listaDocumentos;
+        private System.Windows.Forms.ToolStripMenuItem mn_proc_conozcaSuCliente;
     }
 }

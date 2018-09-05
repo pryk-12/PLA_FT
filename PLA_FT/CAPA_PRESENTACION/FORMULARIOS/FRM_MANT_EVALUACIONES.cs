@@ -75,6 +75,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
         {
             CONSULTAR();
             Permiso_Acceso_Panatallas();
+
         }
 
         private void txt_buscar_TextChanged(object sender, EventArgs e)
