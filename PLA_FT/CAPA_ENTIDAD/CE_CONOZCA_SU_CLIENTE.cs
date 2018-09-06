@@ -41,6 +41,7 @@ namespace CAPA_ENTIDAD
         public string ANTIGUEDAD_CONYUGUE { get; set; }
         public string NOMBRE_BENEFICIARIO { get; set; }
         public string IDENTIFICACION_BENEFICIARIO { get; set; }
+        public string COMO_SE_ENTERO { get; set; }
 
        //REFERENCIAS PERSONALES
         public int ID_CONOZCA_RP { get; set; }
@@ -60,6 +61,10 @@ namespace CAPA_ENTIDAD
         public int ID_CONOZCA_RB { get; set; }
         public string BANCO_RB { get; set; }
         public string TIPO_CUENTA_RB { get; set; }
+
+        //LISTA DOCUMENTOS
+        public int ID_CONOZCA_D { get; set; }
+        public string DOCUMENTO { get; set; }
 
     }
 }

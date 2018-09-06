@@ -341,6 +341,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="REPORTES\REP_CONOZCA_SU_CLIENTE.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTES\REP_CONOZCA_SU_CLIENTE.Designer.cs">
+      <DependentUpon>REP_CONOZCA_SU_CLIENTE.cs</DependentUpon>
+    </Compile>
     <Compile Include="REPORTES\REP_DETALLES.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -495,6 +501,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\REP_CONOZCA_SU_CLIENTE.resx">
+      <DependentUpon>REP_CONOZCA_SU_CLIENTE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="REPORTES\REP_DETALLES.resx">
       <DependentUpon>REP_DETALLES.cs</DependentUpon>

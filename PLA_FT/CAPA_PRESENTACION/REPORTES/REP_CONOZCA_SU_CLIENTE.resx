@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="customSqlQuery2.Sql" xml:space="preserve">
+    <value>SELECT
+			A.ID_CONOZCA,
+			A.ID_CLIENTE,
+			B.NOMBRES,
+			B.APELLIDO_PAT,
+			B.APELLIDO_MAT,
+			B.CELULAR,
+			B.DIRECCION_RESIDENCIAL,
+			B.EMAIL,
+			CASE B.ES_PEP
+			WHEN 1 THEN 'SI'
+			WHEN 0 THEN 'NO'
+			END ES_PEP,
+			B.ESTADO,
+			B.ESTADO_CIVIL,
+			B.FECHA_NACIMIENTO,
+			B.ID_LUGAR_NACIMIENTO,
+			B.LUGAR_NACIMIENTO,
+			B.ID_NACIONALIDAD,
+			B.NACIONALIDAD,
+			B.ID_OCUPACION,
+			B.OCUPACION,
+			B.ID_OFICINA,
+			B.OFICINA,
+			B.ID_PROVINCIA,
+			B.PROVINCIA,
+			B.ID_TIPO_IDENTIFICACION,
+			B.DESCRIPCION TIPO_IDENTIFICACION,
+			B.IDENTIFICACION,
+			B.SEXO,
+			B.TELEFONO,
+			B.TIPO_CLIENTE,
+			B.TIPO_VIVIENDA,
+			CASE B.VINCULADO_PEP
+			WHEN 1 THEN 'SI'
+			WHEN 0 THEN 'NO'
+			END VINCULADO_PEP,
+			A.ACTIVIDAD_CAGO_PEP,
+			A.ACTIVIDAD_DEL_NEGOCIO,
+			A.ACTIVIDAD_EMPRESA,
+			A.ANTIGUEDAD_CONYUGUE,
+			A.CARGO_CONYUGUE,
+			A.CARGO_EN_EMPRESA,
+			A.DIRECCION_EMPRESA,
+			A.DIRECCION_NEGOCIO,
+			A.DIRECCION_TRABAJO_CONYUGUE,
+			A.EMPRESA_TRAJAJO_CONYUGUE,
+			A.EMPRESA_DONDE_LABORA,
+			A.EMPRESA_TRAJAJO_CONYUGUE,
+			A.FECHA,
+			A.FECHA_INGRESO,
+			A.NACIONALIDAD_CONYUGUE,
+			A.IDENTIFICACION_BENEFICIARIO,
+			A.IDENTIFICACION_CONYUGUE,
+			A.INGRESO_MENSUAL,
+		    CASE A.NEGOCIO_PROPIO
+			WHEN 1 THEN 'SI'
+			WHEN 0 THEN 'NO'
+			END NEGOCIO_PROPIO,
+			A.NOMBRE_BENEFICIARIO,
+			A.NOMBRE_CONYUGUE,
+			A.NOMBRE_NEGOCIO,
+			A.NOMBRE_PEP1,
+			A.NOMBRE_PEP2,
+			A.NUMERO_RUC,
+			A.OCUPACION_CONYUGUE,
+			A.PARENTEZCO1,
+			A.PARENTEZCO2,
+			A.REFERENCIA_UBICACION_EMPRESA,
+			A.REFERENCIA_UBICACION_NEGOCIO,
+			A.SUELDO,
+			A.SUELDO_MENSUAL_CONYUGUE,
+			A.TELEFONO_EMPRESA,
+			A.TELEFONO_NEGOCIO,
+			A.TELEFONO_TRABAJO_CONYUGUE,
+			A.TIEMPO_EN_EL_MERCADO,
+                  A.COMO_SE_ENTERO
+			FROM CONOZCA_SU_CLIENTE A, V_CLIENTES B
+			WHERE A.ID_CLIENTE = B.ID_CLIENTE</value>
+  </data>
+  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IkNPTk9aQ0FfU1VfQ0xJRU5URSI+PEZpZWxkIE5hbWU9IklEX0NPTk9aQ0EiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJJRF9DTElFTlRFIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iTk9NQlJFUyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBUEVMTElET19QQVQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQVBFTExJRE9fTUFUIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNFTFVMQVIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRElSRUNDSU9OX1JFU0lERU5DSUFMIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkVNQUlMIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkVTX1BFUCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJFU1RBRE8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRVNUQURPX0NJVklMIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkZFQ0hBX05BQ0lNSUVOVE8iIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJJRF9MVUdBUl9OQUNJTUlFTlRPIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iTFVHQVJfTkFDSU1JRU5UTyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJJRF9OQUNJT05BTElEQUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJOQUNJT05BTElEQUQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSURfT0NVUEFDSU9OIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iT0NVUEFDSU9OIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IklEX09GSUNJTkEiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJPRklDSU5BIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IklEX1BST1ZJTkNJQSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlBST1ZJTkNJQSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJJRF9USVBPX0lERU5USUZJQ0FDSU9OIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iVElQT19JREVOVElGSUNBQ0lPTiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJJREVOVElGSUNBQ0lPTiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTRVhPIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRFTEVGT05PIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRJUE9fQ0xJRU5URSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJUSVBPX1ZJVklFTkRBIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlZJTkNVTEFET19QRVAiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQUNUSVZJREFEX0NBR09fUEVQIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkFDVElWSURBRF9ERUxfTkVHT0NJTyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBQ1RJVklEQURfRU1QUkVTQSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBTlRJR1VFREFEX0NPTllVR1VFIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNBUkdPX0NPTllVR1VFIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNBUkdPX0VOX0VNUFJFU0EiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRElSRUNDSU9OX0VNUFJFU0EiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRElSRUNDSU9OX05FR09DSU8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRElSRUNDSU9OX1RSQUJBSk9fQ09OWVVHVUUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRU1QUkVTQV9UUkFKQUpPX0NPTllVR1VFIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkVNUFJFU0FfRE9OREVfTEFCT1JBIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkZFQ0hBIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iRkVDSEFfSU5HUkVTTyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJOQUNJT05BTElEQURfQ09OWVVHVUUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSURFTlRJRklDQUNJT05fQkVORUZJQ0lBUklPIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IklERU5USUZJQ0FDSU9OX0NPTllVR1VFIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IklOR1JFU09fTUVOU1VBTCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iTkVHT0NJT19QUk9QSU8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTk9NQlJFX0JFTkVGSUNJQVJJTyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJOT01CUkVfQ09OWVVHVUUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTk9NQlJFX05FR09DSU8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTk9NQlJFX1BFUDEiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTk9NQlJFX1BFUDIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTlVNRVJPX1JVQyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJPQ1VQQUNJT05fQ09OWVVHVUUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUEFSRU5URVpDTzEiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUEFSRU5URVpDTzIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUkVGRVJFTkNJQV9VQklDQUNJT05fRU1QUkVTQSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJSRUZFUkVOQ0lBX1VCSUNBQ0lPTl9ORUdPQ0lPIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlNVRUxETyIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iU1VFTERPX01FTlNVQUxfQ09OWVVHVUUiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlRFTEVGT05PX0VNUFJFU0EiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVEVMRUZPTk9fTkVHT0NJTyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJURUxFRk9OT19UUkFCQUpPX0NPTllVR1VFIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRJRU1QT19FTl9FTF9NRVJDQURPIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNPTU9fU0VfRU5URVJPIiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjxWaWV3IE5hbWU9IkVNUFJFU0EiPjxGaWVsZCBOYW1lPSJOT01CUkVfRU1QUkVTQSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJESVJFQ0NJT04iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVEVMRUZPTk8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ0VMVUxBUiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJJREVOVElGSUNBQ0lPTiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJMT0dPIiBUeXBlPSJCeXRlQXJyYXkiIC8+PEZpZWxkIE5hbWU9IkVNQUlMIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlBBR0lOQV9XRUIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUE9MSVRJQ0FfQ0xBVkUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRk9ORE9fUEFOVEFMTEEiIFR5cGU9IkJ5dGVBcnJheSIgLz48L1ZpZXc+PFZpZXcgTmFtZT0iTElTVEFfRE9DVU1FTlRPU19DT05PWkNBIj48RmllbGQgTmFtZT0iSURfQ09OT1pDQSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkRPQ1VNRU5UTyIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48VmlldyBOYW1lPSJSRUZFUkVOQ0lBU19CQU5DQVJJQVMiPjxGaWVsZCBOYW1lPSJJRF9DT05PWkNBIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iQkFOQ08iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVElQT19DVUVOVEEiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PFZpZXcgTmFtZT0iUkVGRVJFTkNJQVNfQ09NRVJDSUFMRVMiPjxGaWVsZCBOYW1lPSJJRF9DT05PWkNBIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iTk9NQlJFIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRJUkVDQ0lPTiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJURUxFRk9OTyIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48VmlldyBOYW1lPSJSRUZFUkVOQ0lBU19QRVJTT05BTEVTIj48RmllbGQgTmFtZT0iSURfQ09OT1pDQSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9Ik5PTUJSRSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJJREVOVElGSUNBQ0lPTiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJQQVJFTlRFWkNPIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRJUkVDQ0lPTiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJURUxFRk9OTyIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48UmVsYXRpb24gTWFzdGVyPSJDT05PWkNBX1NVX0NMSUVOVEUiIERldGFpbD0iTElTVEFfRE9DVU1FTlRPU19DT05PWkNBIj48S2V5Q29sdW1uIE1hc3Rlcj0iSURfQ09OT1pDQSIgRGV0YWlsPSJJRF9DT05PWkNBIiAvPjwvUmVsYXRpb24+PFJlbGF0aW9uIE1hc3Rlcj0iQ09OT1pDQV9TVV9DTElFTlRFIiBEZXRhaWw9IlJFRkVSRU5DSUFTX0JBTkNBUklBUyI+PEtleUNvbHVtbiBNYXN0ZXI9IklEX0NPTk9aQ0EiIERldGFpbD0iSURfQ09OT1pDQSIgLz48L1JlbGF0aW9uPjxSZWxhdGlvbiBNYXN0ZXI9IkNPTk9aQ0FfU1VfQ0xJRU5URSIgRGV0YWlsPSJSRUZFUkVOQ0lBU19DT01FUkNJQUxFUyI+PEtleUNvbHVtbiBNYXN0ZXI9IklEX0NPTk9aQ0EiIERldGFpbD0iSURfQ09OT1pDQSIgLz48L1JlbGF0aW9uPjxSZWxhdGlvbiBNYXN0ZXI9IkNPTk9aQ0FfU1VfQ0xJRU5URSIgRGV0YWlsPSJSRUZFUkVOQ0lBU19QRVJTT05BTEVTIj48S2V5Q29sdW1uIE1hc3Rlcj0iSURfQ09OT1pDQSIgRGV0YWlsPSJJRF9DT05PWkNBIiAvPjwvUmVsYXRpb24+PC9EYXRhU2V0Pg==</value>
+  </data>
+  <data name="xrTableCell96.Text" xml:space="preserve">
+    <value>La información contenida en este formulario es verdadera, completa y proporciona la información de modo confiable y actualizada. Ademas declaro conocer y aceptar que es obligación actualizar anualmente mis datos personales, así como el de comunicar y documentar de manera inmediata a [EMPRESA.NOMBRE_EMPRESA]., cualquier cambio o en la información que hubiera proporcionado. Durante la vigencia de la relación con [EMPRESA.NOMBRE_EMPRESA]. Me comprometo a proveer la documentación e información que me sea solicitada.
+Declaro expresamente que tanto mi actividad, profesión u oficio entre otros es lícita, no ligados con actividades de narcotráfico, lavado de dinero o cualquier otra actividad tipificada en la ley de Sustancias Estupefacientes y Psicotrópicas o en la Ley de Prevención, detección y erradicación del delito de lavado de activos y financiamiento de delitos. Igualmente, que los recursos que poseo provienen de actividad que no se encuentra dentro de las contempladas por la ley como ilícita, por lo que eximo a [EMPRESA.NOMBRE_EMPRESA]., de toda responsabilidad, inclusive a terceros, si esta declaración fuese falsa o errónea. 
+
+
+
+____________________________________________________
+Firma</value>
+  </data>
+  <data name="xrTableCell89.Text" xml:space="preserve">
+    <value>Uso exclusivo para [EMPRESA.NOMBRE_EMPRESA].
+Verificación de la Información:
+Nombre de Oficial de Servicio al Cliente
+
+_________________________________________________
+Se ha revisado la razonabilidad de la información proporcionada por la persona natural y que he verificado la documentación e información solicitada de acuerdo a los establecido por nuestro ente de control; para la política Conozca su  Cliente.
+
+
+_____________________________________________________________________                                     ______________________________________
+                                        Firma de Oficial de Servicio al Cliente                                                                                                            Fecha</value>
+  </data>
+  <data name="xrTableCell91.Text" xml:space="preserve">
+    <value>En sesion extraordinaria celebrada el _____________________    Esta Solicitud fue _________________     Según consta en el libro de actas No. __________
+
+Sesion No.________   Pagina No._______ Observaciones _______________________________________________________________________________
+
+______________________________________________________________________________________________________________________________
+                                                     Visto Bueno                                                                                                            Lo certifíco
+
+
+
+         _______________________________________________________                     ___________________________________________________
+                                                PRESIDENTE(A)                                                                                                   SECRETARIA(O)</value>
+  </data>
+  <data name="xrTableCell84.Text" xml:space="preserve">
+    <value>Siendo conocedor de las disposiciones legales para reprimir el Lavado de Activos, narcotráfico y financiamiento de delitos, autorizo expresamente en forma libre, voluntaria e irrevocable a [EMPRESA.NOMBRE_EMPRESA]., para que realice todas las verificaciones que considere necesarias sobre los datos consignados en este formulario. Adicionalmente comprendo y acepto que la falsedad de información, automáticamente da por terminado el proceso de calificación como socio de bienes y/o servicios o mi relación como socio actual, dependiendo del caso.
+
+
+
+____________________________________________________
+Firma</value>
+  </data>
+  <data name="xrTableCell86.Text" xml:space="preserve">
+    <value>La Cooperativa de Ahorro y Crédito ”[EMPRESA.NOMBRE_EMPRESA].” queda autorizada para debitar de la cuenta de Ahorros cualquier cantidad por concepto de cualquier tipo de obligación directa o indirecta que el Cuenta Ahorrista mantenga en nuestra Institución, inclusive gastos, comisiones y los impuestos respectivos,debiendo [EMPRESA.NOMBRE_EMPRESA]. presentar los documentos de respaldo a las cantidades debitadas.
+
+
+
+____________________________________________________
+Firma</value>
+  </data>
+</root>

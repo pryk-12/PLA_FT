@@ -1,7 +1,5 @@
 ﻿using CAPA_NEGOCIOS;
 using System;
-using System.Collections.Generic;
-using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -61,6 +59,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             String Mant_Lista_Documentos = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Mantenimientos - Lista Documentos Solicitados'";
 
             String Procesos = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Procesos - Evaluación de Riesgo'";
+            String Procesos_Conozca = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Procesos - Conozca su Cliente'";
 
             String Reportes = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Reportes - Listado de Evaluaciónes'";
 
@@ -84,6 +83,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             var Mant_Lista_Documento = CN_PERMISO.CONSULTAR_PERMISO(Mant_Lista_Documentos);
 
             var Proceso = CN_PERMISO.CONSULTAR_PERMISO(Procesos);
+            var Proceso_Conozca = CN_PERMISO.CONSULTAR_PERMISO(Procesos_Conozca);
 
             var Reporte = CN_PERMISO.CONSULTAR_PERMISO(Reportes);
 
@@ -106,10 +106,12 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             mn_mant_clientes.Enabled = Convert.ToBoolean(Mant_Cliente.Rows[0]["ACCESO"].ToString()) == true ? true : false;
             mn_mant_ocupaciones.Enabled = Convert.ToBoolean(Mant_Ocupacion.Rows[0]["ACCESO"].ToString()) == true ? true : false;
             mn_mant_listaDocumentos.Enabled = Convert.ToBoolean(Mant_Lista_Documento.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+            
             //Menu procesos
             mn_proc_evaluaciones.Enabled = Convert.ToBoolean(Proceso.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+            mn_proc_conozcaSuCliente.Enabled = Convert.ToBoolean(Proceso_Conozca.Rows[0]["ACCESO"].ToString()) == true ? true : false;
+           
             //Menu reportes
-
             mn_rep_listado.Enabled = Convert.ToBoolean(Reporte.Rows[0]["ACCESO"].ToString()) == true ? true : false;
             
             //Menu configuraciones
