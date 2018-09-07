@@ -65,7 +65,7 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(18, 63);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(432, 182);
+            this.metroPanel1.Size = new System.Drawing.Size(458, 169);
             this.metroPanel1.TabIndex = 11;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -75,7 +75,7 @@
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(99, 69);
+            this.button1.Location = new System.Drawing.Point(189, 55);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 25);
             this.button1.TabIndex = 22;
@@ -88,7 +88,7 @@
             // ch_incluir_fecha
             // 
             this.ch_incluir_fecha.AutoSize = true;
-            this.ch_incluir_fecha.Location = new System.Drawing.Point(205, 145);
+            this.ch_incluir_fecha.Location = new System.Drawing.Point(346, 121);
             this.ch_incluir_fecha.Name = "ch_incluir_fecha";
             this.ch_incluir_fecha.Size = new System.Drawing.Size(92, 17);
             this.ch_incluir_fecha.TabIndex = 21;
@@ -100,7 +100,7 @@
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel3.Location = new System.Drawing.Point(109, 126);
+            this.metroLabel3.Location = new System.Drawing.Point(204, 122);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(38, 15);
             this.metroLabel3.TabIndex = 20;
@@ -110,7 +110,7 @@
             // 
             this.dt_fecha2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt_fecha2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt_fecha2.Location = new System.Drawing.Point(109, 143);
+            this.dt_fecha2.Location = new System.Drawing.Point(244, 119);
             this.dt_fecha2.Name = "dt_fecha2";
             this.dt_fecha2.Size = new System.Drawing.Size(89, 21);
             this.dt_fecha2.TabIndex = 19;
@@ -120,7 +120,7 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.Location = new System.Drawing.Point(14, 126);
+            this.metroLabel2.Location = new System.Drawing.Point(59, 122);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(42, 15);
             this.metroLabel2.TabIndex = 18;
@@ -130,7 +130,7 @@
             // 
             this.dt_fecha1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt_fecha1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt_fecha1.Location = new System.Drawing.Point(14, 143);
+            this.dt_fecha1.Location = new System.Drawing.Point(104, 119);
             this.dt_fecha1.Name = "dt_fecha1";
             this.dt_fecha1.Size = new System.Drawing.Size(89, 21);
             this.dt_fecha1.TabIndex = 17;
@@ -142,7 +142,7 @@
             // 
             // 
             this.txt_nombre_cliente.CustomButton.Image = null;
-            this.txt_nombre_cliente.CustomButton.Location = new System.Drawing.Point(383, 1);
+            this.txt_nombre_cliente.CustomButton.Location = new System.Drawing.Point(312, 1);
             this.txt_nombre_cliente.CustomButton.Name = "";
             this.txt_nombre_cliente.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_nombre_cliente.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -152,7 +152,7 @@
             this.txt_nombre_cliente.CustomButton.Visible = false;
             this.txt_nombre_cliente.Enabled = false;
             this.txt_nombre_cliente.Lines = new string[0];
-            this.txt_nombre_cliente.Location = new System.Drawing.Point(14, 96);
+            this.txt_nombre_cliente.Location = new System.Drawing.Point(104, 81);
             this.txt_nombre_cliente.MaxLength = 100;
             this.txt_nombre_cliente.Name = "txt_nombre_cliente";
             this.txt_nombre_cliente.PasswordChar = '\0';
@@ -161,7 +161,7 @@
             this.txt_nombre_cliente.SelectionLength = 0;
             this.txt_nombre_cliente.SelectionStart = 0;
             this.txt_nombre_cliente.ShortcutsEnabled = true;
-            this.txt_nombre_cliente.Size = new System.Drawing.Size(405, 23);
+            this.txt_nombre_cliente.Size = new System.Drawing.Size(334, 23);
             this.txt_nombre_cliente.TabIndex = 16;
             this.txt_nombre_cliente.UseSelectable = true;
             this.txt_nombre_cliente.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -172,7 +172,7 @@
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel5.Location = new System.Drawing.Point(17, 54);
+            this.metroLabel5.Location = new System.Drawing.Point(40, 59);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(62, 15);
             this.metroLabel5.TabIndex = 15;
@@ -194,7 +194,7 @@
             this.txt_id_cliente.CustomButton.UseSelectable = true;
             this.txt_id_cliente.CustomButton.Visible = false;
             this.txt_id_cliente.Lines = new string[0];
-            this.txt_id_cliente.Location = new System.Drawing.Point(14, 70);
+            this.txt_id_cliente.Location = new System.Drawing.Point(104, 56);
             this.txt_id_cliente.MaxLength = 100;
             this.txt_id_cliente.Name = "txt_id_cliente";
             this.txt_id_cliente.PasswordChar = '\0';
@@ -214,7 +214,7 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(17, 8);
+            this.metroLabel1.Location = new System.Drawing.Point(20, 23);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(81, 15);
             this.metroLabel1.TabIndex = 3;
@@ -236,7 +236,7 @@
             this.txt_id_evaluacion.CustomButton.UseSelectable = true;
             this.txt_id_evaluacion.CustomButton.Visible = false;
             this.txt_id_evaluacion.Lines = new string[0];
-            this.txt_id_evaluacion.Location = new System.Drawing.Point(14, 24);
+            this.txt_id_evaluacion.Location = new System.Drawing.Point(104, 20);
             this.txt_id_evaluacion.MaxLength = 100;
             this.txt_id_evaluacion.Name = "txt_id_evaluacion";
             this.txt_id_evaluacion.PasswordChar = '\0';
@@ -262,7 +262,7 @@
             this.btn_agregar.ForeColor = System.Drawing.Color.White;
             this.btn_agregar.Image = ((System.Drawing.Image)(resources.GetObject("btn_agregar.Image")));
             this.btn_agregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_agregar.Location = new System.Drawing.Point(18, 250);
+            this.btn_agregar.Location = new System.Drawing.Point(18, 236);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(135, 43);
             this.btn_agregar.TabIndex = 12;
@@ -282,7 +282,7 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(157, 250);
+            this.button2.Location = new System.Drawing.Point(157, 236);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(135, 43);
             this.button2.TabIndex = 13;
@@ -294,7 +294,7 @@
             // FRM_REPORTES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(468, 315);
+            this.ClientSize = new System.Drawing.Size(495, 298);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.metroPanel1);

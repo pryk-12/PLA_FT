@@ -76,29 +76,34 @@ namespace CAPA_PRESENTACION.FORMULARIOS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (this.Width == 625)
-            {
-                this.Width = 254;
-            }
-            else
-            {
-                this.Width = 625;
-            }
+           
         }
 
         private void FRM_CAMBIAR_CLAVE_Load(object sender, EventArgs e)
         {
-            this.Width = 254;
+            this.Width = 340;
 
             if(CN_EMPRESA.CONSULTAR().Rows[0]["POLITICA_CLAVE"].ToString()=="SI")
             {
-                button1.Visible = true;
+                button2.Visible = true;
             }
             else
             {
-                button1.Visible = false;
+                button2.Visible = false;
             }
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (this.Width == 720)
+            {
+                this.Width = 340;
+            }
+            else
+            {
+                this.Width = 720;
+            }
         }
 
 

@@ -115,16 +115,16 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 this.Text = "Editar Usuario";
             }
 
-            this.Size = new System.Drawing.Size(413, 396);
-
             if (CN_EMPRESA.CONSULTAR().Rows[0]["POLITICA_CLAVE"].ToString() == "SI")
             {
-                button1.Visible = true;
+                button2.Visible = true;
             }
             else
             {
-                button1.Visible = false;
+                button2.Visible = false;
             }
+
+            this.Width = 525;
         }
 
         private void btn_agregar_Click(object sender, EventArgs e)
@@ -220,13 +220,18 @@ namespace CAPA_PRESENTACION.FORMULARIOS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(this.Width == 772)
+           
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (this.Width == 944)
             {
-                this.Width = 413;
+                this.Width = 525;
             }
             else
             {
-                this.Width = 772;
+                this.Width = 944;
             }
         }
     }
