@@ -1,5 +1,6 @@
 ﻿using CAPA_ENTIDAD;
 using CAPA_NEGOCIOS;
+using DevExpress.XtraReports.UI;
 using System;
 
 namespace CAPA_PRESENTACION.FORMULARIOS
@@ -18,14 +19,13 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             frm.ShowDialog();
         }
 
-        //public void Permiso_Acceso_Panatallas()
-        //{
-        //    String condicion = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Procesos - Evaluación de Riesgo'";
-        //    var Actividad_Economica = CN_PERMISO.CONSULTAR_PERMISO(condicion);
-        //    btn_agregar.Enabled = Convert.ToBoolean(Actividad_Economica.Rows[0]["AGREGAR"].ToString()) == true ? true : false;
-        //    btn_editar.Enabled = Convert.ToBoolean(Actividad_Economica.Rows[0]["EDITAR"].ToString()) == true ? true : false;
-        //}
-
+        public void Permiso_Acceso_Panatallas()
+        {
+            String condicion = "USUARIO = '" + CP_UTILIDADES.DATOS_USUARIO.USUARIO + "' AND PANTALLA = 'Procesos - Conozca su Cliente'";
+            var Actividad_Economica = CN_PERMISO.CONSULTAR_PERMISO(condicion);
+            btn_agregar.Enabled = Convert.ToBoolean(Actividad_Economica.Rows[0]["AGREGAR"].ToString()) == true ? true : false;
+            btn_editar.Enabled = Convert.ToBoolean(Actividad_Economica.Rows[0]["EDITAR"].ToString()) == true ? true : false;
+        }
 
         public void CONSULTAR()
         {
@@ -67,7 +67,22 @@ namespace CAPA_PRESENTACION.FORMULARIOS
         private void FRM_MANT_CONOZCA_SU_CLIENTE_Load(object sender, EventArgs e)
         {
             CONSULTAR();
-            //Permiso_Acceso_Panatallas();
+            Permiso_Acceso_Panatallas();
+        }
+
+        private void verObservaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (DG.RowCount == 0)
+            {
+                return;
+            }
+            string condicion = "";
+            condicion = @"([ID_CONOZCA] =" + DG.SelectedCells[0].Value.ToString() + ")";
+
+            REPORTES.REP_CONOZCA_SU_CLIENTE report = new REPORTES.REP_CONOZCA_SU_CLIENTE();
+            report.FilterString = condicion;
+            ReportPrintTool tool = new ReportPrintTool(report);
+            tool.ShowPreview();
         }
     }
 }

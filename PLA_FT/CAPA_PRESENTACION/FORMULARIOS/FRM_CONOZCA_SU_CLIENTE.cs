@@ -15,6 +15,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             InitializeComponent();
             CN_UTILIDADES.LLENAR_COMBOBOX(cb_oficina, "SP_LLENAR_COMBOBOX", "OFICINAS", "DESCRIPCION", "ID_OFICINA", "DESCRIPCION LIKE'%" + "" + "%' AND ESTADO='A'");
             CN_UTILIDADES.LLENAR_COMBOBOX(cb_nacionalidad_conyugue, "SP_LLENAR_COMBOBOX", "PAISES", "DESCRIPCION", "ID_PAIS", "DESCRIPCION LIKE'%" + "" + "%' AND ESTADO='A'");
+            CN_UTILIDADES.LLENAR_COMBOBOX(cb_documentos, "SP_LLENAR_COMBOBOX", "LISTA_DOCUMENTOS", "DESCRIPCION", "ID_DOCUMENTO", "DESCRIPCION LIKE'%" + "" + "%' AND ESTADO='A'");
         }
 
         private void metroTabPage3_Click(object sender, EventArgs e)
@@ -92,6 +93,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             txt_fecha_inicion_negocio.Text = CN_CONOZCA_SU_CLIENTE.CONSULTAR("A.ID_CONOZCA =" + obj.ID_CONOZCA + "").Rows[0]["TIEMPO_EN_EL_MERCADO"].ToString();
             txt_beneficiario.Text = CN_CONOZCA_SU_CLIENTE.CONSULTAR("A.ID_CONOZCA =" + obj.ID_CONOZCA + "").Rows[0]["NOMBRE_BENEFICIARIO"].ToString();
             txt_identifiacion_beneficiario.Text = CN_CONOZCA_SU_CLIENTE.CONSULTAR("A.ID_CONOZCA =" + obj.ID_CONOZCA + "").Rows[0]["IDENTIFICACION_BENEFICIARIO"].ToString();
+            cb_institucion.Text = CN_CONOZCA_SU_CLIENTE.CONSULTAR("A.ID_CONOZCA =" + obj.ID_CONOZCA + "").Rows[0]["COMO_SE_ENTERO"].ToString();
             BUSCAR_CLIENTE();
 
             if (CN_CONOZCA_SU_CLIENTE.CONSULTAR_REFERENCIAS_PERSONALES(obj.ID_CONOZCA).Rows.Count > 0)
@@ -137,6 +139,19 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 DG_REFERENCIA_B.DataSource = null;
             }
 
+            if (CN_CONOZCA_SU_CLIENTE.CONSULTAR_LISTA_DOCUMENTOS(obj.ID_CONOZCA).Rows.Count > 0)
+            {
+                int g;
+                for (g = 0; (g
+                            <= (CN_CONOZCA_SU_CLIENTE.CONSULTAR_LISTA_DOCUMENTOS(obj.ID_CONOZCA)).Rows.Count - g); g++)
+                {
+                    DG_DOCUMENTOS.Rows.Add();
+                    DG_DOCUMENTOS.Rows[g].Cells[0].Value = CN_CONOZCA_SU_CLIENTE.CONSULTAR_LISTA_DOCUMENTOS(obj.ID_CONOZCA).Rows[g]["DOCUMENTO"];
+                }
+                DG_DOCUMENTOS.DataSource = null;
+            }
+
+            groupBox1.Enabled = false;
         }
 
         public void INSERTAR_ACTUALIZAR()
@@ -178,6 +193,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             CE.TELEFONO_NEGOCIO = txt_telefono_negocio.Text.Trim();
             CE.TELEFONO_TRABAJO_CONYUGUE = txt_telefono_conyugue.Text.Trim();
             CE.TIEMPO_EN_EL_MERCADO = txt_fecha_inicion_negocio.Text.Trim();
+            CE.COMO_SE_ENTERO = cb_institucion.Text;
             try
             {
                 int ID_CONOZCA = 0;
@@ -242,6 +258,19 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                         CP.BANCO_RB = item.Cells["BANCO_B"].Value.ToString();
                         CP.TIPO_CUENTA_RB = item.Cells["TIPO_CUENTA_B"].Value.ToString();
                         CN_CONOZCA_SU_CLIENTE.INSERTAR_REFERENCIAS_BANCARIAS(CP);
+                    }
+                }
+
+                CN_CONOZCA_SU_CLIENTE.ELIMINAR_LISTA_DOCUMENTO(ID_CONOZCA);
+
+                if (DG_DOCUMENTOS.Rows.Count > 0)
+                {
+                    foreach (DataGridViewRow item in DG_DOCUMENTOS.Rows)
+                    {
+                        CE_CONOZCA_SU_CLIENTE CP = new CE_CONOZCA_SU_CLIENTE();
+                        CP.ID_CONOZCA_D = ID_CONOZCA;
+                        CP.DOCUMENTO = item.Cells["DOCUMENTO"].Value.ToString();
+                        CN_CONOZCA_SU_CLIENTE.INSERTAR_LISTA_DOCUMENTO(CP);
                     }
                 }
 
@@ -328,7 +357,6 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 return;
             }
 
-
             if (!txt_telefono_referencia_c.Text.Equals("   -   -"))
             {
                 if (txt_telefono_referencia_c.Text.Length < 12)
@@ -406,11 +434,11 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             {
                 this.Text = "Editar Datos Cliente";
             }
+            tab.SelectedIndex = 0;
         }
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-
 
             if (txt_id_cliente.Text.Length==0)
             {
@@ -419,7 +447,6 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 tab.SelectedIndex = 0;
                 return;
             }
-
 
             if (!txt_telefono_empresa_cliente.Text.Equals("   -   -"))
             {
@@ -431,6 +458,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                     return;
                 }
             }
+
             if (!txt_telefono_negocio.Text.Equals("   -   -"))
             {
                 if (txt_telefono_negocio.Text.Length < 12)
@@ -441,6 +469,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                     return;
                 }
             }
+
             if (!txt_telefono_conyugue.Text.Equals("   -   -"))
             {
                 if (txt_telefono_conyugue.Text.Length < 12)
@@ -462,6 +491,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                     return;
                 }
             }
+
             if (!txt_telefono_referencia_c.Text.Equals("   -   -"))
             {
                 if (txt_telefono_referencia_c.Text.Length < 12)
@@ -472,9 +502,39 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                     return;
                 }
             }
-            
 
-            
+            if (!txt_fecha_ingreso_empresa_cliente.Text.Equals("  /  /"))
+            {
+                if (txt_fecha_ingreso_empresa_cliente.Text.Length < 10)
+                {
+                    CP_UTILIDADES.MENSAJE_INFORMACION("La Fecha de Ingreso Esta Incompleta", this);
+                    txt_fecha_ingreso_empresa_cliente.Focus();
+                    tab.SelectedIndex = 1;
+                    return;
+                }
+            }
+
+            if (!txt_fecha_inicion_negocio.Text.Equals("  /  /"))
+            {
+                if (txt_fecha_inicion_negocio.Text.Length < 10)
+                {
+                    CP_UTILIDADES.MENSAJE_INFORMACION("La Fecha de Inicio del Negocio Esta Incompleta", this);
+                    txt_fecha_inicion_negocio.Focus();
+                    tab.SelectedIndex = 2;
+                    return;
+                }
+            }
+
+            if (!txt_fecha_inicion_conyugue.Text.Equals("  /  /"))
+            {
+                if (txt_fecha_inicion_conyugue.Text.Length < 10)
+                {
+                    CP_UTILIDADES.MENSAJE_INFORMACION("La Fecha de Inicio del Conyugue Esta Incompleta", this);
+                    txt_fecha_inicion_conyugue.Focus();
+                    tab.SelectedIndex = 3;
+                    return;
+                }
+            }
             
             INSERTAR_ACTUALIZAR();
         }
@@ -500,6 +560,69 @@ namespace CAPA_PRESENTACION.FORMULARIOS
         private void txt_sueldo_conyugue_KeyPress(object sender, KeyPressEventArgs e)
         {
             CP_UTILIDADES.PERMITIR_NUMERO_Y_PUNTO(sender, e, txt_sueldo_conyugue);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+            if (cb_documentos.Text == "")
+            {
+                CP_UTILIDADES.MENSAJE_INFORMACION("El Documento es Obligatorio", this);
+                cb_documentos.Focus();
+                return;
+            }
+
+            foreach (DataGridViewRow item in DG_DOCUMENTOS.Rows)
+            {
+                if (cb_documentos.Text.Trim() == item.Cells["DOCUMENTO"].Value.ToString())
+                {
+                    CP_UTILIDADES.MENSAJE_INFORMACION("Este Documento ya esta en la Lista", this);
+                    cb_documentos.Text = "";
+                    return;
+                }
+            }
+
+            string DOCUMENTO = cb_documentos.Text.Trim();
+
+            DG_DOCUMENTOS.DataSource = null;
+            DG_DOCUMENTOS.Rows.Add(DOCUMENTO);
+            cb_documentos.Text = "";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (DG_REFERENCIAS_P.Rows.Count == 0)
+            {
+                return;
+            }
+            DG_REFERENCIAS_P.Rows.Remove(DG_REFERENCIAS_P.CurrentRow);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (DG_REFERENCIA_C.Rows.Count == 0)
+            {
+                return;
+            }
+            DG_REFERENCIA_C.Rows.Remove(DG_REFERENCIA_C.CurrentRow);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (DG_REFERENCIA_B.Rows.Count == 0)
+            {
+                return;
+            }
+            DG_REFERENCIA_B.Rows.Remove(DG_REFERENCIA_B.CurrentRow);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (DG_DOCUMENTOS.Rows.Count == 0)
+            {
+                return;
+            }
+            DG_DOCUMENTOS.Rows.Remove(DG_DOCUMENTOS.CurrentRow);
         }
     }
 }

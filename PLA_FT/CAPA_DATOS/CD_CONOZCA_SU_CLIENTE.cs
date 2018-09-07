@@ -80,7 +80,7 @@ namespace CAPA_DATOS
             da.InsertCommand.Parameters.AddWithValue("@TELEFONO_NEGOCIO", obj.TELEFONO_NEGOCIO);
             da.InsertCommand.Parameters.AddWithValue("@TELEFONO_TRABAJO_CONYUGUE", obj.TELEFONO_TRABAJO_CONYUGUE);
             da.InsertCommand.Parameters.AddWithValue("@TIEMPO_EN_EL_MERCADO", obj.TIEMPO_EN_EL_MERCADO);
-
+            da.InsertCommand.Parameters.AddWithValue("@COMO_SE_ENTERO", obj.COMO_SE_ENTERO);
 
             cn.Open();
             da.InsertCommand.ExecuteNonQuery();
@@ -130,6 +130,7 @@ namespace CAPA_DATOS
             da.UpdateCommand.Parameters.AddWithValue("@TELEFONO_NEGOCIO", obj.TELEFONO_NEGOCIO);
             da.UpdateCommand.Parameters.AddWithValue("@TELEFONO_TRABAJO_CONYUGUE", obj.TELEFONO_TRABAJO_CONYUGUE);
             da.UpdateCommand.Parameters.AddWithValue("@TIEMPO_EN_EL_MERCADO", obj.TIEMPO_EN_EL_MERCADO);
+            da.UpdateCommand.Parameters.AddWithValue("@COMO_SE_ENTERO", obj.COMO_SE_ENTERO);
 
             cn.Open();
             da.UpdateCommand.ExecuteNonQuery();
@@ -264,6 +265,49 @@ namespace CAPA_DATOS
             da.DeleteCommand.CommandType = CommandType.StoredProcedure;
             da.DeleteCommand.Parameters.AddWithValue("@OPCION", "ELIMINAR_REFERENCIAS_BANCARIAS");
             da.DeleteCommand.Parameters.AddWithValue("@ID_CONOZCA_RB", ID_CONOZCA_RB);
+            cn.Open();
+            da.DeleteCommand.ExecuteNonQuery();
+            cn.Close();
+        }
+
+
+        //LISTA DOCUMENTOS
+        public void INSERTAR_LISTA_DOCUMENTO(CE_CONOZCA_SU_CLIENTE obj)
+        {
+            cn.Close();
+            da.InsertCommand = new SqlCommand("SP_CONOZCA_SU_CLIENTES", cn);
+            da.InsertCommand.CommandType = CommandType.StoredProcedure;
+            da.InsertCommand.Parameters.AddWithValue("@OPCION", "AGREGAR_LISTA_DOCUMENTO");
+            da.InsertCommand.Parameters.AddWithValue("@ID_CONOZCA_D", obj.ID_CONOZCA_D);
+            da.InsertCommand.Parameters.AddWithValue("@DOCUMENTO", obj.DOCUMENTO);
+
+            cn.Open();
+            da.InsertCommand.ExecuteNonQuery();
+            cn.Close();
+        }
+
+        public DataTable CONSULTAR_LISTA_DOCUMENTOS(int ID_CONOZCA_D)
+        {
+            cn.Close();
+            da.SelectCommand = new SqlCommand("SP_CONOZCA_SU_CLIENTES", cn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.AddWithValue("@OPCION", "CONSULTAR_LISTA_DOCUMENTO");
+            da.SelectCommand.Parameters.AddWithValue("@ID_CONOZCA_D", ID_CONOZCA_D);
+            cn.Open();
+            DataSet ds = new DataSet();
+            da.Fill(ds, "LISTA_DOCUMENTOS_CONOZCA");
+            cn.Close();
+
+            return ds.Tables["LISTA_DOCUMENTOS_CONOZCA"];
+        }
+
+        public void ELIMINAR_LISTA_DOCUMENTO(int ID_CONOZCA_D)
+        {
+            cn.Close();
+            da.DeleteCommand = new SqlCommand("SP_CONOZCA_SU_CLIENTES", cn);
+            da.DeleteCommand.CommandType = CommandType.StoredProcedure;
+            da.DeleteCommand.Parameters.AddWithValue("@OPCION", "ELIMINAR_LISTA_DOCUMENTO");
+            da.DeleteCommand.Parameters.AddWithValue("@ID_CONOZCA_D", ID_CONOZCA_D);
             cn.Open();
             da.DeleteCommand.ExecuteNonQuery();
             cn.Close();
