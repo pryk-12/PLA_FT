@@ -1,5 +1,6 @@
 ﻿using CAPA_ENTIDAD;
 using CAPA_NEGOCIOS;
+using DevExpress.XtraReports.UI;
 using System;
 using System.Windows.Forms;
 
@@ -283,12 +284,25 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                     {
                         FRM = (FRM_MANT_CONOZCA_SU_CLIENTE)frm;
                         FRM.CONSULTAR();
+                        DialogResult Resultado = MessageBox.Show("Deseas Visualizar el Reporte?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (Resultado == DialogResult.Yes)
+                        {
+                            string condicion = "";
+                            condicion = @"([ID_CONOZCA] =" + ID_CONOZCA + ")";
+
+                            REPORTES.REP_CONOZCA_SU_CLIENTE report = new REPORTES.REP_CONOZCA_SU_CLIENTE();
+                            report.FilterString = condicion;
+                            ReportPrintTool tool = new ReportPrintTool(report);
+                            tool.ShowPreview();
+                        }
+
                         this.Close();
                         break;
                     }
                 }
 
-                Close();
+
             }
             catch (Exception ex)
             {
@@ -406,9 +420,9 @@ namespace CAPA_PRESENTACION.FORMULARIOS
 
             foreach (DataGridViewRow item in DG_REFERENCIA_B.Rows)
             {
-                if (txt_banco.Text.Trim() == item.Cells["BANCO_B"].Value.ToString())
+                if (txt_banco.Text.Trim() == item.Cells["BANCO_B"].Value.ToString() && cb_tipo_cuenta.Text == item.Cells["TIPO_CUENTA_B"].Value.ToString())
                 {
-                    CP_UTILIDADES.MENSAJE_INFORMACION("Este Banco ya esta en la Lista", this);
+                    CP_UTILIDADES.MENSAJE_INFORMACION("Este Banco con ese Tipo de Cuenta ya está en la Lista", this);
                     txt_banco.Text = "";
                     return;
                 }
@@ -623,6 +637,13 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 return;
             }
             DG_DOCUMENTOS.Rows.Remove(DG_DOCUMENTOS.CurrentRow);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CP_UTILIDADES.DATOS_USUARIO.OPCION = 2;
+            FRM_CONSULTAR_CLIENTES frm = new FRM_CONSULTAR_CLIENTES();
+            frm.ShowDialog();
         }
     }
 }

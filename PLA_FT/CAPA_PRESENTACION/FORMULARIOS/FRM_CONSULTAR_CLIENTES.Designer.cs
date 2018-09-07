@@ -36,11 +36,11 @@
             this.btn_agregar = new System.Windows.Forms.Button();
             this.txt_buscar = new MetroFramework.Controls.MetroTextBox();
             this.ID_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOMBRES = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDENTIFICACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_OFICINA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OFICINA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TIPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TIPO_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,11 +62,11 @@
             this.DG.ColumnHeadersHeight = 25;
             this.DG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_CLIENTE,
-            this.NOMBRE,
+            this.NOMBRES,
             this.IDENTIFICACION,
             this.ID_OFICINA,
             this.OFICINA,
-            this.TIPO});
+            this.TIPO_CLIENTE});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -138,6 +138,7 @@
             this.txt_buscar.MaxLength = 32767;
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.PasswordChar = '\0';
+            this.txt_buscar.PromptText = "Ingrese la Descripción o ID a Buscar";
             this.txt_buscar.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_buscar.SelectedText = "";
             this.txt_buscar.SelectionLength = 0;
@@ -159,13 +160,13 @@
             this.ID_CLIENTE.ReadOnly = true;
             this.ID_CLIENTE.Width = 50;
             // 
-            // NOMBRE
+            // NOMBRES
             // 
-            this.NOMBRE.DataPropertyName = "NOMBRE";
-            this.NOMBRE.HeaderText = "NOMBRE";
-            this.NOMBRE.Name = "NOMBRE";
-            this.NOMBRE.ReadOnly = true;
-            this.NOMBRE.Width = 280;
+            this.NOMBRES.DataPropertyName = "NOMBRES";
+            this.NOMBRES.HeaderText = "NOMBRE";
+            this.NOMBRES.Name = "NOMBRES";
+            this.NOMBRES.ReadOnly = true;
+            this.NOMBRES.Width = 280;
             // 
             // IDENTIFICACION
             // 
@@ -190,12 +191,12 @@
             this.OFICINA.ReadOnly = true;
             this.OFICINA.Width = 200;
             // 
-            // TIPO
+            // TIPO_CLIENTE
             // 
-            this.TIPO.DataPropertyName = "TIPO";
-            this.TIPO.HeaderText = "TIPO";
-            this.TIPO.Name = "TIPO";
-            this.TIPO.ReadOnly = true;
+            this.TIPO_CLIENTE.DataPropertyName = "TIPO_CLIENTE";
+            this.TIPO_CLIENTE.HeaderText = "TIPO";
+            this.TIPO_CLIENTE.Name = "TIPO_CLIENTE";
+            this.TIPO_CLIENTE.ReadOnly = true;
             // 
             // FRM_CONSULTAR_CLIENTES
             // 
@@ -220,10 +221,10 @@
         private System.Windows.Forms.Button btn_agregar;
         private MetroFramework.Controls.MetroTextBox txt_buscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_CLIENTE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRES;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDENTIFICACION;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_OFICINA;
         private System.Windows.Forms.DataGridViewTextBoxColumn OFICINA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TIPO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_CLIENTE;
     }
 }

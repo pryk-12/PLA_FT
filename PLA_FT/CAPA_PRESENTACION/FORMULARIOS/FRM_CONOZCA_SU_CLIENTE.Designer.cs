@@ -28,23 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_CONOZCA_SU_CLIENTE));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tab = new MetroFramework.Controls.MetroTabControl();
-            this.tab_documento = new MetroFramework.Controls.MetroTabPage();
-            this.cb_documentos = new System.Windows.Forms.ComboBox();
-            this.metroLabel38 = new MetroFramework.Controls.MetroLabel();
-            this.DG_DOCUMENTOS = new System.Windows.Forms.DataGridView();
-            this.DOCUMENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.tab_cliente = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel39 = new MetroFramework.Controls.MetroLabel();
             this.cb_institucion = new System.Windows.Forms.ComboBox();
@@ -175,11 +168,16 @@
             this.TIPO_CUENTA_B = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.tab_documento = new MetroFramework.Controls.MetroTabPage();
+            this.cb_documentos = new System.Windows.Forms.ComboBox();
+            this.metroLabel38 = new MetroFramework.Controls.MetroLabel();
+            this.DG_DOCUMENTOS = new System.Windows.Forms.DataGridView();
+            this.DOCUMENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.btn_agregar = new System.Windows.Forms.Button();
             this.txt_id = new MetroFramework.Controls.MetroTextBox();
             this.tab.SuspendLayout();
-            this.tab_documento.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DG_DOCUMENTOS)).BeginInit();
             this.tab_cliente.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tab_empleado.SuspendLayout();
@@ -194,6 +192,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.DG_REFERENCIA_C)).BeginInit();
             this.tab_referencia_b.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_REFERENCIA_B)).BeginInit();
+            this.tab_documento.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DG_DOCUMENTOS)).BeginInit();
             this.SuspendLayout();
             // 
             // tab
@@ -212,114 +212,6 @@
             this.tab.Size = new System.Drawing.Size(698, 422);
             this.tab.TabIndex = 39;
             this.tab.UseSelectable = true;
-            // 
-            // tab_documento
-            // 
-            this.tab_documento.Controls.Add(this.cb_documentos);
-            this.tab_documento.Controls.Add(this.metroLabel38);
-            this.tab_documento.Controls.Add(this.DG_DOCUMENTOS);
-            this.tab_documento.Controls.Add(this.button8);
-            this.tab_documento.Controls.Add(this.button9);
-            this.tab_documento.HorizontalScrollbarBarColor = true;
-            this.tab_documento.HorizontalScrollbarHighlightOnWheel = false;
-            this.tab_documento.HorizontalScrollbarSize = 10;
-            this.tab_documento.Location = new System.Drawing.Point(4, 38);
-            this.tab_documento.Name = "tab_documento";
-            this.tab_documento.Size = new System.Drawing.Size(690, 380);
-            this.tab_documento.TabIndex = 7;
-            this.tab_documento.Text = " Documentos Entregados ";
-            this.tab_documento.VerticalScrollbarBarColor = true;
-            this.tab_documento.VerticalScrollbarHighlightOnWheel = false;
-            this.tab_documento.VerticalScrollbarSize = 10;
-            // 
-            // cb_documentos
-            // 
-            this.cb_documentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_documentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_documentos.FormattingEnabled = true;
-            this.cb_documentos.Items.AddRange(new object[] {
-            "",
-            "AHORROS",
-            "CORRIENTES"});
-            this.cb_documentos.Location = new System.Drawing.Point(30, 62);
-            this.cb_documentos.Name = "cb_documentos";
-            this.cb_documentos.Size = new System.Drawing.Size(631, 23);
-            this.cb_documentos.TabIndex = 92;
-            // 
-            // metroLabel38
-            // 
-            this.metroLabel38.AutoSize = true;
-            this.metroLabel38.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel38.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel38.Location = new System.Drawing.Point(30, 46);
-            this.metroLabel38.Name = "metroLabel38";
-            this.metroLabel38.Size = new System.Drawing.Size(73, 15);
-            this.metroLabel38.TabIndex = 93;
-            this.metroLabel38.Text = "Documento";
-            // 
-            // DG_DOCUMENTOS
-            // 
-            this.DG_DOCUMENTOS.AllowUserToAddRows = false;
-            this.DG_DOCUMENTOS.AllowUserToDeleteRows = false;
-            this.DG_DOCUMENTOS.AllowUserToResizeColumns = false;
-            this.DG_DOCUMENTOS.AllowUserToResizeRows = false;
-            this.DG_DOCUMENTOS.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG_DOCUMENTOS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.DG_DOCUMENTOS.ColumnHeadersHeight = 25;
-            this.DG_DOCUMENTOS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DOCUMENTO});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DG_DOCUMENTOS.DefaultCellStyle = dataGridViewCellStyle10;
-            this.DG_DOCUMENTOS.EnableHeadersVisualStyles = false;
-            this.DG_DOCUMENTOS.GridColor = System.Drawing.Color.Gray;
-            this.DG_DOCUMENTOS.Location = new System.Drawing.Point(30, 139);
-            this.DG_DOCUMENTOS.MultiSelect = false;
-            this.DG_DOCUMENTOS.Name = "DG_DOCUMENTOS";
-            this.DG_DOCUMENTOS.RowHeadersVisible = false;
-            this.DG_DOCUMENTOS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG_DOCUMENTOS.Size = new System.Drawing.Size(631, 198);
-            this.DG_DOCUMENTOS.TabIndex = 87;
-            // 
-            // DOCUMENTO
-            // 
-            this.DOCUMENTO.DataPropertyName = "DOCUMENTO";
-            this.DOCUMENTO.HeaderText = "DOCUMENTO";
-            this.DOCUMENTO.Name = "DOCUMENTO";
-            this.DOCUMENTO.ReadOnly = true;
-            this.DOCUMENTO.Width = 580;
-            // 
-            // button8
-            // 
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(80, 108);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(49, 25);
-            this.button8.TabIndex = 90;
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button9
-            // 
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(29, 108);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(49, 25);
-            this.button9.TabIndex = 89;
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // tab_cliente
             // 
@@ -726,6 +618,7 @@
             this.button1.Size = new System.Drawing.Size(43, 25);
             this.button1.TabIndex = 27;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txt_id_cliente
             // 
@@ -1034,7 +927,7 @@
             // txt_fecha_ingreso_empresa_cliente
             // 
             this.txt_fecha_ingreso_empresa_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_fecha_ingreso_empresa_cliente.Location = new System.Drawing.Point(455, 98);
+            this.txt_fecha_ingreso_empresa_cliente.Location = new System.Drawing.Point(464, 98);
             this.txt_fecha_ingreso_empresa_cliente.Mask = "00/00/0000";
             this.txt_fecha_ingreso_empresa_cliente.Name = "txt_fecha_ingreso_empresa_cliente";
             this.txt_fecha_ingreso_empresa_cliente.PromptChar = ' ';
@@ -1049,7 +942,7 @@
             // 
             // 
             this.txt_sueldo_empresa_cliente.CustomButton.Image = null;
-            this.txt_sueldo_empresa_cliente.CustomButton.Location = new System.Drawing.Point(60, 1);
+            this.txt_sueldo_empresa_cliente.CustomButton.Location = new System.Drawing.Point(50, 1);
             this.txt_sueldo_empresa_cliente.CustomButton.Name = "";
             this.txt_sueldo_empresa_cliente.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_sueldo_empresa_cliente.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -1058,7 +951,7 @@
             this.txt_sueldo_empresa_cliente.CustomButton.UseSelectable = true;
             this.txt_sueldo_empresa_cliente.CustomButton.Visible = false;
             this.txt_sueldo_empresa_cliente.Lines = new string[0];
-            this.txt_sueldo_empresa_cliente.Location = new System.Drawing.Point(546, 98);
+            this.txt_sueldo_empresa_cliente.Location = new System.Drawing.Point(556, 98);
             this.txt_sueldo_empresa_cliente.MaxLength = 100;
             this.txt_sueldo_empresa_cliente.Name = "txt_sueldo_empresa_cliente";
             this.txt_sueldo_empresa_cliente.PasswordChar = '\0';
@@ -1067,8 +960,9 @@
             this.txt_sueldo_empresa_cliente.SelectionLength = 0;
             this.txt_sueldo_empresa_cliente.SelectionStart = 0;
             this.txt_sueldo_empresa_cliente.ShortcutsEnabled = true;
-            this.txt_sueldo_empresa_cliente.Size = new System.Drawing.Size(82, 23);
+            this.txt_sueldo_empresa_cliente.Size = new System.Drawing.Size(72, 23);
             this.txt_sueldo_empresa_cliente.TabIndex = 51;
+            this.txt_sueldo_empresa_cliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_sueldo_empresa_cliente.UseSelectable = true;
             this.txt_sueldo_empresa_cliente.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_sueldo_empresa_cliente.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -1079,7 +973,7 @@
             this.metroLabel13.AutoSize = true;
             this.metroLabel13.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel13.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel13.Location = new System.Drawing.Point(546, 82);
+            this.metroLabel13.Location = new System.Drawing.Point(555, 82);
             this.metroLabel13.Name = "metroLabel13";
             this.metroLabel13.Size = new System.Drawing.Size(45, 15);
             this.metroLabel13.TabIndex = 50;
@@ -1090,7 +984,7 @@
             this.metroLabel11.AutoSize = true;
             this.metroLabel11.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel11.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel11.Location = new System.Drawing.Point(455, 82);
+            this.metroLabel11.Location = new System.Drawing.Point(463, 82);
             this.metroLabel11.Name = "metroLabel11";
             this.metroLabel11.Size = new System.Drawing.Size(84, 15);
             this.metroLabel11.TabIndex = 48;
@@ -1142,11 +1036,11 @@
             // txt_telefono_empresa_cliente
             // 
             this.txt_telefono_empresa_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_telefono_empresa_cliente.Location = new System.Drawing.Point(377, 98);
+            this.txt_telefono_empresa_cliente.Location = new System.Drawing.Point(369, 98);
             this.txt_telefono_empresa_cliente.Mask = "000-000-0000";
             this.txt_telefono_empresa_cliente.Name = "txt_telefono_empresa_cliente";
             this.txt_telefono_empresa_cliente.PromptChar = ' ';
-            this.txt_telefono_empresa_cliente.Size = new System.Drawing.Size(72, 23);
+            this.txt_telefono_empresa_cliente.Size = new System.Drawing.Size(89, 23);
             this.txt_telefono_empresa_cliente.TabIndex = 44;
             // 
             // metroLabel19
@@ -1154,7 +1048,7 @@
             this.metroLabel19.AutoSize = true;
             this.metroLabel19.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel19.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel19.Location = new System.Drawing.Point(377, 82);
+            this.metroLabel19.Location = new System.Drawing.Point(371, 82);
             this.metroLabel19.Name = "metroLabel19";
             this.metroLabel19.Size = new System.Drawing.Size(56, 15);
             this.metroLabel19.TabIndex = 45;
@@ -1167,7 +1061,7 @@
             // 
             // 
             this.txt_actividad_empresa_cliente.CustomButton.Image = null;
-            this.txt_actividad_empresa_cliente.CustomButton.Location = new System.Drawing.Point(329, 1);
+            this.txt_actividad_empresa_cliente.CustomButton.Location = new System.Drawing.Point(322, 1);
             this.txt_actividad_empresa_cliente.CustomButton.Name = "";
             this.txt_actividad_empresa_cliente.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_actividad_empresa_cliente.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -1185,7 +1079,7 @@
             this.txt_actividad_empresa_cliente.SelectionLength = 0;
             this.txt_actividad_empresa_cliente.SelectionStart = 0;
             this.txt_actividad_empresa_cliente.ShortcutsEnabled = true;
-            this.txt_actividad_empresa_cliente.Size = new System.Drawing.Size(351, 23);
+            this.txt_actividad_empresa_cliente.Size = new System.Drawing.Size(344, 23);
             this.txt_actividad_empresa_cliente.TabIndex = 27;
             this.txt_actividad_empresa_cliente.UseSelectable = true;
             this.txt_actividad_empresa_cliente.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -1396,7 +1290,7 @@
             this.txt_ingresos_negocio.CustomButton.UseSelectable = true;
             this.txt_ingresos_negocio.CustomButton.Visible = false;
             this.txt_ingresos_negocio.Lines = new string[0];
-            this.txt_ingresos_negocio.Location = new System.Drawing.Point(313, 97);
+            this.txt_ingresos_negocio.Location = new System.Drawing.Point(340, 97);
             this.txt_ingresos_negocio.MaxLength = 100;
             this.txt_ingresos_negocio.Name = "txt_ingresos_negocio";
             this.txt_ingresos_negocio.PasswordChar = '\0';
@@ -1407,6 +1301,7 @@
             this.txt_ingresos_negocio.ShortcutsEnabled = true;
             this.txt_ingresos_negocio.Size = new System.Drawing.Size(98, 23);
             this.txt_ingresos_negocio.TabIndex = 51;
+            this.txt_ingresos_negocio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_ingresos_negocio.UseSelectable = true;
             this.txt_ingresos_negocio.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_ingresos_negocio.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -1417,7 +1312,7 @@
             this.metroLabel16.AutoSize = true;
             this.metroLabel16.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel16.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel16.Location = new System.Drawing.Point(313, 81);
+            this.metroLabel16.Location = new System.Drawing.Point(340, 81);
             this.metroLabel16.Name = "metroLabel16";
             this.metroLabel16.Size = new System.Drawing.Size(98, 15);
             this.metroLabel16.TabIndex = 50;
@@ -1484,7 +1379,7 @@
             this.txt_telefono_negocio.Mask = "000-000-0000";
             this.txt_telefono_negocio.Name = "txt_telefono_negocio";
             this.txt_telefono_negocio.PromptChar = ' ';
-            this.txt_telefono_negocio.Size = new System.Drawing.Size(72, 23);
+            this.txt_telefono_negocio.Size = new System.Drawing.Size(97, 23);
             this.txt_telefono_negocio.TabIndex = 44;
             // 
             // metroLabel20
@@ -1855,6 +1750,7 @@
             this.txt_sueldo_conyugue.ShortcutsEnabled = true;
             this.txt_sueldo_conyugue.Size = new System.Drawing.Size(98, 23);
             this.txt_sueldo_conyugue.TabIndex = 51;
+            this.txt_sueldo_conyugue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_sueldo_conyugue.UseSelectable = true;
             this.txt_sueldo_conyugue.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_sueldo_conyugue.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -2231,14 +2127,14 @@
             this.DG_REFERENCIAS_P.AllowUserToResizeColumns = false;
             this.DG_REFERENCIAS_P.AllowUserToResizeRows = false;
             this.DG_REFERENCIAS_P.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG_REFERENCIAS_P.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG_REFERENCIAS_P.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DG_REFERENCIAS_P.ColumnHeadersHeight = 25;
             this.DG_REFERENCIAS_P.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NOMBRE,
@@ -2246,14 +2142,14 @@
             this.DIRECCION,
             this.PARENTEZCO,
             this.TELEFONO});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DG_REFERENCIAS_P.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG_REFERENCIAS_P.DefaultCellStyle = dataGridViewCellStyle2;
             this.DG_REFERENCIAS_P.EnableHeadersVisualStyles = false;
             this.DG_REFERENCIAS_P.GridColor = System.Drawing.Color.Gray;
             this.DG_REFERENCIAS_P.Location = new System.Drawing.Point(37, 205);
@@ -2437,27 +2333,27 @@
             this.DG_REFERENCIA_C.AllowUserToResizeColumns = false;
             this.DG_REFERENCIA_C.AllowUserToResizeRows = false;
             this.DG_REFERENCIA_C.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG_REFERENCIA_C.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG_REFERENCIA_C.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DG_REFERENCIA_C.ColumnHeadersHeight = 25;
             this.DG_REFERENCIA_C.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NOMBRE_C,
             this.DIRECCION_C,
             this.TELEFONO_C});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DG_REFERENCIA_C.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG_REFERENCIA_C.DefaultCellStyle = dataGridViewCellStyle4;
             this.DG_REFERENCIA_C.EnableHeadersVisualStyles = false;
             this.DG_REFERENCIA_C.GridColor = System.Drawing.Color.Gray;
             this.DG_REFERENCIA_C.Location = new System.Drawing.Point(27, 184);
@@ -2606,26 +2502,26 @@
             this.DG_REFERENCIA_B.AllowUserToResizeColumns = false;
             this.DG_REFERENCIA_B.AllowUserToResizeRows = false;
             this.DG_REFERENCIA_B.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG_REFERENCIA_B.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG_REFERENCIA_B.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DG_REFERENCIA_B.ColumnHeadersHeight = 25;
             this.DG_REFERENCIA_B.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BANCO_B,
             this.TIPO_CUENTA_B});
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DG_REFERENCIA_B.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG_REFERENCIA_B.DefaultCellStyle = dataGridViewCellStyle6;
             this.DG_REFERENCIA_B.EnableHeadersVisualStyles = false;
             this.DG_REFERENCIA_B.GridColor = System.Drawing.Color.Gray;
             this.DG_REFERENCIA_B.Location = new System.Drawing.Point(29, 141);
@@ -2671,6 +2567,114 @@
             this.button7.TabIndex = 82;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // tab_documento
+            // 
+            this.tab_documento.Controls.Add(this.cb_documentos);
+            this.tab_documento.Controls.Add(this.metroLabel38);
+            this.tab_documento.Controls.Add(this.DG_DOCUMENTOS);
+            this.tab_documento.Controls.Add(this.button8);
+            this.tab_documento.Controls.Add(this.button9);
+            this.tab_documento.HorizontalScrollbarBarColor = true;
+            this.tab_documento.HorizontalScrollbarHighlightOnWheel = false;
+            this.tab_documento.HorizontalScrollbarSize = 10;
+            this.tab_documento.Location = new System.Drawing.Point(4, 38);
+            this.tab_documento.Name = "tab_documento";
+            this.tab_documento.Size = new System.Drawing.Size(690, 380);
+            this.tab_documento.TabIndex = 7;
+            this.tab_documento.Text = " Documentos Entregados ";
+            this.tab_documento.VerticalScrollbarBarColor = true;
+            this.tab_documento.VerticalScrollbarHighlightOnWheel = false;
+            this.tab_documento.VerticalScrollbarSize = 10;
+            // 
+            // cb_documentos
+            // 
+            this.cb_documentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_documentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_documentos.FormattingEnabled = true;
+            this.cb_documentos.Items.AddRange(new object[] {
+            "",
+            "AHORROS",
+            "CORRIENTES"});
+            this.cb_documentos.Location = new System.Drawing.Point(30, 62);
+            this.cb_documentos.Name = "cb_documentos";
+            this.cb_documentos.Size = new System.Drawing.Size(631, 23);
+            this.cb_documentos.TabIndex = 92;
+            // 
+            // metroLabel38
+            // 
+            this.metroLabel38.AutoSize = true;
+            this.metroLabel38.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel38.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel38.Location = new System.Drawing.Point(30, 46);
+            this.metroLabel38.Name = "metroLabel38";
+            this.metroLabel38.Size = new System.Drawing.Size(73, 15);
+            this.metroLabel38.TabIndex = 93;
+            this.metroLabel38.Text = "Documento";
+            // 
+            // DG_DOCUMENTOS
+            // 
+            this.DG_DOCUMENTOS.AllowUserToAddRows = false;
+            this.DG_DOCUMENTOS.AllowUserToDeleteRows = false;
+            this.DG_DOCUMENTOS.AllowUserToResizeColumns = false;
+            this.DG_DOCUMENTOS.AllowUserToResizeRows = false;
+            this.DG_DOCUMENTOS.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG_DOCUMENTOS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.DG_DOCUMENTOS.ColumnHeadersHeight = 25;
+            this.DG_DOCUMENTOS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DOCUMENTO});
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG_DOCUMENTOS.DefaultCellStyle = dataGridViewCellStyle8;
+            this.DG_DOCUMENTOS.EnableHeadersVisualStyles = false;
+            this.DG_DOCUMENTOS.GridColor = System.Drawing.Color.Gray;
+            this.DG_DOCUMENTOS.Location = new System.Drawing.Point(30, 139);
+            this.DG_DOCUMENTOS.MultiSelect = false;
+            this.DG_DOCUMENTOS.Name = "DG_DOCUMENTOS";
+            this.DG_DOCUMENTOS.RowHeadersVisible = false;
+            this.DG_DOCUMENTOS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DG_DOCUMENTOS.Size = new System.Drawing.Size(631, 198);
+            this.DG_DOCUMENTOS.TabIndex = 87;
+            // 
+            // DOCUMENTO
+            // 
+            this.DOCUMENTO.DataPropertyName = "DOCUMENTO";
+            this.DOCUMENTO.HeaderText = "DOCUMENTO";
+            this.DOCUMENTO.Name = "DOCUMENTO";
+            this.DOCUMENTO.ReadOnly = true;
+            this.DOCUMENTO.Width = 580;
+            // 
+            // button8
+            // 
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.Location = new System.Drawing.Point(80, 108);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(49, 25);
+            this.button8.TabIndex = 90;
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
+            this.button9.Location = new System.Drawing.Point(29, 108);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(49, 25);
+            this.button9.TabIndex = 89;
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // btn_agregar
             // 
@@ -2736,9 +2740,6 @@
             this.Name = "FRM_CONOZCA_SU_CLIENTE";
             this.Load += new System.EventHandler(this.FRM_CONOZCA_SU_CLIENTE_Load);
             this.tab.ResumeLayout(false);
-            this.tab_documento.ResumeLayout(false);
-            this.tab_documento.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DG_DOCUMENTOS)).EndInit();
             this.tab_cliente.ResumeLayout(false);
             this.tab_cliente.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -2761,6 +2762,9 @@
             this.tab_referencia_b.ResumeLayout(false);
             this.tab_referencia_b.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_REFERENCIA_B)).EndInit();
+            this.tab_documento.ResumeLayout(false);
+            this.tab_documento.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DG_DOCUMENTOS)).EndInit();
             this.ResumeLayout(false);
 
         }
