@@ -289,7 +289,7 @@
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel4.Location = new System.Drawing.Point(243, 165);
+            this.metroLabel4.Location = new System.Drawing.Point(245, 165);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(43, 15);
             this.metroLabel4.TabIndex = 9;
@@ -304,9 +304,9 @@
             "",
             "ACTIVO",
             "INACTIVO"});
-            this.cb_estado.Location = new System.Drawing.Point(289, 161);
+            this.cb_estado.Location = new System.Drawing.Point(290, 161);
             this.cb_estado.Name = "cb_estado";
-            this.cb_estado.Size = new System.Drawing.Size(165, 23);
+            this.cb_estado.Size = new System.Drawing.Size(164, 23);
             this.cb_estado.TabIndex = 7;
             // 
             // metroLabel1

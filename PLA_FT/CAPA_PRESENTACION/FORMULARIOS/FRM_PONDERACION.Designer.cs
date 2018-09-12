@@ -596,7 +596,7 @@
             this.txt_id.CustomButton.UseSelectable = true;
             this.txt_id.CustomButton.Visible = false;
             this.txt_id.Lines = new string[0];
-            this.txt_id.Location = new System.Drawing.Point(99, 47);
+            this.txt_id.Location = new System.Drawing.Point(101, 47);
             this.txt_id.MaxLength = 100;
             this.txt_id.Name = "txt_id";
             this.txt_id.PasswordChar = '\0';
@@ -625,7 +625,7 @@
             // FRM_PONDERACION
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(466, 345);
+            this.ClientSize = new System.Drawing.Size(468, 345);
             this.Controls.Add(this.lbl_total);
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.metroPanel1);
