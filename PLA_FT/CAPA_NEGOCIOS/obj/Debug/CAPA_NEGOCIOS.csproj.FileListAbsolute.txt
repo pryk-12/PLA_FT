@@ -25,3 +25,12 @@ D:\PLA_FT\PLA_FT\CAPA_NEGOCIOS\bin\Debug\CAPA_ENTIDAD.pdb
 D:\PLA_FT\PLA_FT\CAPA_NEGOCIOS\obj\Debug\CAPA_NEGOCIOS.csprojResolveAssemblyReference.cache
 D:\PLA_FT\PLA_FT\CAPA_NEGOCIOS\obj\Debug\CAPA_NEGOCIOS.dll
 D:\PLA_FT\PLA_FT\CAPA_NEGOCIOS\obj\Debug\CAPA_NEGOCIOS.pdb
+E:\Documentos\GitHub\PLA_FT\PLA_FT\CAPA_NEGOCIOS\bin\Debug\CAPA_NEGOCIOS.dll
+E:\Documentos\GitHub\PLA_FT\PLA_FT\CAPA_NEGOCIOS\bin\Debug\CAPA_NEGOCIOS.pdb
+E:\Documentos\GitHub\PLA_FT\PLA_FT\CAPA_NEGOCIOS\bin\Debug\CAPA_DATOS.dll
+E:\Documentos\GitHub\PLA_FT\PLA_FT\CAPA_NEGOCIOS\bin\Debug\CAPA_ENTIDAD.dll
+E:\Documentos\GitHub\PLA_FT\PLA_FT\CAPA_NEGOCIOS\bin\Debug\CAPA_DATOS.pdb
+E:\Documentos\GitHub\PLA_FT\PLA_FT\CAPA_NEGOCIOS\bin\Debug\CAPA_ENTIDAD.pdb
+E:\Documentos\GitHub\PLA_FT\PLA_FT\CAPA_NEGOCIOS\obj\Debug\CAPA_NEGOCIOS.csprojResolveAssemblyReference.cache
+E:\Documentos\GitHub\PLA_FT\PLA_FT\CAPA_NEGOCIOS\obj\Debug\CAPA_NEGOCIOS.dll
+E:\Documentos\GitHub\PLA_FT\PLA_FT\CAPA_NEGOCIOS\obj\Debug\CAPA_NEGOCIOS.pdb

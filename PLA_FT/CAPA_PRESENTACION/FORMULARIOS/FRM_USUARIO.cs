@@ -203,7 +203,7 @@ namespace CAPA_PRESENTACION.FORMULARIOS
                 }
                 else if (!hasMiniMaxChars.IsMatch(clave))
                 {
-                    mensaje = "La clave no debe ser menor o mayor que 12 caracteres";
+                    mensaje = "La clave no debe ser menor de 8 o mayor que 15 caracteres";
                     CP_UTILIDADES.MENSAJE_INFORMACION(mensaje, this);
                     return;
                 }
@@ -233,6 +233,11 @@ namespace CAPA_PRESENTACION.FORMULARIOS
             {
                 this.Width = 944;
             }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

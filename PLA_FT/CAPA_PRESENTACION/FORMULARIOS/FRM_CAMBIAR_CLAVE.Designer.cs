@@ -228,9 +228,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(7, 75);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(339, 13);
+            this.label4.Size = new System.Drawing.Size(368, 13);
             this.label4.TabIndex = 28;
-            this.label4.Text = "3 - La clave no debe ser menor o mayor que 12 caracteres";
+            this.label4.Text = "3 - La clave no debe ser menor de 8 o mayor que 15 caracteres";
             // 
             // label6
             // 
@@ -291,13 +291,13 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Location = new System.Drawing.Point(343, 58);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(366, 123);
+            this.panel1.Size = new System.Drawing.Size(379, 123);
             this.panel1.TabIndex = 32;
             // 
             // FRM_CAMBIAR_CLAVE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(340, 242);
+            this.ClientSize = new System.Drawing.Size(743, 242);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_mant_oficina);

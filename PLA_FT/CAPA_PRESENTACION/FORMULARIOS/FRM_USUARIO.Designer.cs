@@ -368,7 +368,7 @@
             this.txt_id.CustomButton.UseSelectable = true;
             this.txt_id.CustomButton.Visible = false;
             this.txt_id.Lines = new string[0];
-            this.txt_id.Location = new System.Drawing.Point(447, 33);
+            this.txt_id.Location = new System.Drawing.Point(847, 33);
             this.txt_id.MaxLength = 100;
             this.txt_id.Name = "txt_id";
             this.txt_id.PasswordChar = '\0';
@@ -388,7 +388,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(145, 15);
+            this.label1.Location = new System.Drawing.Point(140, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 17);
             this.label1.TabIndex = 15;
@@ -398,7 +398,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 51);
+            this.label2.Location = new System.Drawing.Point(11, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(329, 13);
             this.label2.TabIndex = 16;
@@ -408,7 +408,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 89);
+            this.label3.Location = new System.Drawing.Point(11, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(333, 13);
             this.label3.TabIndex = 17;
@@ -418,17 +418,18 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(16, 128);
+            this.label4.Location = new System.Drawing.Point(11, 128);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(339, 13);
+            this.label4.Size = new System.Drawing.Size(368, 13);
             this.label4.TabIndex = 18;
-            this.label4.Text = "3 - La clave no debe ser menor o mayor que 12 caracteres";
+            this.label4.Text = "3 - La clave no debe ser menor de 8 o mayor que 15 caracteres";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(16, 169);
+            this.label5.Location = new System.Drawing.Point(11, 169);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(352, 13);
             this.label5.TabIndex = 19;
@@ -469,7 +470,7 @@
             // FRM_USUARIO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(525, 349);
+            this.ClientSize = new System.Drawing.Size(925, 349);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_agregar);
